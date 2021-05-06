@@ -1,0 +1,1528 @@
+{
+  "name" : "Eternal Protectors",
+  "id" : "eternal_protectors",
+  "author" : "guitarninja#5707",
+  "version" : "0.1",
+  "color" : "#D4AF37",
+  "units" : {
+    "lightning_mage_on_gryhpon" : {
+      "name" : "Stormcaller Mage on Gryphon",
+      "description" : "A mighty lightning mage on a hardy gryphon mount, swooping down on his foes.",
+      "category" : "hero",
+      "models" : [
+        {
+          "name" : "Stormcaller Mage on Gryphon",
+          "movement" : 8,
+          "courage" : 7,
+          "shoot" : 7,
+          "fight" : 7,
+          "defense" : 8,
+          "reflexes" : 6,
+          "weapons" : [
+            {
+              "id" : "protector_staff",
+              "count" : 4
+            },
+            {
+              "id" : "beak_and_claws",
+              "count" : 6
+            }
+          ],
+          "rules" : [
+            {
+              "id" : "wounds",
+              "x" : 4
+            },
+            {
+              "id" : "magic",
+              "x" : 1
+            },
+            {
+              "id" : "leader_x",
+              "x" : "Infantry, Cavalry"
+            },
+            "fly"
+          ],
+          "min" : 1,
+          "max" : 1,
+          "options" : [
+            {
+              "addWeapon" : [
+                "spirit_flask"
+              ],
+              "limit" : 3
+            }
+          ]
+        }
+      ],
+      "keywords" : [
+        "Hero",
+        "Beast",
+        "Cavalry"
+      ]
+    },
+    "invokers" : {
+      "name" : "Invokers",
+      "description" : "Warrior mages who invoke the power of lightning to defend themselves.",
+      "category" : "elite",
+      "models" : [
+        {
+          "name" : "Great-Invoker",
+          "movement" : 5,
+          "courage" : 5,
+          "shoot" : 6,
+          "fight" : 6,
+          "defense" : 7,
+          "reflexes" : 6,
+          "rules" : [
+            "lightning_field",
+            {
+              "id" : "wounds",
+              "x" : 2
+            },
+            {
+              "id" : "magic",
+              "x" : 1
+            }
+          ],
+          "weapons" : [
+            {
+              "id" : "sword_and_staff",
+              "count" : 4
+            }
+          ],
+          "min" : 1,
+          "max" : 1
+        },
+        {
+          "options" : [],
+          "name" : "Invoker",
+          "movement" : 5,
+          "courage" : 5,
+          "shoot" : 6,
+          "fight" : 6,
+          "defense" : 7,
+          "reflexes" : 6,
+          "rules" : [
+            "lightning_field",
+            {
+              "id" : "wounds",
+              "x" : 2
+            }
+          ],
+          "weapons" : [
+            {
+              "id" : "sword_and_staff",
+              "count" : 4
+            }
+          ],
+          "min" : 2,
+          "max" : 11
+        }
+      ],
+      "keywords" : [
+        "Infantry"
+      ],
+      "options" : [
+        {
+          "replaceWeapon" : {
+            "id" : "sword_and_staff",
+            "count" : 4
+          },
+          "withWeapon" : [
+            {
+              "id" : "great_staff",
+              "count" : 3
+            }
+          ]
+        }
+      ]
+    },
+    "warriors" : {
+      "name" : "Warriors",
+      "description" : "Warrior mages in heavy armor who use the power of lightning to strengthen their weapons.",
+      "category" : "core",
+      "models" : [
+        {
+          "name" : "Great-Warrior",
+          "min" : 1,
+          "max" : 1,
+          "movement" : 5,
+          "courage" : 5,
+          "shoot" : 6,
+          "fight" : 6,
+          "defense" : 7,
+          "reflexes" : 6,
+          "weapons" : [
+            {
+              "id" : "handweapon",
+              "count" : 3
+            }
+          ]
+        },
+        {
+          "name" : "Warrior",
+          "min" : 4,
+          "max" : 19,
+          "movement" : 5,
+          "courage" : 5,
+          "shoot" : 6,
+          "fight" : 6,
+          "defense" : 7,
+          "reflexes" : 6,
+          "weapons" : [
+            {
+              "id" : "handweapon",
+              "count" : 3
+            }
+          ]
+        }
+      ],
+      "keywords" : [
+        "Infantry"
+      ],
+      "options" : [
+        {
+          "replaceWeapon" : [
+            {
+              "id" : "handweapon",
+              "count" : 3
+            }
+          ],
+          "withWeapon" : [
+            {
+              "id" : "maul",
+              "count" : 3
+            },
+            [
+              {
+                "id" : "maul",
+                "count" : 2
+              },
+              "shield"
+            ],
+            [
+              {
+                "id" : "handweapon",
+                "count" : 2
+              },
+              "shield"
+            ]
+          ],
+          "modelLimit" : "all"
+        },
+        {
+          "replaceWeapon" : [
+            {
+              "id" : "handweapon",
+              "count" : 2
+            },
+            "shield"
+          ],
+          "withWeapon" : {
+            "id" : "great_maul",
+            "count" : 2
+          },
+          "modelLimit" : "1/5"
+        }
+      ]
+    },
+    "hunters" : {
+      "name" : "Hunters",
+      "description" : "Warriors mages who use the elements to strengthen their crossbows.",
+      "category" : "core",
+      "models" : [
+        {
+          "name" : "Great-Hunter",
+          "movement" : 5,
+          "courage" : 5,
+          "shoot" : 6,
+          "fight" : 6,
+          "defense" : 7,
+          "reflexes" : 6,
+          "weapons" : [
+            {
+              "id" : "handweapon",
+              "count" : 2
+            },
+            "heavy_crossbow"
+          ],
+          "min" : 1,
+          "max" : 1
+        },
+        {
+          "name" : "Hunter",
+          "movement" : 5,
+          "courage" : 5,
+          "shoot" : 6,
+          "fight" : 6,
+          "defense" : 7,
+          "reflexes" : 6,
+          "weapons" : [
+            {
+              "id" : "handweapon",
+              "count" : 2
+            },
+            "heavy_crossbow"
+          ],
+          "min" : 4,
+          "max" : 19
+        }
+      ],
+      "keywords" : [
+        "Infantry"
+      ],
+      "options" : [
+        {
+          "replaceWeapon" : [
+            "heavy_crossbow"
+          ],
+          "withWeapon" : [
+            {
+              "id" : "heavy_bow"
+            },
+            [
+              {
+                "id" : "repeater_crossbow",
+                "count" : 3
+              }
+            ]
+          ],
+          "modelLimit" : "all"
+        },
+        {
+          "replaceWeapon" : [
+            "heavy_crossbow"
+          ],
+          "withWeapon" : [
+            "storm_crossbow",
+            "great_bow"
+          ],
+          "modelLimit" : "1/5"
+        },
+        {
+          "addRule" : [
+            "ambush",
+            "outflank"
+          ],
+          "modelLimit" : "all"
+        }
+      ]
+    },
+    "veterans" : {
+      "name" : "Veterans",
+      "description" : "Warrior mages in heavy armor who use storm-charged weapons to bring justice to those that oppose them.",
+      "category" : "elite",
+      "models" : [
+        {
+          "min" : 1,
+          "max" : 1,
+          "name" : "Great-Veteran",
+          "movement" : 5,
+          "courage" : 5,
+          "shoot" : 6,
+          "fight" : 6,
+          "defense" : 7,
+          "reflexes" : 6,
+          "weapons" : [
+            {
+              "id" : "handweapon",
+              "count" : 3
+            },
+            "enchanted_shield"
+          ],
+          "options" : [
+            {
+              "replaceWeapon" : [
+                {
+                  "id" : "handweapon",
+                  "count" : 3
+                },
+                "enchanted_shield"
+              ],
+              "withWeapon" : [
+                [
+                  {
+                    "id" : "storm_hammer",
+                    "count" : 2
+                  }
+                ]
+              ]
+            }
+          ]
+        },
+        {
+          "min" : 2,
+          "max" : 11,
+          "name" : "Veteran",
+          "movement" : 5,
+          "courage" : 5,
+          "shoot" : 6,
+          "fight" : 6,
+          "defense" : 7,
+          "reflexes" : 6,
+          "weapons" : [
+            {
+              "id" : "handweapon",
+              "count" : 3
+            },
+            "enchanted_shield"
+          ]
+        }
+      ],
+      "options" : [
+        {
+          "replaceWeapon" : [
+            {
+              "id" : "handweapon",
+              "count" : 3
+            },
+            "enchanted_shield"
+          ],
+          "withWeapon" : [
+            [
+              {
+                "id" : "maul",
+                "count" : 2
+              },
+              "enchanted_shield"
+            ]
+          ],
+          "modelLimit" : "all"
+        },
+        {
+          "replaceWeapon" : [
+            {
+              "id" : "handweapon",
+              "count" : 3
+            },
+            "enchanted_shield"
+          ],
+          "withWeapon" : [
+            [
+              {
+                "id" : "storm_hammer",
+                "count" : 2
+              }
+            ]
+          ],
+          "modelLimit" : "1/3"
+        }
+      ],
+      "keywords" : [
+        "Infantry"
+      ]
+    },
+    "paladins" : {
+      "keywords" : [
+        "Infantry"
+      ],
+      "name" : "Paladins",
+      "description" : "Warrior mages in heavy armor who infuse their great-weapons with elemental magic.",
+      "category" : "elite",
+      "models" : [
+        {
+          "name" : "Great-Paladin",
+          "min" : 1,
+          "max" : 1,
+          "movement" : 5,
+          "courage" : 5,
+          "shoot" : 6,
+          "fight" : 6,
+          "defense" : 7,
+          "reflexes" : 6,
+          "weapons" : [
+            {
+              "id" : "great_maul",
+              "count" : 3
+            }
+          ]
+        },
+        {
+          "name" : "Paladin",
+          "min" : 2,
+          "max" : 11,
+          "movement" : 5,
+          "courage" : 5,
+          "shoot" : 6,
+          "fight" : 6,
+          "defense" : 7,
+          "reflexes" : 6,
+          "weapons" : [
+            {
+              "id" : "great_maul",
+              "count" : 3
+            }
+          ]
+        }
+      ],
+      "options" : [
+        {
+          "replaceWeapon" : [
+            {
+              "id" : "great_maul",
+              "count" : 3
+            }
+          ],
+          "withWeapon" : [
+            {
+              "id" : "storm_glaive",
+              "count" : 2
+            },
+            {
+              "id" : "storm_hammer",
+              "count" : 2
+            }
+          ],
+          "modelLimit" : "all"
+        },
+        {
+          "modelLimit" : "all",
+          "addRule" : [
+            {
+              "id" : "fear"
+            },
+            {
+              "id" : "lightning_field"
+            }
+          ]
+        }
+      ],
+      "rules" : [
+        {
+          "id" : "wounds",
+          "x" : 2
+        }
+      ]
+    },
+    "sage_knight" : {
+      "name" : "Sage-Knight",
+      "description" : "A warrior mage, clad in magical armor and wielding elemental weaponry.",
+      "category" : "hero",
+      "models" : [
+        {
+          "name" : "Sage-Knight",
+          "min" : 1,
+          "max" : 1,
+          "movement" : 5,
+          "courage" : 7,
+          "shoot" : 6,
+          "fight" : 6,
+          "defense" : 7,
+          "reflexes" : 6,
+          "rules" : [
+            {
+              "id" : "wounds",
+              "x" : 3
+            },
+            "leader",
+            {
+              "id" : "magic",
+              "x" : 1
+            }
+          ],
+          "options" : [
+            {
+              "replaceWeapon" : [
+                {
+                  "id" : "great_staff",
+                  "count" : 3
+                }
+              ],
+              "withWeapon" : [
+                [
+                  {
+                    "id" : "maul",
+                    "count" : 3
+                  },
+                  "starfall_banner"
+                ],
+                [
+                  {
+                    "id" : "maul",
+                    "count" : 2
+                  },
+                  "icon_staff"
+                ],
+                [
+                  {
+                    "id" : "great_staff"
+                  },
+                  "soul_lantern"
+                ],
+                [
+                  {
+                    "id" : "maul",
+                    "count" : 3
+                  },
+                  "grim_staff"
+                ]
+              ]
+            },
+            {
+              "addWeapon" : [
+                "spirit_flask"
+              ],
+              "limit" : 3
+            }
+          ],
+          "weapons" : [
+            {
+              "id" : "protector_staff",
+              "count" : 3
+            }
+          ]
+        }
+      ],
+      "keywords" : [
+        "Hero",
+        "Infantry"
+      ]
+    },
+    "celestial_knight" : {
+      "name" : "Celestial-Knight",
+      "description" : "A warrior mage, equipped with a pair of tempest-wings and magical weapons.",
+      "category" : "hero",
+      "models" : [
+        {
+          "name" : "Celestial-Knight",
+          "min" : 1,
+          "max" : 1,
+          "movement" : 8,
+          "courage" : 7,
+          "shoot" : 6,
+          "fight" : 6,
+          "defense" : 7,
+          "reflexes" : 6,
+          "rules" : [
+            {
+              "id" : "wounds",
+              "x" : 3
+            },
+            "leader",
+            "fly"
+          ],
+          "options" : [
+            {
+              "replaceWeapon" : [
+                {
+                  "id" : "great_bow",
+                  "count" : 3
+                },
+                {
+                  "id" : "handweapon",
+                  "count" : 2
+                }
+              ],
+              "withWeapon" : [
+                [
+                  {
+                    "id" : "storm_blade",
+                    "count" : 4
+                  },
+                  "soul_lantern"
+                ]
+              ]
+            },
+            {
+              "addWeapon" : [
+                "spirit_flask"
+              ],
+              "limit" : 3
+            },
+            {
+              "addWeapon" : [
+                "bird"
+              ]
+            }
+          ],
+          "weapons" : [
+            {
+              "id" : "great_bow",
+              "count" : 3
+            },
+            {
+              "id" : "handweapon",
+              "count" : 3
+            }
+          ]
+        }
+      ],
+      "keywords" : [
+        "Hero",
+        "Infantry"
+      ]
+    },
+    "tempest_knight" : {
+      "name" : "Tempest-Knight",
+      "description" : "A warrior mage, equipped with an arsenal of weapons.",
+      "category" : "hero",
+      "models" : [
+        {
+          "name" : "Tempest-Knight",
+          "min" : 1,
+          "max" : 1,
+          "movement" : 5,
+          "courage" : 7,
+          "shoot" : 6,
+          "fight" : 6,
+          "defense" : 7,
+          "reflexes" : 6,
+          "rules" : [
+            {
+              "id" : "wounds",
+              "x" : 3
+            },
+            "leader"
+          ],
+          "options" : [
+            {
+              "replaceWeapon" : [
+                {
+                  "id" : "storm_blade",
+                  "count" : 2
+                },
+                "shield"
+              ],
+              "withWeapon" : [
+                [
+                  {
+                    "id" : "great_maul",
+                    "count" : 3
+                  }
+                ],
+                [
+                  {
+                    "id" : "maul",
+                    "count" : 4
+                  }
+                ],
+                [
+                  {
+                    "id" : "storm_blade",
+                    "count" : 2
+                  },
+                  {
+                    "id" : "maul",
+                    "count" : 2
+                  }
+                ],
+                [
+                  {
+                    "id" : "storm_glaive"
+                  },
+                  "ward_lantern"
+                ],
+                [
+                  {
+                    "id" : "storm_blade",
+                    "count" : 2
+                  },
+                  "ward_lantern"
+                ]
+              ]
+            },
+            {
+              "addWeapon" : [
+                "spirit_flask"
+              ],
+              "limit" : 3
+            },
+            {
+              "addRule" : [
+                {
+                  "id" : "herald",
+                  "x" : 2
+                }
+              ]
+            }
+          ],
+          "weapons" : [
+            {
+              "id" : "storm_blade",
+              "count" : 2
+            },
+            "shield"
+          ]
+        },
+        {
+          "name" : "Celestial Beast",
+          "min" : 0,
+          "max" : 1,
+          "movement" : 7,
+          "courage" : 4,
+          "shoot" : 6,
+          "fight" : 6,
+          "defense" : 5,
+          "reflexes" : 6,
+          "weapons" : [
+            {
+              "id" : "bite_and_claw",
+              "count" : 4
+            }
+          ]
+        }
+      ],
+      "keywords" : [
+        "Hero",
+        "Infantry"
+      ]
+    },
+    "stormwings" : {
+      "name" : "Stormwings",
+      "description" : "Warrior mages, equipped with a pair of tempest-wings and magical weapons.",
+      "category" : "elite",
+      "models" : [
+        {
+          "name" : "Great-Stormwing",
+          "min" : 1,
+          "max" : 1,
+          "movement" : 8,
+          "courage" : 5,
+          "shoot" : 6,
+          "fight" : 6,
+          "defense" : 7,
+          "reflexes" : 6,
+          "weapons" : [
+            {
+              "id" : "throw_maul",
+              "count" : 2
+            },
+            "shield"
+          ]
+        },
+        {
+          "name" : "Stormwing",
+          "min" : 2,
+          "max" : 11,
+          "movement" : 8,
+          "courage" : 5,
+          "shoot" : 6,
+          "fight" : 6,
+          "defense" : 7,
+          "reflexes" : 6,
+          "weapons" : [
+            "storm_javelin",
+            "shield"
+          ]
+        }
+      ],
+      "rules" : [
+        "fly",
+        "ambush"
+      ],
+      "options" : [
+        {
+          "replaceWeapon" : [
+            "storm_javelin",
+            "shield"
+          ],
+          "withWeapon" : [
+            [
+              {
+                "id" : "throw_maul",
+                "count" : 3
+              }
+            ],
+            [
+              {
+                "id" : "throw_maul",
+                "count" : 2
+              },
+              "shield"
+            ]
+          ],
+          "modelLimit" : "all"
+        },
+        {
+          "replaceWeapon" : [
+            "storm_javelin",
+            "shield"
+          ],
+          "withWeapon" : [
+            [
+              {
+                "id" : "storm_hammer",
+                "count" : 2
+              }
+            ],
+            [
+              {
+                "id" : "storm_glaive",
+                "count" : 2
+              }
+            ],
+            [
+              {
+                "id" : "great_maul",
+                "count" : 3
+              }
+            ]
+          ],
+          "modelLimit" : "1/3"
+        }
+      ],
+      "keywords" : [
+        "Infantry"
+      ]
+    },
+    "beasts" : {
+      "name" : "Celestial Beast",
+      "description" : "",
+      "category" : "core",
+      "models" : [
+        {
+          "name" : "Celestial Alpha",
+          "min" : 1,
+          "max" : 1,
+          "movement" : 7,
+          "courage" : 4,
+          "shoot" : 6,
+          "fight" : 6,
+          "defense" : 5,
+          "reflexes" : 5,
+          "weapons" : [
+            {
+              "id" : "bite_and_claw",
+              "count" : 2
+            }
+          ]
+        },
+        {
+          "name" : "Celestial Beast",
+          "min" : 4,
+          "max" : 19,
+          "movement" : 7,
+          "courage" : 4,
+          "shoot" : 6,
+          "fight" : 6,
+          "defense" : 5,
+          "reflexes" : 5,
+          "weapons" : [
+            {
+              "id" : "bite_and_claw",
+              "count" : 2
+            }
+          ]
+        }
+      ]
+    },
+    "scale-knight_lizard" : {
+      "name" : "Scale-Knight on Dragon-Lizard",
+      "description" : "A warrior mage, equipped with an arsenal of weapons.",
+      "category" : "hero",
+      "models" : [
+        {
+          "name" : "Scale-Knight",
+          "min" : 1,
+          "max" : 1,
+          "movement" : 8,
+          "courage" : 7,
+          "shoot" : 6,
+          "fight" : 6,
+          "defense" : 7,
+          "reflexes" : 6,
+          "rules" : [
+            {
+              "id" : "wounds",
+              "x" : 4
+            },
+            "leader"
+          ],
+          "options" : [
+            {
+              "replaceWeapon" : [
+                {
+                  "id" : "storm_blade",
+                  "count" : 2
+                },
+                "shield"
+              ],
+              "withWeapon" : [
+                [
+                  {
+                    "id" : "storm_glaive"
+                  },
+                  "shield"
+                ],
+                [
+                  {
+                    "id" : "storm_hammer"
+                  },
+                  "shield"
+                ]
+              ]
+            },
+            {
+              "addWeapon" : [
+                "spirit_flask"
+              ],
+              "limit" : 3
+            },
+            {
+              "addRule" : [
+                {
+                  "id" : "magic",
+                  "x" : 1
+                }
+              ]
+            }
+          ],
+          "weapons" : [
+            {
+              "id" : "storm_blade",
+              "count" : 2
+            },
+            "shield",
+            {
+              "id" : "dragon_bite",
+              "count" : 3
+            },
+            {
+              "id" : "beak_and_claws",
+              "count" : 3
+            }
+          ]
+        }
+      ],
+      "keywords" : [
+        "Hero",
+        "Infantry"
+      ]
+    },
+    "protectors_lizard" : {
+      "name" : "Protectors on Dragon-Lizards",
+      "description" : "",
+      "category" : "rare",
+      "options" : [
+        {
+          "replaceWeapon" : [
+            {
+              "id" : "storm_blade",
+              "count" : 3
+            },
+            {
+              "id" : "repeater_crossbow",
+              "count" : 3
+            }
+          ],
+          "withWeapon" : [
+            [
+              {
+                "id" : "storm_hammer",
+                "count" : 3
+              }
+            ],
+            [
+              {
+                "id" : "storm_glaive",
+                "count" : 3
+              }
+            ],
+            [
+              {
+                "id" : "storm_blade_0",
+                "count" : 4
+              }
+            ]
+          ]
+        }
+      ],
+      "rules" : [
+        {
+          "id" : "wounds",
+          "x" : 3
+        }
+      ],
+      "models" : [
+        {
+          "name" : "Champion on Dragon-Lizard",
+          "min" : 1,
+          "max" : 1,
+          "movement" : 8,
+          "courage" : 5,
+          "shoot" : 6,
+          "fight" : 6,
+          "defense" : 7,
+          "reflexes" : 6,
+          "weapons" : [
+            {
+              "id" : "storm_blade",
+              "count" : 3
+            },
+            {
+              "id" : "beak_and_claws",
+              "count" : 2
+            },
+            {
+              "id" : "dragon_bite",
+              "count" : 2
+            },
+            "buckler",
+            {
+              "id" : "repeater_crossbow",
+              "count" : 3
+            }
+          ]
+        },
+        {
+          "name" : "Protector on Dragon-Lizard",
+          "min" : 1,
+          "max" : 5,
+          "movement" : 8,
+          "courage" : 5,
+          "shoot" : 6,
+          "fight" : 6,
+          "defense" : 7,
+          "reflexes" : 6,
+          "weapons" : [
+            {
+              "id" : "storm_blade",
+              "count" : 3
+            },
+            {
+              "id" : "beak_and_claws",
+              "count" : 2
+            },
+            {
+              "id" : "dragon_bite",
+              "count" : 2
+            },
+            "buckler",
+            {
+              "id" : "repeater_crossbow",
+              "count" : 3
+            }
+          ]
+        }
+      ],
+      "keywords" : [
+        "Hero",
+        "Infantry"
+      ]
+    },
+    "scale_knight_drake" : {
+      "name" : "Scale-Knight on Starborn Drake",
+      "description" : "A warrior mage, equipped with an arsenal of weapons.",
+      "category" : "hero",
+      "models" : [
+        {
+          "name" : "Scale-Knight",
+          "min" : 1,
+          "max" : 1,
+          "movement" : 8,
+          "courage" : 7,
+          "shoot" : 7,
+          "fight" : 7,
+          "defense" : 12,
+          "reflexes" : 6,
+          "rules" : [
+            "leader",
+            "damage_table_monster",
+            "fly",
+            {
+              "id" : "magic",
+              "x" : 1
+            }
+          ],
+          "options" : [
+            {
+              "replaceWeapon" : [
+                {
+                  "id" : "storm_hammer",
+                  "count" : 3
+                },
+                "shield"
+              ],
+              "withWeapon" : [
+                [
+                  {
+                    "id" : "storm_glaive",
+                    "count" : 3
+                  },
+                  "shield"
+                ]
+              ]
+            },
+            {
+              "addWeapon" : [
+                "spirit_flask"
+              ],
+              "limit" : 3
+            },
+            {
+              "replaceRule" : [
+                {
+                  "id" : "magic",
+                  "x" : 1
+                }
+              ],
+              "withRule" : [
+                {
+                  "id" : "magic",
+                  "x" : 2
+                }
+              ]
+            }
+          ],
+          "weapons" : [
+            {
+              "id" : "storm_hammer",
+              "count" : 3
+            },
+            "shield",
+            {
+              "id" : "dragon_bite",
+              "count" : 4
+            },
+            {
+              "id" : "beak_and_claws",
+              "count" : 4
+            }
+          ]
+        }
+      ],
+      "keywords" : [
+        "Hero",
+        "Monster",
+        "Cavalry"
+      ]
+    }
+  },
+  "weapons" : {
+    "sword_and_staff" : {
+      "name" : "Sword and Staff",
+      "attacks" : 1,
+      "ap" : 1,
+      "short" : "Melee"
+    },
+    "protector_staff" : {
+      "name" : "Protector's Staff",
+      "attacks" : 1,
+      "ap" : 4,
+      "short" : "Melee",
+      "rules" : [
+        {
+          "id" : "reach",
+          "x" : 1
+        }
+      ]
+    },
+    "enchanted_shield" : {
+      "name" : "Enchanted Shield",
+      "attacks" : 0,
+      "short" : "Melee",
+      "rules" : [
+        "shield",
+        {
+          "id" : "resilient",
+          "x" : 3
+        }
+      ]
+    },
+    "great_bow" : {
+      "name" : "Thunderbolt-Greatbow",
+      "attacks" : 1,
+      "ap" : 3,
+      "short" : 12,
+      "medium" : 24,
+      "rules" : [
+        "stormstrike"
+      ]
+    },
+    "storm_crossbow" : {
+      "name" : "Thunderbolt-Crossbow",
+      "attacks" : 1,
+      "ap" : 3,
+      "short" : 9,
+      "medium" : 18,
+      "rules" : [
+        "stormstrike"
+      ]
+    },
+    "heavy_bow" : {
+      "name" : "Greatbow",
+      "attacks" : 1,
+      "ap" : 3,
+      "short" : 12,
+      "medium" : 24
+    },
+    "storm_hammer" : {
+      "name" : "Lightning Hammer",
+      "attacks" : 1,
+      "ap" : 5,
+      "short" : "Melee",
+      "rules" : [
+        "stormstrike"
+      ]
+    },
+    "storm_glaive" : {
+      "name" : "Storm Glaive",
+      "attacks" : 1,
+      "ap" : 4,
+      "short" : "Melee",
+      "rules" : [
+        "stormstrike",
+        {
+          "id" : "reach",
+          "x" : 1
+        }
+      ]
+    },
+    "storm_blade" : {
+      "name" : "Celestial Warblade",
+      "attacks" : 1,
+      "ap" : 3,
+      "short" : "Melee"
+    },
+    "storm_blade_0" : {
+      "name" : "Volatile Warblade",
+      "attacks" : 1,
+      "ap" : 3,
+      "short" : "Melee",
+      "rules" : [
+        "stormstrike"
+      ]
+    },
+    "starfall_banner" : {
+      "name" : "Starfall Banner",
+      "attacks" : 1,
+      "ap" : 6,
+      "rules" : [
+        {
+          "id" : "ammo",
+          "x" : 1
+        },
+        {
+          "id" : "blast",
+          "x" : 3
+        },
+        "scatter"
+      ],
+      "short" : 24
+    },
+    "icon_staff" : {
+      "name" : "Celestial Standard",
+      "attacks" : 0,
+      "rules" : [
+        {
+          "id" : "icon_x",
+          "x" : "Infantry"
+        }
+      ],
+      "short" : "Melee"
+    },
+    "soul_lantern" : {
+      "name" : "Soul Lantern",
+      "attacks" : 1,
+      "rules" : [
+        "soul_lantern",
+        "spectral"
+      ],
+      "ap" : 1,
+      "short" : 6
+    },
+    "grim_staff" : {
+      "name" : "Grim Reliquary",
+      "attacks" : 0,
+      "rules" : [
+        "fear",
+        "distract"
+      ],
+      "short" : "Melee"
+    },
+    "spirit_flask" : {
+      "name" : "Spirit Flask",
+      "attacks" : 1,
+      "ap" : 3,
+      "short" : 12,
+      "rules" : [
+        {
+          "id" : "blast",
+          "x" : 2
+        },
+        {
+          "id" : "ammo",
+          "x" : 1
+        },
+        "spectral"
+      ]
+    },
+    "bird" : {
+      "name" : "Celestial Eagle",
+      "profiles" : [
+        {
+          "name" : "Claws",
+          "ap" : 2,
+          "attacks" : 1,
+          "rules" : [
+            "rending"
+          ],
+          "short" : "Melee"
+        },
+        {
+          "name" : "Beak",
+          "ap" : 2,
+          "attacks" : 1,
+          "medium" : 24,
+          "short" : 12,
+          "rules" : [
+            "rending"
+          ]
+        }
+      ]
+    },
+    "bite_and_claw" : {
+      "name" : "Teeth and Claws",
+      "ap" : 1,
+      "attacks" : 1,
+      "rules" : [
+        "rending"
+      ],
+      "short" : "Melee"
+    },
+    "ward_lantern" : {
+      "name" : "Warding Lantern",
+      "attacks" : 0,
+      "rules" : [
+        {
+          "id" : "dispel",
+          "x" : 1
+        }
+      ],
+      "short" : "Melee"
+    },
+    "beak_and_claws" : {
+      "name" : "Bite and Claws",
+      "ap" : 4,
+      "attacks" : 1,
+      "short" : "Melee",
+      "rules" : [
+        "stormstrike"
+      ]
+    },
+    "throw_maul" : {
+      "name" : "Tempest Hammer",
+      "profiles" : [
+        {
+          "name" : "Melee",
+          "ap" : 2,
+          "attacks" : 1,
+          "short" : "Melee"
+        },
+        {
+          "name" : "Thrown",
+          "ap" : 2,
+          "attacks" : 1,
+          "medium" : 12,
+          "short" : 6,
+          "rules" : [
+            "assault"
+          ]
+        }
+      ]
+    },
+    "storm_javelin" : {
+      "name" : "Stormstrike Javelin",
+      "profiles" : [
+        {
+          "name" : "Melee",
+          "ap" : 2,
+          "attacks" : 1,
+          "short" : "Melee",
+          "rules" : [
+            {
+              "id" : "reach",
+              "x" : 1
+            }
+          ]
+        },
+        {
+          "name" : "Thrown",
+          "ap" : 2,
+          "attacks" : 1,
+          "medium" : 18,
+          "short" : 9,
+          "rules" : [
+            "assault",
+            "stormstrike"
+          ]
+        }
+      ]
+    },
+    "dragon_bite" : {
+      "name" : "Dragon's Breath",
+      "ap" : 4,
+      "attacks" : 1,
+      "medium" : 12,
+      "short" : 6,
+      "rules" : [
+        "stormstrike"
+      ]
+    }
+  },
+  "rules" : {
+    "lightning_field" : {
+      "name" : "Lightning Field",
+      "description" : "Roll a D10 each time this unit is hit by a Shooting attack. On each roll of a 1 or 2 an attack is prevented.",
+      "points" : 2
+    },
+    "stormstrike_x" : {
+      "name" : "Stormstrike",
+      "description" : "Hit rolls of 1 or 2 from this weapon cause 2 hits instead of 1. Additional hits must be assigned to the same model.",
+      "points" : [
+        "weapon.attacks",
+        {
+          "multiply" : "rule.x"
+        }
+      ],
+      "inputs" : [
+        "x"
+      ]
+    },
+    "eternal_tactics" : {
+      "name" : "Eternal Tactics",
+      "inputs" : [
+        "x"
+      ],
+      "description" : "When this unit is activated, choose up to X friendly _Infantry_ units within 6\". This unit and those units may re-roll failed Strength tests of 9+ until the end of the round.",
+      "points" : [
+        "rule.x",
+        {
+          "multiply" : 10
+        }
+      ]
+    },
+    "soul_lantern" : {
+      "name" : "Soul Lantern",
+      "description" : "Once per round, a friendly _Infantry_ unit within 6\" gains +1 AP on all Melee weapons.",
+      "points" : 10
+    },
+    "stormstrike" : {
+      "name" : "Stormstrike",
+      "description" : "Hit rolls of 1 or 2 from this weapon cause 2 hits instead of 1. Additional hits must be assigned to the same model.",
+      "points" : [
+        "weapon.attacks",
+        {
+          "multiply" : 2
+        }
+      ]
+    },
+    "herald" : {
+      "name" : "Heralding Call",
+      "description" : "When this unit is activated, choose up to X friendly _Infantry_ units within 6\". This model and those units gain +3“ Move next time they move or charge.",
+      "inputs" : [
+        "x"
+      ],
+      "points" : [
+        "rule.x",
+        {
+          "multiply" : 3
+        }
+      ]
+    }
+  },
+  "relics" : [],
+  "powers" : {},
+  "strategies" : []
+}

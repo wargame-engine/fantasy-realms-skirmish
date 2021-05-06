@@ -1,0 +1,988 @@
+{
+  "name" : "Traitor Legions",
+  "id" : "traitor_legions",
+  "author" : "Xekon#8266",
+  "color" : "#231f20",
+  "version" : "0.1",
+  "units" : {
+    "traitor_lord" : {
+      "name" : "Traitor Lord",
+      "description" : "A lord of the dark gods.",
+      "min" : 1,
+      "max" : 1,
+      "category" : "hero",
+      "models" : [
+        {
+          "name" : "Traitor Lord",
+          "movement" : 5,
+          "courage" : 7,
+          "shoot" : 4,
+          "fight" : 6,
+          "defense" : 7,
+          "reflexes" : 6,
+          "weapons" : [
+            "shield",
+            {
+              "id" : "halberd",
+              "count" : 3
+            }
+          ],
+          "options" : [
+            {
+              "replaceWeapon" : [
+                {
+                  "id" : "halberd",
+                  "count" : 3
+                }
+              ],
+              "withWeapon" : [
+                {
+                  "id" : "leeching_sword",
+                  "count" : 4
+                },
+                {
+                  "id" : "great_maul",
+                  "count" : 4
+                }
+              ]
+            },
+            {
+              "replaceRule" : [
+                {
+                  "id" : "traitor_tactics",
+                  "x" : 1
+                }
+              ],
+              "withRule" : [
+                {
+                  "id" : "traitor_tactics",
+                  "x" : 2
+                }
+              ]
+            }
+          ],
+          "rules" : [
+            {
+              "id" : "leader_x",
+              "x" : "Infantry"
+            },
+            {
+              "id" : "tough",
+              "x" : 1
+            },
+            {
+              "id" : "wounds",
+              "x" : 3
+            },
+            {
+              "id" : "traitor_tactics",
+              "x" : 1
+            }
+          ],
+          "min" : 1,
+          "max" : 1
+        }
+      ],
+      "subfactions" : [
+        "none",
+        "wrath",
+        "excess",
+        "pestilence",
+        "change",
+        "deception"
+      ],
+      "keywords" : [
+        "Hero",
+        "Infantry"
+      ]
+    },
+    "sorcerer" : {
+      "name" : "Sorcerer",
+      "description" : "An exalted sorcerer, master of the arcane arts.",
+      "min" : 1,
+      "max" : 1,
+      "category" : "hero",
+      "models" : [
+        {
+          "name" : "Sorcerer",
+          "movement" : 5,
+          "courage" : 6,
+          "shoot" : 4,
+          "fight" : 5,
+          "defense" : 7,
+          "reflexes" : 5,
+          "weapons" : [
+            "maul",
+            "great_maul"
+          ],
+          "options" : [
+            {
+              "replaceRule" : {
+                "id" : "magic",
+                "x" : 1
+              },
+              "withRule" : {
+                "id" : "magic",
+                "x" : 2
+              }
+            },
+            {
+              "addRule" : [
+                "companion"
+              ]
+            }
+          ],
+          "rules" : [
+            {
+              "id" : "leader_x",
+              "x" : "Infantry"
+            },
+            {
+              "id" : "wounds",
+              "x" : 3
+            },
+            {
+              "id" : "magic",
+              "x" : 1
+            }
+          ],
+          "min" : 1,
+          "max" : 1
+        }
+      ],
+      "subfactions" : [
+        "none",
+        "wrath",
+        "excess",
+        "pestilence",
+        "change",
+        "deception"
+      ],
+      "keywords" : [
+        "Hero",
+        "Infantry"
+      ]
+    },
+    "traitor_warriors" : {
+      "name" : "Traitor Warriors",
+      "description" : "Warriors who serve the Traitor Gods.",
+      "category" : "core",
+      "models" : [
+        {
+          "name" : "Aspiring Champion",
+          "movement" : 5,
+          "courage" : 5,
+          "shoot" : 4,
+          "fight" : 6,
+          "defense" : 7,
+          "reflexes" : 5,
+          "weapons" : [
+            "halberd",
+            "shield"
+          ],
+          "min" : 1,
+          "max" : 1
+        },
+        {
+          "name" : "Traitor Warrior",
+          "movement" : 5,
+          "courage" : 6,
+          "shoot" : 4,
+          "fight" : 6,
+          "defense" : 7,
+          "reflexes" : 5,
+          "weapons" : [
+            "halberd",
+            "shield"
+          ],
+          "min" : 4,
+          "max" : 19
+        }
+      ],
+      "subfactions" : [
+        "none",
+        "wrath",
+        "excess",
+        "pestilence",
+        "change",
+        "deception"
+      ],
+      "options" : [
+        {
+          "replaceWeapon" : [
+            "halberd",
+            "shield"
+          ],
+          "withWeapon" : [
+            {
+              "id" : "maul",
+              "count" : 3
+            },
+            {
+              "id" : "great_maul",
+              "count" : 2
+            },
+            [
+              {
+                "id" : "maul",
+                "count" : 2
+              },
+              "shield"
+            ]
+          ],
+          "modelLimit" : "all"
+        },
+        {
+          "addRule" : [
+            "banner"
+          ],
+          "modelLimit" : 1
+        },
+        {
+          "addRule" : [
+            "musician"
+          ],
+          "modelLimit" : 1
+        }
+      ]
+    },
+    "traitor_barbarians" : {
+      "name" : "Traitor Barbarians",
+      "description" : "Frenzied Warriors serving the Traitor Gods.",
+      "category" : "core",
+      "models" : [
+        {
+          "name" : "Traitor Chieftain",
+          "movement" : 6,
+          "courage" : 5,
+          "shoot" : 4,
+          "fight" : 5,
+          "defense" : 4,
+          "reflexes" : 4,
+          "weapons" : [
+            "barbarian_spear"
+          ],
+          "min" : 1,
+          "max" : 1
+        },
+        {
+          "name" : "Traitor Barbarian",
+          "movement" : 6,
+          "courage" : 5,
+          "shoot" : 4,
+          "fight" : 5,
+          "defense" : 4,
+          "reflexes" : 4,
+          "weapons" : [
+            "barbarian_spear"
+          ],
+          "min" : 9,
+          "max" : 29,
+          "options" : []
+        }
+      ],
+      "subfactions" : [
+        "none",
+        "wrath",
+        "excess",
+        "pestilence",
+        "change",
+        "deception"
+      ],
+      "options" : [
+        {
+          "replaceWeapon" : [
+            "barbarian_spear"
+          ],
+          "withWeapon" : [
+            {
+              "id" : "handweapon",
+              "count" : 3
+            },
+            [
+              "handweapon",
+              "shield"
+            ]
+          ],
+          "modelLimit" : "all"
+        },
+        {
+          "addRule" : [
+            "banner"
+          ],
+          "modelLimit" : 1
+        },
+        {
+          "addRule" : [
+            "musician"
+          ],
+          "modelLimit" : 1
+        }
+      ]
+    },
+    "traitor_knights" : {
+      "name" : "Traitor Knights",
+      "description" : "Dark Knights who serve the Traitor Gods.",
+      "min" : 1,
+      "max" : 6,
+      "category" : "elite",
+      "models" : [
+        {
+          "name" : "Dark Herald",
+          "movement" : 7,
+          "courage" : 6,
+          "shoot" : 5,
+          "fight" : 6,
+          "defense" : 7,
+          "reflexes" : 5,
+          "weapons" : [
+            {
+              "id" : "hooves_and_teeth",
+              "count" : 2
+            },
+            {
+              "id" : "heavy_lance",
+              "count" : 2
+            },
+            "shield"
+          ],
+          "rules" : [
+            "fear"
+          ],
+          "min" : 1,
+          "max" : 1,
+          "options" : [
+            {
+              "replaceWeapon" : [
+                {
+                  "id" : "heavy_lance",
+                  "count" : 2
+                }
+              ],
+              "withWeapon" : [
+                {
+                  "id" : "halberd",
+                  "count" : 2
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name" : "Traitor Knight",
+          "movement" : 7,
+          "courage" : 6,
+          "shoot" : 5,
+          "fight" : 6,
+          "defense" : 7,
+          "reflexes" : 5,
+          "weapons" : [
+            {
+              "id" : "heavy_lance",
+              "count" : 2
+            },
+            {
+              "id" : "hooves_and_teeth",
+              "count" : 2
+            },
+            "shield"
+          ],
+          "rules" : [
+            "fear"
+          ],
+          "min" : 2,
+          "max" : 11
+        }
+      ],
+      "subfactions" : [
+        "none",
+        "wrath",
+        "excess",
+        "pestilence",
+        "change",
+        "deception"
+      ],
+      "options" : [
+        {
+          "replaceWeapon" : [
+            {
+              "id" : "heavy_lance",
+              "count" : 2
+            }
+          ],
+          "withWeapon" : [
+            {
+              "id" : "great_maul",
+              "count" : 2
+            }
+          ],
+          "modelLimit" : "all"
+        },
+        {
+          "addRule" : [
+            "banner"
+          ],
+          "modelLimit" : 1
+        },
+        {
+          "addRule" : [
+            "musician"
+          ],
+          "modelLimit" : 1
+        }
+      ]
+    },
+    "traitor_outriders" : {
+      "name" : "Traitor Outriders",
+      "description" : "Mounted Barbarians, ready to spill blood.",
+      "category" : "elite",
+      "models" : [
+        {
+          "name" : "Outrider Chieftain",
+          "movement" : 8,
+          "courage" : 5,
+          "shoot" : 5,
+          "fight" : 5,
+          "defense" : 5,
+          "reflexes" : 4,
+          "weapons" : [
+            {
+              "id" : "handweapon",
+              "count" : 2
+            },
+            {
+              "id" : "hooves_and_teeth",
+              "count" : 2
+            },
+            "shield"
+          ],
+          "min" : 1,
+          "max" : 1
+        },
+        {
+          "name" : "Traitor Outrider",
+          "movement" : 8,
+          "courage" : 5,
+          "shoot" : 5,
+          "fight" : 5,
+          "defense" : 5,
+          "reflexes" : 4,
+          "weapons" : [
+            {
+              "id" : "handweapon",
+              "count" : 2
+            },
+            {
+              "id" : "hooves_and_teeth",
+              "count" : 2
+            },
+            "shield"
+          ],
+          "min" : 4,
+          "max" : 14
+        }
+      ],
+      "subfactions" : [
+        "none",
+        "wrath",
+        "excess",
+        "pestilence",
+        "change",
+        "deception"
+      ],
+      "options" : [
+        {
+          "replaceWeapon" : [
+            {
+              "id" : "handweapon",
+              "count" : 2
+            },
+            "shield"
+          ],
+          "withWeapon" : [
+            [
+              "barbarian_spear",
+              "barbarian_javelin"
+            ]
+          ],
+          "modelLimit" : "all"
+        },
+        {
+          "addRule" : [
+            "banner"
+          ],
+          "modelLimit" : 1
+        },
+        {
+          "addRule" : [
+            "musician"
+          ],
+          "modelLimit" : 1
+        }
+      ]
+    },
+    "icon_bearer" : {
+      "name" : "Exalted Hero with Accursed Icon",
+      "description" : "An chosen icon bearer of the dark gods.",
+      "min" : 1,
+      "max" : 1,
+      "category" : "hero",
+      "models" : [
+        {
+          "name" : "Exalted Hero with Standard",
+          "movement" : 5,
+          "courage" : 7,
+          "shoot" : 4,
+          "fight" : 6,
+          "defense" : 7,
+          "reflexes" : 6,
+          "weapons" : [
+            {
+              "id" : "maul",
+              "count" : 4
+            }
+          ],
+          "rules" : [
+            {
+              "id" : "wounds",
+              "x" : 3
+            },
+            "support",
+            {
+              "id" : "icon_x",
+              "x" : "Infantry"
+            }
+          ],
+          "min" : 1,
+          "max" : 1
+        }
+      ],
+      "subfactions" : [
+        "none",
+        "wrath",
+        "excess",
+        "pestilence",
+        "change",
+        "deception"
+      ],
+      "keywords" : [
+        "Hero",
+        "Infantry"
+      ]
+    },
+    "traitor_lord_horse" : {
+      "name" : "Traitor Lord on Cursed Steed",
+      "description" : "A lord of the dark gods.",
+      "min" : 1,
+      "max" : 1,
+      "category" : "hero",
+      "models" : [
+        {
+          "name" : "Traitor Lord on Cursed Steed",
+          "movement" : 7,
+          "courage" : 7,
+          "shoot" : 4,
+          "fight" : 6,
+          "defense" : 7,
+          "reflexes" : 6,
+          "weapons" : [
+            "shield",
+            {
+              "id" : "halberd",
+              "count" : 3
+            }
+          ],
+          "options" : [
+            {
+              "replaceWeapon" : [
+                {
+                  "id" : "halberd",
+                  "count" : 3
+                }
+              ],
+              "withWeapon" : [
+                {
+                  "id" : "leeching_sword",
+                  "count" : 4
+                },
+                {
+                  "id" : "great_maul",
+                  "count" : 4
+                },
+                {
+                  "id" : "heavy_lance",
+                  "count" : 4
+                }
+              ]
+            }
+          ],
+          "rules" : [
+            {
+              "id" : "leader_x",
+              "x" : "Infantry, Cavalry"
+            },
+            {
+              "id" : "tough",
+              "x" : 1
+            },
+            {
+              "id" : "wounds",
+              "x" : 3
+            }
+          ],
+          "min" : 1,
+          "max" : 1
+        }
+      ],
+      "subfactions" : [
+        "none",
+        "wrath",
+        "excess",
+        "pestilence",
+        "change",
+        "deception"
+      ],
+      "keywords" : [
+        "Hero",
+        "Cavalry"
+      ]
+    },
+    "chosen" : {
+      "name" : "Traitor Chosen",
+      "description" : "Blessed by their dark gods, these warriors set out to slay the mightiest heroes.",
+      "category" : "elite",
+      "models" : [
+        {
+          "name" : "Traitor Paladin",
+          "movement" : 5,
+          "courage" : 5,
+          "shoot" : 4,
+          "fight" : 6,
+          "defense" : 7,
+          "reflexes" : 5,
+          "weapons" : [
+            {
+              "id" : "rending_great",
+              "count" : 3
+            }
+          ],
+          "min" : 1,
+          "max" : 1
+        },
+        {
+          "name" : "Traitor Chosen",
+          "movement" : 5,
+          "courage" : 6,
+          "shoot" : 4,
+          "fight" : 6,
+          "defense" : 7,
+          "reflexes" : 6,
+          "weapons" : [
+            {
+              "id" : "rending_great",
+              "count" : 3
+            }
+          ],
+          "min" : 2,
+          "max" : 11
+        }
+      ],
+      "subfactions" : [
+        "none",
+        "wrath",
+        "excess",
+        "pestilence",
+        "change",
+        "deception"
+      ],
+      "options" : [
+        {
+          "addRule" : [
+            "banner"
+          ],
+          "modelLimit" : 1
+        },
+        {
+          "addRule" : [
+            "musician"
+          ],
+          "modelLimit" : 1
+        }
+      ],
+      "rules" : [
+        "assassin"
+      ]
+    },
+    "traitor_cultists" : {
+      "name" : "Traitor Cultists",
+      "description" : "Fanatical masses serving the Traitor Gods.",
+      "category" : "core",
+      "models" : [
+        {
+          "name" : "Traitor Adept",
+          "movement" : 6,
+          "courage" : 4,
+          "shoot" : 4,
+          "fight" : 5,
+          "defense" : 5,
+          "reflexes" : 4,
+          "weapons" : [
+            {
+              "id" : "maul",
+              "count" : 2
+            }
+          ],
+          "min" : 1,
+          "max" : 1,
+          "rules" : [
+            {
+              "id" : "dispel",
+              "x" : 1
+            }
+          ]
+        },
+        {
+          "name" : "Traitor Cultist",
+          "movement" : 6,
+          "courage" : 4,
+          "shoot" : 4,
+          "fight" : 5,
+          "defense" : 5,
+          "reflexes" : 4,
+          "weapons" : [
+            {
+              "id" : "maul",
+              "count" : 2
+            }
+          ],
+          "min" : 9,
+          "max" : 29
+        }
+      ],
+      "subfactions" : [
+        "none",
+        "wrath",
+        "excess",
+        "pestilence",
+        "change",
+        "deception"
+      ],
+      "options" : [
+        {
+          "replaceWeapon" : [
+            {
+              "id" : "maul",
+              "count" : 2
+            }
+          ],
+          "withWeapon" : [
+            [
+              "maul",
+              "shield"
+            ],
+            [
+              "bow",
+              {
+                "id" : "handweapon",
+                "count" : 2
+              }
+            ]
+          ],
+          "modelLimit" : "all"
+        },
+        {
+          "replaceWeapon" : [
+            {
+              "id" : "maul",
+              "count" : 2
+            }
+          ],
+          "withWeapon" : [
+            [
+              "halberd"
+            ]
+          ],
+          "modelLimit" : "3/10"
+        },
+        {
+          "addRule" : [
+            "artifact"
+          ],
+          "modelLimit" : "1/10"
+        },
+        {
+          "addRule" : [
+            "companion"
+          ],
+          "modelLimit" : "1/10"
+        },
+        {
+          "addRule" : [
+            "banner"
+          ],
+          "modelLimit" : 1
+        },
+        {
+          "addRule" : [
+            "musician"
+          ],
+          "modelLimit" : 1
+        }
+      ]
+    }
+  },
+  "weapons" : {
+    "barbarian_spear" : {
+      "name" : "Barbarian Spear",
+      "ap" : 2,
+      "attacks" : 1,
+      "short" : "Melee",
+      "rules" : [
+        {
+          "id" : "reach",
+          "x" : 1
+        }
+      ]
+    },
+    "hooves_and_teeth" : {
+      "name" : "Hooves and Teeth",
+      "attacks" : 1,
+      "short" : "Melee",
+      "ap" : 1
+    },
+    "barbarian_javelin" : {
+      "name" : "Barbarian Javelins",
+      "ap" : 3,
+      "attacks" : 1,
+      "rules" : [
+        "assault"
+      ],
+      "short" : 6,
+      "medium" : 12
+    },
+    "heavy_lance" : {
+      "name" : "Heavy Lance",
+      "ap" : 2,
+      "attacks" : 1,
+      "short" : "Melee",
+      "rules" : [
+        {
+          "id" : "reach",
+          "x" : 1
+        },
+        "lance"
+      ]
+    }
+  },
+  "rules" : {
+    "traitor_tactics" : {
+      "name" : "Traitor Tactics",
+      "inputs" : [
+        "x"
+      ],
+      "description" : "When this unit is activated, choose up to X friendly _Infantry_ units within 6\". This unit and those units may re-roll failed Strength tests of 9+ until the end of the round.",
+      "points" : [
+        "rule.x",
+        {
+          "multiply" : 10
+        }
+      ]
+    },
+    "artifact" : {
+      "name" : "Cursed Artifact",
+      "description" : "Once per turn, for every model with this rule, add +1 to a cast roll of a friendly _Wizard_ unit within 6“ of this unit.",
+      "points" : 5
+    },
+    "companion" : {
+      "name" : "Arcane Companion",
+      "description" : "Once per turn when a power within 24“ of this model gets dispelled, deal 1 hit with AP(2) to the caster.",
+      "points" : 5
+    }
+  },
+  "strategies" : [
+    {
+      "subfactions" : [
+        "none",
+        "wrath",
+        "excess",
+        "pestilence",
+        "change",
+        "deception"
+      ],
+      "name" : "Eye of the Gods",
+      "phase" : "activation",
+      "description" : "Use when a friendly unit destroys an enemy unit. That unit gains +1 Strength until the end of the battle. A unit may only be affected by this strategy once.",
+      "flavor" : "The forces of chaos commit countless bloodbaths to appease their dark gods, in hope of gainign boons and turning into a demon lord.",
+      "cost" : 2
+    },
+    {
+      "subfactions" : [
+        "none",
+        "wrath",
+        "excess",
+        "pestilence",
+        "change",
+        "deception"
+      ],
+      "name" : "Fearless",
+      "phase" : "activation",
+      "description" : "Use before activating a unit. That unit may immediately remove up to 2 Shock.",
+      "flavor" : "Unflinged by the horrors of war, the forces of chaos march ever forward.",
+      "cost" : 1
+    },
+    {
+      "subfactions" : [
+        "none",
+        "wrath",
+        "excess",
+        "pestilence",
+        "change",
+        "deception"
+      ],
+      "name" : "Blazing Runes",
+      "phase" : "activation",
+      "description" : "Use before an Infantry unit fights. Hit rolls of 1 or 2 gain +1 AP.",
+      "flavor" : "Chaos Warriors wield enchanted weapons, covered in unholy runes and burning with dark magic.",
+      "cost" : 1
+    }
+  ],
+  "relics" : [],
+  "powers" : {
+    "bolt" : {
+      "name" : "Arcane Bolt",
+      "description" : "Target enemy model within 12\" takes 3 hits with AP 1. This power may be cast unlimited times.",
+      "flavor" : "The enemy is hit by an unseen force, ripping trough armor and shields alike.",
+      "charge" : 6,
+      "subfactions" : [
+        "change"
+      ]
+    },
+    "soul_fire" : {
+      "name" : "Soul Fire",
+      "description" : "Target enemy unit within 12\" takes 6 hits. This power may be cast only three times per game.",
+      "flavor" : "The Sorcerer sings an unholy chant, incinerating the souls of his enemies.",
+      "charge" : 7,
+      "subfactions" : [
+        "change"
+      ]
+    },
+    "fury" : {
+      "name" : "Furious Assault",
+      "description" : "Target friendly unit within 12\" gains the Furious special rule until the end of the turn. This power may be cast only once per turn.",
+      "flavor" : "The priest chants a sinister prayer, blessing his fellow Warriors with a great rage.",
+      "charge" : 7,
+      "subfactions" : [
+        "wrath"
+      ]
+    },
+    "plague" : {
+      "name" : "Rotten Fortitude",
+      "description" : "Target friendly unit within 12\" gains Tough (+1) until the end of the turn. This power may be cast only three times per game.",
+      "flavor" : "The sorcerer spreads a joyous disease onto his fellow warriors, making them numb to harm.",
+      "charge" : 7,
+      "subfactions" : [
+        "pestilence"
+      ]
+    }
+  }
+}

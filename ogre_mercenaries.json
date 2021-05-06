@@ -1,0 +1,373 @@
+{
+    "name": "Ogre Mercenaries",
+    "id": "ogre_mercenaries",
+    "color": "#50974A",
+    "author": "Valgaav#9736",
+    "version": "0.1",
+    "description": "Large-bodied mercenaries with huge appetites for gold and destruction.",
+    "alliance": "destruction",
+    "units": {
+        "ogre_captain": {
+            "name": "Ogre Captain",
+            "description": "The ferocious leader of a mercenary company.",
+            "category": "hero",
+            "models": [
+                {
+                    "name": "Ogre Captain",
+                    "movement": 6,
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 7,
+                    "courage": 9,
+                    "reflexes": 6,
+                    "min": 1,
+                    "max": 1,
+                    "rules": [{"id": "wounds", "x": 4}, {"id": "merc_tactics", "x": 1}, {"id": "leader_x", "x": "Infantry"}],
+                    "weapons": [{"id": "handgun", "count": 2}, {"id": "capn_weapon", "count": 3}, {"id": "great_maul", "count": 2}],
+                    "options": [{"replaceRule": [{"id": "merc_tactics", "x": 1}], "withRule": [{"id": "merc_tactics", "x": 2}]}]
+                }
+            ]
+        },
+        "ogre_cook": {
+            "name": "Ogre Cook",
+            "description": "An army marches on their belly - even more so when the cook can call magic from bones!",
+            "category": "hero",
+            "models": [
+                {
+                    "name": "Ogre Cook",
+                    "movement": 6,
+                    "shoot": 4,
+                    "fight": 6,
+                    "defense": 6,
+                    "courage": 7,
+                    "reflexes": 6,
+                    "min": 1,
+                    "max": 1,
+                    "rules": [{"id": "wounds", "x": 3}, {"id": "magic", "x": 1}, "support"],
+                    "weapons": [{"id": "great_maul", "count": 6}],
+                    "options": [{"replaceRule": [{"id": "magic", "x": 1}], "withRule": [{"id": "magic", "x": 2}]}]
+                }
+            ]
+        },
+        "ogre_beastmaster": {
+            "name": "Ogre Beastmaster",
+            "description": "A skilled hunter, and the leader of the beast packs in a company, Beastmasters are often more comfortable with animals than their own kind.",
+            "category": "hero",
+            "models": [
+                {
+                    "name": "Ogre Beastmaster",
+                    "movement": 7,
+                    "shoot": 5,
+                    "fight": 6,
+                    "defense": 6,
+                    "courage": 7,
+                    "reflexes": 6,
+                    "min": 1,
+                    "max": 1,
+                    "rules": [{"id": "wounds", "x": 3}, {"id": "hunter_tactics", "x": 1}, {"id": "leader_x", "x": "Beasts"}],
+                    "weapons": [{"id": "heavy_crossbow", "count": 1}, {"id": "heavy_crossbow_melee", "count": 1}, {"id": "hunting_spear", "count": 1}, {"id": "hunting_spear_melee", "count": 4}]
+                }
+            ]
+        },
+        "ogre_mercenaries": {
+            "name": "Ogre Mercenaries",
+            "description": "The rank-and-file, as much as any ogre can be",
+            "category": "core",
+            "models": [
+                {
+                    "name": "Ogre Sergeant",
+                    "movement": 6,
+                    "shoot": 4,
+                    "fight": 6,
+                    "defense": 6,
+                    "courage": 7,
+                    "reflexes": 6,
+                    "min": 1,
+                    "max": 1,
+                    "rules": [{"id": "wounds", "x": 2}],
+                    "weapons": [{"id": "maul", "count": 4}],
+                    "options": [{"replaceWeapon" : [{"id" : "maul", "count" : 5}], "withWeapon" : [[{"id" : "maul", "count" : 4}, {"id" : "ironfist", "count" : 1}]]}]
+                },
+                {
+                    "name": "Ogre Private",
+                    "movement": 6,
+                    "shoot": 4,
+                    "fight": 6,
+                    "defense": 6,
+                    "courage": 7,
+                    "reflexes": 6,
+                    "min": 2,
+                    "max": 11,
+                    "rules": [{"id": "wounds", "x": 2}],
+                    "weapons": [{"id": "maul", "count": 3}],
+                    "options": [{"replaceWeapon" : [{"id" : "maul", "count" : 3}], "withWeapon" : [[{"id" : "maul", "count" : 2}, {"id" : "ironfist", "count" : 1}]]}, {"addRule": ["banner"], "modelLimit": 1}, {"addRule": ["musician"], "modelLimit": 1}]
+                }
+            ]
+        },
+        "ogre_veterans": {
+            "name": "Ogre Veterans",
+            "Description": "The old guard of a mercenary company, who have long since earned their place",
+            "category": "elite",
+            "models": [
+                {
+                    "name": "Ogre Veteran Sergeant",
+                    "movement": 6,
+                    "shoot": 4,
+                    "fight": 6,
+                    "defense": 7,
+                    "courage": 6,
+                    "reflexes": 6,
+                    "min": 1,
+                    "max": 1,
+                    "rules": [{"id": "wounds", "x": 2}],
+                    "weapons": [{"id": "great_maul", "count": 5}],
+                    "options": [{"replaceWeapon" : [{"id" : "great_maul", "count" : 5}], "withWeapon" : [[{"id" : "great_maul", "count" : 4}, {"id" : "ironfist", "count" : 1}]]}]
+                },
+                {
+                    "name": "Ogre Veteran",
+                    "movement": 6,
+                    "shoot": 4,
+                    "fight": 6,
+                    "defense": 7,
+                    "courage": 6,
+                    "reflexes": 6,
+                    "min": 2,
+                    "max": 8,
+                    "rules": [{"id": "wounds", "x": 2}],
+                    "weapons": [{"id": "great_maul", "count": 4}],
+                    "options": [{"replaceWeapon" : [{"id" : "great_maul", "count" : 4}], "withWeapon" : [[{"id" : "great_maul", "count" : 3}, {"id" : "ironfist", "count" : 1}]]}, {"addRule": ["banner"], "modelLimit": 1}, {"addRule": ["musician"], "modelLimit": 1}]
+                }
+            ]
+        },
+        "ogre_artillerists": {
+            "name": "Ogre Artillerists",
+            "description": "With the strength of an ogre, your definition of 'sidearm' quickly changes.",
+            "category": "core",
+            "models": [
+                {
+                    "name": "Ogre Artillerist Sergeant",
+                    "movement": 6,
+                    "shoot": 5,
+                    "fight": 6,
+                    "defense": 6,
+                    "reflexes": 6,
+                    "courage" : 6,
+                    "min": 1,
+                    "max": 1,
+                    "rules": [{"id": "wounds", "x": 2}],
+                    "weapons": [{"id": "boomstick", "count": 1}, {"id": "ogre_fists", "count": 3}]
+                },
+                {
+                    "name": "Ogre Artillerist",
+                    "movement": 6,
+                    "shoot": 5,
+                    "fight": 6,
+                    "defense": 6,
+                    "reflexes": 6,
+                    "courage" : 6,
+                    "min": 2,
+                    "max": 8,
+                    "rules": [{"id": "wounds", "x": 2}],
+                    "weapons": [{"id": "boomstick", "count": 1}, {"id": "ogre_fists", "count": 2}],
+                    "options": [{"addRule": ["banner"], "modelLimit": 1}, {"addRule": ["musician"], "modelLimit": 1}]
+                }
+            ]
+        },
+        "goblin_auxiliary": {
+            "name" : "Goblin Auxiliaries",
+            "description" : "The one thing goblins value more than their lives is shiny things.  With mercenary work, they can get both.",
+            "category" : "core",
+            "models": [
+                {
+                 "name" : "Least-Scared Auxiliary",
+                 "movement" : 6,
+                   "courage" : 5,
+                   "shoot" : 5,
+                 "fight" : 4,
+                    "defense" : 4,
+                    "reflexes" : 5,
+                   "min": 1,
+                   "max": 1,
+                   "weapons": [{"id": "sharp_stuff", "count" : 1}, {"id" : "gobbo_weapons", "count" : 1}]
+    },
+    {
+        "name" : "Goblin Auxiliaries",
+        "movement" : 6,
+        "shoot" : 5,
+        "courage" : 4,
+        "fight" : 4,
+        "defense" : 4,
+        "reflexes" : 5,
+        "min": 19,
+        "max": 49,
+        "weapons": [{"id": "sharp_stuff", "count" : 1}, {"id" : "gobbo_weapons", "count" : 1}]
+    }
+]
+        },
+        "ogre_cavalry": {
+            "name": "Ogre Cavalry",
+            "description": "Outriders for mercenary companies - when ogres can find beasts strong enough to carry them!",
+            "category": "elite",
+            "models": [
+                {
+                    "name": "Cavalry Sergeant",
+                    "movement": 8,
+                    "shoot": 5,
+                    "fight": 6,
+                    "defense": 7,
+                    "reflexes": 6,
+                    "courage" : 6,
+                    "min": 1,
+                    "max": 1,
+                    "rules": [{"id": "wounds", "x": 3}, {"id": "impact", "x": 2}],
+                    "weapons": [{"id": "great_maul", "count": 3}, {"id": "mournfang_tusks", "count": 4}, {"id": "handgun", "count": 1}, {"id" : "ironfist", "count" : 1}]
+                },
+                {
+                    "name": "Ogre Cavalry",
+                    "movement": 8,
+                    "shoot": 5,
+                    "fight": 6,
+                    "defense": 7,
+                    "reflexes": 6,
+                    "courage" : 6,
+                    "min": 2,
+                    "max": 8,
+                    "rules": [{"id": "wounds", "x": 3}, {"id": "impact", "x": 2}],
+                    "weapons": [{"id": "great_maul", "count": 3}, {"id": "mournfang_tusks", "count": 4}, {"id" : "ironfist", "count" : 1}],
+                    "options": [{"addRule": ["banner"], "modelLimit": 1}, {"addRule": ["musician"], "modelLimit": 1}]
+                }
+            ]
+        },
+        "hunting_beasts": {
+            "name": "Hunting Beasts",
+            "description" : "A motley of beasts best used for scouting, flanking and disruption by the mercenaries that tamed them",
+            "category": "elite",
+            "keywords": ["Beasts"],
+            "models": [
+                {
+                    "name": "Hunting Beast",
+                    "movement": 10,
+                    "shoot" : 4,
+                    "fight": 5,
+                    "defense": 5,
+                    "reflexes": 6,
+                    "courage": 4,
+                    "weapons": [{"id": "beast_fangs", "count": 2}],
+                    "min": 2,
+                    "max": 20
+                }
+            ]
+        },
+        "attack_beasts": {
+            "name": "Attack Beasts",
+            "description" : "A strange assortment of beasts used for assault, terror and cannon fodder by the mercenaries that tamed them",
+            "category": "elite",
+            "keywords": ["Beasts"],
+            "models": [
+                {
+                    "name": "Attack Beast",
+                    "movement": 7,
+                    "shoot": 4,
+                    "fight": 6,
+                    "defense": 5,
+                    "reflexes": 6,
+                    "courage": 4,
+                    "weapons": [{"id": "beast_claws", "count": 3}],
+                    "rules": [{"id": "fear"}, {"id": "wounds", "x" : 2}],
+                    "min": 2,
+                    "max": 20
+                }
+            ]
+        },
+        "goblin_stuffhucker": {
+            "name": "Goblin Stuff-Hucker",
+            "description": "Goblins feel most at home away from the front lines, so their Ogre leaders designed artillery to help them contribute.",
+            "category": "rare",
+            "keywords": ["Warmachine", "Artillery"],
+            "models": [
+                {
+                    "name" : "Goblin Stuff-Chucker",
+                    "movement": 7,
+                    "shoot": 6,
+                    "fight": 4,
+                    "defense": 11,
+                    "reflexes": 4,
+                    "courage": 4,
+                    "min": 1,
+                    "max": 1,
+                    "weapons": [{"id": "ball_o_stuff", "count": 1}, {"id": "mournfang_tusks", "count": 1}, {"id": "gobbo_weapons", "count": 3}],
+                    "rules": ["damage_table_warmachine"]
+                }
+            ]
+        },
+        "ogre_cannon": {
+            "name" : "Beast-Pulled Cannon",
+            "description": "No mercenary company worth its coin lets a siege stop them.  The ogres use this monstrosity to crack walls and, when there's no walls around, monsters.",
+            "min":1,
+            "max": 1,
+            "category": "rare",
+            "keywords": ["warmachine", "arillery"],
+            "models": [
+                {
+                    "name" : "Beast-Pulled Cannon",
+                    "movement": 7,
+                    "shoot": 5,
+                    "fight": 6,
+                    "defense": 12,
+                    "reflexes": 6,
+                    "courage": 6,
+                    "min": 1,
+                    "max": 1,
+                    "weapons": [{"id": "ogre_cannon", "count": 1}, {"id": "ogre_fists", "count": 3}, {"id": "mournfang_tusks", "count": 2}],
+                    "rules": ["damage_table_warmachine"]
+                }
+            ]
+    }},
+    "weapons": {
+        "capn_weapon": {"name": "Captain's Peacekeeper", "attacks": 1, "ap": 5, "short": "Melee"},
+        "ogre_fists": {"name": "Ogre Fists", "attacks": 1, "ap": 3, "short": "Melee"},
+        "mournfang_tusks": {"name": "Cavalry Tusks", "attacks": 1, "ap": 3, "rules": ["lance"], "short": "Melee"},
+        "boomstick": {"name": "Boomstick", "attacks": 3, "ap": 3, "short": 6, "medium": 12},
+        "ironfist": {"name": "Ironfist", "attacks": 1, "ap": 1, "short": "Melee", "rules": ["buckler"]},
+        "sharp_stuff": {"name": "Sharp Stuff", "attacks":1, "ap": 0, "short":4, "medium": 8},
+        "gobbo_weapons": {"name": "Goblin Weapons", "attacks":1, "ap":0, "short":"Melee"},
+        "hunting_spear": {"name": "Thrown Hunting Spear", "attacks": 1, "ap": 3, "short": "6", "medium": 9},
+        "hunting_spear_melee": {"name": "Hunting Spear", "attacks": 1, "ap":2, "short": "Melee"},
+        "beast_fangs": {"name": "Beast Fangs", "attacks":1, "ap": 2, "short":"Melee"},
+        "beast_claws": {"name": "Beast Claws", "attacks":1, "ap": 3, "short": "Melee"},
+        "ball_o_stuff": {"name": "Ball Of Stuff", "attacks": 3, "ap": 2, "short": 18, "medium": 36, "rules": ["scatter", {"id": "blast", "x": 6}, "indirect"]},
+        "ogre_cannon": {"name": "Ogre-Sized Cannon",  "profiles" : [
+            {
+              "name" : "Cannon Ball",
+              "ap" : 7,
+              "attacks" : 1,
+              "medium" : 24,
+              "short" : 12,
+              "rules" : [
+                {
+                  "id" : "deadly",
+                  "x" : 3
+                },
+                "scatter"
+              ]
+            },
+            {
+              "name" : "Grapeshot",
+              "attacks" : 6,
+              "ap" : 3,
+              "short" : 6,
+              "medium" : 12,
+              "rules" : [
+                  {
+                      "id" : "blast",
+                      "x": 3
+                  }
+              ]
+            }
+          ]}
+    },
+    "rules" : {
+        "merc_tactics": {"name": "Mercenary Tactics", "inputs": ["x"], "description": "When this unit is activated, choose up to X friendly _Infantry_ units within 6\" to receive one of the following bonuses until the end of the round: \n * Re-roll failed Strength tests of 9+ \n * +3\" Movement", "points": ["rule.x", {"multiply": 15}]},
+        "hunter_tactics": {"name": "Hunter Tactics", "inputs": ["x"], "description": "When this unit is activated, choose up to X friendly _Beast_ units within 12\" to receive one of the following bonuses until the end of the round: \n * Re-roll failed Strength tests of 9+ \n * Re-roll failed Initiative tests of 9+", "points": ["rule.x", {"multiply": 15}]}
+}
+}
