@@ -1,691 +1,511 @@
 {
-  "reportUrl" : "https://github.com/wargame-engine/fantasy-realms-skirmish/issues",
-  "name" : "Fantasy Realms Skirmish (Beta)",
-  "id" : "fantasy_realms_skirmish",
-  "alliances" : {
-    "death" : {
-      "name" : "Bringers of Death"
+    "reportUrl": "https://github.com/wargame-engine/fantasy-realms-skirmish/issues",
+    "name": "Fantasy Realms Skirmish (Beta)",
+    "id": "fantasy_realms_skirmish",
+    "alliances": {"death": {"name": "Bringers of Death"}, "destruction": {"name": "Forces of Destruction"}, "order": {"name": "Keepers of Order"}, "chaos": {"name": "Instruments of Chaos"}},
+    "factions": {
+        "eternal_protectors": {
+            "name": "Eternal Protectors",
+            "id": "eternal_protectors",
+            "url": "eternal_protectors.json",
+            "color": "#D4AF37",
+            "secondary_color": "#0d407f",
+            "version": "0.1",
+            "alliance": "order",
+            "description": "The Eternal Protectors are sworn to protect those who cannot protect themselves and to ward off evil. They wear tough armor and wield mighty weapons to strike down those are unjust."
+        },
+        "ogre_mercenaries": {
+            "name": "Ogre Mercenaries",
+            "id": "ogre_mercenaries",
+            "url": "ogre_mercenaries.json",
+            "color": "#954535",
+            "version": "0.1",
+            "alliance": "destruction",
+            "description": "Large-bodied mercenaries with huge appetites for gold and destruction"
+        },
+        "greatogre_raiders": {
+            "name": "Greatogre Raiders",
+            "id": "greatogre_raiders",
+            "url": "greatogre_raiders.json",
+            "color": "#4f9ae0",
+            "version": "0.1",
+            "description": "The greatest of ogre tribes, who only interact with their lessers when they need something - food, coin, or just a challenge!",
+            "alliance": "destruction"
+        },
+        "vampire_lords": {
+            "name": "Vampire Lords",
+            "id": "vampire_lords",
+            "url": "vampire_lords.json",
+            "color": "#9a1115",
+            "version": "0.1",
+            "alliance": "death",
+            "description": "The Vampire Lords are powerful vampires who command legions of undead to do their bidding. They defeat their foes with powerful death magic and hordes of undead.",
+            "subfactions": {
+                "bone": {"name": "Bone", "id": "bone", "color": "#90305d", "description": "Raising endless armies of skeletal soldiers to do their bidding."},
+                "blood": {"name": "Blood", "id": "blood", "color": "#547588", "description": "Fledgling vampires are eager to drink and don't have the patience for just biting their enemies."},
+                "dread": {
+                    "name": "Dread",
+                    "id": "dread",
+                    "color": "#547588",
+                    "description": "Using illusions, necromancy and their own kin against their foes, these Vampire Lords are masters of attritional warfare."
+                }
+            }
+        },
+        "traitor_legions": {
+            "name": "Traitor Legions",
+            "id": "traitor_legions",
+            "url": "traitor_legions.json",
+            "color": "#231f20",
+            "version": "0.1",
+            "alliance": "chaos",
+            "description": "The Traitor Legions are those who chose to fight for evil instead of order and made a pact with the dark gods. The Traitor Legions use deadly traitor warriors and other barbarians to swiftly crush their foes.",
+            "subfactions": {
+                "change": {
+                    "name": "Magic",
+                    "id": "change",
+                    "color": "#90305d",
+                    "description": "Mighty Sorcerers that bring down a storm of spells, empowered by hordes of cultists that give their life in pursuit of knowledge."
+                },
+                "pestilence": {
+                    "name": "Pestilence",
+                    "id": "pestilence",
+                    "color": "#547588",
+                    "description": "The forces of the unstoppable decay of all life, born anew as a warrior of the dark gods."
+                },
+                "wrath": {
+                    "name": "Wrath",
+                    "id": "wrath",
+                    "color": "#547588",
+                    "description": "Warriors of unbridled fury, filled with an eternal bloodlust and always looking for ever greater foes to still it."
+                },
+                "excess": {"name": "Excess", "id": "excess", "color": "#547588", "description": "Sadistic and twisted Warriors, always seeking for new ways of ecstasy."},
+                "deception": {
+                    "name": "Deception",
+                    "id": "deception",
+                    "color": "#6a0001",
+                    "description": "Agents of chaos that undermine enemy forces and crumble them from within or lead a corrupt government themselves."
+                }
+            }
+        },
+        "haunting_ghosts": {
+            "name": "Haunting Ghosts",
+            "id": "haunting_ghosts",
+            "url": "haunting_ghosts.json",
+            "color": "#4C838A",
+            "version": "0.1",
+            "alliance": "death",
+            "description": "The Haunting Ghosts are a collection of undead spirits which haunt their hallowed grave sites. The Ghostly Undead use fear and ethereal movement to wash over their foes and scare them into defeat."
+        },
+        "high_elves": {
+            "name": "High Elves",
+            "id": "high_elves",
+            "url": "high_elves.json",
+            "color": "#38733a",
+            "version": "0.1",
+            "alliance": "order",
+            "description": "Masters of the Arcane, this ancient island nation is shrouded in mystery.",
+            "subfactions": {
+                "temple": {
+                    "name": "Phoenix Temple",
+                    "id": "temple",
+                    "color": "#90305d",
+                    "description": "Defenders of the Temple of the Last Flame, leading crusades agains the forces that seek to destroy it."
+                },
+                "polis": {"name": "Polis", "id": "polis", "color": "#547588", "description": "An amalgamation of several city states, masters of urban fighting and outlasting sieges."},
+                "magic": {"name": "Magic", "id": "magic", "color": "#547588", "description": "Agents of the Ivory Citadel, focusing on Mageblades and mighty wizards."},
+                "beasts": {"name": "Beastmasters", "id": "beasts", "color": "#800080", "background": "A force that focuses heavily on cavalry and giant beasts."}
+            }
+        },
+        "orcs_and_goblins": {
+            "name": "Orcs and Goblins",
+            "id": "orcs_and_goblins",
+            "url": "orcs_and_goblins.json",
+            "color": "#50974A",
+            "version": "0.1",
+            "alliance": "destruction",
+            "description": "A savage race made up of various warring tribes.",
+            "subfactions": {
+                "armor": {
+                    "name": "Armor",
+                    "id": "armor",
+                    "color": "#90305d",
+                    "description": "The great goblin forges are blazing anew, supplying their orcish masters with mastercrafted equipment as crude as they may seem."
+                },
+                "speed": {"name": "Speed", "id": "speed", "color": "#547588", "description": "This force focuses on using chariots, boars and anything that goes fast."},
+                "trickery": {
+                    "name": "Trickery",
+                    "id": "trickery",
+                    "color": "#547588",
+                    "description": "Striking in moonlight, these masters of deception, as far as orcs are concerned, use outflanking and ambush maneuvers to gain the upper hand."
+                },
+                "primal": {
+                    "name": "Primal",
+                    "id": "primal",
+                    "color": "#547588",
+                    "description": "Empowered by their animalistic gods, the strongest warriors charge into battle with fearsome beasts at their side."
+                }
+            }
+        },
+        "sea_elves": {
+            "name": "Sea Elves",
+            "id": "sea_elves",
+            "url": "sea_elves.json",
+            "color": "#03414e",
+            "version": "1.0",
+            "alliance": "order",
+            "description": "Raising from the depths of the ocean, transmuted by their ancient magic."
+        },
+        "dwarves": {
+            "name": "Dwarves",
+            "id": "dwarves",
+            "url": "dwarves.json",
+            "color": "#A55D35",
+            "version": "0.1",
+            "alliance": "order",
+            "description": "A stout race of miners, engineers and warriors.",
+            "subfactions": {
+                "blackpowder": {"name": "Blackpowder", "id": "blackpowder", "color": "#800080", "background": "A force that focuses heavily on guns and artillery."},
+                "magic": {"name": "Magic", "id": "magic", "color": "#800080", "background": "A force that focuses heavily on magic and rune-enchanted equipment."},
+                "combat": {"name": "Combat", "id": "combat", "color": "#800080", "background": "A force that focuses on overruning their foe in glorious combat."},
+                "tunneler": {"name": "Tunneler", "id": "tunneler", "color": "#800080", "background": "A force that focuses on ambushing their enemies from below the battlefield."}
+            }
+        },
+        "beastmen_horde": {
+            "name": "Beastmen Horde",
+            "id": "beastmen_horde",
+            "url": "beastmen_horde.json",
+            "color": "#954535",
+            "version": "0.1",
+            "alliance": "chaos",
+            "description": "The Beastmen are a race of human-like beasts found in forests. Their main goal is to disrupt and destroy the races of mankind through savage all-out raids.",
+            "subfactions": {
+                "change": {
+                    "name": "Magic",
+                    "id": "change",
+                    "color": "#90305d",
+                    "description": "Mighty Shamans that bring down a storm of spells, empowered by hordes of ravaging beasts that give their life in pursuit of power."
+                },
+                "pestilence": {
+                    "name": "Pestilence",
+                    "id": "pestilence",
+                    "color": "#547588",
+                    "description": "The forces of the unstoppable decay of all life, born anew as a warrior of the dark gods."
+                },
+                "wrath": {
+                    "name": "Wrath",
+                    "id": "wrath",
+                    "color": "#547588",
+                    "description": "Warriors of unbridled fury, filled with an eternal bloodlust and always looking for ever greater foes to still it."
+                },
+                "excess": {"name": "Excess", "id": "excess", "color": "#547588", "description": "Sadistic and twisted Warriors, always seeking for new ways of ecstasy."}
+            }
+        },
+        "human_kingdoms": {
+            "name": "Great Kingdoms",
+            "id": "human_kingdoms",
+            "url": "human_kingdoms.json",
+            "color": "#087194",
+            "version": "0.1",
+            "alliance": "order",
+            "description": "A collection of various kingdoms, infighting for political presence but uniting under one banner to defend their home.",
+            "subfactions": {
+                "order": {"name": "Holy Order", "id": "order", "color": "#90305d", "description": "Leading crusades against the forces of chaos and death, blessed by their gods."},
+                "polis": {"name": "Polis", "id": "polis", "color": "#547588", "description": "An amalgamation of several city states, masters of urban fighting and outlasting sieges."},
+                "magic": {"name": "Magic", "id": "magic", "color": "#547588", "description": "Mighty wizards from all across the kingdoms come togethet to smite down their foes with arcane spell."},
+                "blackpowder": {"name": "Blackpowder", "id": "blackpowder", "color": "#800080", "background": "A force that focuses heavily on guns and artillery."}
+            }
+        },
+        "traitor_dwarves": {
+            "name": "Traitor Dwarves",
+            "id": "traitor_dwarves",
+            "url": "traitor_dwarves.json",
+            "color": "#360c30",
+            "version": "0.1",
+            "alliance": "chaos",
+            "description": "Corrupted by the dark gods, these dwarves imbue twisted warmachines with demonic magic.",
+            "subfactions": {
+                "forge": {"name": "Forge", "id": "forge", "color": "#90305d", "description": "A force that focueses Daemonsmiths and various animated soldiers."},
+                "wrath": {
+                    "name": "Wrath",
+                    "id": "wrath",
+                    "color": "#547588",
+                    "description": "Warriors of unbridled fury, filled with an eternal bloodlust and always looking for ever greater foes to still it."
+                },
+                "excess": {"name": "Excess", "id": "excess", "color": "#547588", "description": "Sadistic and twisted Warriors, always seeking for new ways of ecstasy."},
+                "blackpowder": {"name": "Blackpowder", "id": "blackpowder", "color": "#800080", "background": "A force that focuses heavily on guns and artillery."}
+            }
+        }
     },
-    "destruction" : {
-      "name" : "Forces of Destruction"
+    "categories": {"hero": {"name": "Hero"}, "core": {"name": "Core"}, "elite": {"name": "Elite"}, "rare": {"name": "Rare"}},
+    "organizations": {
+        "skirmish": {
+            "name": "Generalist",
+            "cost": 0,
+            "description": "A well-rounded force for taking on any mission.",
+            "categories": {"hero": {"min": 1, "max": 2}, "core": {"min": 2, "max": 8}, "elite": {"max": 5}, "rare": {"max": 3}, "fortification": {"max": 4}}
+        },
+        "elite": {
+            "name": "Elite",
+            "cost": 1,
+            "description": "An elite force to deal with specific targets.",
+            "categories": {"hero": {"min": 1, "max": 2}, "core": {"max": 5}, "elite": {"min": 2, "max": 8}, "rare": {"max": 3}, "fortification": {"max": 4}}
+        },
+        "rare": {
+            "name": "Rare",
+            "cost": 1,
+            "description": "A rare force to pack a punch on the field.",
+            "categories": {"hero": {"min": 1, "max": 2}, "core": {"max": 5}, "elite": {"max": 5}, "rare": {"min": 2, "max": 5}, "fortification": {"max": 4}}
+        },
+        "support": {
+            "name": "Support",
+            "cost": 1,
+            "description": "A small supporting force.",
+            "categories": {"hero": {"max": 1}, "core": {"max": 2}, "elite": {"max": 2}, "rare": {"max": 2}, "fortification": {"max": 4}}
+        }
     },
-    "order" : {
-      "name" : "Keepers of Order"
+    "relics": {
+        "inspired": {
+            "name": "Inspired",
+            "rule": "legend_courage",
+            "description": "Upgrade one Leader model with Inspired.",
+            "flavor": "This model inspires the best in those who serve them.",
+            "points": 10
+        }
     },
-    "chaos" : {
-      "name" : "Instruments of Chaos"
+    "powers": {
+        "blast": {"name": "Blast", "description": "Target enemy unit within 12\" takes 3 hits with AP(1). This power may be cast unlimited times.", "charge": 8},
+        "shield": {
+            "name": "Shield",
+            "description": "Target friendly unit within 12\". Until the end of the round, roll a D10 each time that unit is hit. On a 3 or less, that hit is ignored. This power may be cast unlimited times.",
+            "charge": 7
+        }
+    },
+    "weapons": {
+        "hooves_and_teeth": {"name": "Hooves and Teeth", "attacks": 1, "short": "Melee"},
+        "heavy_hooves_and_teeth": {"name": "Heavy Hooves and Teeth", "attacks": 1, "short": "Melee", "ap": 1},
+        "buckler": {"name": "Buckler", "attacks": 0, "short": "Melee", "rules": ["buckler"]},
+        "shield": {"name": "Shield", "attacks": 0, "short": "Melee", "rules": ["shield"]},
+        "light_handweapon": {"name": "Light Hand Weapon", "attacks": 1, "short": "Melee"},
+        "handweapon": {"name": "Hand Weapon", "attacks": 1, "ap": 1, "short": "Melee"},
+        "heavy_handweapon": {"name": "Heavy Hand Weapon", "attacks": 1, "ap": 2, "short": "Melee"},
+        "great_weapon": {"name": "Great Weapon", "attacks": 1, "ap": 3, "short": "Melee"},
+        "heavy_great_weapon": {"name": "Heavy Great Weapon", "attacks": 1, "ap": 4, "short": "Melee"},
+        "war_hammer": {"name": "War Hammer", "attacks": 1, "ap": 5, "short": "Melee", "rules": ["lethal"]},
+        "staff": {"name": "Staff", "attacks": 1, "ap": 2, "short": "Melee", "rules": [{"id": "reach", "x": 1}]},
+        "great_staff": {"name": "Great Staff", "attacks": 1, "ap": 4, "short": "Melee", "rules": [{"id": "reach", "x": 1}]},
+        "mace": {"name": "Mace", "attacks": 1, "ap": 2, "short": "Melee", "rules": ["rending"]},
+        "great_mace": {"name": "Great Mace", "attacks": 1, "ap": 4, "short": "Melee", "rules": ["rending"]},
+        "flail": {"name": "Flail", "attacks": 1, "ap": 2, "short": "Melee", "rules": [{"id": "reach", "x": 1}]},
+        "heavy_flail": {"name": "Heavy Flail", "attacks": 1, "ap": 3, "short": "Melee", "rules": [{"id": "reach", "x": 1}]},
+        "spear": {"name": "Spear", "attacks": 1, "ap": 1, "short": "Melee", "rules": [{"id": "reach", "x": 1}]},
+        "heavy_spear": {"name": "Heavy Spear", "attacks": 1, "ap": 2, "short": "Melee", "rules": [{"id": "reach", "x": 1}]},
+        "long_spear": {"name": "Long Spear", "attacks": 1, "ap": 1, "short": "Melee", "rules": [{"id": "reach", "x": 1}, "phalanx"]},
+        "pike": {"name": "Pike", "attacks": 1, "ap": 1, "short": "Melee", "rules": [{"id": "reach", "x": 2}, "phalanx"]},
+        "net_and_spear": {"name": "Spear and Net", "attacks": 1, "ap": 1, "short": "Melee", "rules": ["net", {"id": "reach", "x": 1}]},
+        "polearm": {"name": "Polearm", "attacks": 1, "ap": 2, "short": "Melee", "rules": [{"id": "reach", "x": 1}]},
+        "heavy_polearm": {"name": "Heavy Polearm", "attacks": 1, "ap": 3, "short": "Melee", "rules": [{"id": "reach", "x": 1}]},
+        "great_polearm": {"name": "Great Polearm", "attacks": 1, "ap": 4, "short": "Melee", "rules": [{"id": "reach", "x": 1}]},
+        "lance": {"name": "Lance", "attacks": 1, "ap": 2, "short": "Melee", "rules": [{"id": "reach", "x": 1}, "lance"]},
+        "heavy_lance": {"name": "Heavy Lance", "attacks": 1, "ap": 3, "short": "Melee", "rules": [{"id": "reach", "x": 1}, "lance"]},
+        "javelin": {"name": "Javelin", "attacks": 1, "ap": 1, "short": 6, "medium": 12, "rules": ["assault"]},
+        "heavy_javelin": {"name": "Heavy Javelin", "attacks": 1, "ap": 2, "short": 6, "medium": 12, "rules": ["assault"]},
+        "great_javelin": {"name": "Great Javelin", "attacks": 1, "ap": 3, "short": 6, "medium": 12, "rules": ["assault"]},
+        "throwing_knife": {"long_bow": {"name": "Longbow", "attacks": 1, "ap": 1, "short": 15, "medium": 30}, "name": "Throwing Knives", "attacks": 1, "ap": 1, "short": 6, "rules": ["assault"]},
+        "throwing_axe": {"name": "Handaxe", "profiles": [{"name": "Melee", "attacks": 1, "ap": 1, "short": "Melee"}, {"name": "Thrown", "attacks": 1, "ap": 1, "short": 9, "rules": ["assault"]}]},
+        "short_bow": {"name": "Shortbow", "attacks": 1, "ap": 1, "short": 9, "medium": 18},
+        "bow": {"name": "Bow", "attacks": 1, "ap": 1, "short": 12, "medium": 24},
+        "heavy_long_bow": {"name": "Heavy Longbow", "attacks": 1, "ap": 2, "short": 18, "medium": 36},
+        "repeater_crossbow": {"name": "Repeater-Crossbow", "attacks": 1, "ap": 1, "short": 12, "medium": 24, "rules": ["rapid_fire"]},
+        "light_crossbow": {"name": "Light Crossbow", "attacks": 1, "ap": 2, "short": 12, "medium": 24},
+        "crossbow": {"name": "Crossbow", "attacks": 1, "ap": 2, "short": 15, "medium": 30},
+        "heavy_crossbow": {"name": "Heavy Crossbow", "attacks": 1, "ap": 2, "short": 18, "medium": 36},
+        "light_pistol": {"name": "Light Pistol", "ap": 1, "attacks": 1, "short": 6, "rules": ["pistol"]},
+        "pistol": {"name": "Pistol", "ap": 2, "attacks": 1, "short": 6, "rules": ["pistol"]},
+        "heavy_pistol": {"name": "Heavy Pistol", "ap": 3, "attacks": 1, "short": 9, "rules": ["pistol"]},
+        "leeching_blade": {"name": "Leeching Blade", "attacks": 1, "ap": 3, "short": "Melee", "rules": ["leeching"]},
+        "steam_gun": {"name": "Steam Gun", "ap": 2, "attacks": 1, "short": 9, "medium": 18, "rules": ["rapid_fire"]},
+        "repeater_handgun": {"name": "Repeater Handgun", "ap": 3, "attacks": 1, "short": 12, "medium": 24, "rules": ["rapid_fire"]},
+        "handgun": {"name": "Handgun", "ap": 3, "attacks": 1, "short": 12, "medium": 24},
+        "long_rifle": {"name": "Long Rifle", "ap": 4, "attacks": 1, "short": 18, "medium": 36, "rules": ["sniper"]},
+        "light_repeater_handgun": {"name": "Light Repeater Handgun", "ap": 1, "attacks": 1, "short": 12, "medium": 24, "rules": ["rapid_fire"]},
+        "shotgun": {"name": "Shotgun", "attacks": 1, "ap": 3, "short": 6, "medium": 12, "rules": ["assault", "brutal"]},
+        "poison_handweapon": {"name": "Poisoned Handweapon", "attacks": 1, "ap": 1, "short": "Melee", "rules": ["poison"]},
+        "poison_greatweapon": {"name": "Poisoned Greatweapon", "attacks": 1, "ap": 3, "short": "Melee", "rules": ["poison"]},
+        "heavy_poison_handweapon": {"name": "Poisoned Heavy Handweapon", "attacks": 1, "ap": 2, "short": "Melee", "rules": ["poison"]},
+        "heavy_poison_greatweapon": {"name": "Poisoned Heavy Greatweapon", "attacks": 1, "ap": 4, "short": "Melee", "rules": ["poison"]},
+        "poison_polearm": {"name": "Poisoned Polearm", "attacks": 1, "ap": 2, "short": "Melee", "rules": [{"id": "reach", "x": 1}, "poison"]},
+        "heavy_poison_polearm": {"name": "Poisoned Heavy Polearm", "attacks": 1, "ap": 3, "short": "Melee", "rules": [{"id": "reach", "x": 1}, "poison"]},
+        "great_lance": {"name": "Great Lance", "attacks": 1, "ap": 4, "short": "Melee", "rules": [{"id": "reach", "x": 1}, "lance"]},
+        "poison_short_bow": {"name": "Poisoned Shortbow", "attacks": 1, "ap": 1, "short": 9, "medium": 18, "rules": ["poison"]},
+        "great_bow": {"name": "Greatbow", "attacks": 1, "ap": 4, "short": 18, "medium": 36},
+        "lethal_handweapon": {"name": "Lethal Handweapon", "attacks": 1, "ap": 1, "short": "Melee", "rules": ["lethal"]},
+        "lethal_greatweapon": {"name": "Lethal Greatweapon", "attacks": 1, "ap": 3, "short": "Melee", "rules": ["lethal"]},
+        "heavy_lethal_handweapon": {"name": "Lethal Heavy Handweapon", "attacks": 1, "ap": 2, "short": "Melee", "rules": ["lethal"]},
+        "heavy_lethal_greatweapon": {"name": "Lethal Heavy Greatweapon", "attacks": 1, "ap": 4, "short": "Melee", "rules": ["lethal"]},
+        "lethal_polearm": {"name": "Lethal Polearm", "attacks": 1, "ap": 2, "short": "Melee", "rules": [{"id": "reach", "x": 1}, "lethal"]},
+        "heavy_lethal_polearm": {"name": "Lethal Heavy Polearm", "attacks": 1, "ap": 3, "short": "Melee", "rules": [{"id": "reach", "x": 1}, "lethal"]},
+        "lethal_short_bow": {"name": "Lethal Shortbow", "attacks": 1, "ap": 1, "short": 9, "medium": 18, "rules": ["lethal"]},
+        "blowpipe": {"name": "Blowpipe", "attacks": 1, "short": 9, "rules": ["poison", "assault"]},
+        "heavy_shield": {"name": "Heavy Shield", "attacks": 0, "short": "Melee", "rules": ["heavy_shield"]},
+        "enchanted_shield": {"name": "Enchanted Shield", "attacks": 0, "short": "Melee", "rules": ["enchanted_shield"]},
+        "tower_shield": {"name": "Tower Shield", "attacks": 0, "short": "Melee", "rules": ["tower_shield"]},
+        "spiked_buckler": {"name": "Spiked Buckler", "attacks": 1, "short": "Melee", "rules": ["buckler"]},
+        "spiked_shield": {"name": "Spiked Shield", "attacks": 1, "short": "Melee", "rules": ["shield"]},
+        "spiked_heavy_shield": {"name": "Spiked Heavy Shield", "attacks": 1, "short": "Melee", "rules": ["heavy_shield"]},
+        "spiked_enchanted_shield": {"name": "Spiked Enchanted Shield", "attacks": 1, "short": "Melee", "rules": ["enchanted_shield"]},
+        "spiked_tower_shield": {"name": "Spiked Tower Shield", "attacks": 1, "short": "Melee", "rules": ["tower_shield"]},
+        "heavy_buckler": {"name": "Heavy Buckler", "attacks": 0, "short": "Melee", "rules": ["heavy_buckler"]},
+        "spiked_heavy_buckler": {"name": "Spiked Heavy Buckler", "attacks": 1, "short": "Melee", "rules": ["heavy_buckler"]},
+        "light_bomb": {"name": "Light Bomb", "rules": ["bomb", {"id": "ammo", "x": 1}, {"id": "blast", "x": 4}], "ap": 2, "attacks": 1, "short": 6},
+        "medium_bomb": {"name": "Medium Bomb", "rules": ["bomb", {"id": "ammo", "x": 1}, {"id": "blast", "x": 5}], "ap": 3, "attacks": 1, "short": 6},
+        "heavy_bomb": {"name": "Heavy Bomb", "rules": ["bomb", {"id": "ammo", "x": 1}, {"id": "blast", "x": 6}], "ap": 4, "attacks": 1, "short": 6},
+        "harpoon_rifle": {"name": "Harpoon-Rifle", "ap": 6, "attacks": 1, "short": 12, "medium": 24, "rules": [{"id": "deadly", "x": 2}]},
+        "mortar": {"name": "Mortar", "short": 12, "medium": 24, "ap": 3, "attacks": 1, "rules": [{"id": "blast", "x": 3}, "indirect", "scatter"]},
+        "burst_cannon": {"name": "Burst Cannon", "ap": 8, "attacks": 1, "short": 12, "medium": 24, "rules": [{"id": "blast", "x": 2}]},
+        "frag_grenade": {"name": "Frag Grenades", "attacks": 1, "ap": 1, "short": 6, "rules": [{"id": "blast", "x": 3}, "indirect", "grenade"]},
+        "flamethrower_rifle": {"name": "Flamethrower-Rifle", "short": 9, "medium": 18, "ap": 4, "attacks": 1, "rules": ["flame"]},
+        "mining_drill": {"name": "Mining Drill", "attacks": 1, "ap": 7, "short": "Melee"},
+        "cannon": {
+            "name": "Cannon",
+            "profiles": [
+                {"name": "Mortar", "ap": 7, "attacks": 1, "medium": 48, "short": 24, "rules": [{"id": "blast", "x": 3}, "scatter"]},
+                {"name": "Grapeshot", "attacks": 3, "ap": 3, "short": 6, "medium": 12}
+            ]
+        },
+        "flamethrower": {
+            "name": "Flamethrower",
+            "profiles": [
+                {"name": "Stream", "short": 6, "medium": 12, "ap": 5, "attacks": 2, "rules": ["flame"]},
+                {"name": "Spray", "short": 6, "medium": 12, "ap": 1, "attacks": 5, "rules": ["flame"]}
+            ]
+        },
+        "flamethrower_cannon": {
+            "name": "Flamethrower(Warmachine)",
+            "profiles": [
+                {"name": "Stream", "short": 6, "medium": 12, "ap": 7, "attacks": 2, "rules": ["flame", {"id": "blast", "x": 2}]},
+                {"name": "Spray", "short": 6, "medium": 12, "ap": 2, "attacks": 5, "rules": ["flame", {"id": "blast", "x": 2}]}
+            ]
+        },
+        "net_launcher": {"name": "Net Launcher", "attacks": 1, "ap": 4, "rules": ["barbed_net"], "short": 9, "medium": 18},
+        "steam_cannon": {
+            "name": "Steam Cannon",
+            "profiles": [
+                {"name": "Blast", "short": 6, "medium": 12, "ap": 4, "attacks": 1, "rules": [{"id": "blast", "x": 3}]},
+                {"name": "Billow", "short": 6, "medium": 12, "attacks": 3, "rules": ["smoke"]}
+            ]
+        },
+        "harpoon_rifle_warmachine": {"name": "Harpoon-Rifle (Warmachine)", "ap": 8, "attacks": 1, "short": 12, "medium": 24, "rules": [{"id": "deadly", "x": 2}]},
+        "torpedoes": {"name": "Torpedoes", "attacks": 1, "ap": 5, "short": 12, "medium": 24, "rules": ["unreliable"]},
+        "hand_cannon": {"name": "Hand Cannon", "ap": 7, "attacks": 1, "short": 6, "medium": 12},
+        "chainsaw": {"name": "Chainsaw", "attacks": 1, "short": "Melee", "ap": 7},
+        "crushing_fists": {"name": "Crushing Fists", "attacks": 1, "ap": 6, "short": "Melee", "rules": ["rending"]},
+        "rock_throw": {"name": "Rock Throw", "attacks": 1, "ap": 6, "rules": [{"id": "blast", "x": 2}, "scatter"], "short": 9, "medium": 18},
+        "rending_claws": {"name": "Rending Claws", "attacks": 1, "ap": 1, "short": "Melee", "rules": ["rending"]},
+        "flame_breath": {"name": "Flaming Breath", "short": 6, "medium": 12, "ap": 3, "attacks": 1, "rules": ["flame", "lethal"]},
+        "burst_rifle": {"name": "Burst Rifle", "short": 9, "medium": 18, "ap": 8, "attacks": 1, "rules": [{"id": "blast", "x": 2}]},
+        "spider_bite": {"name": "Spider Bite", "attacks": 1, "short": "Melee", "rules": [{"id": "poison", "x": 2}], "ap": 1},
+        "fangs_and_teeth": {"name": "Fangs and Teeth", "ap": 2, "attacks": 1, "short": "Melee"},
+        "ballista": {"name": "Ballista", "profiles": [{"name": "Focus", "ap": 6, "attacks": 1, "medium": 36, "short": 18}, {"name": "Volley", "ap": 2, "attacks": 6, "medium": 36, "short": 18}]},
+        "beak_and_claws": {"name": "Beak and Claws", "ap": 4, "attacks": 1, "short": "Melee", "rules": ["lethal"]},
+        "beak": {"name": "Beak", "ap": 2, "attacks": 1, "short": "Melee"},
+        "daggerfist": {"name": "Daggerfist", "attacks": 1, "ap": 2, "short": "Melee", "rules": ["buckler"]},
+        "barbed_whip": {"name": "Barbed Whip", "attacks": 1, "ap": 3, "short": "Melee", "rules": [{"id": "reach", "x": 1}, "lethal"]},
+        "bashing_tail": {"name": "Bashing Tail", "ap": 1, "attacks": 1, "short": "Melee"},
+        "horn_and_claws": {"name": "Horn and Claws", "ap": 4, "attacks": 1, "short": "Melee", "rules": ["lethal"]},
+        "fangs_and_claws": {"name": "Fangs and Claws", "ap": 5, "attacks": 1, "short": "Melee", "rules": ["lethal"]},
+        "heavy_volley_gun": {"rules": ["rapid_fire"], "short": 15, "medium": 30, "attacks": 6, "ap": 3, "name": "Heavy Volley Gun"},
+        "rocket_battery": {"rules": ["scatter", {"id": "blast", "x": 3}, "indirect"], "short": 18, "medium": 36, "attacks": 3, "ap": 5, "name": "Rocket Battery"},
+        "crushing_hull": {"name": "Crushing Hull", "attacks": 3, "short": "Melee", "ap": 3},
+        "grenade_launcher": {"name": "Grenade Launcher", "ap": 3, "attacks": 1, "short": 6, "medium": 12, "rules": [{"id": "blast", "x": 3}]},
+        "tank_cannon": {"name": "Tank Cannon", "ap": 6, "attacks": 1, "medium": 48, "short": 24, "rules": [{"id": "blast", "x": 3}]},
+        "tank_repeater": {"name": "Tank Repeater", "ap": 3, "attacks": 2, "short": 12, "medium": 24, "rules": [{"id": "blast", "x": 3}]},
+        "heavy_mortar": {"rules": ["scatter", {"id": "blast", "x": 6}, "indirect"], "short": 24, "medium": 48, "attacks": 1, "ap": 5, "name": "Heavy Mortar"},
+        "carbine": {"name": "Carbine", "ap": 3, "attacks": 1, "short": 9, "medium": 18, "rules": ["assault"]},
+        "tentacle": {"name": "Lashing Tentacle", "attacks": 1, "ap": 1, "short": "Melee", "rules": [{"id": "reach", "x": 2}]},
+        "crushing_maw": {"name": "Crushing Maw", "attacks": 1, "ap": 8, "short": "Melee", "rules": ["rending"]},
+        "ogre_fists": {"name": "Ogre Fists", "attacks": 1, "ap": 3, "short": "Melee"},
+        "ogre_cannon": {
+            "name": "Ogre-Sized Cannon",
+            "profiles": [{"name": "Cannon Ball", "ap": 7, "attacks": 1, "medium": 24, "short": 12}, {"name": "Grapeshot", "attacks": 6, "ap": 3, "short": 6, "medium": 12}]
+        },
+        "necrotic_breath": {"name": "Necrotic Breath", "ap": 5, "attacks": 1, "short": 6, "medium": 12, "rules": ["lethal"]},
+        "banshee_wail": {"name": "Banshee Wail", "ap": 3, "attacks": 1, "short": 9, "medium": 18, "rules": [{"id": "shocking", "x": 2}]},
+        "volley_gun": {"rules": ["rapid_fire"], "short": 12, "medium": 24, "attacks": 3, "ap": 2, "name": "Volley Gun"},
+        "drill_cannon": {"name": "Drill Cannon", "ap": 7, "attacks": 1, "short": 18, "medium": 36, "rules": ["lethal"]},
+        "long_bow": {"name": "Long Bow", "attacks": 1, "ap": 1, "short": 15, "medium": 30},
+        "relic_shield": {"name": "Relic Shield", "attacks": 0, "short": "Melee", "rules": ["relic_shield"]}
+    },
+    "rules": {
+        "light_armor": {"name": "Light Armor", "description": "This model has +1 Save.", "points": 2},
+        "heavy_armor": {"name": "Heavy Armor", "description": "This model has +2 Save.", "points": 4},
+        "shield": {"name": "Shield", "description": "This model has +1 Save.", "points": 2},
+        "buckler": {"name": "Buckler", "description": "This model has +1 Save against melee attacks.", "points": 1},
+        "icon": {"name": "Icon", "description": "Friendly units of X types within 6\" may re-roll a single failed Courage test when removing Shock.", "points": 10, "inputs": ["x"]},
+        "distract": {"name": "Distracting", "description": "Enemy units within 6\" get -1 Strength.", "points": 3},
+        "ethereal": {"name": "Ethereal", "description": "This model may ignore other models and any terrain when moving.", "points": 2},
+        "legend_wounds": {"name": "Resilient", "description": "This model gains Wounds(+1).", "points": 10},
+        "legend_courage": {"name": "Inspired", "description": "This model gains +1 Courage.", "points": 10},
+        "leeching": {"name": "Leeching", "description": "Roll a D10 each time this weapon deals damage to a _Leader_ unit. On a 1 or 2 this model regains one Wound.", "points": 1},
+        "mount_horse": {"name": "Warhorse", "description": "This model has +2\" Movement.", "points": 2},
+        "net": {
+            "name": "Net",
+            "description": "Units engaged in Melee with a model that has this weapon suffer -1 to Initiative tests when escaping combat for each weapon with this rule.",
+            "points": 1
+        },
+        "barbed_net": {"name": "Barbed Net", "description": "Units hit by this weapon half their movement until the end of the turn.", "points": 3},
+        "poisoned_blades": {"name": "Poisoned Blades", "description": "This model's melee weapons have +1 AP against enemies without _Damage Table(X)_.", "points": 5},
+        "regeneration": {"name": "Regeneration", "description": "At the end of it's activation you can heal 1 wound that has been allocated to this model.", "points": 5},
+        "enchanted": {"name": "Enchanted", "description": "This weapon hits at Strength +1.", "points": ["weapon.attacks"]},
+        "heavy_shield": {"name": "Heavy Shield", "description": "This model has +1 Save.", "points": 4},
+        "enchanted_shield": {"name": "Enchanted Shield", "description": "This model has +1 Save.", "points": 6},
+        "tower_shield": {"name": "Tower Shield", "description": "This model has +1 Save.", "points": 8},
+        "relic_shield": {"name": "Relic Shield", "description": "This model has +1 Save.", "points": 10},
+        "heavy_buckler": {"name": "Heavy Buckler", "description": "This model has +1 Save against melee attacks.", "points": 2},
+        "crazed": {
+            "name": "Crazed",
+            "description": "When you activate this unit make an initiative test. If successful, until the end of the turn whenever you make a move action with this unit you may sprint without needing to make an initiative test.",
+            "points": 4
+        },
+        "repair": {
+            "name": "Repair",
+            "inputs": ["x"],
+            "description": "At any point during this unit's activation, if within 3\" of a Vehicle or Warmachine, roll one die. On an X or less the vehicle or warmachine may remove one critical damage.",
+            "points": ["rule.x", {"multiply": 2}]
+        },
+        "repair_toolkit": {
+            "name": "Repair Toolkit",
+            "description": "This model and its unit may spend one action to repair one vehicle or warmachine within 3\" that has suffered critical damage.",
+            "points": 5
+        },
+        "disk_of_change": {
+            "name": "Disk of Change",
+            "description": "This model increases its Movement by 2\". This unit may ignore difficult terrain and obstacles of height 2\" or less when moving.",
+            "points": 5
+        },
+        "battle_prayer": {
+            "name": "Battle Prayer",
+            "description": "When this unit is activated, choose a Blessing for this unit or a friendly _Infantry_ unit within 6\" to receive until the end of the turn:\n* Divine Shield: Roll a die when a model in this unit loses a wound. On a value of 1 or 2 that wound is not lost.\n* Righteous Fury: When this unit fights, hit rolls of 1 or 2 generate an additional attack.\n* Healing Word: One model in the unit immediately heals D3 wounds.",
+            "points": [15]
+        },
+        "curse": {
+            "name": "Curse",
+            "description": "When this unit is activated, choose a Curse for an enemy _Infantry_ unit within 6\" to receive until the end of the turn:\n* Weakness: This unit has -1 Strength and Accuracy when fighting or making a shooting attack.\n* Brittle Bones: When this unit is targeted by an attack, hit rolls of 1 or 2 generate an additional attack.\n* Soul Siphon: One model in the unit immediately takes 2 hits with AP2.",
+            "points": [15]
+        },
+        "trappers": {
+            "name": "Trappers",
+            "description": "When this model's unit successfully performs a counter attack or escape reaction, the charging unit suffers 6 hits with no AP.",
+            "points": [1]
+        },
+        "raise_dead": {
+            "name": "Raise Dead",
+            "description": "Roll a die each time this model kills an enemy model. On a roll of 1 or 2, return a model to this unit. This may not bring the unit over its starting size.",
+            "points": 2
+        },
+        "vampiric_siphon": {
+            "name": "Vampiric Siphon",
+            "description": "At the end of any activation in which this unit slew any enemy models, you can heal 1 wound that has been allocated to a mode in this unit.",
+            "points": 2
+        }
     }
-  },
-  "factions" : {
-    "eternal_protectors" : {
-      "name" : "Eternal Protectors",
-      "id" : "eternal_protectors",
-      "url" : "eternal_protectors.json",
-      "color" : "#D4AF37",
-      "secondary_color" : "#0d407f",
-      "version" : "0.1",
-      "alliance" : "order",
-      "description" : "The Eternal Protectors are sworn to protect those who cannot protect themselves and to ward off evil. They wear tough armor and wield mighty weapons to strike down those are unjust."
-    },
-    "ogre_mercenaries" : {
-      "name" : "Ogre Mercenaries",
-      "id" : "ogre_mercenaries",
-      "url" : "ogre_mercenaries.json",
-      "color" : "#954535",
-      "version" : "0.1",
-      "alliance" : "destruction",
-      "description": "Large-bodied mercenaries with huge appetites for gold and destruction"
-    },
-    "greatogre_raiders" : {"name": "Greatogre Raiders",
-    "id": "greatogre_raiders",
-    "url": "greatogre_raiders.json",
-    "color": "#4f9ae0",
-    "version": "0.1",
-    "description": "The greatest of ogre tribes, who only interact with their lessers when they need something - food, coin, or just a challenge!",
-    "alliance": "destruction"
-    },
-    "vampire_lords" : {
-      "name" : "Vampire Lords",
-      "id" : "vampire_lords",
-      "url" : "vampire_lords.json",
-      "color" : "#9a1115",
-      "version" : "0.1",
-      "alliance" : "death",
-      "description" : "The Vampire Lords are powerful vampires who command legions of undead to do their bidding. They defeat their foes with powerful death magic and hordes of undead.",
-      "subfactions" : {
-        "bone" : {
-          "name" : "Bone",
-          "id" : "bone",
-          "color" : "#90305d",
-          "description" : "Raising endless armies of skeletal soldiers to do their bidding."
-        },
-        "blood" : {
-          "name" : "Blood",
-          "id" : "blood",
-          "color" : "#547588",
-          "description" : "Fledgling vampires are eager to drink and don't have the patience for just biting their enemies."
-        },
-        "dread" : {
-          "name" : "Dread",
-          "id" : "dread",
-          "color" : "#547588",
-          "description" : "Using illusions, necromancy and their own kin against their foes, these Vampire Lords are masters of attritional warfare."
-        }
-      }
-    },
-    "traitor_legions" : {
-      "name" : "Traitor Legions",
-      "id" : "traitor_legions",
-      "url" : "traitor_legions.json",
-      "color" : "#231f20",
-      "version" : "0.1",
-      "alliance" : "chaos",
-      "description" : "The Traitor Legions are those who chose to fight for evil instead of order and made a pact with the dark gods. The Traitor Legions use deadly traitor warriors and other barbarians to swiftly crush their foes.",
-      "subfactions" : {
-        "change" : {
-          "name" : "Magic",
-          "id" : "change",
-          "color" : "#90305d",
-          "description" : "Mighty Sorcerers that bring down a storm of spells, empowered by hordes of cultists that give their life in pursuit of knowledge."
-        },
-        "pestilence" : {
-          "name" : "Pestilence",
-          "id" : "pestilence",
-          "color" : "#547588",
-          "description" : "The forces of the unstoppable decay of all life, born anew as a warrior of the dark gods."
-        },
-        "wrath" : {
-          "name" : "Wrath",
-          "id" : "wrath",
-          "color" : "#547588",
-          "description" : "Warriors of unbridled fury, filled with an eternal bloodlust and always looking for ever greater foes to still it."
-        },
-        "excess" : {
-          "name" : "Excess",
-          "id" : "excess",
-          "color" : "#547588",
-          "description" : "Sadistic and twisted Warriors, always seeking for new ways of ecstasy."
-        },
-        "deception" : {
-          "name" : "Deception",
-          "id" : "deception",
-          "color" : "#6a0001",
-          "description" : "Agents of chaos that undermine enemy forces and crumble them from within or lead a corrupt government themselves."
-        }
-      }
-    },
-    "haunting_ghosts" : {
-      "name" : "Haunting Ghosts",
-      "id" : "haunting_ghosts",
-      "url" : "haunting_ghosts.json",
-      "color" : "#4C838A",
-      "version" : "0.1",
-      "alliance" : "death",
-      "description" : "The Haunting Ghosts are a collection of undead spirits which haunt their hallowed grave sites. The Ghostly Undead use fear and ethereal movement to wash over their foes and scare them into defeat."
-    },
-    "high_elves" : {
-      "name" : "High Elves",
-      "id" : "high_elves",
-      "url" : "high_elves.json",
-      "color" : "#38733a",
-      "version" : "0.1",
-      "alliance" : "order",
-      "description" : "Masters of the Arcane, this ancient island nation is shrouded in mystery.",
-      "subfactions" : {
-        "temple" : {
-          "name" : "Phoenix Temple",
-          "id" : "temple",
-          "color" : "#90305d",
-          "description" : "Defenders of the Temple of the Last Flame, leading crusades agains the forces that seek to destroy it."
-        },
-        "polis" : {
-          "name" : "Polis",
-          "id" : "polis",
-          "color" : "#547588",
-          "description" : "An amalgamation of several city states, masters of urban fighting and outlasting sieges."
-        },
-        "magic" : {
-          "name" : "Magic",
-          "id" : "magic",
-          "color" : "#547588",
-          "description" : "Agents of the Ivory Citadel, focusing on Mageblades and mighty wizards."
-        },
-        "beasts" : {
-          "name" : "Beastmasters",
-          "id" : "beasts",
-          "color" : "#800080",
-          "background" : "A force that focuses heavily on cavalry and giant beasts."
-        }
-      }
-    },
-    "orcs_and_goblins" : {
-      "name" : "Orcs and Goblins",
-      "id" : "orcs_and_goblins",
-      "url" : "orcs_and_goblins.json",
-      "color" : "#50974A",
-      "version" : "0.1",
-      "alliance" : "destruction",
-      "description" : "A savage race made up of various warring tribes.",
-      "subfactions" : {
-        "armor" : {
-          "name" : "Armor",
-          "id" : "armor",
-          "color" : "#90305d",
-          "description" : "The great goblin forges are blazing anew, supplying their orcish masters with mastercrafted equipment as crude as they may seem."
-        },
-        "speed" : {
-          "name" : "Speed",
-          "id" : "speed",
-          "color" : "#547588",
-          "description" : "This force focuses on using chariots, boars and anything that goes fast."
-        },
-        "trickery" : {
-          "name" : "Trickery",
-          "id" : "trickery",
-          "color" : "#547588",
-          "description" : "Striking in moonlight, these masters of deception, as far as orcs are concerned, use outflanking and ambush maneuvers to gain the upper hand."
-        },
-        "primal" : {
-          "name" : "Primal",
-          "id" : "primal",
-          "color" : "#547588",
-          "description" : "Empowered by their animalistic gods, the strongest warriors charge into battle with fearsome beasts at their side."
-        }
-      }
-    },
-    "sea_elves" : {
-      "name" : "Sea Elves",
-      "id" : "sea_elves",
-      "url" : "sea_elves.json",
-      "color" : "#03414e",
-      "version" : "1.0",
-      "alliance" : "order",
-      "description" : "Raising from the depths of the ocean, transmuted by their ancient magic."
-    },
-    "dwarves" : {
-      "name" : "Dwarves",
-      "id" : "dwarves",
-      "url" : "dwarves.json",
-      "color" : "#A55D35",
-      "version" : "0.1",
-      "alliance" : "order",
-      "description" : "A stout race of miners, engineers and warriors.",
-      "subfactions" : {
-        "blackpowder" : {
-          "name" : "Blackpowder",
-          "id" : "blackpowder",
-          "color" : "#800080",
-          "background" : "A force that focuses heavily on guns and artillery."
-        },
-        "magic" : {
-          "name" : "Magic",
-          "id" : "magic",
-          "color" : "#800080",
-          "background" : "A force that focuses heavily on magic and rune-enchanted equipment."
-        },
-        "combat" : {
-          "name" : "Combat",
-          "id" : "combat",
-          "color" : "#800080",
-          "background" : "A force that focuses on overruning their foe in glorious combat."
-        },
-        "tunneler" : {
-          "name" : "Tunneler",
-          "id" : "tunneler",
-          "color" : "#800080",
-          "background" : "A force that focuses on ambushing their enemies from below the battlefield."
-        }
-      }
-    },
-    "beastmen_horde" : {
-      "name" : "Beastmen Horde",
-      "id" : "beastmen_horde",
-      "url" : "beastmen_horde.json",
-      "color" : "#954535",
-      "version" : "0.1",
-      "alliance" : "chaos",
-      "description" : "The Beastmen are a race of human-like beasts found in forests. Their main goal is to disrupt and destroy the races of mankind through savage all-out raids.",
-      "subfactions" : {
-        "change" : {
-          "name" : "Magic",
-          "id" : "change",
-          "color" : "#90305d",
-          "description" : "Mighty Shamans that bring down a storm of spells, empowered by hordes of ravaging beasts that give their life in pursuit of power."
-        },
-        "pestilence" : {
-          "name" : "Pestilence",
-          "id" : "pestilence",
-          "color" : "#547588",
-          "description" : "The forces of the unstoppable decay of all life, born anew as a warrior of the dark gods."
-        },
-        "wrath" : {
-          "name" : "Wrath",
-          "id" : "wrath",
-          "color" : "#547588",
-          "description" : "Warriors of unbridled fury, filled with an eternal bloodlust and always looking for ever greater foes to still it."
-        },
-        "excess" : {
-          "name" : "Excess",
-          "id" : "excess",
-          "color" : "#547588",
-          "description" : "Sadistic and twisted Warriors, always seeking for new ways of ecstasy."
-        }
-      }
-    },
-    "human_kingdoms" : {
-      "name" : "Great Kingdoms",
-      "id" : "human_kingdoms",
-      "url" : "human_kingdoms.json",
-      "color" : "#087194",
-      "version" : "0.1",
-      "alliance" : "order",
-      "description" : "A collection of various kingdoms, infighting for political presence but uniting under one banner to defend their home.",
-      "subfactions" : {
-        "order" : {
-          "name" : "Holy Order",
-          "id" : "order",
-          "color" : "#90305d",
-          "description" : "Leading crusades against the forces of chaos and death, blessed by their gods."
-        },
-        "polis" : {
-          "name" : "Polis",
-          "id" : "polis",
-          "color" : "#547588",
-          "description" : "An amalgamation of several city states, masters of urban fighting and outlasting sieges."
-        },
-        "magic" : {
-          "name" : "Magic",
-          "id" : "magic",
-          "color" : "#547588",
-          "description" : "Mighty wizards from all across the kingdoms come togethet to smite down their foes with arcane spell."
-        },
-        "blackpowder" : {
-          "name" : "Blackpowder",
-          "id" : "blackpowder",
-          "color" : "#800080",
-          "background" : "A force that focuses heavily on guns and artillery."
-        }
-      }
-    },
-    "traitor_dwarves" : {
-      "name" : "Traitor Dwarves",
-      "id" : "traitor_dwarves",
-      "url" : "traitor_dwarves.json",
-      "color" : "#360c30",
-      "version" : "0.1",
-      "alliance" : "chaos",
-      "description" : "Corrupted by the dark gods, these dwarves imbue twisted warmachines with demonic magic.",
-      "subfactions" : {
-        "forge" : {
-          "name" : "Forge",
-          "id" : "forge",
-          "color" : "#90305d",
-          "description" : "A force that focueses Daemonsmiths and various animated soldiers."
-        },
-        "wrath" : {
-          "name" : "Wrath",
-          "id" : "wrath",
-          "color" : "#547588",
-          "description" : "Warriors of unbridled fury, filled with an eternal bloodlust and always looking for ever greater foes to still it."
-        },
-        "excess" : {
-          "name" : "Excess",
-          "id" : "excess",
-          "color" : "#547588",
-          "description" : "Sadistic and twisted Warriors, always seeking for new ways of ecstasy."
-        },
-        "blackpowder" : {
-          "name" : "Blackpowder",
-          "id" : "blackpowder",
-          "color" : "#800080",
-          "background" : "A force that focuses heavily on guns and artillery."
-        }
-      }
-    }
-  },
-  "categories" : {
-    "hero" : {
-      "name" : "Hero"
-    },
-    "core" : {
-      "name" : "Core"
-    },
-    "elite" : {
-      "name" : "Elite"
-    },
-    "rare" : {
-      "name" : "Rare"
-    }
-  },
-  "organizations" : {
-    "skirmish" : {
-      "name" : "Battle (Core)",
-      "cost" : 0,
-      "description" : "A well-rounded force for taking on any mission.",
-      "categories" : {
-        "hero" : {
-          "min" : 1,
-          "max" : 2
-        },
-        "core" : {
-          "min" : 2,
-          "max" : 4
-        },
-        "elite" : {
-          "min" : 0,
-          "max" : 3
-        },
-        "rare" : {
-          "rare" : 0,
-          "max" : 2
-        }
-      }
-    }
-  },
-  "relics" : {
-    "inspired" : {
-      "name" : "Inspired",
-      "rule" : "legend_courage",
-      "description" : "Upgrade one Leader model with Inspired.",
-      "flavor" : "This model inspires the best in those who serve them.",
-      "points" : 10
-    }
-  },
-  "powers" : {
-    "blast" : {
-      "name" : "Shock Wave",
-      "description" : "Target enemy unit within 12\" takes 3 hits with AP 1. This power may be cast unlimited times.",
-      "flavor" : "This enemy is hit by a single blast of shock.",
-      "charge" : 8
-    }
-  },
-  "weapons" : {
-    "great_maul" : {
-      "name" : "Great-weapon",
-      "attacks" : 1,
-      "ap" : 4,
-      "short" : "Melee"
-    },
-    "great_staff" : {
-      "name" : "Great-staff",
-      "attacks" : 1,
-      "ap" : 2,
-      "short" : "Melee",
-      "rules" : [
-        {
-          "id" : "reach",
-          "x" : 1
-        }
-      ]
-    },
-    "maul" : {
-      "name" : "Heavy Handweapon",
-      "attacks" : 1,
-      "ap" : 2,
-      "short" : "Melee"
-    },
-    "shield" : {
-      "name" : "Shield",
-      "attacks" : 0,
-      "short" : "Melee",
-      "rules" : [
-        "shield"
-      ]
-    },
-    "dagger" : {
-      "name" : "Dagger",
-      "attacks" : 1,
-      "short" : "Melee"
-    },
-    "handweapon" : {
-      "name" : "Handweapon",
-      "attacks" : 1,
-      "ap" : 1,
-      "short" : "Melee"
-    },
-    "heavy_crossbow" : {
-      "name" : "Heavy Crossbow",
-      "attacks" : 1,
-      "ap" : 3,
-      "short" : 9,
-      "medium" : 18
-    },
-    "heavy_crossbow_melee" : {
-      "name" : "Heavy Crossbow (Melee)",
-      "attacks" : 1,
-      "ap" : 1,
-      "short" : "Melee"
-    },
-    "short_bow" : {
-      "name" : "Shortbow",
-      "attacks" : 1,
-      "ap" : 1,
-      "short" : 9,
-      "medium" : 18
-    },
-    "long_bow" : {
-      "name" : "Longbow",
-      "attacks" : 1,
-      "ap" : 1,
-      "short" : 18,
-      "medium" : 36
-    },
-    "spear" : {
-      "name" : "Spear",
-      "attacks" : 1,
-      "ap" : 1,
-      "short" : "Melee",
-      "rules" : [
-        {
-          "id" : "reach",
-          "x" : 1
-        }
-      ]
-    },
-    "lance" : {
-      "name" : "Lance",
-      "attacks" : 1,
-      "ap" : 2,
-      "rules" : [
-        {
-          "id" : "reach",
-          "x" : 1
-        },
-        "lance"
-      ],
-      "short" : "Melee"
-    },
-    "buckler" : {
-      "name" : "Buckler",
-      "attacks" : 0,
-      "short" : "Melee",
-      "rules" : [
-        {
-          "id" : "buckler"
-        }
-      ]
-    },
-    "bow" : {
-      "name" : "Bow",
-      "attacks" : 1,
-      "ap" : 1,
-      "short" : 12,
-      "medium" : 24
-    },
-    "halberd" : {
-      "name" : "Halberd",
-      "ap" : 3,
-      "attacks" : 1,
-      "short" : "Melee",
-      "rules" : [
-        {
-          "id" : "reach",
-          "x" : 1
-        },
-        "rending"
-      ]
-    },
-    "light_crossbow" : {
-      "name" : "Light Crossbow",
-      "attacks" : 1,
-      "ap" : 2,
-      "short" : 9,
-      "medium" : 18
-    },
-    "handgun" : {
-      "name" : "Handgun",
-      "ap" : 4,
-      "attacks" : 1,
-      "short" : 6,
-      "medium" : 12,
-      "rules" : [
-        "pistol"
-      ]
-    },
-    "wizard_staff" : {
-      "name" : "Wizard Staff",
-      "attacks" : 1,
-      "ap" : 5,
-      "short" : "Melee",
-      "rules" : [
-        {
-          "id" : "reach",
-          "x" : 1
-        },
-        "rending"
-      ]
-    },
-    "leeching_sword" : {
-      "name" : "Leeching Sword",
-      "attacks" : 1,
-      "ap" : 3,
-      "short" : "Melee",
-      "rules" : [
-        "leeching"
-      ]
-    },
-    "rending_blade" : {
-      "name" : "Rending Blade",
-      "attacks" : 1,
-      "ap" : 2,
-      "short" : "Melee",
-      "rules" : [
-        "rending"
-      ]
-    },
-    "rending_great" : {
-      "name" : "Rending Great-blade",
-      "attacks" : 1,
-      "ap" : 4,
-      "short" : "Melee",
-      "rules" : [
-        "rending"
-      ]
-    },
-    "repeater_crossbow" : {
-      "name" : "Repeater-Crossbow",
-      "attacks" : 1,
-      "ap" : 1,
-      "short" : 6,
-      "medium" : 12
-    }
-  },
-  "rules" : {
-    "light_armor" : {
-      "name" : "Light Armor",
-      "description" : "This model has +1 to its Save characteristic.",
-      "points" : 2
-    },
-    "heavy_armor" : {
-      "name" : "Heavy Armor",
-      "description" : "This model has +2 to its Save characteristic.",
-      "points" : 4
-    },
-    "skirmishers" : {
-      "name" : "Skirmishers",
-      "description" : "This unit has a 4\" coherency and may not be more than 8\" away from any model in the unit at the end of a move action.",
-      "points" : 2
-    },
-    "distract" : {
-      "name" : "Distracting",
-      "description" : "Enemy units within 6\" get -1 Strength.",
-      "points" : 3
-    },
-    "ethereal" : {
-      "name" : "Ethereal",
-      "description" : "This model may ignore other models and any terrain when moving.",
-      "points" : 2
-    },
-    "shield" : {
-      "name" : "Shield",
-      "description" : "This model increases its Save by 1.",
-      "points" : 2
-    },
-    "legend_wounds" : {
-      "name" : "Resilient",
-      "description" : "This model gains Wounds(+1).",
-      "points" : 10
-    },
-    "legend_courage" : {
-      "name" : "Inspired",
-      "description" : "This model gains +1 Courage.",
-      "points" : 10
-    },
-    "damage_table_warmachine" : {
-      "name" : "Damage Table(Warmachine)",
-      "description" : "When this model would be killed, roll a D10 adding the amount it failed the save by (to a maximum of 5) plus the number of critical damage tokens it has and refer to the following: \n * Glance(1-2): Take one additional shock. \n * Stunned(3-4): The unit permenantly suffers -1 Courage. \n * Damaged(5-6): The unit permenantly suffers -1 Accuracy and -1 Strength. \n * Slowed(7-8): The unit permenantly halves its movement. \n * Shellshock(9-10): Take 2 additional shock and immediately take a Courage test. If failed the unit is destroyed. \n * Destroyed(11+): It is instantly destroyed. \n * Explosion(13+): The unit explodes and all units within 6\" gain 2 Shock. \n\n\n Mark each time the unit rolls on the table with a critical damage token. If that token is removed, the effect of the table is removed. If a unit contains multiple models with Damage Table(x), hits must be assigned to models with a critical damage token first.",
-      "points" : [
-        "model.defense",
-        {
-          "subtract" : "constants.baseStats.defense"
-        },
-        {
-          "multiply" : 10
-        }
-      ]
-    },
-    "banner" : {
-      "name" : "Banner",
-      "description" : "This unit may re-roll a single failed Courage test when removing Shock.",
-      "points" : 5
-    },
-    "musician" : {
-      "name" : "Musician",
-      "description" : "This unit may re-roll a single failed Initiative test when sprinting.",
-      "points" : 5
-    },
-    "leeching" : {
-      "name" : "Leeching",
-      "description" : "Roll a D10 each time this weapon deals damage to a _Leader_ unit. On a 1 or 2 this model regains one Wound.",
-      "points" : 1
-    },
-    "buckler" : {
-      "name" : "Buckler",
-      "description" : "This model has +1 Save against melee attacks.",
-      "points" : 1
-    },
-    "mount_horse" : {
-      "name" : "Warhorse",
-      "description" : "This model has +2\" Movement.",
-      "points" : 2
-    },
-    "icon_x" : {
-      "name" : "Icon",
-      "description" : "Friendly units of X types within 6\" may re-roll a single failed Courage test when removing Shock.",
-      "points" : 10,
-      "inputs" : [
-        "x"
-      ]
-    },
-    "spectral" : {
-      "name" : "Spectral",
-      "description" : "Hit rolls of 1 or 2 from this weapon cause 2 hits instead of 1. Additional hits must be assigned to the same model.",
-      "points" : [
-        "weapon.attacks",
-        {
-          "multiply" : 2
-        }
-      ]
-    }
-  }
 }
