@@ -1,589 +1,260 @@
 {
-  "name" : "Haunting Ghosts",
-  "id" : "haunting_ghosts",
-  "author" : "guitarninja#5707",
-  "version" : "0.1",
-  "color" : "#4C838A",
-  "units" : {
-    "shroudeded_knight_on_ghost_horse" : {
-      "name" : "Shrouded Knight on Ghost Horse",
-      "description" : "Once a hero of the realm, now nothing more than a spiteful revenant mounted on a cursed spirit-mare.",
-      "category" : "hero",
-      "rules" : [
-        "fly"
-      ],
-      "models" : [
-        {
-          "name" : "Shrouded Knight on Ghost Horse",
-          "movement" : 8,
-          "courage" : 7,
-          "shoot" : 7,
-          "fight" : 7,
-          "defense" : 7,
-          "reflexes" : 6,
-          "weapons" : [
-            {
-              "id" : "leeching_sword",
-              "count" : 4
-            },
-            {
-              "id" : "hooves_and_teeth",
-              "count" : 2
-            }
-          ],
-          "rules" : [
-            {
-              "id" : "wounds",
-              "x" : 3
-            },
-            "ghost_lord",
-            {
-              "id" : "leader_x",
-              "x" : "Infantry, Cavalry"
-            }
-          ],
-          "min" : 1,
-          "max" : 1
+    "name": "Haunting Ghosts",
+    "id": "haunting_ghosts",
+    "author": "guitarninja#5707",
+    "color": "#4C838A",
+    "units": {
+        "shroudeded_knight_on_ghost_horse": {
+            "name": "Shrouded Knight on Ghost Horse",
+            "description": "Once a hero of the realm, now nothing more than a spiteful revenant mounted on a cursed spirit-mare.",
+            "category": "hero",
+            "models": [
+                {
+                    "name": "Shrouded Knight on Ghost Horse",
+                    "movement": 8,
+                    "courage": 7,
+                    "shoot": 7,
+                    "fight": 7,
+                    "defense": 7,
+                    "reflexes": 6,
+                    "weapons": [{"id": "leeching_blade", "count": 4}, {"id": "hooves_and_teeth", "count": 2}],
+                    "rules": [{"id": "wounds", "x": 3}, "ghost_lord", {"id": "leader_x", "x": "Infantry, Cavalry"}],
+                    "min": 1,
+                    "max": 1
+                }
+            ],
+            "keywords": ["Hero", "Undead", "Cavalry"]
+        },
+        "executioner": {
+            "name": "Executioner",
+            "description": "A frightening wraith with a huge axe, returning to execute the living.",
+            "category": "hero",
+            "rules": ["fear"],
+            "models": [
+                {
+                    "name": "Executioner",
+                    "movement": 6,
+                    "courage": 7,
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 6,
+                    "reflexes": 6,
+                    "weapons": [{"id": "executioner_great_axe", "count": 3}],
+                    "rules": [{"id": "wounds", "x": 3}, {"id": "leader_x", "x": "Infantry"}],
+                    "min": 1,
+                    "max": 1
+                }
+            ],
+            "keywords": ["Hero", "Undead", "Infantry"]
+        },
+        "tormented_spirit": {
+            "name": "Tormented Spirit",
+            "description": "A tormented soul seeking to force those who did wrong to repent.",
+            "category": "hero",
+            "models": [
+                {
+                    "name": "Tormented Spirit",
+                    "movement": 6,
+                    "courage": 7,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 6,
+                    "reflexes": 6,
+                    "weapons": [{"id": "ghostly_shackles", "count": 3}],
+                    "rules": [{"id": "wounds", "x": 3}, {"id": "ghost_tactics", "x": 1}, {"id": "leader_x", "x": "Infantry"}],
+                    "min": 1,
+                    "max": 1
+                }
+            ],
+            "keywords": ["Undead", "Infantry"]
+        },
+        "soul_guardian": {
+            "name": "Soul Guardian",
+            "description": "A magical sorcerer who uses souls to cast powers.",
+            "category": "hero",
+            "models": [
+                {
+                    "name": "Soul Guardian",
+                    "movement": 6,
+                    "courage": 7,
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 6,
+                    "reflexes": 6,
+                    "weapons": [{"id": "heavy_handweapon", "count": 3}],
+                    "rules": [{"id": "wounds", "x": 3}, {"id": "power", "x": 1}, "soul_lantern", {"id": "leader_x", "x": "Infantry"}],
+                    "min": 1,
+                    "max": 1
+                }
+            ],
+            "keywords": ["Hero", "Undead", "Infantry"]
+        },
+        "shroudeded_lieutenant_on_ghost_horse_0": {
+            "name": "Shrouded Lieutenant on Ghost Horse",
+            "description": "Spiritual Protector of a Shrouded Knight, cursed with an ethereal body.",
+            "category": "hero",
+            "rules": ["teleport"],
+            "models": [
+                {
+                    "name": "Shrouded Lieutenant on Ghost Horse",
+                    "movement": 8,
+                    "courage": 7,
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 7,
+                    "reflexes": 6,
+                    "weapons": [{"id": "curse_blade", "count": 3}, {"id": "hooves_and_teeth", "count": 2}],
+                    "rules": [{"id": "wounds", "x": 3}, {"id": "leader_x", "x": "Infantry, Cavalry"}],
+                    "min": 1,
+                    "max": 1
+                }
+            ],
+            "keywords": ["Hero", "Undead", "Cavalry"]
+        },
+        "shroudeded_knight": {
+            "name": "Shrouded Knight",
+            "description": "Once a hero of the realm, now nothing more than a spiteful revenant seeking to drain the life from the living.",
+            "category": "hero",
+            "models": [
+                {
+                    "name": "Shrouded Knight",
+                    "movement": 6,
+                    "courage": 7,
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 7,
+                    "reflexes": 6,
+                    "weapons": [{"id": "leeching_blade", "count": 4}],
+                    "rules": [{"id": "wounds", "x": 3}, "ghost_lord", "leader"],
+                    "min": 1,
+                    "max": 1
+                }
+            ],
+            "keywords": ["Hero", "Undead", "Infantry"]
+        },
+        "ghost_leader": {
+            "name": "Ghostly Warrior Leader",
+            "description": "Foul spirits with various weapons.",
+            "category": "hero",
+            "rules": ["leader"],
+            "models": [{"name": "Ghostly Warrior", "movement": 6, "courage": 5, "shoot": 5, "fight": 5, "defense": 5, "reflexes": 5, "weapons": [{"id": "handweapon", "count": 2}], "min": 1, "max": 1}],
+            "keywords": ["Undead", "Infantry"]
+        },
+        "ghost_warrior": {
+            "name": "Ghostly Warrior",
+            "description": "Foul spirits with various weapons.",
+            "category": "core",
+            "models": [{"name": "Ghostly Warrior", "movement": 6, "courage": 5, "shoot": 5, "fight": 5, "defense": 5, "reflexes": 5, "weapons": [{"id": "handweapon", "count": 2}], "options": [{"addRule": ["banner", "musician"], "limit": 1}], "min": 1, "max": 1}],
+            "keywords": ["Undead", "Infantry"]
+        },
+        "stalker_leader": {
+            "name": "Glaive Stalker Leader",
+            "description": "Hunting spirits with glaives.",
+            "category": "hero",
+            "rules": ["leader"],
+            "models": [{"name": "Glaive Stalker Leader", "movement": 8, "courage": 6, "shoot": 5, "fight": 5, "defense": 6, "reflexes": 5, "weapons": [{"id": "polearm", "count": 2}], "min": 1, "max": 1}],
+            "keywords": ["Undead", "Infantry"]
+        },
+        "stalker": {
+            "name": "Glaive Stalker",
+            "description": "Hunting spirits with glaives.",
+            "category": "core",
+            "models": [{"name": "Glaive Stalker", "movement": 8, "courage": 6, "shoot": 5, "fight": 5, "defense": 6, "reflexes": 5, "weapons": [{"id": "polearm", "count": 2}], "options": [{"addRule": ["banner", "musician"], "limit": 1}], "min": 1, "max": 1}],
+            "keywords": ["Undead", "Infantry"]
+        },
+        "reaper_leader": {
+            "name": "Reaper Bell Carrier",
+            "description": "Spirits with large scythes, hunting the living.",
+            "category": "hero",
+            "models": [
+                {"name": "Reaper Bell Carrier", "movement": 8, "courage": 6, "shoot": 5, "fight": 5, "defense": 6, "reflexes": 5, "weapons": [{"id": "death_bell", "count": 1}], "min": 1, "max": 1}
+            ],
+            "keywords": ["Undead", "Infantry"]
+        },
+        "reapers": {
+            "name": "Ghastly Reaper",
+            "description": "Spirits with large scythes, hunting the living.",
+            "category": "elite",
+            "models": [
+                {"name": "Reaper", "movement": 8, "courage": 6, "shoot": 5, "fight": 5, "defense": 6, "reflexes": 5, "weapons": [{"id": "rending_heavy_polearm", "count": 2}], "options": [{"addRule": ["banner", "musician"], "limit": 1}], "min": 1, "max": 1}
+            ],
+            "keywords": ["Undead", "Infantry"]
+        },
+        "spirits": {
+            "name": "Spirits",
+            "description": "A swarm of spirits.",
+            "category": "core",
+            "rules": [{"id": "swarm", "x": 3}],
+            "models": [{"name": "Spirits", "movement": 6, "courage": 6, "shoot": 4, "fight": 4, "defense": 5, "reflexes": 5, "weapons": [{"id": "handweapon", "count": 5}], "min": 1, "max": 1}],
+            "keywords": ["Undead", "Infantry"]
+        },
+        "revenant_leader": {
+            "name": "Cursed Revenant Leader",
+            "description": "These are the spirits of those that met a vicious end, forever cursed to be in endless pain.",
+            "category": "hero",
+            "models": [{"name": "Cursed Revenant Leader", "movement": 6, "courage": 5, "shoot": 6, "fight": 6, "defense": 6, "reflexes": 5, "weapons": [{"id": "curse_blade", "count": 2}], "min": 1, "max": 1}],
+            "keywords": ["Undead", "Infantry"]
+        },
+        "revenant": {
+            "name": "Cursed Revenant",
+            "description": "These are the spirits of those that met a vicious end, forever cursed to be in endless pain.",
+            "category": "elite",
+            "models": [{"name": "Cursed Revenant", "movement": 6, "courage": 5, "shoot": 6, "fight": 6, "defense": 6, "reflexes": 5, "weapons": [{"id": "curse_blade", "count": 2}], "min": 1, "max": 1}],
+            "keywords": ["Undead", "Infantry"]
         }
-      ],
-      "keywords" : [
-        "Hero",
-        "Undead",
-        "Cavalry"
-      ]
     },
-    "executioner" : {
-      "name" : "Executioner",
-      "description" : "A frightening wraith with a huge axe, returning to execute the living.",
-      "category" : "hero",
-      "rules" : [
-        "fly",
-        "fear"
-      ],
-      "models" : [
-        {
-          "name" : "Executioner",
-          "movement" : 6,
-          "courage" : 7,
-          "shoot" : 6,
-          "fight" : 6,
-          "defense" : 6,
-          "reflexes" : 6,
-          "weapons" : [
-            {
-              "id" : "rending_great",
-              "count" : 3
-            }
-          ],
-          "rules" : [
-            {
-              "id" : "wounds",
-              "x" : 3
-            },
-            {
-              "id" : "leader_x",
-              "x" : "Infantry"
-            }
-          ],
-          "min" : 1,
-          "max" : 1
-        }
-      ],
-      "keywords" : [
-        "Hero",
-        "Undead",
-        "Infantry"
-      ]
+    "weapons": {
+        "hooves_and_teeth": {"name": "Hooves and Teeth", "attacks": 1, "short": "Melee"},
+        "ghostly_shackles": {"name": "Ghostly Shackles", "attacks": 1, "ap": 4, "short": "Melee"},
+        "death_bell": {"name": "Death Bell", "attacks": 1, "ap": 4, "short": "Melee"},
+        "curse_blade": {"name": "Curse-bound Blade", "attacks": 1, "ap": 2, "short": "Melee", "rules": ["lance"]},
+        "executioner_great_axe": {"name": "Great Axe", "attacks": 1, "ap": 5, "short": "Melee", "rules": ["rending"]}
     },
-    "tormented_spirit" : {
-      "name" : "Tormented Spirit",
-      "description" : "A tormented soul seeking to force those who did wrong to repent.",
-      "category" : "hero",
-      "rules" : [
-        "fly"
-      ],
-      "models" : [
-        {
-          "name" : "Tormented Spirit",
-          "movement" : 6,
-          "courage" : 7,
-          "shoot" : 5,
-          "fight" : 5,
-          "defense" : 6,
-          "reflexes" : 6,
-          "weapons" : [
-            {
-              "id" : "ghostly_shackles",
-              "count" : 3
-            }
-          ],
-          "rules" : [
-            {
-              "id" : "wounds",
-              "x" : 3
-            },
-            {
-              "id" : "ghost_tactics",
-              "x" : 1
-            },
-            {
-              "id" : "leader_x",
-              "x" : "Infantry"
-            }
-          ],
-          "min" : 1,
-          "max" : 1
-        }
-      ],
-      "keywords" : [
-        "Undead",
-        "Infantry"
-      ]
+    "rules": {
+        "ghost_tactics": {
+            "name": "Ghost Tactics",
+            "inputs": ["x"],
+            "description": "When this unit is activated, choose up to X friendly _Infantry_ units within 6\". Those units may re-roll failed Strength tests of 9+ until the end of the round.",
+            "points": ["rule.x", {"multiply": 10}]
+        },
+        "ghost_lord": {
+            "name": "Ghost Lord",
+            "description": "Once per round, when a friendly _Infantry_ or _Cavalry_ unit within 6\" declares a Fight action, hit rolls of 1 or 2 cause 2 hits instead of 1.",
+            "points": 10
+        },
+        "soul_lantern": {"name": "Soul Lantern", "description": "Once per round, a friendly _Infantry_ unit within 6\" gains +1 AP on all Melee weapons.", "points": 10}
     },
-    "soul_guardian" : {
-      "name" : "Soul Guardian",
-      "description" : "A magical sorcerer who uses souls to cast powers.",
-      "category" : "hero",
-      "rules" : [
-        "fly"
-      ],
-      "models" : [
-        {
-          "name" : "Soul Guardian",
-          "movement" : 6,
-          "courage" : 7,
-          "shoot" : 6,
-          "fight" : 6,
-          "defense" : 6,
-          "reflexes" : 6,
-          "weapons" : [
-            {
-              "id" : "maul",
-              "count" : 3
-            }
-          ],
-          "rules" : [
-            {
-              "id" : "wounds",
-              "x" : 3
-            },
-            {
-              "id" : "magic",
-              "x" : 1
-            },
-            "soul_lantern",
-            {
-              "id" : "leader_x",
-              "x" : "Infantry"
-            }
-          ],
-          "min" : 1,
-          "max" : 1
-        }
-      ],
-      "keywords" : [
-        "Hero",
-        "Undead",
-        "Infantry"
-      ]
+    "powers": {
+        "raise_dead": {
+            "name": "Raise Dead",
+            "description": "Target friendly _Undead_ Infantry unit within 12\" restores 1D3 models. This power may only be cast once per turn.",
+            "charge": 5,
+            "subfactions": ["blood", "bone", "dread", "none"]
+        },
+        "blind": {"name": "Blind", "description": "Target enemy unit within 12\" gets -1 Accuracy until the end of the round.", "charge": 6, "school": "shadow"},
+        "shroud": {"name": "Shroud", "description": "Target friendly unit within 12\" gets -1 to be hit the next time it is attacked.", "charge": 6}
     },
-    "shroudeded_lieutenant_on_ghost_horse_0" : {
-      "name" : "Shrouded Lieutenant on Ghost Horse",
-      "description" : "Spiritual Protector of a Shrouded Knight, cursed with an ethereal body.",
-      "category" : "hero",
-      "rules" : [
-        "fly",
-        "teleport"
-      ],
-      "models" : [
+    "strategies": [
         {
-          "name" : "Shrouded Lieutenant on Ghost Horse",
-          "movement" : 8,
-          "courage" : 7,
-          "shoot" : 6,
-          "fight" : 6,
-          "defense" : 7,
-          "reflexes" : 6,
-          "weapons" : [
-            {
-              "id" : "curse_blade",
-              "count" : 3
-            },
-            {
-              "id" : "hooves_and_teeth",
-              "count" : 2
-            }
-          ],
-          "rules" : [
-            {
-              "id" : "wounds",
-              "x" : 3
-            },
-            {
-              "id" : "leader_x",
-              "x" : "Infantry, Cavalry"
-            }
-          ],
-          "min" : 1,
-          "max" : 1
-        }
-      ],
-      "keywords" : [
-        "Hero",
-        "Undead",
-        "Cavalry"
-      ]
-    },
-    "shroudeded_knight" : {
-      "name" : "Shrouded Knight",
-      "description" : "Once a hero of the realm, now nothing more than a spiteful revenant seeking to drain the life from the living.",
-      "category" : "hero",
-      "rules" : [
-        "fly"
-      ],
-      "models" : [
-        {
-          "name" : "Shrouded Knight",
-          "movement" : 6,
-          "courage" : 7,
-          "shoot" : 6,
-          "fight" : 6,
-          "defense" : 7,
-          "reflexes" : 6,
-          "weapons" : [
-            {
-              "id" : "leeching_sword",
-              "count" : 4
-            }
-          ],
-          "rules" : [
-            {
-              "id" : "wounds",
-              "x" : 3
-            },
-            "ghost_lord",
-            "leader"
-          ],
-          "min" : 1,
-          "max" : 1
-        }
-      ],
-      "keywords" : [
-        "Hero",
-        "Undead",
-        "Infantry"
-      ]
-    },
-    "ghosts" : {
-      "name" : "Ghostly Horde",
-      "description" : "Foul spirits with various weapons.",
-      "category" : "core",
-      "rules" : [
-        "fly"
-      ],
-      "models" : [
-        {
-          "name" : "Ghost",
-          "movement" : 6,
-          "courage" : 5,
-          "shoot" : 5,
-          "fight" : 5,
-          "defense" : 5,
-          "reflexes" : 5,
-          "weapons" : [
-            {
-              "id" : "handweapon",
-              "count" : 2
-            }
-          ],
-          "min" : 10,
-          "max" : 30
-        }
-      ],
-      "keywords" : [
-        "Undead",
-        "Infantry"
-      ],
-      "options" : [
-        {
-          "addRule" : [
-            "banner"
-          ],
-          "modelLimit" : 1
+            "name": "Fearless",
+            "phase": "activation",
+            "description": "Use before activating a unit. That unit may immediately remove up to 2 Shock.",
+            "flavor": "These horrors know no fear, only death.",
+            "cost": 1
         },
         {
-          "addRule" : [
-            "musician"
-          ],
-          "modelLimit" : 1
-        }
-      ]
-    },
-    "stalkers" : {
-      "name" : "Glaive Stalkers",
-      "description" : "Hunting spirits with glaives.",
-      "category" : "core",
-      "rules" : [
-        "fly"
-      ],
-      "models" : [
-        {
-          "name" : "Glaive Stalkers",
-          "movement" : 8,
-          "courage" : 6,
-          "shoot" : 5,
-          "fight" : 5,
-          "defense" : 6,
-          "reflexes" : 5,
-          "weapons" : [
-            {
-              "id" : "stalker_glaive",
-              "count" : 2
-            }
-          ],
-          "min" : 4,
-          "max" : 16
-        }
-      ],
-      "keywords" : [
-        "Undead",
-        "Infantry"
-      ],
-      "options" : [
-        {
-          "addRule" : [
-            "banner"
-          ],
-          "modelLimit" : 1
+            "name": "Ghostly Form",
+            "phase": "activation",
+            "description": "Use when an _Infantry_ unit makes a Move action. It may ignore any models and terrain for that move.",
+            "flavor": "These horrors are can phase through almost any object with ease.",
+            "cost": 1
         },
         {
-          "addRule" : [
-            "musician"
-          ],
-          "modelLimit" : 1
+            "name": "Nightmares",
+            "phase": "activation",
+            "description": "Use when a unit within 6\" takes a Courage test. That unit suffers -1 Courage.",
+            "flavor": "Their nightmarish form can terrorize even the strongest of wills.",
+            "cost": 1
         }
-      ]
-    },
-    "reapers" : {
-      "name" : "Ghastly Reapers",
-      "description" : "Spirits with large scythes, hunting the living.",
-      "category" : "elite",
-      "rules" : [
-        "fly"
-      ],
-      "models" : [
-        {
-          "name" : "Reaper Bell Carrier",
-          "movement" : 8,
-          "courage" : 6,
-          "shoot" : 5,
-          "fight" : 5,
-          "defense" : 6,
-          "reflexes" : 5,
-          "weapons" : [
-            {
-              "id" : "death_bell",
-              "count" : 1
-            }
-          ],
-          "min" : 1,
-          "max" : 1
-        },
-        {
-          "name" : "Reaper",
-          "movement" : 8,
-          "courage" : 6,
-          "shoot" : 5,
-          "fight" : 5,
-          "defense" : 6,
-          "reflexes" : 5,
-          "weapons" : [
-            {
-              "id" : "rending_blade",
-              "count" : 2
-            }
-          ],
-          "min" : 4,
-          "max" : 19
-        }
-      ],
-      "keywords" : [
-        "Undead",
-        "Infantry"
-      ],
-      "options" : [
-        {
-          "addRule" : [
-            "banner"
-          ],
-          "modelLimit" : 1
-        },
-        {
-          "addRule" : [
-            "musician"
-          ],
-          "modelLimit" : 1
-        }
-      ]
-    },
-    "spirits" : {
-      "name" : "Spirits",
-      "description" : "A swarm of spirits.",
-      "category" : "core",
-      "rules" : [
-        "fly",
-        {
-          "id" : "swarm",
-          "x" : 3
-        }
-      ],
-      "models" : [
-        {
-          "name" : "Spirits",
-          "movement" : 6,
-          "courage" : 6,
-          "shoot" : 4,
-          "fight" : 4,
-          "defense" : 5,
-          "reflexes" : 5,
-          "weapons" : [
-            {
-              "id" : "handweapon",
-              "count" : 5
-            }
-          ],
-          "min" : 3,
-          "max" : 12
-        }
-      ],
-      "keywords" : [
-        "Undead",
-        "Infantry"
-      ]
-    },
-    "revenants" : {
-      "name" : "Cursed Revenants",
-      "description" : "These are the spirits of those that met a vicious end, forever cursed to be in endless pain.",
-      "category" : "elite",
-      "rules" : [
-        "fly"
-      ],
-      "models" : [
-        {
-          "name" : "Revenant",
-          "movement" : 6,
-          "courage" : 5,
-          "shoot" : 6,
-          "fight" : 6,
-          "defense" : 6,
-          "reflexes" : 5,
-          "weapons" : [
-            {
-              "id" : "curse_blade",
-              "count" : 2
-            }
-          ],
-          "min" : 5,
-          "max" : 20
-        }
-      ],
-      "keywords" : [
-        "Undead",
-        "Infantry"
-      ]
-    }
-  },
-  "weapons" : {
-    "hooves_and_teeth" : {
-      "name" : "Hooves and Teeth",
-      "attacks" : 1,
-      "short" : "Melee"
-    },
-    "ghostly_shackles" : {
-      "name" : "Ghostly Shackles",
-      "attacks" : 1,
-      "ap" : 4,
-      "short" : "Melee"
-    },
-    "stalker_glaive" : {
-      "name" : "Stalker Glaive",
-      "attacks" : 1,
-      "ap" : 2,
-      "short" : "Melee",
-      "rules" : [
-        {
-          "id" : "reach",
-          "x" : 1
-        }
-      ]
-    },
-    "death_bell" : {
-      "name" : "Death Bell",
-      "attacks" : 1,
-      "ap" : 3,
-      "short" : "Melee",
-      "rules" : [
-        "rending"
-      ]
-    },
-    "curse_blade" : {
-      "name" : "Curse-bound Blade",
-      "attacks" : 1,
-      "ap" : 2,
-      "short" : "Melee",
-      "rules" : [
-        "lance"
-      ]
-    }
-  },
-  "rules" : {
-    "ghost_tactics" : {
-      "name" : "Ghost Tactics",
-      "inputs" : [
-        "x"
-      ],
-      "description" : "When this unit is activated, choose up to X friendly _Infantry_ units within 6\". Those units may re-roll failed Strength tests of 9+ until the end of the round.",
-      "points" : [
-        "rule.x",
-        {
-          "multiply" : 10
-        }
-      ]
-    },
-    "ghost_lord" : {
-      "name" : "Ghost Lord",
-      "description" : "Once per round, when a friendly _Infantry_ or _Cavalry_ unit within 6\" declares a Fight action, hit rolls of 1 or 2 cause 2 hits instead of 1.",
-      "points" : 10
-    },
-    "soul_lantern" : {
-      "name" : "Soul Lantern",
-      "description" : "Once per round, a friendly _Infantry_ unit within 6\" gains +1 AP on all Melee weapons.",
-      "points" : 10
-    }
-  },
-  "relics" : [],
-  "powers" : {},
-  "strategies" : [
-    {
-      "name" : "Fearless",
-      "phase" : "activation",
-      "description" : "Use before activating a unit. That unit may immediately remove up to 2 Shock.",
-      "flavor" : "These horrors know no fear, only death.",
-      "cost" : 1
-    },
-    {
-      "name" : "Ghostly Form",
-      "phase" : "activation",
-      "description" : "Use when a unit is targeted by an attack. That unit ignores up to 1 AP.",
-      "flavor" : "These horrors know no fear, only death.",
-      "cost" : 2
-    },
-    {
-      "name" : "Nightmares",
-      "phase" : "activation",
-      "description" : "Use when a unit within 6\" takes a Courage test. That unit suffers -1 Courage.",
-      "flavor" : "Their nightmarish form can terrorize even the strongest of wills.",
-      "cost" : 1
-    }
-  ]
+    ]
 }

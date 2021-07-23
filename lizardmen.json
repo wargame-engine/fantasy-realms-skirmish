@@ -1,0 +1,38 @@
+{
+    "name": "Lizardmen",
+    "id": "lizardmen",
+    "author": "guitarninja#5707",
+    "units": {
+        "lizard_warriors": {
+            "name": "Lizard Warriors",
+            "description": "",
+            "category": "core",
+            "models": [
+                {
+                    "options": [
+                        {"replaceWeapon": ["great_weapon", "shield"], "withWeapon": [["heavy_spear", "shield"]], "modelLimit": "all"},
+                        {"addRule": ["champion"], "modelLimit": 1},
+                        {"addRule": ["banner"], "modelLimit": 1},
+                        {"addRule": ["musician"], "modelLimit": 1}
+                    ],
+                    "name": "Lizard Warrior",
+                    "movement": 6,
+                    "courage": 5,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 5,
+                    "reflexes": 5,
+                    "weapons": ["great_weapon", "shield", "lizard_bite"],
+                    "min": 10,
+                    "max": 30
+                }
+            ],
+            "subfactions": ["none"]
+        }
+    },
+    "weapons": {"lizard_bite": {"name": "Lizard Bite", "attacks": 1, "short": "Melee", "ap": 1}},
+    "rules": {},
+    "relics": [],
+    "powers": {},
+    "strategies": []
+}

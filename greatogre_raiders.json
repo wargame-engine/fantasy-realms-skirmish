@@ -2,7 +2,6 @@
     "name": "Greatogre Raiders",
     "id": "greatogre_raiders",
     "color": "#4f9ae0",
-    "version": "0.1",
     "description": "The greatest of ogre tribes, who only interact with their lessers when they need something - food, coin, or just a challenge!",
     "alliance": "destruction",
     "units": {
@@ -31,6 +30,8 @@
             "name": "Great-Ogre Fangriders",
             "description": "The weakest of the Great-Ogres, they're nevertheless terrifying in a fight.",
             "category": "core",
+            "options": [{"addRule": ["banner"], "modelLimit": 1}, {"addRule": ["musician"], "modelLimit": 1}],
+            "rules": [{"id": "wounds", "x": 3}, {"id": "impact", "x": 2}],
             "keywords": ["Cavalry"],
             "models": [
                 {
@@ -43,8 +44,7 @@
                     "courage": 6,
                     "min": 1,
                     "max": 1,
-                    "rules": [{"id": "wounds", "x": 3}, {"id": "impact", "x": 2}],
-                    "weapons": [{"id": "great_maul", "count": 3}, {"id": "fangrider_tusks", "count": 4}, {"id": "handgun", "count": 1}, {"id": "punching_shield", "count": 1}]
+                    "weapons": ["punching_shield", "pistol", {"id": "great_weapon", "count": 3}, {"id": "fangrider_tusks", "count": 4}]
                 },
                 {
                     "name": "Fangrider",
@@ -56,9 +56,7 @@
                     "courage": 6,
                     "min": 2,
                     "max": 8,
-                    "rules": [{"id": "wounds", "x": 3}, {"id": "impact", "x": 2}],
-                    "weapons": [{"id": "great_maul", "count": 3}, {"id": "fangrider_tusks", "count": 4}, {"id": "punching_shield", "count": 1}],
-                    "options": [{"addRule": ["banner"], "modelLimit": 1}, {"addRule": ["musician"], "modelLimit": 1}]
+                    "weapons": ["punching_shield", {"id": "great_weapon", "count": 3}, {"id": "fangrider_tusks", "count": 4}]
                 }
             ]
         },
@@ -108,5 +106,33 @@
             "description": "When this unit is activated, choose up to X friendly _Cavalry_ units within 6\".  These units re-roll failed Strength tests of 9+",
             "points": ["rule.x", {"multiply": 10}]
         }
+    },
+    "strategies": {
+        "stampede": {
+            "phase": "activation",
+            "name": "Stampede",
+            "description": "Use when a _Cavalry_ unit makes a charge action. The Impact Rule gains +1 AP for the charge.",
+            "flavor": "Ogres like to charge with full force into enemy ranks and trampling them beneath their hooves and tusks.",
+            "cost": 1
+        },
+        "thick_skinned": {
+            "phase": "activation",
+            "name": "Thick Skinned",
+            "description": "Use before taking Save rolls for an Infantry unit. It gets +1 Save.",
+            "flavor": "Ogres are said to have layers of hardened skin that are impossible to penetrate.",
+            "cost": 2
+        },
+        "brutality": {
+            "phase": "activation",
+            "name": "Brutality",
+            "description": "Use before fighting with a _Cavalry_ unit. Hit rolls of 1 or 2 gain +1 AP.",
+            "flavor": "With their superior strength and savagery these beasts can easily crush any opposition.",
+            "cost": 1
+        }
+    },
+    "powers": {
+        "haste": {"name": "Haste", "description": "Target friendly unit within 12\" may immediately make a free move action.", "charge": 7},
+        "pain": {"name": "Pain", "description": "Target enemy model within 12\" takes 1 automatic hit with AP(3).", "charge": 6, "subfactions": ["none", "pestilence", "wrath", "excess", "change"]},
+        "lightning_storm": {"name": "Lightning Storm", "description": "Target enemy unit within 12\" take 5 hits each with no AP", "charge": 7}
     }
 }

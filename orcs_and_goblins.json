@@ -1,1480 +1,496 @@
 {
-  "name" : "Orcs and Goblins",
-  "id" : "orcs_and_goblins",
-  "color" : "#50974A",
-  "author" : "Xekon#8266",
-  "version" : "0.2",
-  "description" : "A savage race made up of various warring tribes.",
-  "alliance" : "destruction",
-  "units" : {
-    "orc_warboss" : {
-      "name" : "Orc Warboss on foot",
-      "description" : "Stronger and more savage than the normal orc.",
-      "min" : 1,
-      "max" : 1,
-      "category" : "hero",
-      "models" : [
-        {
-          "name" : "Orc Warboss",
-          "movement" : 6,
-          "courage" : 7,
-          "shoot" : 4,
-          "fight" : 7,
-          "defense" : 7,
-          "reflexes" : 6,
-          "weapons" : [
-            "shield",
-            {
-              "id" : "great_maul",
-              "count" : 4
-            }
-          ],
-          "options" : [
-            {
-              "replaceWeapon" : [
+    "name": "Orcs and Goblins",
+    "id": "orcs_and_goblins",
+    "color": "#50974A",
+    "author": "Xekon#8266",
+    "description": "A savage race made up of various warring tribes.",
+    "alliance": "destruction",
+    "units": {
+        "orc_warboss": {
+            "name": "Orc Warboss",
+            "description": "Stronger and more savage than the normal orc.",
+            "min": 1,
+            "max": 1,
+            "category": "hero",
+            "models": [
                 {
-                  "id" : "great_maul",
-                  "count" : 4
-                },
-                "shield"
-              ],
-              "withWeapon" : [
-                {
-                  "id" : "big_smasher",
-                  "count" : 4
-                },
-                {
-                  "id" : "great_maul",
-                  "count" : 5
+                    "name": "Orc Warboss",
+                    "movement": 6,
+                    "courage": 7,
+                    "shoot": 4,
+                    "fight": 7,
+                    "defense": 7,
+                    "reflexes": 6,
+                    "weapons": ["shield", {"id": "great_weapon", "count": 4}],
+                    "options": [{"replaceWeapon": [{"id": "great_weapon", "count": 4}, "shield"], "withWeapon": [{"id": "big_smasher", "count": 4}, {"id": "great_weapon", "count": 5}]}],
+                    "rules": [{"id": "wounds", "x": 3}, "leader"],
+                    "min": 1,
+                    "max": 1
                 }
-              ]
-            }
-          ],
-          "rules" : [
-            {
-              "id" : "wounds",
-              "x" : 3
-            },
-            "leader"
-          ],
-          "min" : 1,
-          "max" : 1
-        }
-      ],
-      "keywords" : [
-        "Hero",
-        "Orc",
-        "Infantry"
-      ],
-      "subfactions" : [
-        "none",
-        "trickery",
-        "speed",
-        "primal",
-        "armor"
-      ]
-    },
-    "moon_goblin_shaman" : {
-      "name" : "Goblin Shaman on Cave Beast",
-      "description" : "",
-      "min" : 1,
-      "max" : 1,
-      "category" : "hero",
-      "models" : [
-        {
-          "name" : "Goblin Shaman",
-          "movement" : 8,
-          "courage" : 6,
-          "shoot" : 4,
-          "fight" : 4,
-          "defense" : 5,
-          "reflexes" : 5,
-          "weapons" : [
-            {
-              "id" : "bite",
-              "count" : 3
-            },
-            "wizard_staff"
-          ],
-          "options" : [
-            {
-              "replaceRule" : [
-                {
-                  "id" : "magic",
-                  "x" : 1
-                }
-              ],
-              "withRule" : [
-                {
-                  "id" : "magic",
-                  "x" : 2
-                }
-              ]
-            }
-          ],
-          "rules" : [
-            {
-              "id" : "wounds",
-              "x" : 3
-            },
-            {
-              "id" : "magic",
-              "x" : 1
-            },
-            "crazed",
-            {
-              "id" : "impact",
-              "x" : 1
-            },
-            "agile",
-            {
-              "id" : "leader",
-              "x" : "Infantry, Cavalry"
-            }
-          ],
-          "min" : 1,
-          "max" : 1
-        }
-      ],
-      "keywords" : [
-        "Hero",
-        "Goblin",
-        "Wizard",
-        "Cavalry"
-      ],
-      "subfactions" : [
-        "none",
-        "trickery",
-        "speed",
-        "primal",
-        "armor"
-      ]
-    },
-    "goblin_warboss" : {
-      "name" : "Goblin Warboss on foot",
-      "description" : "",
-      "min" : 1,
-      "max" : 1,
-      "category" : "hero",
-      "models" : [
-        {
-          "name" : "Goblin Warboss",
-          "movement" : 6,
-          "courage" : 7,
-          "shoot" : 5,
-          "fight" : 5,
-          "defense" : 5,
-          "reflexes" : 6,
-          "weapons" : [
-            {
-              "id" : "handweapon",
-              "count" : 3
-            },
-            "shield"
-          ],
-          "options" : [
-            {
-              "replaceWeapon" : [
-                {
-                  "id" : "handweapon",
-                  "count" : 3
-                },
-                "shield"
-              ],
-              "withWeapon" : [
-                {
-                  "id" : "sickle",
-                  "count" : 3
-                },
-                [
-                  {
-                    "id" : "short_bow",
-                    "count" : 3
-                  },
-                  {
-                    "id" : "dagger",
-                    "count" : 3
-                  }
-                ],
-                {
-                  "id" : "rending_blade",
-                  "count" : 3
-                }
-              ]
-            },
-            {
-              "addRule" : [
-                "heavy_armor"
-              ]
-            }
-          ],
-          "rules" : [
-            {
-              "id" : "wounds",
-              "x" : 3
-            },
-            "leader"
-          ],
-          "min" : 1,
-          "max" : 1
-        }
-      ],
-      "keywords" : [
-        "Hero",
-        "Goblin",
-        "Infantry"
-      ],
-      "subfactions" : [
-        "none",
-        "trickery",
-        "speed",
-        "primal",
-        "armor"
-      ]
-    },
-    "goblins" : {
-      "name" : "Goblins",
-      "description" : "Small and weak, making up this weakness trough their sheer numbers.",
-      "min" : 1,
-      "max" : 3,
-      "category" : "core",
-      "models" : [
-        {
-          "name" : "Goblin Boss",
-          "movement" : 6,
-          "courage" : 4,
-          "shoot" : 5,
-          "fight" : 4,
-          "defense" : 5,
-          "reflexes" : 5,
-          "weapons" : [
-            "shield",
-            {
-              "id" : "handweapon",
-              "count" : 2
-            }
-          ],
-          "min" : 1,
-          "max" : 1,
-          "options" : [
-            {
-              "replaceWeapon" : [
-                {
-                  "id" : "handweapon",
-                  "count" : 2
-                },
-                "shield"
-              ],
-              "withWeapon" : [
-                [
-                  {
-                    "id" : "short_bow",
-                    "count" : 2
-                  },
-                  {
-                    "id" : "dagger",
-                    "count" : 2
-                  }
-                ],
-                [
-                  {
-                    "id" : "spear",
-                    "count" : 2
-                  },
-                  "shield"
-                ]
-              ]
-            }
-          ]
-        },
-        {
-          "name" : "Goblin",
-          "movement" : 6,
-          "courage" : 4,
-          "shoot" : 5,
-          "fight" : 4,
-          "defense" : 5,
-          "reflexes" : 5,
-          "weapons" : [
-            "handweapon",
-            "shield"
-          ],
-          "min" : 9,
-          "max" : 29,
-          "options" : [
-            {
-              "replaceWeapon" : [
-                "handweapon",
-                "shield"
-              ],
-              "withWeapon" : [
-                [
-                  "short_bow",
-                  "dagger"
-                ],
-                [
-                  "spear",
-                  "shield"
-                ]
-              ]
-            },
-            {
-              "replaceWeapon" : [
-                "handweapon",
-                "shield"
-              ],
-              "withWeapon" : [
-                [
-                  "net_and_spear"
-                ]
-              ],
-              "modelLimit" : 2
-            }
-          ]
-        }
-      ],
-      "keywords" : [
-        "Goblin",
-        "Infantry"
-      ],
-      "options" : [
-        {
-          "addRule" : [
-            "banner"
-          ],
-          "modelLimit" : 1
-        },
-        {
-          "addRule" : [
-            "musician"
-          ],
-          "modelLimit" : 1
-        }
-      ],
-      "subfactions" : [
-        "none",
-        "trickery",
-        "speed",
-        "primal",
-        "armor"
-      ]
-    },
-    "orc_warriors" : {
-      "name" : "Orc Warriors",
-      "description" : "Stronger and better equipped than the goblins.",
-      "min" : 1,
-      "max" : 3,
-      "category" : "core",
-      "models" : [
-        {
-          "name" : "Orc Boss",
-          "movement" : 6,
-          "courage" : 4,
-          "shoot" : 5,
-          "fight" : 6,
-          "defense" : 5,
-          "reflexes" : 5,
-          "weapons" : [
-            {
-              "id" : "maul",
-              "count" : 2
-            },
-            "shield"
-          ],
-          "options" : [
-            {
-              "replaceWeapon" : [
-                {
-                  "id" : "maul",
-                  "count" : 2
-                },
-                "shield"
-              ],
-              "withWeapon" : [
-                [
-                  {
-                    "id" : "maul",
-                    "count" : 3
-                  }
-                ],
-                [
-                  "big_smasher",
-                  {
-                    "id" : "maul",
-                    "count" : 2
-                  }
-                ]
-              ]
-            }
-          ],
-          "rules" : [],
-          "min" : 1,
-          "max" : 1
-        },
-        {
-          "name" : "Orc Warrior",
-          "movement" : 6,
-          "courage" : 4,
-          "shoot" : 5,
-          "fight" : 6,
-          "defense" : 5,
-          "reflexes" : 5,
-          "weapons" : [
-            {
-              "id" : "maul"
-            },
-            {
-              "id" : "shield"
-            }
-          ],
-          "options" : [
-            {
-              "replaceWeapon" : [
-                {
-                  "id" : "maul"
-                },
-                {
-                  "id" : "shield"
-                }
-              ],
-              "withWeapon" : [
-                {
-                  "id" : "maul",
-                  "count" : 2
-                }
-              ],
-              "modelLimit" : "all"
-            }
-          ],
-          "min" : 4,
-          "max" : 19
-        }
-      ],
-      "keywords" : [
-        "Orc",
-        "Infantry"
-      ],
-      "options" : [
-        {
-          "replaceWeapon" : [
-            {
-              "id" : "maul",
-              "count" : 2
-            }
-          ],
-          "withWeapon" : [
-            [
-              "big_smasher"
-            ]
-          ],
-          "modelLimit" : "1/5"
-        },
-        {
-          "addRule" : [
-            "banner"
-          ],
-          "modelLimit" : 1
-        },
-        {
-          "addRule" : [
-            "musician"
-          ],
-          "modelLimit" : 1
-        }
-      ],
-      "subfactions" : [
-        "none",
-        "trickery",
-        "speed",
-        "primal",
-        "armor"
-      ]
-    },
-    "goblin_riders" : {
-      "name" : "Goblin Spider Riders",
-      "description" : "",
-      "min" : 1,
-      "max" : 6,
-      "category" : "core",
-      "models" : [
-        {
-          "name" : "Goblin Boss",
-          "movement" : 9,
-          "courage" : 4,
-          "shoot" : 5,
-          "fight" : 4,
-          "defense" : 5,
-          "reflexes" : 5,
-          "weapons" : [
-            {
-              "id" : "short_bow",
-              "count" : 3
-            },
-            {
-              "id" : "spear",
-              "count" : 2
-            },
-            {
-              "id" : "spider_bite",
-              "count" : 2
-            }
-          ],
-          "min" : 1,
-          "max" : 1,
-          "rules" : [
-            "strider",
-            "outflank"
-          ]
-        },
-        {
-          "name" : "Goblin Spider Rider",
-          "movement" : 9,
-          "courage" : 4,
-          "shoot" : 5,
-          "fight" : 4,
-          "defense" : 5,
-          "reflexes" : 5,
-          "weapons" : [
-            {
-              "id" : "short_bow",
-              "count" : 2
-            },
-            "spear",
-            {
-              "id" : "spider_bite",
-              "count" : 2
-            }
-          ],
-          "min" : 4,
-          "max" : 19,
-          "rules" : [
-            "strider",
-            "outflank"
-          ]
-        }
-      ],
-      "keywords" : [
-        "Goblin",
-        "Cavalry"
-      ],
-      "options" : [
-        {
-          "addRule" : [
-            "banner"
-          ],
-          "modelLimit" : 1
-        },
-        {
-          "addRule" : [
-            "musician"
-          ],
-          "modelLimit" : 1
-        }
-      ],
-      "subfactions" : [
-        "none",
-        "tirckery",
-        "speed",
-        "primal",
-        "armor"
-      ]
-    },
-    "goblin_knights" : {
-      "name" : "Goblin Knights",
-      "description" : "",
-      "min" : 1,
-      "max" : 3,
-      "category" : "elite",
-      "models" : [
-        {
-          "name" : "Goblin Boss",
-          "movement" : 8,
-          "courage" : 4,
-          "shoot" : 3,
-          "fight" : 5,
-          "defense" : 4,
-          "reflexes" : 5,
-          "weapons" : [
-            {
-              "id" : "dagger",
-              "count" : 3
-            },
-            {
-              "id" : "bite",
-              "count" : 3
-            }
-          ],
-          "min" : 1,
-          "max" : 1,
-          "options" : [
-            {
-              "replaceWeapon" : [
-                {
-                  "id" : "dagger",
-                  "count" : 3
-                }
-              ],
-              "withWeapon" : [
-                [
-                  {
-                    "id" : "lance",
-                    "count" : 2
-                  }
-                ]
-              ]
-            }
-          ],
-          "rules" : [
-            "skirmishers",
-            "crazed",
-            {
-              "id" : "impact",
-              "x" : 1
-            },
-            "agile"
-          ]
-        },
-        {
-          "name" : "Goblin Knight",
-          "movement" : 8,
-          "courage" : 4,
-          "shoot" : 3,
-          "fight" : 5,
-          "defense" : 4,
-          "reflexes" : 5,
-          "weapons" : [
-            {
-              "id" : "dagger",
-              "count" : 2
-            },
-            {
-              "id" : "bite",
-              "count" : 3
-            }
-          ],
-          "min" : 2,
-          "max" : 11,
-          "options" : [
-            {
-              "replaceWeapon" : [
-                {
-                  "id" : "dagger",
-                  "count" : 2
-                }
-              ],
-              "withWeapon" : [
-                {
-                  "id" : "lance"
-                }
-              ],
-              "modelLimit" : "all"
-            }
-          ],
-          "rules" : [
-            "skirmishers",
-            "crazed",
-            {
-              "id" : "impact",
-              "x" : 1
-            },
-            "agile"
-          ]
-        }
-      ],
-      "keywords" : [
-        "Goblin",
-        "Cavalry"
-      ],
-      "options" : [
-        {
-          "addRule" : [
-            "heavy_armor"
-          ],
-          "modelLimit" : "all"
-        },
-        {
-          "addRule" : [
-            "banner"
-          ],
-          "modelLimit" : 1
-        },
-        {
-          "addRule" : [
-            "musician"
-          ],
-          "modelLimit" : 1
-        }
-      ],
-      "subfactions" : [
-        "none",
-        "trickery",
-        "speed",
-        "primal",
-        "armor"
-      ]
-    },
-    "primal_warriors" : {
-      "name" : "Primal Orc Warriors",
-      "description" : "",
-      "min" : 1,
-      "max" : 3,
-      "category" : "core",
-      "models" : [
-        {
-          "name" : "Primal Orc Boss",
-          "movement" : 6,
-          "courage" : 4,
-          "shoot" : 5,
-          "fight" : 6,
-          "defense" : 5,
-          "reflexes" : 5,
-          "weapons" : [
-            {
-              "id" : "maul",
-              "count" : 3
-            }
-          ],
-          "options" : [
-            {
-              "replaceWeapon" : [
-                {
-                  "id" : "maul",
-                  "count" : 3
-                }
-              ],
-              "withWeapon" : [
-                [
-                  {
-                    "id" : "spear",
-                    "count" : 3
-                  }
-                ]
-              ]
-            }
-          ],
-          "rules" : [
-            "furious"
-          ],
-          "min" : 1,
-          "max" : 1
-        },
-        {
-          "name" : "Primal Orc Warrior",
-          "movement" : 6,
-          "courage" : 4,
-          "shoot" : 5,
-          "fight" : 6,
-          "defense" : 5,
-          "reflexes" : 5,
-          "weapons" : [
-            {
-              "id" : "maul",
-              "count" : 2
-            }
-          ],
-          "options" : [
-            {
-              "replaceWeapon" : [
-                {
-                  "id" : "maul",
-                  "count" : 2
-                }
-              ],
-              "withWeapon" : [
-                {
-                  "id" : "spear",
-                  "count" : 2
-                }
-              ],
-              "modelLimit" : "all"
-            }
-          ],
-          "rules" : [
-            "furious"
-          ],
-          "min" : 4,
-          "max" : 19
-        }
-      ],
-      "keywords" : [
-        "Orc",
-        "Infantry"
-      ],
-      "options" : [
-        {
-          "addRule" : [
-            "banner"
-          ],
-          "modelLimit" : 1
-        },
-        {
-          "addRule" : [
-            "musician"
-          ],
-          "modelLimit" : 1
-        }
-      ],
-      "subfactions" : [
-        "none",
-        "trickery",
-        "speed",
-        "primal",
-        "armor"
-      ]
-    },
-    "primal_goblin_warboss" : {
-      "name" : "Goblin Warboss on Cave Spider",
-      "description" : "",
-      "min" : 1,
-      "max" : 1,
-      "category" : "hero",
-      "models" : [
-        {
-          "name" : "Goblin Warboss",
-          "movement" : 9,
-          "courage" : 7,
-          "shoot" : 5,
-          "fight" : 5,
-          "defense" : 5,
-          "reflexes" : 6,
-          "weapons" : [
-            {
-              "id" : "short_bow",
-              "count" : 3
-            },
-            {
-              "id" : "handweapon",
-              "count" : 3
-            },
-            {
-              "id" : "spider_bite",
-              "count" : 2
-            }
-          ],
-          "options" : [
-            {
-              "replaceWeapon" : [
-                {
-                  "id" : "handweapon",
-                  "count" : 3
-                }
-              ],
-              "withWeapon" : [
-                {
-                  "id" : "sickle",
-                  "count" : 3
-                },
-                {
-                  "id" : "spear",
-                  "count" : 3
-                }
-              ]
-            },
-            {
-              "addRule" : [
-                "shield"
-              ]
-            }
-          ],
-          "rules" : [
-            {
-              "id" : "wounds",
-              "x" : 4
-            },
-            "leader",
-            "strider",
-            "outflank"
-          ],
-          "min" : 1,
-          "max" : 1
-        }
-      ],
-      "keywords" : [
-        "Hero",
-        "Goblin",
-        "Cavalry"
-      ],
-      "subfactions" : [
-        "none",
-        "trickery",
-        "speed",
-        "primal",
-        "armor"
-      ]
-    },
-    "speed_goblin_warboss" : {
-      "name" : "Goblin Warboss on Cave Beast",
-      "description" : "Smaller in stature but even more crazy than their orcish counterpart.",
-      "min" : 1,
-      "max" : 1,
-      "category" : "hero",
-      "models" : [
-        {
-          "name" : "Goblin Warboss",
-          "movement" : 8,
-          "courage" : 7,
-          "shoot" : 5,
-          "fight" : 5,
-          "defense" : 5,
-          "reflexes" : 6,
-          "weapons" : [
-            {
-              "id" : "sickle",
-              "count" : 3
-            },
-            "shield",
-            {
-              "id" : "bite",
-              "count" : 3
-            }
-          ],
-          "options" : [
-            {
-              "replaceWeapon" : [
-                {
-                  "id" : "sickle",
-                  "count" : 3
-                }
-              ],
-              "withWeapon" : [
-                {
-                  "id" : "lance",
-                  "count" : 3
-                }
-              ]
-            },
-            {
-              "addRule" : [
-                "heavy_armor"
-              ]
-            }
-          ],
-          "rules" : [
-            {
-              "id" : "wounds",
-              "x" : 4
-            },
-            "leader",
-            "crazed",
-            {
-              "id" : "impact",
-              "x" : 1
-            },
-            "agile"
-          ],
-          "min" : 1,
-          "max" : 1
-        }
-      ],
-      "keywords" : [
-        "Hero",
-        "Goblin",
-        "Infantry"
-      ],
-      "subfactions" : [
-        "none",
-        "trickery",
-        "speed",
-        "primal",
-        "armor"
-      ]
-    },
-    "goblin_shaman" : {
-      "name" : "Goblin Shaman on foot",
-      "description" : "",
-      "min" : 1,
-      "max" : 1,
-      "category" : "hero",
-      "models" : [
-        {
-          "name" : "Goblin Shaman",
-          "movement" : 6,
-          "courage" : 6,
-          "shoot" : 4,
-          "fight" : 4,
-          "defense" : 5,
-          "reflexes" : 5,
-          "weapons" : [
-            "wizard_staff"
-          ],
-          "options" : [
-            {
-              "replaceRule" : [
-                {
-                  "id" : "magic",
-                  "x" : 1
-                }
-              ],
-              "withRule" : [
-                {
-                  "id" : "magic",
-                  "x" : 2
-                }
-              ]
-            }
-          ],
-          "rules" : [
-            {
-              "id" : "wounds",
-              "x" : 2
-            },
-            {
-              "id" : "magic",
-              "x" : 1
-            },
-            "leader"
-          ],
-          "min" : 1,
-          "max" : 1
-        }
-      ],
-      "keywords" : [
-        "Hero",
-        "Goblin",
-        "Wizard",
-        "Cavalry"
-      ],
-      "subfactions" : [
-        "none",
-        "trickery",
-        "speed",
-        "primal",
-        "armor"
-      ]
-    },
-    "orc_brutes" : {
-      "name" : "Orc Brutes",
-      "description" : "Bigger than their common brethren, wielding massive weapons.",
-      "min" : 1,
-      "max" : 3,
-      "category" : "elite",
-      "models" : [
-        {
-          "name" : "Orc Boss",
-          "movement" : 6,
-          "courage" : 4,
-          "shoot" : 5,
-          "fight" : 6,
-          "defense" : 7,
-          "reflexes" : 4,
-          "weapons" : [
-            {
-              "id" : "big_smasher",
-              "count" : 2
-            }
-          ],
-          "options" : [
-            {
-              "replaceWeapon" : [
-                {
-                  "id" : "big_smasher",
-                  "count" : 2
-                }
-              ],
-              "withWeapon" : [
-                [
-                  {
-                    "id" : "gauntlet"
-                  },
-                  {
-                    "id" : "great_maul",
-                    "count" : 2
-                  }
-                ]
-              ]
-            }
-          ],
-          "rules" : [
-            {
-              "id" : "wounds",
-              "x" : 2
-            }
-          ],
-          "min" : 1,
-          "max" : 1
-        },
-        {
-          "name" : "Orc Brute",
-          "movement" : 6,
-          "courage" : 4,
-          "shoot" : 5,
-          "fight" : 6,
-          "defense" : 7,
-          "reflexes" : 4,
-          "weapons" : [
-            {
-              "id" : "great_maul",
-              "count" : 2
-            }
-          ],
-          "rules" : [
-            {
-              "id" : "wounds",
-              "x" : 2
-            }
-          ],
-          "min" : 2,
-          "max" : 11
-        }
-      ],
-      "keywords" : [
-        "Orc",
-        "Infantry"
-      ],
-      "options" : [
-        {
-          "modelLimit" : "2/3",
-          "replaceWeapon" : [
-            {
-              "id" : "great_maul",
-              "count" : 2
-            }
-          ],
-          "withWeapon" : [
-            [
-              {
-                "id" : "halberd",
-                "count" : 2
-              }
             ],
-            [
-              {
-                "id" : "big_smasher",
-                "count" : 2
-              }
-            ]
-          ]
+            "keywords": ["Hero", "Orc", "Infantry"],
+            "subfactions": ["none", "trickery", "speed", "primal", "armor"]
         },
-        {
-          "addRule" : [
-            "banner"
-          ],
-          "modelLimit" : 1
-        },
-        {
-          "addRule" : [
-            "musician"
-          ],
-          "modelLimit" : 1
-        }
-      ],
-      "subfactions" : [
-        "none",
-        "trickery",
-        "speed",
-        "primal",
-        "armor"
-      ]
-    },
-    "armor_orc_warboss" : {
-      "name" : "Armorclad Warboss on foot",
-      "description" : "A walking tank, clad in the best orcish armor and wielding deadly weapons.",
-      "min" : 1,
-      "max" : 1,
-      "category" : "hero",
-      "models" : [
-        {
-          "name" : "Armorclad Warboss",
-          "movement" : 6,
-          "courage" : 7,
-          "shoot" : 4,
-          "fight" : 7,
-          "defense" : 7,
-          "reflexes" : 6,
-          "weapons" : [
-            {
-              "id" : "big_smasher",
-              "count" : 4
-            },
-            "shield"
-          ],
-          "options" : [
-            {
-              "replaceWeapon" : [
+        "moon_goblin_shaman": {
+            "name": "Goblin Shaman on Cave Beast",
+            "description": "",
+            "min": 1,
+            "max": 1,
+            "category": "hero",
+            "models": [
                 {
-                  "id" : "big_smasher",
-                  "count" : 4
-                },
-                "shield"
-              ],
-              "withWeapon" : [
-                {
-                  "id" : "big_smasher",
-                  "count" : 5
+                    "name": "Goblin Shaman",
+                    "movement": 8,
+                    "courage": 6,
+                    "shoot": 4,
+                    "fight": 4,
+                    "defense": 5,
+                    "reflexes": 5,
+                    "weapons": [{"id": "bite", "count": 3}, "wizard_staff"],
+                    "options": [{"replaceRule": [{"id": "power", "x": 1}], "withRule": [{"id": "power", "x": 2}]}],
+                    "rules": [{"id": "wounds", "x": 3}, {"id": "power", "x": 1}, "crazed", {"id": "impact", "x": 1}, "agile", {"id": "leader", "x": "Infantry, Cavalry"}],
+                    "min": 1,
+                    "max": 1
                 }
-              ]
-            }
-          ],
-          "rules" : [
-            {
-              "id" : "wounds",
-              "x" : 3
-            },
-            "leader",
-            "heavy_armor"
-          ],
-          "min" : 1,
-          "max" : 1
-        }
-      ],
-      "keywords" : [
-        "Hero",
-        "Orc",
-        "Infantry"
-      ],
-      "subfactions" : [
-        "none",
-        "trickery",
-        "speed",
-        "primal",
-        "armor"
-      ]
-    },
-    "armor_orc_brute" : {
-      "name" : "Armorclad Brutes",
-      "description" : "Wielding an arsenal of the best orcish weapons and armor.",
-      "min" : 1,
-      "max" : 3,
-      "category" : "elite",
-      "models" : [
-        {
-          "name" : "Armorclad Boss",
-          "movement" : 6,
-          "courage" : 4,
-          "shoot" : 5,
-          "fight" : 6,
-          "defense" : 7,
-          "reflexes" : 4,
-          "weapons" : [
-            "shield",
-            {
-              "id" : "maul",
-              "count" : 3
-            }
-          ],
-          "options" : [
-            {
-              "replaceWeapon" : [
-                {
-                  "id" : "maul",
-                  "count" : 3
-                },
-                "shield"
-              ],
-              "withWeapon" : [
-                [
-                  {
-                    "id" : "big_smasher",
-                    "count" : 2
-                  }
-                ]
-              ]
-            }
-          ],
-          "rules" : [
-            {
-              "id" : "wounds",
-              "x" : 2
-            },
-            "heavy_armor"
-          ],
-          "min" : 1,
-          "max" : 1
-        },
-        {
-          "name" : "Armorclad Brute",
-          "movement" : 6,
-          "courage" : 4,
-          "shoot" : 5,
-          "fight" : 6,
-          "defense" : 7,
-          "reflexes" : 4,
-          "weapons" : [
-            "shield",
-            {
-              "id" : "maul",
-              "count" : 2
-            }
-          ],
-          "rules" : [
-            {
-              "id" : "wounds",
-              "x" : 2
-            },
-            "heavy_armor"
-          ],
-          "min" : 2,
-          "max" : 11
-        }
-      ],
-      "keywords" : [
-        "Orc",
-        "Infantry"
-      ],
-      "options" : [
-        {
-          "replaceWeapon" : [
-            {
-              "id" : "maul",
-              "count" : 2
-            },
-            "shield"
-          ],
-          "withWeapon" : [
-            [
-              {
-                "id" : "big_smasher",
-                "count" : 2
-              }
             ],
-            [
-              {
-                "id" : "halberd",
-                "count" : 2
-              }
-            ]
-          ],
-          "modelLimit" : "2/3"
+            "keywords": ["Hero", "Goblin", "Wizard", "Cavalry"],
+            "subfactions": ["none", "trickery", "speed", "primal", "armor"]
+        },
+        "goblin_warboss": {
+            "name": "Goblin Warboss",
+            "description": "",
+            "min": 1,
+            "max": 1,
+            "category": "hero",
+            "models": [
+                {
+                    "name": "Goblin Warboss",
+                    "movement": 6,
+                    "courage": 7,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 5,
+                    "reflexes": 6,
+                    "weapons": [{"id": "handweapon", "count": 3}, "shield"],
+                    "options": [
+                        {
+                            "replaceWeapon": [{"id": "handweapon", "count": 3}, "shield"],
+                            "withWeapon": [{"id": "sickle", "count": 2}, ["long_bow", {"id": "handweapon", "count": 2}], {"id": "rending_blade", "count": 2}]
+                        },
+                        {"addRule": ["heavy_armor"]}
+                    ],
+                    "rules": [{"id": "wounds", "x": 3}, "leader"],
+                    "min": 1,
+                    "max": 1
+                }
+            ],
+            "keywords": ["Hero", "Goblin", "Infantry"],
+            "subfactions": ["none", "trickery", "speed", "primal", "armor"]
+        },
+        "goblins": {
+            "name": "Goblins",
+            "description": "Small and weak, making up this weakness trough their sheer numbers.",
+            "min": 1,
+            "max": 3,
+            "category": "core",
+            "models": [
+                {"name": "Goblin Boss", "movement": 6, "courage": 4, "shoot": 5, "fight": 4, "defense": 5, "reflexes": 5, "weapons": ["shield", "handweapon"], "min": 1, "max": 1},
+                {"name": "Goblin", "movement": 6, "courage": 4, "shoot": 5, "fight": 4, "defense": 5, "reflexes": 5, "weapons": ["handweapon", "shield"], "min": 9, "max": 29}
+            ],
+            "keywords": ["Goblin", "Infantry"],
+            "options": [
+                {"replaceWeapon": ["handweapon", "shield"], "withWeapon": [["short_bow", "light_handweapon"], ["spear", "shield"]]},
+                {"replaceWeapon": ["handweapon", "shield"], "withWeapon": [["net_and_spear"]], "modelLimit": "1/5"},
+                {"addRule": ["banner"], "modelLimit": 1},
+                {"addRule": ["musician"], "modelLimit": 1}
+            ],
+            "subfactions": ["none", "trickery", "speed", "primal", "armor"]
+        },
+        "orc_warriors": {
+            "name": "Orc Warriors",
+            "description": "Stronger and better equipped than the goblins.",
+            "min": 1,
+            "max": 3,
+            "category": "core",
+            "models": [
+                {"name": "Orc Boss", "movement": 6, "courage": 4, "shoot": 5, "fight": 6, "defense": 5, "reflexes": 5, "weapons": ["heavy_handweapon", "shield"], "min": 1, "max": 1},
+                {"name": "Orc Warrior", "movement": 6, "courage": 4, "shoot": 5, "fight": 6, "defense": 5, "reflexes": 5, "weapons": ["heavy_handweapon", "shield"], "min": 4, "max": 19}
+            ],
+            "keywords": ["Orc", "Infantry"],
+            "options": [
+                {"replaceWeapon": [{"id": "heavy_handweapon"}, {"id": "shield"}], "withWeapon": [{"id": "heavy_handweapon", "count": 2}], "modelLimit": "all"},
+                {"replaceWeapon": [{"id": "heavy_handweapon", "count": 2}], "withWeapon": [["big_smasher"]], "modelLimit": "1/5"},
+                {"addRule": ["banner"], "modelLimit": 1},
+                {"addRule": ["musician"], "modelLimit": 1}
+            ],
+            "subfactions": ["none", "trickery", "speed", "primal", "armor"]
+        },
+        "goblin_riders": {
+            "name": "Goblin Spider Riders",
+            "description": "",
+            "min": 1,
+            "max": 6,
+            "category": "core",
+            "models": [
+                {
+                    "name": "Goblin Boss",
+                    "movement": 9,
+                    "courage": 4,
+                    "shoot": 5,
+                    "fight": 4,
+                    "defense": 5,
+                    "reflexes": 5,
+                    "weapons": [{"id": "short_bow", "count": 3}, {"id": "spear", "count": 2}, {"id": "spider_bite", "count": 2}],
+                    "min": 1,
+                    "max": 1,
+                    "rules": ["strider", "outflank"]
+                },
+                {
+                    "name": "Goblin Spider Rider",
+                    "movement": 9,
+                    "courage": 4,
+                    "shoot": 5,
+                    "fight": 4,
+                    "defense": 5,
+                    "reflexes": 5,
+                    "weapons": [{"id": "short_bow", "count": 2}, "spear", {"id": "spider_bite", "count": 2}],
+                    "min": 4,
+                    "max": 19,
+                    "rules": ["strider", "outflank"]
+                }
+            ],
+            "keywords": ["Goblin", "Cavalry"],
+            "options": [{"addRule": ["banner"], "modelLimit": 1}, {"addRule": ["musician"], "modelLimit": 1}],
+            "subfactions": ["none", "tirckery", "speed", "primal", "armor"]
+        },
+        "goblin_knights": {
+            "name": "Goblin Knights",
+            "description": "",
+            "min": 1,
+            "max": 3,
+            "category": "elite",
+            "models": [
+                {
+                    "name": "Goblin Boss",
+                    "movement": 8,
+                    "courage": 4,
+                    "shoot": 3,
+                    "fight": 5,
+                    "defense": 4,
+                    "reflexes": 5,
+                    "weapons": [{"id": "light_handweapon", "count": 3}, {"id": "bite", "count": 3}],
+                    "min": 1,
+                    "max": 1,
+                    "options": [{"replaceWeapon": [{"id": "light_handweapon", "count": 3}], "withWeapon": [[{"id": "lance", "count": 2}]]}],
+                    "rules": ["stealth", "crazed", {"id": "impact", "x": 1}, "agile"]
+                },
+                {
+                    "name": "Goblin Knight",
+                    "movement": 8,
+                    "courage": 4,
+                    "shoot": 3,
+                    "fight": 5,
+                    "defense": 4,
+                    "reflexes": 5,
+                    "weapons": [{"id": "light_handweapon", "count": 2}, {"id": "bite", "count": 3}],
+                    "min": 2,
+                    "max": 11,
+                    "options": [{"replaceWeapon": [{"id": "light_handweapon", "count": 2}], "withWeapon": [{"id": "lance"}], "modelLimit": "all"}],
+                    "rules": ["stealth", "crazed", {"id": "impact", "x": 1}, "agile"]
+                }
+            ],
+            "keywords": ["Goblin", "Cavalry"],
+            "options": [{"addRule": ["heavy_armor"], "modelLimit": "all"}, {"addRule": ["banner"], "modelLimit": 1}, {"addRule": ["musician"], "modelLimit": 1}],
+            "subfactions": ["none", "trickery", "speed", "primal", "armor"]
+        },
+        "primal_warriors": {
+            "name": "Primal Orc Warriors",
+            "description": "",
+            "min": 1,
+            "max": 3,
+            "category": "core",
+            "models": [
+                {
+                    "name": "Primal Orc Boss",
+                    "movement": 6,
+                    "courage": 4,
+                    "shoot": 5,
+                    "fight": 6,
+                    "defense": 5,
+                    "reflexes": 5,
+                    "weapons": [{"id": "heavy_handweapon", "count": 3}],
+                    "options": [{"replaceWeapon": [{"id": "heavy_handweapon", "count": 3}], "withWeapon": [[{"id": "long_spear", "count": 3}]]}],
+                    "rules": ["furious"],
+                    "min": 1,
+                    "max": 1
+                },
+                {
+                    "name": "Primal Orc Warrior",
+                    "movement": 6,
+                    "courage": 4,
+                    "shoot": 5,
+                    "fight": 6,
+                    "defense": 5,
+                    "reflexes": 5,
+                    "weapons": [{"id": "heavy_handweapon", "count": 2}],
+                    "options": [{"replaceWeapon": [{"id": "heavy_handweapon", "count": 2}], "withWeapon": [{"id": "long_spear", "count": 2}], "modelLimit": "all"}],
+                    "rules": ["furious"],
+                    "min": 4,
+                    "max": 19
+                }
+            ],
+            "keywords": ["Orc", "Infantry"],
+            "options": [{"addRule": ["banner"], "modelLimit": 1}, {"addRule": ["musician"], "modelLimit": 1}],
+            "subfactions": ["none", "trickery", "speed", "primal", "armor"]
+        },
+        "warboss_spider": {
+            "name": "Goblin Warboss on Cave Spider",
+            "description": "",
+            "min": 1,
+            "max": 1,
+            "category": "hero",
+            "models": [
+                {
+                    "name": "Goblin Warboss",
+                    "movement": 9,
+                    "courage": 7,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 5,
+                    "reflexes": 6,
+                    "weapons": [{"id": "short_bow", "count": 3}, {"id": "handweapon", "count": 3}, {"id": "spider_bite", "count": 2}],
+                    "options": [{"replaceWeapon": [{"id": "handweapon", "count": 3}], "withWeapon": [{"id": "sickle", "count": 2}, {"id": "spear", "count": 2}]}, {"addRule": ["shield"]}],
+                    "rules": [{"id": "wounds", "x": 4}, "leader", "strider", "outflank"],
+                    "min": 1,
+                    "max": 1
+                }
+            ],
+            "keywords": ["Hero", "Goblin", "Cavalry"],
+            "subfactions": ["none", "trickery", "speed", "primal", "armor"]
+        },
+        "warboss_beast": {
+            "name": "Goblin Warboss on Cave Beast",
+            "description": "Smaller in stature but even more crazy than their orcish counterpart.",
+            "min": 1,
+            "max": 1,
+            "category": "hero",
+            "models": [
+                {
+                    "name": "Goblin Warboss",
+                    "movement": 8,
+                    "courage": 7,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 5,
+                    "reflexes": 6,
+                    "weapons": [{"id": "sickle", "count": 3}, "shield", {"id": "bite", "count": 3}],
+                    "options": [{"replaceWeapon": [{"id": "sickle", "count": 3}], "withWeapon": [{"id": "lance", "count": 3}]}, {"addRule": ["heavy_armor"]}],
+                    "rules": [{"id": "wounds", "x": 4}, "leader", "crazed", {"id": "impact", "x": 1}, "agile"],
+                    "min": 1,
+                    "max": 1
+                }
+            ],
+            "keywords": ["Hero", "Goblin", "Infantry"],
+            "subfactions": ["none", "trickery", "speed", "primal", "armor"]
+        },
+        "goblin_shaman": {
+            "name": "Goblin Shaman",
+            "description": "",
+            "min": 1,
+            "max": 1,
+            "category": "hero",
+            "models": [
+                {
+                    "name": "Goblin Shaman",
+                    "movement": 6,
+                    "courage": 6,
+                    "shoot": 4,
+                    "fight": 4,
+                    "defense": 5,
+                    "reflexes": 5,
+                    "weapons": ["wizard_staff"],
+                    "options": [{"replaceRule": [{"id": "power", "x": 1}], "withRule": [{"id": "power", "x": 2}]}],
+                    "rules": [{"id": "wounds", "x": 2}, {"id": "power", "x": 1}, "leader"],
+                    "min": 1,
+                    "max": 1
+                }
+            ],
+            "keywords": ["Hero", "Goblin", "Wizard", "Cavalry"],
+            "subfactions": ["none", "trickery", "speed", "primal", "armor"]
+        },
+        "orc_brutes": {
+            "name": "Orc Brutes",
+            "description": "Bigger than their common brethren, wielding massive weapons.",
+            "min": 1,
+            "max": 3,
+            "category": "elite",
+            "models": [
+                {
+                    "name": "Orc Boss",
+                    "movement": 6,
+                    "courage": 4,
+                    "shoot": 5,
+                    "fight": 6,
+                    "defense": 7,
+                    "reflexes": 4,
+                    "weapons": [{"id": "big_smasher", "count": 2}],
+                    "options": [{"replaceWeapon": [{"id": "big_smasher", "count": 2}], "withWeapon": [[{"id": "gauntlet"}, {"id": "great_weapon", "count": 2}]]}],
+                    "rules": [{"id": "wounds", "x": 2}],
+                    "min": 1,
+                    "max": 1
+                },
+                {
+                    "name": "Orc Brute",
+                    "movement": 6,
+                    "courage": 4,
+                    "shoot": 5,
+                    "fight": 6,
+                    "defense": 7,
+                    "reflexes": 4,
+                    "weapons": [{"id": "great_weapon", "count": 2}],
+                    "rules": [{"id": "wounds", "x": 2}],
+                    "min": 2,
+                    "max": 11
+                }
+            ],
+            "keywords": ["Orc", "Infantry"],
+            "options": [
+                {"modelLimit": "2/3", "replaceWeapon": [{"id": "great_weapon", "count": 2}], "withWeapon": [[{"id": "great_weapon", "count": 2}], [{"id": "big_smasher", "count": 2}]]},
+                {"addRule": ["banner"], "modelLimit": 1},
+                {"addRule": ["musician"], "modelLimit": 1}
+            ],
+            "subfactions": ["none", "trickery", "speed", "primal", "armor"]
+        },
+        "armor_orc_warboss": {
+            "name": "Armorclad Warboss",
+            "description": "A walking tank, clad in the best orcish armor and wielding deadly weapons.",
+            "min": 1,
+            "max": 1,
+            "category": "hero",
+            "models": [
+                {
+                    "name": "Armorclad Warboss",
+                    "movement": 6,
+                    "courage": 7,
+                    "shoot": 4,
+                    "fight": 7,
+                    "defense": 7,
+                    "reflexes": 6,
+                    "weapons": [{"id": "big_smasher", "count": 4}, "shield"],
+                    "options": [{"replaceWeapon": [{"id": "big_smasher", "count": 4}, "shield"], "withWeapon": [{"id": "big_smasher", "count": 5}]}],
+                    "rules": [{"id": "wounds", "x": 3}, "leader", "heavy_armor"],
+                    "min": 1,
+                    "max": 1
+                }
+            ],
+            "keywords": ["Hero", "Orc", "Infantry"],
+            "subfactions": ["none", "trickery", "speed", "primal", "armor"]
+        },
+        "armor_orc_brute": {
+            "name": "Armorclad Brutes",
+            "description": "Wielding an arsenal of the best orcish weapons and armor.",
+            "min": 1,
+            "max": 3,
+            "category": "elite",
+            "models": [
+                {
+                    "name": "Armorclad Boss",
+                    "movement": 6,
+                    "courage": 4,
+                    "shoot": 5,
+                    "fight": 6,
+                    "defense": 7,
+                    "reflexes": 4,
+                    "weapons": ["shield", {"id": "heavy_handweapon", "count": 2}],
+                    "min": 1,
+                    "max": 1
+                },
+                {
+                    "name": "Armorclad Brute",
+                    "movement": 6,
+                    "courage": 4,
+                    "shoot": 5,
+                    "fight": 6,
+                    "defense": 7,
+                    "reflexes": 4,
+                    "weapons": ["shield", {"id": "heavy_handweapon", "count": 2}],
+                    "min": 2,
+                    "max": 11
+                }
+            ],
+            "rules": [{"id": "wounds", "x": 2}, "heavy_armor"],
+            "keywords": ["Orc", "Infantry"],
+            "options": [
+                {"replaceWeapon": [{"id": "heavy_handweapon", "count": 2}, "shield"], "withWeapon": [[{"id": "big_smasher", "count": 2}], [{"id": "great_weapon", "count": 2}]], "modelLimit": "2/3"},
+                {"addRule": ["banner"], "modelLimit": 1},
+                {"addRule": ["musician"], "modelLimit": 1}
+            ],
+            "subfactions": ["none", "trickery", "speed", "primal", "armor"]
+        }
+    },
+    "weapons": {
+        "net_and_spear": {"name": "Spear and Net", "attacks": 1, "short": "Melee", "ap": 1, "rules": ["net", {"id": "reach", "x": 1}]},
+        "spider_bite": {"name": "Spider Bite", "attacks": 1, "short": "Melee", "rules": [{"id": "poison", "x": 2}]},
+        "claws": {"name": "Rending Claws", "ap": 1, "attacks": 2, "short": "Melee", "rules": [{"id": "rending"}]},
+        "bite": {"name": "Fangs and Teeth", "ap": 2, "attacks": 1, "short": "Melee"},
+        "sickle": {"name": "Moon-sickle", "ap": 3, "attacks": 1, "short": "Melee", "note": "goblins only"},
+        "big_smasher": {"name": "Big Smasher", "ap": 6, "attacks": 1, "short": "Melee"},
+        "gauntlet": {"name": "Scythed Gauntlet", "attacks": 1, "short": "Melee", "ap": 3}
+    },
+    "rules": {
+        "crazed": {
+            "name": "Crazed",
+            "description": "When you activate this unit make an initiative test. If successful, until the end of the turn whenever you make a move action with this unit you may sprint without needing to make an initiative test.",
+            "points": 4
+        },
+        "net": {
+            "name": "Net",
+            "description": "Units engaged in Melee with a model that has this weapon suffer -2 to Initiative tests when escaping combat for each weapon with this rule.",
+            "points": 2
+        },
+        "frenzy_banner": {
+            "description": "When this unit is activated, choose a friendly Infantry unit within 6\". That unit's hit rolls of 1 or 2 cause an additional hit until the end of the round.",
+            "name": "Frenzy Banner"
+        },
+        "mount": {
+            "name": "Mount",
+            "description": "This model may carry X Infantry models on top of it. Units on this mount may take a single fire or fight action when activated or when charging an enemy unit. Up to X models total may fire or fight with their weapons.",
+            "inputs": ["x"],
+            "points": ["rule.x", {"multiply": 2}]
+        },
+        "banner": {"name": "Banner", "description": "This unit may re-roll a single failed Courage test when removing Shock.", "points": 5},
+        "musician": {"name": "Musician", "description": "This unit may re-roll a single failed Initiative test when sprinting.", "points": 5}
+    },
+    "powers": {
+        "lightning_bolt": {"name": "Lightning Bolt", "description": "Target enemy unit within 18\" takes 1 hit with AP(7).", "charge": 6},
+        "haste": {"name": "Haste", "description": "Target friendly unit within 12\" may immediately make a free move action.", "charge": 7},
+        "warpath": {"name": "Warpath", "description": "Target friendly unit within 12\" may immediately make a free charge action.", "charge": 5, "school": "shadow"}
+    },
+    "strategies": [
+        {"name": "Here We Go!", "phase": "activation", "description": "Use when a unit declares a Charge action. That unit gets +3\" of Movement for that action.", "cost": 1},
+        {
+            "name": "Smash Them",
+            "phase": "activation",
+            "flavor": "It's about time we got to fighting.",
+            "description": "Use when an _Infantry_ unit performs a Fight action. Hit rolls of 1 or 2 cause an additional hit.",
+            "cost": 1
         },
         {
-          "addRule" : [
-            "banner"
-          ],
-          "modelLimit" : 1
-        },
-        {
-          "addRule" : [
-            "musician"
-          ],
-          "modelLimit" : 1
+            "name": "Tough Ones",
+            "phase": "activation",
+            "flavor": "These Orcs are some of the toughest you've ever seen.",
+            "description": "Use before taking Save rolls for an _Infantry_ unit. It gets +1 Save.",
+            "cost": 2
         }
-      ],
-      "subfactions" : [
-        "none",
-        "trickery",
-        "speed",
-        "primal",
-        "armor"
-      ]
-    }
-  },
-  "weapons" : {
-    "net_and_spear" : {
-      "name" : "Spear and Net",
-      "attacks" : 1,
-      "short" : "Melee",
-      "ap" : 1,
-      "rules" : [
-        "net",
+    ],
+    "relics": [
         {
-          "id" : "reach",
-          "x" : 1
+            "name": "Bloody Trophy",
+            "description": "Upgrade one Orc Warboss model with Frenzy Banner.",
+            "flavor": "A crimson banner, dyed in the blood of the Warboss's greatest kills, inciting an endless rage in their followers.",
+            "points": 10,
+            "rule": "frenzy_banner",
+            "subfactions": ["armor", "speed", "none", "trickery", "primal"]
         }
-      ]
-    },
-    "spider_bite" : {
-      "name" : "Spider Bite",
-      "attacks" : 1,
-      "short" : "Melee",
-      "rules" : [
-        {
-          "id" : "poison",
-          "x" : 2
-        }
-      ]
-    },
-    "claws" : {
-      "name" : "Rending Claws",
-      "ap" : 1,
-      "attacks" : 2,
-      "short" : "Melee",
-      "rules" : [
-        {
-          "id" : "rending"
-        }
-      ]
-    },
-    "bite" : {
-      "name" : "Fangs and Teeth",
-      "ap" : 2,
-      "attacks" : 1,
-      "short" : "Melee"
-    },
-    "sickle" : {
-      "name" : "Moon-sickle",
-      "ap" : 3,
-      "attacks" : 1,
-      "short" : "Melee",
-      "note" : "goblins only"
-    },
-    "big_smasher" : {
-      "name" : "Big Smasher",
-      "ap" : 6,
-      "attacks" : 1,
-      "short" : "Melee"
-    },
-    "gauntlet" : {
-      "name" : "Scythed Gauntlet",
-      "attacks" : 1,
-      "short" : "Melee",
-      "ap" : 3
-    }
-  },
-  "rules" : {
-    "crazed" : {
-      "name" : "Crazed",
-      "description" : "When you activate this unit make an initiative test. If successful, until the end of the turn whenever you make a move action with this unit you may sprint without needing to make an initiative test.",
-      "points" : 4
-    },
-    "net" : {
-      "name" : "Net",
-      "description" : "Units engaged in Melee with a model that has this weapon suffer -1 to Initiative tests when escaping combat for each weapon with this rule.",
-      "points" : 1
-    },
-    "frenzy_banner" : {
-      "description" : "When this unit is activated, choose a friendly Infantry unit within 6\". That unit's hit rolls of 1 or 2 cause an additional hit until the end of the round.",
-      "name" : "Frenzy Banner"
-    },
-    "mount" : {
-      "name" : "Mount",
-      "description" : "This model may carry X Infantry models on top of it. Units on this mount may take a single fire or fight action when activated or when charging an enemy unit. Up to X models total may fire or fight with their weapons.",
-      "inputs" : [
-        "x"
-      ],
-      "points" : [
-        "rule.x",
-        {
-          "multiply" : 2
-        }
-      ]
-    },
-    "banner" : {
-      "name" : "Banner",
-      "description" : "This unit may re-roll a single failed Courage test when removing Shock.",
-      "points" : 5
-    },
-    "musician" : {
-      "name" : "Musician",
-      "description" : "This unit may re-roll a single failed Initiative test when sprinting.",
-      "points" : 5
-    }
-  },
-  "powers" : {},
-  "strategies" : [],
-  "relics" : [
-    {
-      "name" : "Bloody Trophy",
-      "description" : "Upgrade one Orc Warboss model with Frenzy Banner.",
-      "flavor" : "A crimson banner, dyed in the blood of the Warboss's greatest kills, inciting an endless rage in their followers.",
-      "points" : 10,
-      "rule" : "frenzy_banner",
-      "subfactions" : [
-        "armor",
-        "speed",
-        "none",
-        "trickery",
-        "primal"
-      ]
-    }
-  ]
+    ]
 }

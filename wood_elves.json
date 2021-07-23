@@ -1,0 +1,541 @@
+{
+    "name": "Wood Elves",
+    "id": "wood_elves",
+    "author": "Xekon#8266",
+    "description": "",
+    "alliance": "order",
+    "units": {
+        "elf_prince": {
+            "name": "Elven Prince",
+            "description": "A prince of the wood elves.",
+            "category": "hero",
+            "models": [
+                {
+                    "name": "Elven Prince",
+                    "movement": 7,
+                    "courage": 6,
+                    "shoot": 7,
+                    "fight": 6,
+                    "defense": 6,
+                    "reflexes": 6,
+                    "weapons": [{"id": "handweapon", "count": 3}, {"id": "long_bow", "count": 3}],
+                    "options": [
+                        {
+                            "replaceWeapon": [{"id": "handweapon", "count": 3}],
+                            "withWeapon": [{"id": "great_weapon", "count": 3}, {"id": "handweapon", "count": 4}, {"id": "polearm", "count": 3}, {"id": "long_spear", "count": 3}]
+                        },
+                        {"addRule": ["shield_hero"]},
+                        {"addRule": [{"id": "power", "x": 1}]},
+                        {"replaceRule": [{"id": "elf_tactics", "x": 1}], "withRule": [{"id": "elf_tactics", "x": 2}]}
+                    ],
+                    "rules": ["agile", {"id": "wounds", "x": 3}, "leader", {"id": "elf_tactics", "x": 1}],
+                    "min": 1,
+                    "max": 1
+                }
+            ],
+            "subfactions": ["none", "watchers", "life", "spite"]
+        },
+        "elf_prince_stag": {
+            "name": "Elven Prince on Great Stag",
+            "description": "A prince of the wood elves.",
+            "category": "hero",
+            "models": [
+                {
+                    "name": "Elven Prince on Great Stag",
+                    "movement": 8,
+                    "courage": 6,
+                    "shoot": 7,
+                    "fight": 6,
+                    "defense": 6,
+                    "reflexes": 6,
+                    "weapons": [{"id": "handweapon", "count": 3}, {"id": "long_bow", "count": 3}, {"id": "antlers_and_hooves", "count": 2}],
+                    "options": [
+                        {
+                            "replaceWeapon": [{"id": "handweapon", "count": 3}],
+                            "withWeapon": [{"id": "great_weapon", "count": 3}, {"id": "handweapon", "count": 4}, {"id": "polearm", "count": 3}, {"id": "lance", "count": 3}]
+                        },
+                        {"addRule": ["shield_hero"]},
+                        {"addRule": [{"id": "power", "x": 1}]},
+                        {"replaceRule": [{"id": "knight_tactics", "x": 1}], "withRule": [{"id": "knight_tactics", "x": 2}]}
+                    ],
+                    "rules": ["agile", {"id": "wounds", "x": 3}, {"id": "knight_tactics", "x": 1}, {"id": "leader_x", "x": "Infantry, Cavalry"}],
+                    "min": 1,
+                    "max": 1
+                }
+            ],
+            "keywords": ["Cavalry"],
+            "subfactions": ["none", "watchers", "life", "spite"]
+        },
+        "witch_revenant": {
+            "name": "Thornwitch-Revenant",
+            "description": "",
+            "category": "hero",
+            "models": [
+                {
+                    "name": "Thornwitch-Revenant",
+                    "movement": 7,
+                    "courage": 6,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 6,
+                    "reflexes": 6,
+                    "weapons": [{"id": "claws_revenant", "count": 2}],
+                    "min": 1,
+                    "max": 1,
+                    "rules": ["agile", {"id": "wounds", "x": 3}, {"id": "power", "x": 2}, {"id": "revenant_tactics", "x": 1}],
+                    "options": [
+                        {"replaceWeapon": [{"id": "claws_revenant", "count": 2}], "withWeapon": [{"id": "polearm", "count": 2}]},
+                        {"addRule": ["companion"]},
+                        {"replaceRule": [{"id": "power", "x": 2}], "withRule": [{"id": "power", "x": 3}]}
+                    ]
+                }
+            ],
+            "keywords": ["Infantry", "Undead"],
+            "subfactions": ["none", "life", "spite", "sorrow"]
+        },
+        "arch_revenant": {
+            "name": "Arch-Revenant",
+            "description": "",
+            "category": "hero",
+            "models": [
+                {
+                    "name": "Arch-Revenant",
+                    "movement": 7,
+                    "courage": 6,
+                    "shoot": 7,
+                    "fight": 7,
+                    "defense": 6,
+                    "reflexes": 6,
+                    "weapons": [{"id": "great_polearm", "count": 3}],
+                    "options": [{"replaceRule": [{"id": "revenant_tactics", "x": 1}], "withRule": [{"id": "revenant_tactics", "x": 2}]}],
+                    "rules": ["fly", {"id": "wounds", "x": 3}, "leader", {"id": "revenant_tactics", "x": 1}, "shield_hero"],
+                    "min": 1,
+                    "max": 1
+                }
+            ],
+            "keywords": ["Infantry", "Undead"],
+            "subfactions": ["none", "life", "spite", "sorrow"]
+        },
+        "druid": {
+            "name": "Druid",
+            "description": "A secretive spellcaster of the Wood Elves.",
+            "category": "hero",
+            "models": [
+                {
+                    "name": "Druid",
+                    "movement": 7,
+                    "courage": 6,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 5,
+                    "reflexes": 6,
+                    "weapons": ["staff", "handweapon"],
+                    "rules": [{"id": "wounds", "x": 3}, "leader", {"id": "power", "x": 1}],
+                    "min": 1,
+                    "max": 1,
+                    "options": [{"replaceRule": [{"id": "power", "x": 1}], "withRule": [{"id": "power", "x": 2}]}]
+                }
+            ],
+            "subfactions": ["none", "watchers", "life", "spite"]
+        },
+        "elf_rangers": {
+            "name": "Elven Rangers",
+            "description": "",
+            "category": "core",
+            "models": [
+                {
+                    "rules": ["agile"],
+                    "min": 10,
+                    "max": 30,
+                    "name": "Ranger",
+                    "movement": 7,
+                    "courage": 5,
+                    "shoot": 6,
+                    "fight": 5,
+                    "defense": 5,
+                    "reflexes": 6,
+                    "weapons": ["light_handweapon", "longbow"]
+                }
+            ],
+            "options": [{"addRule": ["champion"], "modelLimit": 1}, {"addRule": ["banner"], "modelLimit": 1}, {"addRule": ["musician"], "modelLimit": 1}],
+            "subfactions": ["none", "watchers", "life", "spite"]
+        },
+        "elf_guardians": {
+            "name": "Elven Guardians",
+            "description": "",
+            "category": "core",
+            "models": [
+                {
+                    "rules": ["agile"],
+                    "max": 30,
+                    "min": 10,
+                    "name": "Guardian",
+                    "movement": 7,
+                    "courage": 5,
+                    "shoot": 6,
+                    "fight": 5,
+                    "defense": 5,
+                    "reflexes": 6,
+                    "weapons": ["shield", "spear", "javelin"],
+                    "options": [{"replaceWeapon": ["shield", "spear"], "withWeapon": [{"id": "great_weapon", "count": 2}]}]
+                }
+            ],
+            "options": [{"addRule": ["champion"], "modelLimit": 1}, {"addRule": ["banner"], "modelLimit": 1}, {"addRule": ["musician"], "modelLimit": 1}],
+            "subfactions": ["none", "watchers", "life", "spite"]
+        },
+        "dryads": {
+            "name": "Dryads",
+            "description": "",
+            "category": "core",
+            "models": [
+                {
+                    "name": "Dryads",
+                    "movement": 6,
+                    "courage": 5,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 5,
+                    "reflexes": 6,
+                    "weapons": [{"id": "claws", "count": 2}],
+                    "min": 10,
+                    "max": 30,
+                    "rules": ["agile", "furious"]
+                }
+            ],
+            "options": [{"addRule": ["champion"], "modelLimit": 1}, {"addRule": ["banner"], "modelLimit": 1}, {"addRule": ["musician"], "modelLimit": 1}],
+            "keywords": ["Infantry", "Undead"],
+            "subfactions": ["none", "life", "spite", "sorrow"]
+        },
+        "stag_knights": {
+            "name": "Stag Knights",
+            "description": "",
+            "category": "elite",
+            "models": [
+                {
+                    "max": 10,
+                    "min": 5,
+                    "name": "Stag Knight",
+                    "movement": 8,
+                    "courage": 5,
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 6,
+                    "reflexes": 6,
+                    "weapons": [{"id": "spear", "count": 2}, {"id": "antlers_and_hooves", "count": 2}, {"id": "javelin", "count": 2}],
+                    "rules": ["agile"]
+                }
+            ],
+            "options": [{"addRule": ["champion"], "modelLimit": 1}, {"addRule": ["banner"], "modelLimit": 1}, {"addRule": ["musician"], "modelLimit": 1}],
+            "keywords": ["Cavalry"],
+            "subfactions": ["none", "watchers", "life", "spite"]
+        },
+        "cursed_revenants": {
+            "name": "Cursed Revenants",
+            "description": "",
+            "category": "elite",
+            "models": [
+                {
+                    "name": "Cursed Revenants",
+                    "movement": 6,
+                    "courage": 6,
+                    "shoot": 5,
+                    "fight": 6,
+                    "defense": 5,
+                    "reflexes": 6,
+                    "weapons": [{"id": "claws_revenant", "count": 2}],
+                    "min": 5,
+                    "max": 10,
+                    "rules": ["agile", "fear"]
+                }
+            ],
+            "options": [{"addRule": ["champion"], "modelLimit": 1}, {"addRule": ["banner"], "modelLimit": 1}, {"addRule": ["musician"], "modelLimit": 1}],
+            "keywords": ["Infantry", "Undead"],
+            "subfactions": ["none", "life", "spite", "sorrow"]
+        },
+        "protector_revenants": {
+            "name": "Protector-Revenants",
+            "description": "",
+            "category": "elite",
+            "models": [
+                {
+                    "name": "Protector-Revenants",
+                    "movement": 6,
+                    "courage": 6,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 5,
+                    "reflexes": 6,
+                    "weapons": [{"id": "great_weapon", "count": 2}],
+                    "min": 5,
+                    "max": 10,
+                    "rules": ["agile", "ambush"],
+                    "options": [{"replaceWeapon": [{"id": "great_weapon", "count": 2}], "withWeapon": [{"id": "heavy_polearm", "count": 2}]}]
+                }
+            ],
+            "options": [{"addRule": ["champion"], "modelLimit": 1}, {"addRule": ["banner"], "modelLimit": 1}, {"addRule": ["musician"], "modelLimit": 1}],
+            "keywords": ["Infantry", "Undead"],
+            "subfactions": ["none", "life", "spite", "sorrow"]
+        },
+        "treemen_hunters": {
+            "name": "Firstborn Hunters",
+            "description": "",
+            "category": "elite",
+            "models": [
+                {
+                    "name": "Firstborn Hunter",
+                    "movement": 6,
+                    "courage": 6,
+                    "shoot": 5,
+                    "fight": 6,
+                    "defense": 6,
+                    "reflexes": 6,
+                    "weapons": [{"id": "claws", "count": 2}, {"id": "great_bow", "count": 2}],
+                    "min": 3,
+                    "max": 6,
+                    "rules": ["agile", {"id": "wounds", "x": 3}],
+                    "options": [
+                        {"replaceWeapon": [{"id": "great_bow", "count": 2}, {"id": "claws", "count": 2}], "withWeapon": [{"id": "great_weapon", "count": 4}, {"id": "great_polearm", "count": 3}]}
+                    ]
+                }
+            ],
+            "options": [{"addRule": ["champion"], "modelLimit": 1}, {"addRule": ["banner"], "modelLimit": 1}, {"addRule": ["musician"], "modelLimit": 1}],
+            "subfactions": ["none", "life", "spite", "sorrow"]
+        },
+        "wild_riders": {
+            "name": "Wild Riders",
+            "description": "",
+            "category": "elite",
+            "models": [
+                {
+                    "max": 10,
+                    "min": 5,
+                    "name": "Wild Riders",
+                    "movement": 8,
+                    "courage": 5,
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 6,
+                    "reflexes": 6,
+                    "weapons": [{"id": "lance", "count": 2}, {"id": "antlers_and_hooves", "count": 2}],
+                    "rules": ["agile", "shield"]
+                }
+            ],
+            "options": [{"addRule": ["champion"], "modelLimit": 1}, {"addRule": ["banner"], "modelLimit": 1}, {"addRule": ["musician"], "modelLimit": 1}],
+            "keywords": ["Cavalry"],
+            "subfactions": ["none", "watchers", "life", "spite"]
+        },
+        "spellsinger_revenant": {
+            "name": "Spellsinger Revenant",
+            "description": "",
+            "category": "hero",
+            "models": [
+                {
+                    "name": "Arch-Revenant",
+                    "movement": 7,
+                    "courage": 6,
+                    "shoot": 7,
+                    "fight": 7,
+                    "defense": 6,
+                    "reflexes": 6,
+                    "weapons": [{"id": "roots", "count": 5}],
+                    "options": [{"replaceRule": [{"id": "power", "x": 2}], "withRule": [{"id": "power", "x": 3}]}],
+                    "rules": ["fly", {"id": "wounds", "x": 4}, "leader", {"id": "power", "x": 2}, {"id": "resilient", "x": 4}],
+                    "min": 1,
+                    "max": 1
+                }
+            ],
+            "keywords": ["Infantry", "Undead"],
+            "subfactions": ["none", "life", "spite", "sorrow"]
+        },
+        "firstborn_ancient": {
+            "name": "Firstborn Ancient of Life",
+            "description": "",
+            "category": "hero",
+            "models": [
+                {
+                    "name": "Firstborn Ancient of Life",
+                    "movement": 7,
+                    "courage": 7,
+                    "shoot": 6,
+                    "fight": 7,
+                    "defense": 11,
+                    "reflexes": 6,
+                    "weapons": ["impaling_claws", "wild_staff", {"id": "roots", "count": 5}],
+                    "rules": ["leader", {"id": "power", "x": 2}, "damage_table_monster", "ambush", "agile"],
+                    "min": 1,
+                    "max": 1,
+                    "options": [{"replaceRule": [{"id": "power", "x": 2}], "withRule": [{"id": "power", "x": 3}]}]
+                }
+            ],
+            "keywords": ["Monster"],
+            "subfactions": ["none", "life"]
+        },
+        "firstborn_revenant": {
+            "name": "Firstborn Ancient of Spite",
+            "description": "",
+            "category": "hero",
+            "models": [
+                {
+                    "name": "Firstborn Ancient of Spite",
+                    "movement": 7,
+                    "courage": 7,
+                    "shoot": 6,
+                    "fight": 7,
+                    "defense": 11,
+                    "reflexes": 6,
+                    "weapons": [{"id": "wild_blade", "count": 3}, "impaling_claws", {"id": "roots", "count": 5}],
+                    "rules": ["leader", {"id": "power", "x": 1}, "damage_table_monster", "ambush", "agile"],
+                    "min": 1,
+                    "max": 1
+                }
+            ],
+            "keywords": ["Monster"],
+            "subfactions": ["none", "spite"]
+        },
+        "firstborn_sorrow": {
+            "name": "Firstborn Ancient of Sorrow",
+            "description": "",
+            "category": "hero",
+            "models": [
+                {
+                    "name": "Firstborn Ancient of Sorrow",
+                    "movement": 7,
+                    "courage": 7,
+                    "shoot": 6,
+                    "fight": 7,
+                    "defense": 11,
+                    "reflexes": 6,
+                    "weapons": [{"id": "impaling_claws", "count": 2}, "swarm"],
+                    "rules": ["leader", {"id": "power", "x": 1}, "damage_table_monster", "ambush", "agile"],
+                    "min": 1,
+                    "max": 1
+                }
+            ],
+            "keywords": ["Monster"],
+            "subfactions": ["none", "sorrow"]
+        }
+    },
+    "weapons": {
+        "dragon_bite": {"name": "Dragon's Breath", "ap": 4, "attacks": 1, "medium": 12, "short": 6, "rules": ["lethal"]},
+        "claws": {"name": "Rending Claws", "ap": 1, "attacks": 1, "short": "Melee", "rules": ["rending"]},
+        "beak": {"name": "Beak", "ap": 2, "attacks": 1, "short": "Melee"},
+        "antlers_and_hooves": {"name": "Antlers and Hooves", "attacks": 1, "short": "Melee", "ap": 1},
+        "ballista": {
+            "name": "Ballista",
+            "profiles": [{"name": "Focus", "ap": 6, "attacks": 1, "medium": 36, "short": 18, "rules": []}, {"name": "Volley", "ap": 2, "attacks": 6, "medium": 36, "short": 18, "rules": []}]
+        },
+        "beak_and_claws": {"name": "Bite and Claws", "ap": 4, "attacks": 1, "short": "Melee", "rules": ["lethal"]},
+        "phoenix_claws": {"name": "Phoenix Claws", "ap": 5, "attacks": 1, "short": "Melee"},
+        "phoenix_flame": {"name": "Flaming Wings", "ap": 4, "attacks": 1, "medium": 12, "short": 6, "rules": ["flame", "bomb"]},
+        "claws_revenant": {"name": "Cursed Claws", "ap": 2, "attacks": 1, "short": "Melee", "rules": ["rending"]},
+        "roots": {"name": "Piercing Roots", "ap": 4, "attacks": 1, "short": "Melee", "rules": [{"id": "reach", "x": 2}]},
+        "impaling_claws": {
+            "name": "Impaling Claws",
+            "profiles": [{"name": "Cleave", "ap": 6, "attacks": 1, "short": "Melee", "rules": ["brutal"]}, {"name": "Sweep", "ap": 5, "attacks": 3, "short": "Melee"}]
+        },
+        "wild_staff": {"name": "Wildwood Staff", "attacks": 1, "ap": 6, "short": "Melee", "rules": [{"id": "reach", "x": 1}]},
+        "wild_blade": {"name": "Wildwood Blade", "attacks": 1, "ap": 7, "short": "Melee", "rules": ["lethal"]},
+        "swarm": {"name": "Bleakwing Hive", "medium": 18, "short": 9, "rules": ["lethal"], "attacks": 10, "ap": 3}
+    },
+    "rules": {
+        "elf_tactics": {
+            "name": "Elven Tactics",
+            "inputs": ["x"],
+            "description": "When this unit is activated, choose up to X friendly _Infantry_ units within 6\". This unit and those units may re-roll failed Accuracy tests of 9+ until the end of the round.",
+            "points": ["rule.x", {"multiply": 10}]
+        },
+        "astral_quiver": {"name": "Astral Quiver", "description": "When you use the Moonfire Arrows strategy on this unit, you don't spend SP to use it.", "points": 2},
+        "shield_hero": {"name": "Shield", "description": "This model has +1 Save.", "points": 5},
+        "revenant_tactics": {
+            "name": "Revenant Tactics",
+            "inputs": ["x"],
+            "description": "When this unit is activated, choose up to X friendly _Infantry_ units within 6\". This unit and those units may re-roll failed Strength tests of 9+ until the end of the round.",
+            "points": ["rule.x", {"multiply": 10}]
+        },
+        "knight_tactics": {
+            "name": "Knight Tactics",
+            "inputs": ["x"],
+            "description": "When this unit is activated, choose up to X friendly _Cavalry_ units within 6\". This unit and those units may re-roll failed Strength tests of 9+ until the end of the round.",
+            "points": ["rule.x", {"multiply": 10}]
+        },
+        "companion": {"name": "Arcane Companion", "description": "Once per turn when a power within 24“ of this model gets dispelled, deal 1 hit with AP(2) to the caster.", "points": 5},
+        "brutal": {
+            "name": "Brutal",
+            "description": "Hit rolls of 1 or 2 from this weapon cause 3 hits instead of 1. Additional hits must be assigned to the same model.",
+            "points": ["weapon.attacks", {"multiply": 3}]
+        }
+    },
+    "powers": {
+        "cloak_of_thorns": {
+            "name": "Cloak of Thorns",
+            "description": "Target friendly unit within 12\". Until the end of the round, each time that unit rolls a 1 or 2 on a save roll, the attacking unit takes 1 hit with AP(3). This power may be cast unlimited times.",
+            "charge": 7
+        },
+        "lifebloom": {
+            "name": "Lifebloom",
+            "description": "Target friendly _Infantry_ unit within 12\" restores 1D3 wounds. If no wounds can be restored, restore 1d3 models instead. This power may only be cast once per turn.",
+            "charge": 6
+        },
+        "barkskin": {"name": "Barkskin", "description": "Target friendly unit within 12\" may re-roll one failed die on its next Save test. This power may be cast unlimited times.", "charge": 6},
+        "siphon_life": {
+            "name": "Siphon Life",
+            "description": "Target enemy unit within 12\" takes 2 hits with AP(3) and this model regains 1 wound or removes a critical wound token. This power may only be cast once per turn.",
+            "charge": 6
+        },
+        "fright": {"name": "Frightening Presence", "description": "Target enemy unit within 12\" gets -1 Courage until the end of the round. This power may be cast unlimited times.", "charge": 7},
+        "path": {
+            "name": "Spirit Path",
+            "description": "Target friendly unit within 12\" may immediately make a free move action, ignoring terrain or other models. This power may only be cast once per turn.",
+            "charge": 7
+        }
+    },
+    "strategies": [
+        {
+            "name": "Valor",
+            "phase": "activation",
+            "description": "Use before activating a unit. That unit may immediately remove up to 2 Shock.",
+            "flavor": "Standing in the face of near extinction has battle hardened even the youngest of their kind.",
+            "cost": 1
+        },
+        {
+            "name": "Veterancy",
+            "phase": "activation",
+            "description": "Use when taking a Initiative test. That unit is treated as having +2 Initiative for that test.",
+            "flavor": "With countless battles experienced, these soldiers are trained to react to any situation.",
+            "cost": 1
+        },
+        {
+            "name": "Moonfire Arrows",
+            "phase": "activation",
+            "description": "Use before an _Infantry_ unit shoots with Longbows. Succesful hits have +1 AP.",
+            "flavor": "Weaved out of the light of the stars and enchanted by ancient secrets, these arrows are a potent weapon to slay even the greatest beasts.",
+            "cost": 1
+        }
+    ],
+    "relics": [],
+    "color": "#38733a",
+    "subfactions": {
+        "spite": {
+            "name": "Spite-Grove",
+            "id": "spite",
+            "color": "#801111",
+            "description": "Fueled by their own rage, lashing out at the outside world in brutal and quick skirmishes.",
+            "restricted": true
+        },
+        "life": {"name": "Life-Grove", "id": "life", "color": "#50974A", "description": "Protecting the land and all its inhabitants, following the circle of life and death.", "restricted": true},
+        "sorrow": {
+            "name": "Sorrow-Grove",
+            "id": "sorrow",
+            "color": "#30106B",
+            "description": "Blinded by their own hate, these forces of the woods have turned against their elven allies and the rest of the world.",
+            "restricted": true
+        },
+        "watchers": {
+            "name": "Wayward Watcher",
+            "id": "watchers",
+            "color": "#38733a",
+            "description": "Nomadic Guardians of ancient paths and groves, setting out to seek out and destroy great dangers.",
+            "restricted": true
+        }
+    }
+}

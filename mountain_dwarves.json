@@ -1,0 +1,638 @@
+{
+    "name": "Mountain Dwarves",
+    "id": "mountain_dwarves",
+    "author": "Xekon#8266",
+    "description": "A stout race of miners, engineers and warriors.",
+    "alliance": "order",
+    "units": {
+        "thane": {
+            "name": "Thane",
+            "description": "The head of a dwarven clan.",
+            "category": "hero",
+            "models": [
+                {
+                    "name": "Thane",
+                    "movement": 5,
+                    "courage": 7,
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 7,
+                    "reflexes": 6,
+                    "rules": ["leader", {"id": "wounds", "x": 3}, {"id": "sentinel_tactics", "x": 1}],
+                    "weapons": [{"id": "heavy_great_weapon", "count": 3}],
+                    "min": 1,
+                    "max": 1,
+                    "options": [
+                        {"replaceWeapon": [{"id": "heavy_great_weapon", "count": 3}], "withWeapon": [{"id": "heavy_great_weapon", "count": 4}, {"id": "war_hammer", "count": 3}]},
+                        {"addRule": ["enchanted_shield"]},
+                        {"addWeapon": ["crossbow", "pistol"], "limit": 1},
+                        {"replaceRule": [{"id": "sentinel_tactics", "x": 1}], "withRule": [{"id": "sentinel_tactics", "x": 2}]}
+                    ]
+                }
+            ],
+            "subfactions": ["none"]
+        },
+        "runepriest": {
+            "name": "Runepriest",
+            "description": "A master of his craft, hammering raw magic into magical runes.",
+            "category": "hero",
+            "models": [
+                {
+                    "name": "Runepriest",
+                    "movement": 5,
+                    "courage": 6,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 7,
+                    "reflexes": 6,
+                    "rules": ["leader", {"id": "power", "x": 1}, {"id": "wounds", "x": 3}],
+                    "weapons": [{"id": "handweapon", "count": 2}, "great_staff"],
+                    "options": [
+                        {"replaceWeapon": [{"id": "handweapon", "count": 2}], "withWeapon": [{"id": "great_weapon", "count": 2}]},
+                        {"replaceRule": [{"id": "power", "x": 1}], "withRule": [{"id": "power", "x": 2}]}
+                    ],
+                    "min": 1,
+                    "max": 1
+                }
+            ],
+            "subfactions": ["none"]
+        },
+        "master_engineer": {
+            "name": "Master Engineer",
+            "description": "A master of his craft, equipped with an array of tools and guns.",
+            "category": "hero",
+            "models": [
+                {
+                    "name": "Master Engineer",
+                    "movement": 5,
+                    "courage": 6,
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 6,
+                    "reflexes": 6,
+                    "rules": [{"id": "leader_x", "x": "Warmachine"}, "repair_toolkit", {"id": "wounds", "x": 3}, {"id": "blackpowder_tactics", "x": 1}],
+                    "weapons": [{"id": "handweapon", "count": 4}, {"id": "pistol", "count": 3}],
+                    "min": 1,
+                    "max": 1,
+                    "options": [
+                        {
+                            "replaceWeapon": [{"id": "pistol", "count": 3}],
+                            "withWeapon": [{"id": "handgun", "count": 3}, {"id": "shotgun", "count": 3}, {"id": "flame_rifle", "count": 3}, "harpoon_rifle", {"id": "repeater_handgun", "count": 3}]
+                        },
+                        {"replaceWeapon": [{"id": "handweapon", "count": 4}], "withWeapon": [{"id": "great_weapon", "count": 3}, {"id": "war_hammer", "count": 3}]},
+                        {"replaceRule": [{"id": "blackpowder_tactics", "x": 1}], "withRule": [{"id": "blackpowder_tactics", "x": 2}]}
+                    ]
+                }
+            ],
+            "subfactions": ["none"]
+        },
+        "commando": {
+            "name": "Commando",
+            "description": "A master pathfinder with great tenacity.",
+            "category": "hero",
+            "models": [
+                {
+                    "name": "Commando",
+                    "movement": 5,
+                    "courage": 6,
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 7,
+                    "reflexes": 6,
+                    "weapons": [{"id": "crossbow"}, {"id": "throwing_axe", "count": 4}],
+                    "rules": ["ambush", "leader", {"id": "wounds", "x": 3}, {"id": "ranger_tactics", "x": 1}],
+                    "min": 1,
+                    "max": 1,
+                    "options": [{"replaceRule": [{"id": "ranger_tactics", "x": 1}], "withRule": [{"id": "ranger_tactics", "x": 2}]}]
+                }
+            ],
+            "subfactions": ["none"]
+        },
+        "runepriest_elemental": {
+            "name": "Runepriest on Runecarved Elemental",
+            "description": "Animating the Earth around him to smite down his foes with the wrath of nature.",
+            "category": "hero",
+            "models": [
+                {
+                    "name": "Runepriest on Runecarved Elemental",
+                    "movement": 5,
+                    "courage": 6,
+                    "shoot": 5,
+                    "fight": 7,
+                    "defense": 10,
+                    "reflexes": 5,
+                    "rules": ["damage_table_monster", {"id": "leader_x", "x": "Infantry, Monster"}, {"id": "power", "x": 2}, "strider"],
+                    "weapons": [{"id": "crushing_fists", "count": 2}, {"id": "crushing_fists", "count": 2}, {"id": "handweapon", "count": 2}, "great_staff"],
+                    "options": [
+                        {"replaceWeapon": [{"id": "crushing_fists", "count": 2}], "withWeapon": [{"id": "heavy_great_weapon", "count": 3}], "modelLimit": 2},
+                        {"replaceRule": [{"id": "power", "x": 2}], "withRule": [{"id": "power", "x": 3}]}
+                    ],
+                    "min": 1,
+                    "max": 1
+                }
+            ],
+            "keywords": ["Monster", "Infantry"],
+            "subfactions": ["none"]
+        },
+        "berserker_champion": {
+            "name": "Berserker Champion",
+            "description": "First into the fray, this champion is imbued with an endless rage.",
+            "category": "hero",
+            "models": [
+                {
+                    "name": "Berserker Champion",
+                    "movement": 5,
+                    "courage": 6,
+                    "shoot": 5,
+                    "fight": 7,
+                    "defense": 6,
+                    "reflexes": 6,
+                    "rules": ["fanatical", "leader", {"id": "wounds", "x": 3}, {"id": "sentinel_tactics", "x": 1}, "furious"],
+                    "weapons": [{"id": "great_weapon", "count": 6}],
+                    "min": 1,
+                    "max": 1
+                }
+            ],
+            "subfactions": ["none"]
+        },
+        "dwarf_grunts": {
+            "name": "Dwarven Grunts",
+            "description": "A squad of dwarven soldiers.",
+            "category": "core",
+            "models": [
+                {
+                    "options": [{"replaceWeapon": ["handweapon", "shield"], "withWeapon": ["great_weapon", ["crossbow", "light_handweapon"]]}],
+                    "name": "Grunt",
+                    "movement": 5,
+                    "courage": 5,
+                    "shoot": 5,
+                    "fight": 6,
+                    "defense": 6,
+                    "reflexes": 5,
+                    "weapons": ["handweapon", "shield"],
+                    "min": 10,
+                    "max": 30
+                }
+            ],
+            "subfactions": ["none"],
+            "options": [{"addRule": ["champion"], "modelLimit": 1}, {"addRule": ["banner"], "modelLimit": 1}, {"addRule": ["musician"], "modelLimit": 1}]
+        },
+        "dwarf_veterans": {
+            "name": "Dwarven Veterans",
+            "description": "A squad of dwarven veterans.",
+            "category": "core",
+            "models": [
+                {
+                    "name": "Veteran",
+                    "movement": 5,
+                    "courage": 5,
+                    "shoot": 5,
+                    "fight": 6,
+                    "defense": 6,
+                    "reflexes": 5,
+                    "weapons": [{"id": "great_weapon", "count": 2}],
+                    "min": 10,
+                    "max": 30,
+                    "rules": ["fearless"],
+                    "options": [{"replaceWeapon": [{"id": "great_weapon", "count": 2}], "withWeapon": [{"id": "long_spear", "count": 2}]}, {"addRule": ["shield"], "modelLimit": "all"}]
+                }
+            ],
+            "options": [{"addRule": ["champion"], "modelLimit": 1}, {"addRule": ["banner"], "modelLimit": 1}, {"addRule": ["musician"], "modelLimit": 1}],
+            "subfactions": ["none"]
+        },
+        "dwarf_rangers": {
+            "name": "Dwarven Rangers",
+            "description": "A squad of dwarven scouts.",
+            "category": "elite",
+            "models": [
+                {
+                    "options": [{"addWeapon": "shield", "modelLimit": "all"}, {"replaceRule": ["scout"], "withRule": ["ambush"], "modelLimit": "all"}],
+                    "name": "Ranger",
+                    "movement": 5,
+                    "courage": 6,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 5,
+                    "reflexes": 6,
+                    "weapons": ["heavy_crossbow", {"id": "throwing_axe", "count": 2}],
+                    "min": 5,
+                    "max": 10
+                }
+            ],
+            "subfactions": ["none"],
+            "rules": ["scout"],
+            "options": [{"addRule": ["champion"], "modelLimit": 1}, {"addRule": ["banner"], "modelLimit": 1}, {"addRule": ["musician"], "modelLimit": 1}]
+        },
+        "dwarf_gunners": {
+            "name": "Dwarven Gunners",
+            "description": "A squad of veteran heavy riflemen.",
+            "category": "elite",
+            "models": [
+                {
+                    "name": "Gunner",
+                    "movement": 5,
+                    "courage": 5,
+                    "shoot": 6,
+                    "fight": 5,
+                    "defense": 6,
+                    "reflexes": 5,
+                    "weapons": ["handgun", "light_handweapon"],
+                    "options": [
+                        {"replaceWeapon": ["handgun"], "withWeapon": ["flamethrower_rifle"]},
+                        {"replaceWeapon": ["handgun"], "withWeapon": [["pistol", "frag_grenade"], {"id": "pistol", "count": 2}, "harpoon_rifle"], "modelLimit": "1/10"}
+                    ],
+                    "max": 20,
+                    "min": 10
+                }
+            ],
+            "subfactions": ["none"],
+            "options": [{"addRule": ["champion"], "modelLimit": 1}, {"addRule": ["banner"], "modelLimit": 1}, {"addRule": ["musician"], "modelLimit": 1}]
+        },
+        "dwarf_berserker": {
+            "name": "Dwarven Berserkers",
+            "description": "A squad of dwarven warriors that rush into the fray.",
+            "category": "elite",
+            "models": [
+                {
+                    "name": "Berserker",
+                    "movement": 5,
+                    "courage": 5,
+                    "shoot": 5,
+                    "fight": 6,
+                    "defense": 6,
+                    "reflexes": 5,
+                    "weapons": [{"id": "handweapon", "count": 3}],
+                    "min": 5,
+                    "max": 10,
+                    "options": [{"replaceWeapon": [{"id": "handweapon", "count": 3}], "withWeapon": [{"id": "great_weapon", "count": 2}]}]
+                }
+            ],
+            "rules": ["fanatical", "furious"],
+            "subfactions": ["none"],
+            "options": [{"addRule": ["champion"], "modelLimit": 1}, {"addRule": ["banner"], "modelLimit": 1}, {"addRule": ["musician"], "modelLimit": 1}]
+        },
+        "dwarf_miners": {
+            "name": "Dwarven Miners",
+            "description": "A squad of dwarven miners, digging tunnels beneath the battlefield.",
+            "category": "elite",
+            "models": [
+                {
+                    "name": "Miner",
+                    "movement": 5,
+                    "courage": 5,
+                    "shoot": 5,
+                    "fight": 6,
+                    "defense": 5,
+                    "reflexes": 5,
+                    "weapons": ["great_weapon", "frag_grenade"],
+                    "options": [
+                        {"replaceWeapon": ["great_weapon"], "withWeapon": ["mining_drill", "harpoon_rifle"], "modelLimit": "1/10"},
+                        {"addRule": ["champion"], "modelLimit": 1},
+                        {"addRule": ["banner"], "modelLimit": 1},
+                        {"addRule": ["musician"], "modelLimit": 1}
+                    ],
+                    "min": 10,
+                    "max": 20
+                }
+            ],
+            "rules": [{"id": "ambush"}],
+            "subfactions": ["none"]
+        },
+        "cannon": {
+            "name": "Cannon",
+            "description": "",
+            "category": "rare",
+            "models": [
+                {"name": "Cannon", "movement": 5, "shoot": 6, "weapons": ["cannon"], "rules": ["damage_table_warmachine"], "min": 1, "max": 1, "fight": "-", "defense": 8, "courage": 5, "reflexes": 5}
+            ],
+            "keywords": ["Warmachine", "Artillery"],
+            "subfactions": ["none"]
+        },
+        "hellblaster": {
+            "name": "Hellblaster",
+            "description": "",
+            "category": "rare",
+            "models": [
+                {
+                    "name": "Hellblaster",
+                    "movement": 5,
+                    "shoot": 6,
+                    "weapons": ["flamethrower_cannon"],
+                    "rules": ["damage_table_warmachine"],
+                    "min": 1,
+                    "max": 1,
+                    "fight": "-",
+                    "defense": 8,
+                    "courage": 5,
+                    "reflexes": 5
+                }
+            ],
+            "keywords": ["Warmachine", "Artillery"],
+            "subfactions": ["none"]
+        },
+        "rune_elemental": {
+            "name": "Runecarved Elemental",
+            "description": "",
+            "category": "rare",
+            "models": [
+                {
+                    "name": "Runecarved Elemental",
+                    "movement": 5,
+                    "fight": 7,
+                    "shoot": 5,
+                    "defense": 10,
+                    "courage": 6,
+                    "reflexes": 5,
+                    "weapons": [{"id": "crushing_fists", "count": 2}, {"id": "crushing_fists", "count": 2}, "rock_throw"],
+                    "rules": ["damage_table_monster", "strider"],
+                    "options": [{"replaceWeapon": [{"id": "crushing_fists", "count": 2}], "withWeapon": [{"id": "heavy_great_weapon", "count": 3}], "modelLimit": 2}],
+                    "min": 1,
+                    "max": 1
+                }
+            ],
+            "keywords": ["Monster"],
+            "subfactions": ["none"]
+        },
+        "forge_golem": {
+            "name": "Forgefire Golem",
+            "description": "",
+            "category": "rare",
+            "models": [
+                {
+                    "options": [
+                        {"replaceWeapon": [{"id": "runic_fist", "count": 2}], "withWeapon": [{"id": "heavy_great_weapon", "count": 3}]},
+                        {"replaceWeapon": ["cannon"], "withWeapon": ["flamethrower_cannon"]}
+                    ],
+                    "name": "Forgefire Golem",
+                    "movement": 5,
+                    "fight": 7,
+                    "shoot": 5,
+                    "defense": 10,
+                    "courage": 6,
+                    "reflexes": 5,
+                    "weapons": [{"id": "crushing_fists", "count": 2}, {"id": "cannon"}],
+                    "rules": ["damage_table_warmachine"],
+                    "min": 1,
+                    "max": 1
+                }
+            ],
+            "keywords": ["Monster", "Warmachine"],
+            "subfactions": ["none"]
+        },
+        "rune_golem": {
+            "name": "Runic Golems",
+            "description": "",
+            "category": "elite",
+            "models": [
+                {
+                    "name": "Runic Golem",
+                    "movement": 5,
+                    "fight": 6,
+                    "shoot": 5,
+                    "defense": 8,
+                    "courage": 6,
+                    "reflexes": 5,
+                    "weapons": [{"id": "war_hammer", "count": 2}],
+                    "rules": [{"id": "wounds", "x": 4}],
+                    "min": 2,
+                    "max": 4
+                }
+            ],
+            "keywords": ["Monster"],
+            "subfactions": ["none"]
+        },
+        "berserker_roughriders": {
+            "name": "Dwarven Berserkers on War-Beasts",
+            "description": "A squad of dwarven berserkers riding atop ferocious beasts into battle.",
+            "category": "elite",
+            "models": [
+                {
+                    "name": "Dwarven Berserker on War-Beasts",
+                    "movement": 8,
+                    "courage": 5,
+                    "shoot": 5,
+                    "fight": 6,
+                    "defense": 6,
+                    "reflexes": 5,
+                    "weapons": [{"id": "heavy_hooves_and_teeth", "count": 2}, {"id": "handweapon", "count": 3}],
+                    "min": 5,
+                    "max": 10,
+                    "rules": [{"id": "impact", "x": 1}, "fanatical", "furious"]
+                }
+            ],
+            "subfactions": ["none"],
+            "options": [{"addRule": ["champion"], "modelLimit": 1}, {"addRule": ["banner"], "modelLimit": 1}, {"addRule": ["musician"], "modelLimit": 1}],
+            "keywords": ["Cavalry"]
+        },
+        "berserker_champion_roughrider": {
+            "name": "Berserker Champion on War-Beast",
+            "description": "A dwarven berserker champion riding atop a ferocious beast into battle.",
+            "category": "hero",
+            "models": [
+                {
+                    "name": "Berserker Champion on War-Beast",
+                    "movement": 8,
+                    "courage": 6,
+                    "shoot": 5,
+                    "fight": 7,
+                    "defense": 6,
+                    "reflexes": 6,
+                    "weapons": [{"id": "heavy_hooves_and_teeth", "count": 2}, {"id": "great_weapon", "count": 6}],
+                    "min": 1,
+                    "max": 1,
+                    "rules": [{"id": "impact", "x": 1}, "fanatical", "furious", {"id": "wounds", "x": 3}, "leader", {"id": "sentinel_tactics", "x": 1}]
+                }
+            ],
+            "subfactions": ["none"],
+            "keywords": ["Cavalry"]
+        },
+        "thane_roughrider": {
+            "name": "Thane on War-Beast",
+            "description": "A dwarven berserker leader riding atop a ferocious beast into battle.",
+            "category": "hero",
+            "models": [
+                {
+                    "name": "Thane on War-Beast",
+                    "movement": 8,
+                    "courage": 7,
+                    "shoot": 5,
+                    "fight": 6,
+                    "defense": 7,
+                    "reflexes": 6,
+                    "weapons": [{"id": "heavy_hooves_and_teeth", "count": 2}, {"id": "heavy_great_weapon", "count": 3}],
+                    "min": 1,
+                    "max": 1,
+                    "rules": [{"id": "impact", "x": 1}, {"id": "wounds", "x": 3}, "leader", {"id": "sentinel_tactics", "x": 1}],
+                    "options": [
+                        {"replaceWeapon": [{"id": "heavy_great_weapon", "count": 3}], "withWeapon": [{"id": "heavy_great_weapon", "count": 4}, {"id": "war_hammer", "count": 3}]},
+                        {"addRule": ["enchanted_shield"]},
+                        {"addWeapon": ["crossbow", "pistol"], "limit": 1},
+                        {"replaceRule": [{"id": "sentinel_tactics", "x": 1}], "withRule": [{"id": "sentinel_tactics", "x": 2}]}
+                    ]
+                }
+            ],
+            "subfactions": ["none"],
+            "keywords": ["Cavalry"]
+        },
+        "veteran_roughriders": {
+            "name": "Dwarven Veterans on War-Beasts",
+            "description": "A squad of dwarven veterans riding atop ferocious beasts into battle.",
+            "category": "elite",
+            "models": [
+                {
+                    "name": "Dwarven Veteran on War-Beasts",
+                    "movement": 8,
+                    "courage": 5,
+                    "shoot": 5,
+                    "fight": 6,
+                    "defense": 6,
+                    "reflexes": 5,
+                    "weapons": [{"id": "heavy_hooves_and_teeth", "count": 2}, {"id": "great_weapon", "count": 2}],
+                    "min": 5,
+                    "max": 10,
+                    "rules": [{"id": "impact", "x": 1}, "fearless"],
+                    "options": [{"replaceWeapon": [{"id": "great_weapon", "count": 2}], "withWeapon": [{"id": "lance", "count": 2}]}, {"addRule": ["shield"], "modelLimit": "all"}]
+                }
+            ],
+            "subfactions": ["none"],
+            "options": [{"addRule": ["champion"], "modelLimit": 1}, {"addRule": ["banner"], "modelLimit": 1}, {"addRule": ["musician"], "modelLimit": 1}],
+            "keywords": ["Cavalry"]
+        },
+        "light_gyrocopter": {
+            "name": "Light Gyrocopter",
+            "description": "",
+            "category": "elite",
+            "models": [
+                {
+                    "name": "Light Gyrocopter",
+                    "movement": 10,
+                    "shoot": 6,
+                    "weapons": ["burst_cannon", "light_bomb", "crushing_hull"],
+                    "rules": [{"id": "wounds", "x": 2}, "fly", {"id": "impact", "x": 1}],
+                    "min": 1,
+                    "max": 1,
+                    "defense": 7,
+                    "courage": 5,
+                    "reflexes": 5,
+                    "fight": 5,
+                    "options": [{"replaceWeapon": ["burst_cannon"], "withWeapon": ["mortar"]}]
+                }
+            ],
+            "keywords": ["Warmachine"],
+            "subfactions": ["none"]
+        },
+        "heavy_gyrocopter": {
+            "name": "Heavy Gyrocopter",
+            "description": "",
+            "category": "rare",
+            "models": [
+                {
+                    "name": "Heavy Gyrocopter",
+                    "movement": 10,
+                    "shoot": 6,
+                    "weapons": [{"id": "heavy_bomb", "count": 2}, "crushing_hull", "volley_gun"],
+                    "rules": [{"id": "wounds", "x": 3}, "fly", {"id": "impact", "x": 1}],
+                    "min": 1,
+                    "max": 1,
+                    "defense": 8,
+                    "courage": 5,
+                    "reflexes": 5,
+                    "fight": 5
+                }
+            ],
+            "keywords": ["Warmachine"],
+            "subfactions": ["none"]
+        },
+        "runepriest_roughrider": {
+            "name": "Runepriest on War-Beast",
+            "description": "A dwarven wizard leader riding atop a ferocious beast into battle.",
+            "category": "hero",
+            "models": [
+                {
+                    "name": "Runepriest on War-Beast",
+                    "movement": 8,
+                    "courage": 6,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 7,
+                    "reflexes": 6,
+                    "weapons": [{"id": "heavy_hooves_and_teeth", "count": 2}, {"id": "handweapon", "count": 2}, "great_staff"],
+                    "min": 1,
+                    "max": 1,
+                    "rules": [{"id": "impact", "x": 1}, {"id": "wounds", "x": 3}, "leader", {"id": "power", "x": 1}],
+                    "options": [{"replaceRule": [{"id": "power", "x": 1}], "withRule": [{"id": "power", "x": 2}]}]
+                }
+            ],
+            "subfactions": ["none"],
+            "keywords": ["Cavalry"]
+        }
+    },
+    "weapons": {},
+    "rules": {
+        "brew": {"name": "Dwarven Brew", "description": "Once per game when you activate this unit, you may heal D3 wounds that have been allocated to this unit."},
+        "repair": {
+            "name": "Repair",
+            "inputs": ["x"],
+            "description": "At any point during this unit's activation, if within 3\" of a Vehicle or Warmachine, roll one die. On an X or less the vehicle or warmachine may remove one critical damage.",
+            "points": ["rule.x", {"multiply": 2}]
+        },
+        "repair_toolkit": {
+            "name": "Repair Toolkit",
+            "description": "This model and its unit may spend one action to repair one vehicle or warmachine within 3\" that has suffered critical damage.",
+            "points": 5
+        },
+        "sentinel_tactics": {
+            "name": "Dwarf Tactics",
+            "inputs": ["x"],
+            "description": "When this unit is activated, choose up to X friendly _Infantry_ units within 6\". This unit and those units may re-roll failed Strength tests of 9+ until the end of the round.",
+            "points": ["rule.x", {"multiply": 10}]
+        },
+        "ranger_tactics": {
+            "name": "Ranger Tactics",
+            "inputs": ["x"],
+            "description": "When this unit is activated, choose up to X friendly _Infantry_ units within 6\". This unit and those units may re-roll failed Accuracy tests of 9+ until the end of the round.",
+            "points": ["rule.x", {"multiply": 10}]
+        },
+        "blackpowder_tactics": {
+            "name": "Blackpowder Tactics",
+            "inputs": ["x"],
+            "description": "When this unit is activated, choose up to X friendly _Warmachine_ units within 6\". This unit and those units may re-roll failed Accuracy tests of 9+ until the end of the round.",
+            "points": ["rule.x", {"multiply": 10}]
+        }
+    },
+    "powers": {},
+    "strategies": [
+        {
+            "name": "Stubborn",
+            "phase": "activation",
+            "description": "Use before activating a unit. That unit may immediately remove up to 2 Shock.",
+            "flavor": "Standing steadfast like their mountain halls.",
+            "cost": 1,
+            "subfactions": ["none"]
+        },
+        {
+            "name": "Shieldwall",
+            "phase": "activation",
+            "description": "Use when a _Dwarf Infanty_ unit with Shields is charged or targeted by a shooting attack. That unit gains +1 Save until end of turn.",
+            "flavor": "Forming a shieldwall, dwarven formations are able to hold objectives against all odds.",
+            "cost": 2,
+            "subfactions": ["none"]
+        },
+        {
+            "phase": "activation",
+            "name": "Final Stand",
+            "description": "Use when a friendly unit is destroyed. If that unit has not activated yet this round, it may perform one shoot or fight action before it is destroyed.",
+            "flavor": "A Dwarf fights to the last breath.",
+            "cost": 1
+        }
+    ],
+    "relics": [
+        {
+            "name": "Hidden Stash",
+            "description": "Upgrade one Hero model with Dwarven Brew.",
+            "flavor": "Dwarves are known for their love of alcohol, which they even carry into battle.",
+            "points": 10,
+            "rule": "brew"
+        }
+    ]
+}

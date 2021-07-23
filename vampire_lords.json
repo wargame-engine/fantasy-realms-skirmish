@@ -2,8 +2,6 @@
     "name": "Vampire Lords",
     "id": "vampire_lords",
     "author": "Xekon#8266",
-    "version": "0.1",
-    "color": "#9a1115",
     "units": {
         "watch_captain": {
             "name": "Watch Captain",
@@ -19,13 +17,42 @@
                     "fight": 6,
                     "defense": 6,
                     "reflexes": 6,
-                    "weapons": [{"id": "heavy_lethal_polearm", "count": 2}, "handweapon"],
+                    "weapons": [{"id": "heavy_polearm", "count": 2}, "handweapon"],
                     "min": 1,
                     "max": 1
                 }
             ],
             "keywords": ["Undead", "Infantry"],
             "subfactions": ["none"]
+        },
+        "vampire_lord_dragon": {
+            "name": "Vampire Lord on Undead Dragon",
+            "description": "",
+            "category": "hero",
+            "models": [
+                {
+                    "name": "Vampire Lord on Undead Dragon",
+                    "movement": 10,
+                    "courage": 8,
+                    "shoot": 5,
+                    "fight": 6,
+                    "defense": 12,
+                    "reflexes": 6,
+                    "weapons": [{"id": "great_weapon", "count": 4}, {"id": "feral_claws", "count": 4}, {"id": "banshee_wail", "count": 2}],
+                    "options": [
+                        {"replaceWeapon": [{"id": "great_weapon", "count": 4}], "withWeapon": [{"id": "lance", "count": 4}]},
+                        {"replaceWeapon": [{"id": "banshee_wail", "count": 2}], "withWeapon": [{"id": "necrotic_breath", "count": 2}]},
+                        {"addRule": ["relic_shield"]},
+                        {"replaceRule": [{"id": "power", "x": 1}], "withRule": [{"id": "power", "x": 2}]},
+                        {"replaceRule": [{"id": "knight_tactics", "x": 1}], "withRule": [{"id": "knight_tactics", "x": 2}]}
+                    ],
+                    "rules": ["fear", {"id": "leader", "x": "Infantry, Cavalry"}, "damage_table_monster", "fly", {"id": "power", "x": 1}, {"id": "knight_tactics", "x": 1}],
+                    "min": 1,
+                    "max": 1
+                }
+            ],
+            "keywords": ["Undead", "Cavalry"],
+            "subfactions": ["none", "blood", "bone", "dread"]
         },
         "vampire_lord_horse": {
             "name": "Vampire Lord on Hell Mare",
@@ -50,7 +77,7 @@
                         {"replaceRule": [{"id": "power", "x": 1}], "withRule": [{"id": "power", "x": 2}]},
                         {"replaceRule": [{"id": "knight_tactics", "x": 1}], "withRule": [{"id": "knight_tactics", "x": 2}]}
                     ],
-                    "rules": ["fear", {"id": "leader", "x": "Infantry, Cavalry"}, {"id": "wounds", "x": 3}, {"id": "power", "x": 1}, {"id": "knight_tactics", "x": 1}],
+                    "rules": ["fear", {"id": "leader", "x": "Infantry, Cavalry"}, {"id": "wounds", "x": 3}, {"id": "power", "x": 1}, {"id": "knight_tactics", "x": 1}, "vampiric_siphon"],
                     "min": 1,
                     "max": 1
                 }
@@ -82,7 +109,7 @@
                         {"replaceRule": [{"id": "power", "x": 1}], "withRule": [{"id": "power", "x": 2}]},
                         {"replaceRule": [{"id": "vampire_tactics", "x": 1}], "withRule": [{"id": "vampire_tactics", "x": 2}]}
                     ],
-                    "rules": [{"id": "wounds", "x": 3}, "leader", {"id": "power", "x": 1}, {"id": "vampire_tactics", "x": 1}, "siphon"],
+                    "rules": [{"id": "wounds", "x": 3}, "leader", {"id": "power", "x": 1}, {"id": "vampire_tactics", "x": 1}, "vampiric_siphon"],
                     "min": 1,
                     "max": 1
                 }
@@ -105,7 +132,7 @@
                     "reflexes": 6,
                     "weapons": [{"id": "feral_claws", "count": 4}, "vampire_bite"],
                     "options": [{"addRule": ["fly"]}, {"replaceRule": [{"id": "feral_tactics", "x": 1}], "withRule": [{"id": "feral_tactics", "x": 2}]}],
-                    "rules": [{"id": "wounds", "x": 3}, "fear", "leader", {"id": "feral_tactics", "x": 1}, "siphon"],
+                    "rules": [{"id": "wounds", "x": 3}, "fear", "leader", {"id": "feral_tactics", "x": 1}, "vampiric_siphon"],
                     "min": 1,
                     "max": 1
                 }
@@ -126,7 +153,7 @@
                     "fight": 6,
                     "defense": 7,
                     "reflexes": 6,
-                    "weapons": [{"id": "heavy_lethal_greatweapon", "count": 4}],
+                    "weapons": [{"id": "heavy_great_weapon", "count": 4}],
                     "options": [{"addRule": ["enchanted_shield"]}, {"addRule": [{"id": "power", "x": 1}]}],
                     "min": 1,
                     "max": 1
@@ -149,11 +176,11 @@
                     "fight": 6,
                     "defense": 7,
                     "reflexes": 6,
-                    "weapons": [{"id": "heavy_lethal_greatweapon", "count": 4}, {"id": "hooves_and_teeth", "count": 2}],
+                    "weapons": [{"id": "heavy_great_weapon", "count": 4}, {"id": "hooves_and_teeth", "count": 2}],
                     "min": 1,
                     "max": 1,
                     "options": [
-                        {"replaceWeapon": [{"id": "heavy_lethal_greatweapon", "count": 4}], "withWeapon": [{"id": "spectral_lance", "count": 4}]},
+                        {"replaceWeapon": [{"id": "heavy_great_weapon", "count": 4}], "withWeapon": [{"id": "spectral_lance", "count": 4}]},
                         {"addRule": ["enchanted_shield"]},
                         {"addRule": [{"id": "power", "x": 1}]}
                     ]
@@ -176,7 +203,7 @@
                     "fight": 6,
                     "defense": 7,
                     "reflexes": 6,
-                    "weapons": [{"id": "heavy_lethal_greatweapon", "count": 4}],
+                    "weapons": [{"id": "heavy_great_weapon", "count": 4}],
                     "options": [{"addRule": ["enchanted_shield"]}, {"addRule": [{"id": "power", "x": 1}]}],
                     "min": 1,
                     "max": 1
@@ -186,49 +213,52 @@
             "subfactions": ["none"],
             "rules": ["fear", {"id": "wounds", "x": 3}, "leader"]
         },
-        "zombie": {
-            "name": "Zombie",
+        "zombies": {
+            "name": "Zombies",
             "description": "The risen undead.",
             "category": "core",
             "models": [
-                {"name": "Zombie", "movement": 5, "courage": 6, "shoot": 4, "fight": 4, "defense": 4, "reflexes": 4, "weapons": ["unarmed"], "rules": ["raise_dead", "fear"], "min": 1, "max": 1}
+                {"name": "Zombie", "movement": 5, "courage": 5, "shoot": 4, "fight": 5, "defense": 4, "reflexes": 4, "weapons": ["unarmed"], "rules": ["raise_dead", "fear"], "min": 10, "max": 30}
             ],
             "keywords": ["Undead", "Infantry"],
+            "options": [{"addRule": ["champion"], "modelLimit": 1}, {"addRule": ["banner"], "modelLimit": 1}, {"addRule": ["musician"], "modelLimit": 1}],
             "subfactions": ["blood", "bone", "dread", "none"]
         },
-        "skeleton": {
-            "name": "Skeleton",
+        "skeletons": {
+            "name": "Skeletons",
             "description": "The risen undead.",
             "category": "core",
             "models": [
                 {
                     "name": "Skeleton",
                     "movement": 5,
-                    "courage": 6,
+                    "courage": 5,
                     "shoot": 4,
                     "fight": 5,
-                    "defense": 4,
+                    "defense": 5,
                     "reflexes": 5,
                     "weapons": ["handweapon", "shield"],
-                    "options": [{"replaceWeapon": ["handweapon", "shield"], "withWeapon": ["great_weapon", ["bow", {"id": "light_handweapon", "count": 2}], ["spear", "shield"]]}],
-                    "min": 1,
-                    "max": 1
+                    "options": [{"replaceWeapon": ["handweapon", "shield"], "withWeapon": ["great_weapon", ["bow", {"id": "light_handweapon", "count": 2}], ["spear", "shield"]], "modelLimit": "all"}],
+                    "min": 10,
+                    "max": 30
                 }
             ],
             "keywords": ["Undead", "Infantry"],
-            "subfactions": ["blood", "bone", "dread", "none"]
+            "subfactions": ["blood", "bone", "dread", "none"],
+            "options": [{"addRule": ["champion"], "modelLimit": 1}, {"addRule": ["banner"], "modelLimit": 1}, {"addRule": ["musician"], "modelLimit": 1}]
         },
-        "ghoul": {
-            "name": "Ghoul",
+        "ghouls": {
+            "name": "Ghouls",
             "description": "",
             "category": "core",
-            "models": [{"name": "Ghoul", "movement": 6, "courage": 6, "shoot": 4, "fight": 5, "defense": 4, "reflexes": 4, "weapons": [{"id": "rending_claws", "count": 2}], "min": 1, "max": 1}],
+            "models": [{"name": "Ghoul", "movement": 6, "courage": 5, "shoot": 4, "fight": 5, "defense": 4, "reflexes": 4, "weapons": [{"id": "claws", "count": 2}], "min": 10, "max": 30}],
             "rules": ["fear"],
+            "options": [{"addRule": ["champion"], "modelLimit": 1}],
             "keywords": ["Undead", "Infantry"],
             "subfactions": ["none"]
         },
-        "barghest": {
-            "name": "Barghest",
+        "barghests": {
+            "name": "Barghests",
             "description": "",
             "category": "core",
             "models": [
@@ -242,15 +272,16 @@
                     "reflexes": 5,
                     "rules": ["scout"],
                     "weapons": [{"id": "fangs_and_teeth", "count": 2}],
-                    "min": 1,
-                    "max": 1
+                    "min": 5,
+                    "max": 15
                 }
             ],
             "keywords": ["Undead", "Beast", "Infantry"],
+            "options": [{"addRule": ["champion"], "modelLimit": 1}],
             "subfactions": ["blood", "bone", "dread", "none"]
         },
-        "bat_swarm": {
-            "name": "Bat Swarm",
+        "bat_swarms": {
+            "name": "Bat Swarms",
             "description": "",
             "category": "elite",
             "models": [
@@ -259,20 +290,20 @@
                     "movement": 8,
                     "courage": 6,
                     "shoot": 4,
-                    "fight": 4,
+                    "fight": 5,
                     "defense": 4,
                     "reflexes": 5,
-                    "rules": [{"id": "swarm", "x": 3}, "distract", "fly", "siphon"],
-                    "weapons": [{"id": "bite", "count": 4}],
-                    "min": 1,
-                    "max": 1
+                    "rules": [{"id": "swarm", "x": 3}, "distracting", "fly", "vampiric_siphon"],
+                    "weapons": [{"id": "bite", "count": 3}],
+                    "min": 2,
+                    "max": 4
                 }
             ],
             "keywords": ["Beast", "Infantry"],
             "subfactions": ["blood", "bone", "dread", "none"]
         },
-        "feral_ghoul": {
-            "name": "Feral Ghoul",
+        "feral_ghouls": {
+            "name": "Feral Ghouls",
             "description": "",
             "category": "elite",
             "models": [
@@ -286,11 +317,12 @@
                     "reflexes": 5,
                     "rules": ["fear", {"id": "wounds", "x": 2}],
                     "weapons": [{"id": "feral_claws", "count": 3}],
-                    "min": 1,
-                    "max": 1
+                    "min": 3,
+                    "max": 6
                 }
             ],
             "keywords": ["Undead", "Monster"],
+            "options": [{"addRule": ["champion"], "modelLimit": 1}],
             "subfactions": ["none"]
         },
         "crypt_watch": {
@@ -306,17 +338,18 @@
                     "fight": 6,
                     "defense": 5,
                     "reflexes": 5,
-                    "weapons": [{"id": "heavy_lethal_handweapon", "count": 2}, "shield"],
-                    "min": 1,
-                    "max": 1,
-                    "options": [{"replaceWeapon": [{"id": "heavy_lethal_handweapon", "count": 2}, "shield"], "withWeapon": [{"id": "heavy_lethal_greatweapon", "count": 2}]}]
+                    "weapons": [{"id": "heavy_handweapon", "count": 2}, "shield"],
+                    "min": 5,
+                    "max": 10,
+                    "options": [{"replaceWeapon": [{"id": "heavy_handweapon", "count": 2}, "shield"], "withWeapon": [{"id": "heavy_great_weapon", "count": 2}], "modelLimit": "all"}]
                 }
             ],
             "keywords": ["Undead", "Infantry"],
-            "subfactions": ["blood", "bone", "dread", "none"]
+            "subfactions": ["blood", "bone", "dread", "none"],
+            "options": [{"addRule": ["champion"], "modelLimit": 1}, {"addRule": ["banner"], "modelLimit": 1}, {"addRule": ["musician"], "modelLimit": 1}]
         },
-        "skeletal_knight": {
-            "name": "Skeletal Knight",
+        "skeletal_knights": {
+            "name": "Skeletal Knights",
             "description": "",
             "category": "elite",
             "models": [
@@ -329,35 +362,13 @@
                     "defense": 5,
                     "reflexes": 5,
                     "weapons": [{"id": "spectral_lance", "count": 2}, {"id": "hooves_and_teeth", "count": 2}, "shield"],
-                    "min": 1,
-                    "max": 1
+                    "min": 5,
+                    "max": 10
                 }
             ],
             "keywords": ["Undead", "Cavalry"],
+            "options": [{"addRule": ["champion"], "modelLimit": 1}, {"addRule": ["banner"], "modelLimit": 1}, {"addRule": ["musician"], "modelLimit": 1}],
             "rules": ["fear"],
-            "subfactions": ["none"]
-        },
-        "vampire_knight": {
-            "name": "Vampire Knight",
-            "description": "",
-            "category": "rare",
-            "models": [
-                {
-                    "name": "Vampire Knight",
-                    "movement": 8,
-                    "courage": 6,
-                    "shoot": 5,
-                    "fight": 6,
-                    "defense": 7,
-                    "reflexes": 5,
-                    "weapons": [{"id": "lance", "count": 3}, "heavy_shield", {"id": "hooves_and_teeth", "count": 2}],
-                    "min": 1,
-                    "max": 1,
-                    "options": [{"replaceWeapon": [{"id": "lance", "count": 3}], "withWeapon": [{"id": "heavy_lethal_handweapon", "count": 3}]}]
-                }
-            ],
-            "keywords": ["Undead", "Cavalry"],
-            "rules": [{"id": "wounds", "x": 2}, "siphon"],
             "subfactions": ["none"]
         },
         "necromancer": {
@@ -382,111 +393,10 @@
             ],
             "subfactions": ["blood", "bone", "dread", "none"]
         },
-        "skeleton_leader": {
-            "name": "Skeleton Leader",
-            "description": "The risen undead.",
-            "category": "hero",
-            "models": [
-                {
-                    "name": "Skeleton Leader",
-                    "movement": 5,
-                    "courage": 6,
-                    "shoot": 4,
-                    "fight": 5,
-                    "defense": 4,
-                    "reflexes": 5,
-                    "weapons": ["handweapon", "shield"],
-                    "options": [{"replaceWeapon": ["handweapon", "shield"], "withWeapon": ["great_weapon", ["bow", {"id": "light_handweapon", "count": 2}], ["spear", "shield"]]}],
-                    "min": 1,
-                    "max": 1,
-                    "rules": ["leader"]
-                }
-            ],
-            "keywords": ["Undead", "Infantry"],
-            "subfactions": ["blood", "bone", "dread", "none"]
-        },
-        "ghoul_leader": {
-            "name": "Ghoul Leader",
+        "vampire_knights": {
+            "name": "Vampire Knights",
             "description": "",
-            "category": "hero",
-            "models": [
-                {"name": "Ghoul Leader", "movement": 6, "courage": 6, "shoot": 4, "fight": 5, "defense": 4, "reflexes": 4, "weapons": [{"id": "rending_claws", "count": 2}], "min": 1, "max": 1}
-            ],
-            "rules": ["fear", "leader"],
-            "options": [{"addRule": ["champion"], "modelLimit": 1}],
-            "keywords": ["Undead", "Infantry"],
-            "subfactions": ["none"]
-        },
-        "feral_ghoul_leader": {
-            "name": "Feral Ghoul Leader",
-            "description": "",
-            "category": "hero",
-            "models": [
-                {
-                    "name": "Feral Ghoul",
-                    "movement": 8,
-                    "courage": 6,
-                    "shoot": 5,
-                    "fight": 5,
-                    "defense": 6,
-                    "reflexes": 5,
-                    "rules": ["fear", {"id": "wounds", "x": 2}, "leader"],
-                    "weapons": [{"id": "feral_claws", "count": 3}],
-                    "min": 1,
-                    "max": 1
-                }
-            ],
-            "keywords": ["Undead", "Monster"],
-            "subfactions": ["none"]
-        },
-        "crypt_watch_leader": {
-            "name": "Crypt Watch Leader",
-            "description": "",
-            "category": "hero",
-            "models": [
-                {
-                    "name": "Crypt Watch Leader",
-                    "movement": 5,
-                    "courage": 6,
-                    "shoot": 4,
-                    "fight": 6,
-                    "defense": 5,
-                    "reflexes": 5,
-                    "weapons": [{"id": "heavy_lethal_handweapon", "count": 2}, "shield"],
-                    "min": 1,
-                    "max": 1,
-                    "options": [{"replaceWeapon": [{"id": "heavy_lethal_handweapon", "count": 2}, "shield"], "withWeapon": [{"id": "heavy_lethal_greatweapon", "count": 2}]}]
-                }
-            ],
-            "keywords": ["Undead", "Infantry"],
-            "subfactions": ["blood", "bone", "dread", "none"]
-        },
-        "skeletal_knight_leader": {
-            "name": "Skeletal Knight Leader",
-            "description": "",
-            "category": "hero",
-            "models": [
-                {
-                    "name": "Skeletal Knight Leader",
-                    "movement": 8,
-                    "courage": 6,
-                    "shoot": 5,
-                    "fight": 6,
-                    "defense": 5,
-                    "reflexes": 5,
-                    "weapons": [{"id": "spectral_lance", "count": 2}, {"id": "hooves_and_teeth", "count": 2}, "shield"],
-                    "min": 1,
-                    "max": 1
-                }
-            ],
-            "keywords": ["Undead", "Cavalry"],
-            "rules": ["fear", "leader"],
-            "subfactions": ["none"]
-        },
-        "vampire_knight_leader": {
-            "name": "Vampire Knight Leader",
-            "description": "",
-            "category": "hero",
+            "category": "rare",
             "models": [
                 {
                     "name": "Vampire Knight",
@@ -497,13 +407,14 @@
                     "defense": 7,
                     "reflexes": 5,
                     "weapons": [{"id": "lance", "count": 3}, "heavy_shield", {"id": "hooves_and_teeth", "count": 2}],
-                    "min": 1,
-                    "max": 1,
-                    "options": [{"replaceWeapon": [{"id": "lance", "count": 3}], "withWeapon": [{"id": "heavy_lethal_handweapon", "count": 3}]}]
+                    "min": 3,
+                    "max": 6,
+                    "options": [{"replaceWeapon": [{"id": "lance", "count": 3}], "withWeapon": [{"id": "heavy_handweapon", "count": 5}]}]
                 }
             ],
             "keywords": ["Undead", "Cavalry"],
-            "rules": [{"id": "wounds", "x": 2}, "siphon", "leader"],
+            "rules": [{"id": "wounds", "x": 2}, "vampiric_siphon"],
+            "options": [{"addRule": ["champion"], "modelLimit": 1}, {"addRule": ["banner"], "modelLimit": 1}, {"addRule": ["musician"], "modelLimit": 1}],
             "subfactions": ["none"]
         }
     },
@@ -536,20 +447,39 @@
     },
     "relics": [],
     "powers": {
-        "bat_form": {
-            "name": "Bat Form",
-            "description": "This model gains the Fly special rule until the end of the turn. This power may only be cast once per turn.",
-            "flavor": "The vampire lord transforms themselves into a giant bat, traversing the batttlefield at ease.",
-            "charge": 7,
+        "raise_dead": {"name": "Raise Dead", "description": "Target friendly _Undead_ Infantry unit within 12\" restores 1D3 models. This power may only be cast once per turn.", "charge": 5},
+        "death_hex": {"name": "Death Hex", "description": "Target enemy unit within 12\" must re-roll one succesful die on its next Save test. This power may be cast unlimited times.", "charge": 6},
+        "vampiric_siphon_life": {
+            "name": "vampiric_siphon Life",
+            "description": "Target enemy unit within 12\" takes 2 hits with AP(3) and this model regains 1 wound. This power may only be cast once per turn.",
+            "charge": 7
+        },
+        "fright": {"name": "Unnatural Fright", "description": "Target enemy unit within 12\" gets -1 Courage until the end of the round. This power may be cast unlimited times.", "charge": 8}
+    },
+    "strategies": {
+        "fearless": {
+            "name": "Fearless",
+            "phase": "activation",
+            "description": "Use before activating a unit. That unit may immediately remove up to 2 Shock.",
+            "flavor": "With no morale to break, the undead hordes march forward even in the face of death.",
+            "cost": 1,
             "subfactions": ["blood", "bone", "dread", "none"]
         },
-        "raise_dead": {
-            "name": "Raise Dead",
-            "description": "Target friendly \"Undead\" Infantry unit within 12\" restores 1D3 models. This power may only be cast once per turn.",
-            "flavor": "The Vampire Lord enslaves the souls of the fallen once more.",
-            "charge": 5,
+        "dread": {
+            "name": "Eternal Dread",
+            "phase": "activation",
+            "description": "Use when a unit within 6\" takes a Courage test. That unit suffers -1 Courage.",
+            "flavor": "Half-rotten and surrounded by a miasma of death and decay, striking fear into even the heart of angels.",
+            "cost": 1,
+            "subfactions": ["blood", "bone", "dread", "none"]
+        },
+        "living_dead": {
+            "name": "Living Dead",
+            "phase": "activation",
+            "description": "Use when a unit declares a Charge action. That unit gets +3\" of Movement for that action.",
+            "flavor": "Corpses raised from their grave, preying on their once beloved with uncanny ferocity.",
+            "cost": 1,
             "subfactions": ["blood", "bone", "dread", "none"]
         }
-    },
-    "strategies": []
+    }
 }

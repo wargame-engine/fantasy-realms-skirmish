@@ -1,43 +1,55 @@
 {
     "reportUrl": "https://github.com/wargame-engine/fantasy-realms-skirmish/issues",
-    "name": "Fantasy Realms Skirmish (Beta)",
+    "name": "Fantasy Realms Skirmish",
     "id": "fantasy_realms_skirmish",
+    "version": "1.0",
     "alliances": {"death": {"name": "Bringers of Death"}, "destruction": {"name": "Forces of Destruction"}, "order": {"name": "Keepers of Order"}, "chaos": {"name": "Instruments of Chaos"}},
     "factions": {
+        "haunting_ghosts": {
+            "version": "1.0",
+            "name": "Haunting Ghosts",
+            "id": "haunting_ghosts",
+            "url": "haunting_ghosts.json",
+            "color": "#4C838A",
+            "alliance": "death",
+            "description": "The Haunting Ghosts are a collection of undead spirits which haunt their hallowed grave sites. The Ghostly Undead use fear and ethereal movement to wash over their foes and scare them into defeat."
+        }
+    },
+    "unfinished_factions": {
         "eternal_protectors": {
+            "version": "1.0",
             "name": "Eternal Protectors",
             "id": "eternal_protectors",
             "url": "eternal_protectors.json",
             "color": "#D4AF37",
             "secondary_color": "#0d407f",
-            "version": "0.1",
             "alliance": "order",
             "description": "The Eternal Protectors are sworn to protect those who cannot protect themselves and to ward off evil. They wear tough armor and wield mighty weapons to strike down those are unjust."
         },
         "ogre_mercenaries": {
+            "version": "1.0",
             "name": "Ogre Mercenaries",
             "id": "ogre_mercenaries",
             "url": "ogre_mercenaries.json",
             "color": "#954535",
-            "version": "0.1",
             "alliance": "destruction",
             "description": "Large-bodied mercenaries with huge appetites for gold and destruction"
         },
         "greatogre_raiders": {
+            "version": "1.0",
             "name": "Greatogre Raiders",
             "id": "greatogre_raiders",
             "url": "greatogre_raiders.json",
             "color": "#4f9ae0",
-            "version": "0.1",
             "description": "The greatest of ogre tribes, who only interact with their lessers when they need something - food, coin, or just a challenge!",
             "alliance": "destruction"
         },
         "vampire_lords": {
+            "version": "1.0",
             "name": "Vampire Lords",
             "id": "vampire_lords",
             "url": "vampire_lords.json",
-            "color": "#9a1115",
-            "version": "0.1",
+            "color": "#801111",
             "alliance": "death",
             "description": "The Vampire Lords are powerful vampires who command legions of undead to do their bidding. They defeat their foes with powerful death magic and hordes of undead.",
             "subfactions": {
@@ -52,11 +64,11 @@
             }
         },
         "traitor_legions": {
+            "version": "1.0",
             "name": "Traitor Legions",
             "id": "traitor_legions",
             "url": "traitor_legions.json",
             "color": "#231f20",
-            "version": "0.1",
             "alliance": "chaos",
             "description": "The Traitor Legions are those who chose to fight for evil instead of order and made a pact with the dark gods. The Traitor Legions use deadly traitor warriors and other barbarians to swiftly crush their foes.",
             "subfactions": {
@@ -64,64 +76,48 @@
                     "name": "Magic",
                     "id": "change",
                     "color": "#90305d",
-                    "description": "Mighty Sorcerers that bring down a storm of spells, empowered by hordes of cultists that give their life in pursuit of knowledge."
+                    "description": "Mighty Sorcerers that bring down a storm of spells, empowered by hordes of cultists that give their life in pursuit of knowledge.",
+                    "restricted": true
                 },
                 "pestilence": {
                     "name": "Pestilence",
                     "id": "pestilence",
                     "color": "#547588",
-                    "description": "The forces of the unstoppable decay of all life, born anew as a warrior of the dark gods."
+                    "description": "The forces of the unstoppable decay of all life, born anew as a warrior of the dark gods.",
+                    "restricted": true
                 },
                 "wrath": {
                     "name": "Wrath",
                     "id": "wrath",
                     "color": "#547588",
-                    "description": "Warriors of unbridled fury, filled with an eternal bloodlust and always looking for ever greater foes to still it."
+                    "description": "Warriors of unbridled fury, filled with an eternal bloodlust and always looking for ever greater foes to still it.",
+                    "restricted": true
                 },
-                "excess": {"name": "Excess", "id": "excess", "color": "#547588", "description": "Sadistic and twisted Warriors, always seeking for new ways of ecstasy."},
+                "excess": {"name": "Excess", "id": "excess", "color": "#547588", "description": "Sadistic and twisted Warriors, always seeking for new ways of ecstasy.", "restricted": true},
                 "deception": {
                     "name": "Deception",
                     "id": "deception",
                     "color": "#6a0001",
-                    "description": "Agents of chaos that undermine enemy forces and crumble them from within or lead a corrupt government themselves."
+                    "description": "Agents of chaos that undermine enemy forces and crumble them from within or lead a corrupt government themselves.",
+                    "restricted": true
                 }
             }
         },
-        "haunting_ghosts": {
-            "name": "Haunting Ghosts",
-            "id": "haunting_ghosts",
-            "url": "haunting_ghosts.json",
-            "color": "#4C838A",
-            "version": "0.1",
-            "alliance": "death",
-            "description": "The Haunting Ghosts are a collection of undead spirits which haunt their hallowed grave sites. The Ghostly Undead use fear and ethereal movement to wash over their foes and scare them into defeat."
-        },
         "high_elves": {
+            "version": "1.0",
             "name": "High Elves",
             "id": "high_elves",
             "url": "high_elves.json",
-            "color": "#38733a",
-            "version": "0.1",
+            "color": "#607d8b",
             "alliance": "order",
-            "description": "Masters of the Arcane, this ancient island nation is shrouded in mystery.",
-            "subfactions": {
-                "temple": {
-                    "name": "Phoenix Temple",
-                    "id": "temple",
-                    "color": "#90305d",
-                    "description": "Defenders of the Temple of the Last Flame, leading crusades agains the forces that seek to destroy it."
-                },
-                "polis": {"name": "Polis", "id": "polis", "color": "#547588", "description": "An amalgamation of several city states, masters of urban fighting and outlasting sieges."},
-                "magic": {"name": "Magic", "id": "magic", "color": "#547588", "description": "Agents of the Ivory Citadel, focusing on Mageblades and mighty wizards."},
-                "beasts": {"name": "Beastmasters", "id": "beasts", "color": "#800080", "background": "A force that focuses heavily on cavalry and giant beasts."}
-            }
+            "description": "Masters of the Arcane, this ancient island nation is shrouded in mystery."
         },
         "orcs_and_goblins": {
+            "version": "1.0",
             "name": "Orcs and Goblins",
             "id": "orcs_and_goblins",
             "url": "orcs_and_goblins.json",
             "color": "#50974A",
-            "version": "0.1",
             "alliance": "destruction",
             "description": "A savage race made up of various warring tribes.",
             "subfactions": {
@@ -147,35 +143,29 @@
             }
         },
         "sea_elves": {
+            "version": "1.0",
             "name": "Sea Elves",
             "id": "sea_elves",
             "url": "sea_elves.json",
             "color": "#03414e",
-            "version": "1.0",
             "alliance": "order",
             "description": "Raising from the depths of the ocean, transmuted by their ancient magic."
         },
-        "dwarves": {
-            "name": "Dwarves",
-            "id": "dwarves",
-            "url": "dwarves.json",
+        "mountain_dwarves": {
+            "version": "1.0",
+            "name": "Mountain Dwarves",
+            "id": "mountain_dwarves",
+            "url": "mountain_dwarves.json",
             "color": "#A55D35",
-            "version": "0.1",
             "alliance": "order",
-            "description": "A stout race of miners, engineers and warriors.",
-            "subfactions": {
-                "blackpowder": {"name": "Blackpowder", "id": "blackpowder", "color": "#800080", "background": "A force that focuses heavily on guns and artillery."},
-                "magic": {"name": "Magic", "id": "magic", "color": "#800080", "background": "A force that focuses heavily on magic and rune-enchanted equipment."},
-                "combat": {"name": "Combat", "id": "combat", "color": "#800080", "background": "A force that focuses on overruning their foe in glorious combat."},
-                "tunneler": {"name": "Tunneler", "id": "tunneler", "color": "#800080", "background": "A force that focuses on ambushing their enemies from below the battlefield."}
-            }
+            "description": "A stout race of miners, engineers and warriors."
         },
         "beastmen_horde": {
+            "version": "1.0",
             "name": "Beastmen Horde",
             "id": "beastmen_horde",
             "url": "beastmen_horde.json",
             "color": "#954535",
-            "version": "0.1",
             "alliance": "chaos",
             "description": "The Beastmen are a race of human-like beasts found in forests. Their main goal is to disrupt and destroy the races of mankind through savage all-out raids.",
             "subfactions": {
@@ -183,7 +173,7 @@
                     "name": "Magic",
                     "id": "change",
                     "color": "#90305d",
-                    "description": "Mighty Shamans that bring down a storm of spells, empowered by hordes of ravaging beasts that give their life in pursuit of power."
+                    "description": "Mighty Sorcerers that bring down a storm of spells, empowered by hordes of cultists that give their life in pursuit of knowledge."
                 },
                 "pestilence": {
                     "name": "Pestilence",
@@ -201,38 +191,109 @@
             }
         },
         "human_kingdoms": {
-            "name": "Great Kingdoms",
+            "version": "1.0",
+            "name": "Human Kingdoms",
             "id": "human_kingdoms",
             "url": "human_kingdoms.json",
-            "color": "#087194",
-            "version": "0.1",
+            "color": "#990c0c",
             "alliance": "order",
-            "description": "A collection of various kingdoms, infighting for political presence but uniting under one banner to defend their home.",
-            "subfactions": {
-                "order": {"name": "Holy Order", "id": "order", "color": "#90305d", "description": "Leading crusades against the forces of chaos and death, blessed by their gods."},
-                "polis": {"name": "Polis", "id": "polis", "color": "#547588", "description": "An amalgamation of several city states, masters of urban fighting and outlasting sieges."},
-                "magic": {"name": "Magic", "id": "magic", "color": "#547588", "description": "Mighty wizards from all across the kingdoms come togethet to smite down their foes with arcane spell."},
-                "blackpowder": {"name": "Blackpowder", "id": "blackpowder", "color": "#800080", "background": "A force that focuses heavily on guns and artillery."}
-            }
+            "description": "A collection of various kingdoms, infighting for political presence but uniting under one banner to defend their home."
+        },
+        "lizardmen": {
+            "version": "0.1",
+            "name": "Lizardmen",
+            "id": "lizardmen",
+            "url": "lizardmen.json",
+            "color": "#087194",
+            "alliance": "order",
+            "description": "A race of relentless jungle-dwelling lizards who who believe they are the rightful inheritors to the world."
         },
         "traitor_dwarves": {
+            "version": "1.0",
             "name": "Traitor Dwarves",
             "id": "traitor_dwarves",
             "url": "traitor_dwarves.json",
             "color": "#360c30",
-            "version": "0.1",
             "alliance": "chaos",
             "description": "Corrupted by the dark gods, these dwarves imbue twisted warmachines with demonic magic.",
             "subfactions": {
-                "forge": {"name": "Forge", "id": "forge", "color": "#90305d", "description": "A force that focueses Daemonsmiths and various animated soldiers."},
+                "change": {
+                    "name": "Magic",
+                    "id": "change",
+                    "color": "#90305d",
+                    "description": "Mighty Sorcerers that bring down a storm of spells, empowered by hordes of cultists that give their life in pursuit of knowledge."
+                },
+                "pestilence": {
+                    "name": "Pestilence",
+                    "id": "pestilence",
+                    "color": "#547588",
+                    "description": "The forces of the unstoppable decay of all life, born anew as a warrior of the dark gods."
+                },
                 "wrath": {
                     "name": "Wrath",
                     "id": "wrath",
                     "color": "#547588",
                     "description": "Warriors of unbridled fury, filled with an eternal bloodlust and always looking for ever greater foes to still it."
                 },
-                "excess": {"name": "Excess", "id": "excess", "color": "#547588", "description": "Sadistic and twisted Warriors, always seeking for new ways of ecstasy."},
-                "blackpowder": {"name": "Blackpowder", "id": "blackpowder", "color": "#800080", "background": "A force that focuses heavily on guns and artillery."}
+                "excess": {"name": "Excess", "id": "excess", "color": "#547588", "description": "Sadistic and twisted Warriors, always seeking for new ways of ecstasy."}
+            }
+        },
+        "merchant_dwarves": {
+            "version": "1.0",
+            "name": "Merchant Dwarves",
+            "id": "merchant_dwarves",
+            "url": "merchant_dwarves.json",
+            "alliance": "order",
+            "description": "A race of travelling merchants and glory-seekers with advanced weaponry.",
+            "color": "#000000",
+            "secondary_color": "#360c30"
+        },
+        "dark_elves": {
+            "version": "1.0",
+            "name": "Dark Elves",
+            "id": "dark_elves",
+            "url": "dark_elves.json",
+            "color": "#30106B",
+            "alliance": "order",
+            "description": "Cursed by their dark gods, these Elves raid the coasts and rivers of the mainlands from their ship-fortresses."
+        },
+        "wood_elves": {
+            "version": "1.0",
+            "name": "Wood Elves",
+            "id": "wood_elves",
+            "url": "wood_elves.json",
+            "color": "#38733a",
+            "alliance": "order",
+            "description": "Hidden away within their dense forests, striking back against those that dare to anger the spirits of the forest.",
+            "subfactions": {
+                "spite": {
+                    "name": "Spite-Grove",
+                    "id": "spite",
+                    "color": "#801111",
+                    "description": "Fueled by their own rage, lashing out at the outside world in brutal and quick skirmishes.",
+                    "restricted": true
+                },
+                "life": {
+                    "name": "Life-Grove",
+                    "id": "life",
+                    "color": "#50974A",
+                    "description": "Protecting the land and all its inhabitants, following the circle of life and death.",
+                    "restricted": true
+                },
+                "sorrow": {
+                    "name": "Sorrow-Grove",
+                    "id": "sorrow",
+                    "color": "#30106B",
+                    "description": "Blinded by their own hate, these forces of the woods have turned against their elven allies and the rest of the world.",
+                    "restricted": true
+                },
+                "watchers": {
+                    "name": "Wayward Watcher",
+                    "id": "watchers",
+                    "color": "#38733a",
+                    "description": "Nomadic Guardians of ancient paths and groves, setting out to seek out and destroy great dangers.",
+                    "restricted": true
+                }
             }
         }
     },
@@ -278,7 +339,99 @@
             "name": "Shield",
             "description": "Target friendly unit within 12\". Until the end of the round, roll a D10 each time that unit is hit. On a 3 or less, that hit is ignored. This power may be cast unlimited times.",
             "charge": 7
-        }
+        },
+        "fireball": {
+            "name": "Fireball",
+            "description": "Target enemy unit within 12\" takes 3 hits with AP(3). This power may only be cast once per turn.",
+            "charge": 6,
+            "subfactions": ["test"],
+            "school": "fire"
+        },
+        "ashes": {
+            "name": "Blindin Ashes",
+            "description": "Target enemy unit within 12\" gets -1 Accuracy until the end of the round. This power may be cast unlimited times.",
+            "charge": 6,
+            "school": "fire",
+            "subfactions": ["test"]
+        },
+        "blind": {
+            "name": "Blinding Light",
+            "description": "Target enemy unit within 12\" gets -1 Accuracy until the end of the round. This power may be cast unlimited times.",
+            "charge": 6,
+            "school": "light",
+            "subfactions": ["test"]
+        },
+        "terror": {
+            "name": "Terrifying Visage",
+            "description": "Target enemy model within 12\" gets -1 Courage until the end of the round. This power may be cast unlimited times.",
+            "charge": 8,
+            "subfactions": ["test"],
+            "school": "shadow"
+        },
+        "shroud": {
+            "name": "Shrouding Mist",
+            "description": "Target friendly unit within 12\" gets -1 to be hit the next time it is attacked. This power may be cast unlimited times.",
+            "charge": 6,
+            "subfactions": ["test"],
+            "school": "shadow"
+        },
+        "dagger": {
+            "name": "Shadow Daggers",
+            "description": "Target enemy unit within 12\" take 5 hits each with no AP. This power may only be cast once per turn.",
+            "charge": 7,
+            "subfactions": ["test"],
+            "school": "shadow"
+        },
+        "haste": {
+            "name": "Haste",
+            "description": "Target friendly unit within 12\" may immediately make a free move action. This power may only be cast once per turn.",
+            "charge": 7,
+            "subfactions": ["test"],
+            "school": "storm"
+        },
+        "lightning_storm": {
+            "name": "Lightning Storm",
+            "description": "Target enemy unit within 12\" take 5 hits each with no AP. This power may only be cast once per turn.",
+            "charge": 7,
+            "subfactions": ["test"],
+            "school": "storm"
+        },
+        "lightning_bolt": {
+            "name": "Lightning Bolt",
+            "description": "Target enemy unit within 18\" takes 1 hit with AP(7). This power may only be cast once per turn.",
+            "charge": 6,
+            "subfactions": ["test"],
+            "school": "storm"
+        },
+        "pain": {
+            "name": "Pain",
+            "description": "Target enemy model within 12\" takes 1 automatic hit with AP(3). This power may be cast unlimited times.",
+            "charge": 6,
+            "subfactions": ["test"],
+            "school": "death"
+        },
+        "ruin": {
+            "name": "Ruin",
+            "description": "Target 2 enemy units within 6\" take 3 hits with AP(1) each. This power may be cast unlimited times.",
+            "charge": 6,
+            "subfactions": ["test"],
+            "school": "death"
+        },
+        "death_weight": {
+            "name": "Dead Weight",
+            "description": "Target enemy unit within 12\" gets -2\" of Movement until the end of the round. This power may be cast unlimited times.",
+            "charge": 8,
+            "subfactions": ["test"],
+            "school": "metal"
+        },
+        "melt_armor": {
+            "name": "Melt Armor",
+            "description": "Target enemy unit within 18\" takes 1 hit with AP(7). This power may only be cast once per turn.",
+            "charge": 6,
+            "subfactions": ["test"],
+            "school": "metal"
+        },
+        "frenzy": {"name": "Frenzy", "description": "Target friendly unit within 12\" may immediately make a free charge action.", "charge": 5, "school": "wild", "subfactions": ["test"]}
     },
     "weapons": {
         "hooves_and_teeth": {"name": "Hooves and Teeth", "attacks": 1, "short": "Melee"},
@@ -330,20 +483,21 @@
         "light_repeater_handgun": {"name": "Light Repeater Handgun", "ap": 1, "attacks": 1, "short": 12, "medium": 24, "rules": ["rapid_fire"]},
         "shotgun": {"name": "Shotgun", "attacks": 1, "ap": 3, "short": 6, "medium": 12, "rules": ["assault", "brutal"]},
         "poison_handweapon": {"name": "Poisoned Handweapon", "attacks": 1, "ap": 1, "short": "Melee", "rules": ["poison"]},
-        "poison_greatweapon": {"name": "Poisoned Greatweapon", "attacks": 1, "ap": 3, "short": "Melee", "rules": ["poison"]},
+        "poison_great_weapon": {"name": "Poisoned Great Weapon", "attacks": 1, "ap": 3, "short": "Melee", "rules": ["poison"]},
         "heavy_poison_handweapon": {"name": "Poisoned Heavy Handweapon", "attacks": 1, "ap": 2, "short": "Melee", "rules": ["poison"]},
-        "heavy_poison_greatweapon": {"name": "Poisoned Heavy Greatweapon", "attacks": 1, "ap": 4, "short": "Melee", "rules": ["poison"]},
+        "heavy_poison_great_weapon": {"name": "Poisoned Heavy Great Weapon", "attacks": 1, "ap": 4, "short": "Melee", "rules": ["poison"]},
         "poison_polearm": {"name": "Poisoned Polearm", "attacks": 1, "ap": 2, "short": "Melee", "rules": [{"id": "reach", "x": 1}, "poison"]},
         "heavy_poison_polearm": {"name": "Poisoned Heavy Polearm", "attacks": 1, "ap": 3, "short": "Melee", "rules": [{"id": "reach", "x": 1}, "poison"]},
         "great_lance": {"name": "Great Lance", "attacks": 1, "ap": 4, "short": "Melee", "rules": [{"id": "reach", "x": 1}, "lance"]},
         "poison_short_bow": {"name": "Poisoned Shortbow", "attacks": 1, "ap": 1, "short": 9, "medium": 18, "rules": ["poison"]},
         "great_bow": {"name": "Greatbow", "attacks": 1, "ap": 4, "short": 18, "medium": 36},
         "lethal_handweapon": {"name": "Lethal Handweapon", "attacks": 1, "ap": 1, "short": "Melee", "rules": ["lethal"]},
-        "lethal_greatweapon": {"name": "Lethal Greatweapon", "attacks": 1, "ap": 3, "short": "Melee", "rules": ["lethal"]},
+        "lethal_great_weapon": {"name": "Lethal Great Weapon", "attacks": 1, "ap": 3, "short": "Melee", "rules": ["lethal"]},
         "heavy_lethal_handweapon": {"name": "Lethal Heavy Handweapon", "attacks": 1, "ap": 2, "short": "Melee", "rules": ["lethal"]},
-        "heavy_lethal_greatweapon": {"name": "Lethal Heavy Greatweapon", "attacks": 1, "ap": 4, "short": "Melee", "rules": ["lethal"]},
+        "heavy_lethal_great_weapon": {"name": "Lethal Heavy Great Weapon", "attacks": 1, "ap": 4, "short": "Melee", "rules": ["lethal"]},
         "lethal_polearm": {"name": "Lethal Polearm", "attacks": 1, "ap": 2, "short": "Melee", "rules": [{"id": "reach", "x": 1}, "lethal"]},
         "heavy_lethal_polearm": {"name": "Lethal Heavy Polearm", "attacks": 1, "ap": 3, "short": "Melee", "rules": [{"id": "reach", "x": 1}, "lethal"]},
+        "rending_heavy_polearm": {"name": "Rending Heavy Polearm", "attacks": 1, "ap": 3, "short": "Melee", "rules": ["rending", {"id": "reach", "x": 1}]},
         "lethal_short_bow": {"name": "Lethal Shortbow", "attacks": 1, "ap": 1, "short": 9, "medium": 18, "rules": ["lethal"]},
         "blowpipe": {"name": "Blowpipe", "attacks": 1, "short": 9, "rules": ["poison", "assault"]},
         "heavy_shield": {"name": "Heavy Shield", "attacks": 0, "short": "Melee", "rules": ["heavy_shield"]},
@@ -400,6 +554,7 @@
         "chainsaw": {"name": "Chainsaw", "attacks": 1, "short": "Melee", "ap": 7},
         "crushing_fists": {"name": "Crushing Fists", "attacks": 1, "ap": 6, "short": "Melee", "rules": ["rending"]},
         "rock_throw": {"name": "Rock Throw", "attacks": 1, "ap": 6, "rules": [{"id": "blast", "x": 2}, "scatter"], "short": 9, "medium": 18},
+        "claws": {"name": "Claws", "attacks": 1, "ap": 1, "short": "Melee"},
         "rending_claws": {"name": "Rending Claws", "attacks": 1, "ap": 1, "short": "Melee", "rules": ["rending"]},
         "flame_breath": {"name": "Flaming Breath", "short": 6, "medium": 12, "ap": 3, "attacks": 1, "rules": ["flame", "lethal"]},
         "burst_rifle": {"name": "Burst Rifle", "short": 9, "medium": 18, "ap": 8, "attacks": 1, "rules": [{"id": "blast", "x": 2}]},
@@ -441,7 +596,6 @@
         "shield": {"name": "Shield", "description": "This model has +1 Save.", "points": 2},
         "buckler": {"name": "Buckler", "description": "This model has +1 Save against melee attacks.", "points": 1},
         "icon": {"name": "Icon", "description": "Friendly units of X types within 6\" may re-roll a single failed Courage test when removing Shock.", "points": 10, "inputs": ["x"]},
-        "distract": {"name": "Distracting", "description": "Enemy units within 6\" get -1 Strength.", "points": 3},
         "ethereal": {"name": "Ethereal", "description": "This model may ignore other models and any terrain when moving.", "points": 2},
         "legend_wounds": {"name": "Resilient", "description": "This model gains Wounds(+1).", "points": 10},
         "legend_courage": {"name": "Inspired", "description": "This model gains +1 Courage.", "points": 10},

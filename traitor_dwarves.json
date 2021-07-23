@@ -1,810 +1,339 @@
 {
-  "name" : "Traitor Dwarves",
-  "id" : "traitor_dwarves",
-  "author" : "Xekon#8266",
-  "units" : {
-    "daemonsmith" : {
-      "name" : "Daemonsmith",
-      "description" : "",
-      "category" : "hero",
-      "models" : [
-        {
-          "name" : "Daemonsmith",
-          "movement" : 5,
-          "courage" : 6,
-          "shoot" : 5,
-          "fight" : 5,
-          "defense" : 7,
-          "reflexes" : 6,
-          "rules" : [
-            {
-              "id" : "wounds",
-              "x" : 3
-            },
-            "leader",
-            {
-              "id" : "magic",
-              "x" : 2
-            },
-            "rune"
-          ],
-          "weapons" : [
-            {
-              "id" : "demon_hammer",
-              "count" : 2
-            }
-          ],
-          "min" : 1,
-          "max" : 1,
-          "options" : [
-            {
-              "replaceWeapon" : [
+    "name": "Traitor Dwarves",
+    "id": "traitor_dwarves",
+    "author": "Xekon#8266",
+    "units": {
+        "traitor_runesmith": {
+            "name": "Traitor Runesmith",
+            "description": "",
+            "category": "hero",
+            "models": [
                 {
-                  "id" : "demon_hammer",
-                  "count" : 2
+                    "name": "Traitor Runesmith",
+                    "movement": 5,
+                    "courage": 6,
+                    "shoot": 5,
+                    "fight": 6,
+                    "defense": 7,
+                    "reflexes": 6,
+                    "rules": ["leader", {"id": "wounds", "x": 3}, {"id": "power", "x": 1}, {"id": "demon_tactics", "x": 1}],
+                    "weapons": [{"id": "great_weapon", "count": 2}, "frag_grenade"],
+                    "min": 1,
+                    "max": 1,
+                    "options": [
+                        {"replaceWeapon": [{"id": "great_weapon", "count": 2}], "withWeapon": ["blazing_staff"]},
+                        {"addWeapon": "heavy_pistol"},
+                        {"replaceRule": [{"id": "power", "x": 1}], "withRule": [{"id": "power", "x": 2}]},
+                        {"replaceRule": [{"id": "demon_tactics", "x": 1}], "withRule": [{"id": "demon_tactics", "x": 2}]}
+                    ]
                 }
-              ],
-              "withWeapon" : [
-                [
-                  "blazing_staff",
-                  "fire_amulet"
-                ]
-              ]
-            },
-            {
-              "addWeapon" : "demon_handgun"
-            }
-          ]
-        }
-      ],
-      "keywords" : [
-        "Hero",
-        "Wizard",
-        "Infantry"
-      ],
-      "subfactions" : [
-        "blackpowder",
-        "wrath",
-        "excess",
-        "forge",
-        "none"
-      ]
-    },
-    "iron_souls" : {
-      "name" : "Iron Souls",
-      "description" : "",
-      "category" : "core",
-      "models" : [
-        {
-          "name" : "Ironclad",
-          "movement" : 5,
-          "courage" : 4,
-          "shoot" : 5,
-          "fight" : 6,
-          "defense" : 6,
-          "reflexes" : 4,
-          "weapons" : [
-            {
-              "id" : "demon_hand",
-              "count" : 2
-            },
-            "shield"
-          ],
-          "min" : 1,
-          "max" : 1,
-          "options" : [
-            {
-              "addWeapon" : "demon_handgun"
-            }
-          ]
+            ],
+            "subfactions": ["wrath", "excess", "pestilence", "none", "change"]
         },
-        {
-          "name" : "Iron Soul",
-          "movement" : 5,
-          "courage" : 4,
-          "shoot" : 5,
-          "fight" : 6,
-          "defense" : 6,
-          "reflexes" : 4,
-          "weapons" : [
-            "demon_hand",
-            "shield"
-          ],
-          "min" : 4,
-          "max" : 19
-        }
-      ],
-      "keywords" : [
-        "Infantry"
-      ],
-      "options" : [
-        {
-          "addRule" : [
-            "banner"
-          ],
-          "modelLimit" : 1
-        },
-        {
-          "addRule" : [
-            "musician"
-          ],
-          "modelLimit" : 1
-        }
-      ],
-      "subfactions" : [
-        "blackpowder",
-        "wrath",
-        "excess",
-        "forge",
-        "none"
-      ]
-    },
-    "pyre_souls" : {
-      "name" : "Pyre Souls",
-      "description" : "",
-      "category" : "core",
-      "models" : [
-        {
-          "name" : "Ironclad",
-          "movement" : 5,
-          "courage" : 4,
-          "shoot" : 5,
-          "fight" : 5,
-          "defense" : 6,
-          "reflexes" : 4,
-          "weapons" : [
-            "demon_rifle",
-            {
-              "id" : "demon_dagger",
-              "count" : 2
-            }
-          ],
-          "min" : 1,
-          "max" : 1,
-          "options" : [
-            {
-              "addWeapon" : "demon_handgun"
-            }
-          ]
-        },
-        {
-          "name" : "Pyre Soul",
-          "movement" : 5,
-          "courage" : 4,
-          "shoot" : 5,
-          "fight" : 5,
-          "defense" : 6,
-          "reflexes" : 4,
-          "weapons" : [
-            "demon_rifle",
-            "demon_dagger"
-          ],
-          "min" : 4,
-          "max" : 19
-        }
-      ],
-      "keywords" : [
-        "Infantry"
-      ],
-      "options" : [
-        {
-          "addRule" : [
-            "banner"
-          ],
-          "modelLimit" : 1
-        },
-        {
-          "addRule" : [
-            "musician"
-          ],
-          "modelLimit" : 1
-        }
-      ],
-      "subfactions" : [
-        "blackpowder",
-        "wrath",
-        "excess",
-        "forge",
-        "none"
-      ]
-    },
-    "iron_lord" : {
-      "name" : "Iron Lord",
-      "description" : "",
-      "category" : "hero",
-      "models" : [
-        {
-          "name" : "Iron Lord",
-          "movement" : 5,
-          "courage" : 6,
-          "shoot" : 5,
-          "fight" : 5,
-          "defense" : 7,
-          "reflexes" : 6,
-          "rules" : [
-            {
-              "id" : "wounds",
-              "x" : 3
-            },
-            "soul_gem"
-          ],
-          "weapons" : [
-            {
-              "id" : "demon_hammer",
-              "count" : 4
-            },
-            "demon_handgun"
-          ],
-          "min" : 1,
-          "max" : 1,
-          "options" : [
-            {
-              "replaceWeapon" : [
+        "iron_souls": {
+            "name": "Iron Souls",
+            "description": "Branded with cursed runes and filled with eternal hatred.",
+            "category": "core",
+            "models": [
                 {
-                  "id" : "demon_hammer",
-                  "count" : 4
+                    "options": [{"replaceWeapon": ["heavy_handweapon", "spiked_shield"], "withWeapon": ["glaive_carbine"], "modelLimit": "all"}],
+                    "name": "Iron Soul",
+                    "movement": 5,
+                    "courage": 5,
+                    "shoot": 5,
+                    "fight": 6,
+                    "defense": 6,
+                    "reflexes": 5,
+                    "weapons": ["heavy_handweapon", "spiked_shield"],
+                    "min": 10,
+                    "max": 30
                 }
-              ],
-              "withWeapon" : [
-                {
-                  "id" : "demon_halberd",
-                  "count" : 4
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      "keywords" : [
-        "Hero",
-        "Infantry"
-      ],
-      "subfactions" : [
-        "blackpowder",
-        "wrath",
-        "excess",
-        "forge",
-        "none"
-      ]
-    },
-    "soul_bound_orcs" : {
-      "name" : "Soul-bound Orcs",
-      "description" : "",
-      "category" : "core",
-      "models" : [
-        {
-          "name" : "Overseer",
-          "movement" : 6,
-          "courage" : 4,
-          "shoot" : 4,
-          "fight" : 6,
-          "defense" : 5,
-          "reflexes" : 4,
-          "weapons" : [
-            {
-              "id" : "demon_hand",
-              "count" : 2
-            },
-            "shield"
-          ],
-          "min" : 1,
-          "max" : 1
+            ],
+            "subfactions": ["wrath", "excess", "pestilence", "none", "change"],
+            "options": [{"addRule": ["champion"], "modelLimit": 1}, {"addRule": ["banner"], "modelLimit": 1}, {"addRule": ["musician"], "modelLimit": 1}]
         },
-        {
-          "name" : "Soul-bound Orc",
-          "movement" : 6,
-          "courage" : 4,
-          "shoot" : 4,
-          "fight" : 6,
-          "defense" : 5,
-          "reflexes" : 4,
-          "weapons" : [
-            "demon_hand",
-            "shield"
-          ],
-          "min" : 9,
-          "max" : 29
+        "iron_lord": {
+            "name": "Iron Lord",
+            "description": "",
+            "category": "hero",
+            "models": [
+                {
+                    "name": "Iron Lord",
+                    "movement": 5,
+                    "courage": 6,
+                    "shoot": 5,
+                    "fight": 6,
+                    "defense": 7,
+                    "reflexes": 6,
+                    "rules": [{"id": "leader_x", "x": "Infantry, Soul-bound"}, {"id": "wounds", "x": 3}, {"id": "iron_tactics", "x": 1}],
+                    "weapons": [{"id": "great_weapon", "count": 4}, "heavy_pistol"],
+                    "min": 1,
+                    "max": 1,
+                    "options": [
+                        {"replaceWeapon": [{"id": "great_weapon", "count": 4}], "withWeapon": [{"id": "heavy_polearm", "count": 4}]},
+                        {"addWeapon": "enchanted_shield"},
+                        {"replaceRule": [{"id": "iron_tactics", "x": 1}], "withRule": [{"id": "iron_tactics", "x": 2}]}
+                    ]
+                }
+            ],
+            "subfactions": ["wrath", "excess", "pestilence", "none", "change"]
+        },
+        "soul_bound_orcs": {
+            "name": "Soul-bound Orcs",
+            "description": "Bound by an ancient contract, these orcs have aligned themselves with the Traitor Dwarves.",
+            "category": "core",
+            "models": [
+                {
+                    "options": [{"replaceWeapon": ["heavy_handweapon", "shield"], "withWeapon": [[{"id": "great_weapon", "count": 2}]], "modelLimit": "2/5"}],
+                    "name": "Soul-bound Orc",
+                    "movement": 6,
+                    "courage": 4,
+                    "shoot": 5,
+                    "fight": 6,
+                    "defense": 5,
+                    "reflexes": 5,
+                    "weapons": ["heavy_handweapon", "shield"],
+                    "min": 10,
+                    "max": 30
+                }
+            ],
+            "keywords": ["Soul-bound", "Infantry"],
+            "subfactions": ["wrath", "excess", "pestilence", "none", "change"],
+            "options": [{"addRule": ["champion"], "modelLimit": 1}, {"addRule": ["banner"], "modelLimit": 1}, {"addRule": ["musician"], "modelLimit": 1}]
+        },
+        "centaur_hybrids": {
+            "name": "Centaur Hybrids",
+            "description": "Experimental warriors, half beast and half dwarf.",
+            "category": "elite",
+            "options": [{"addRule": ["champion"], "modelLimit": 1}, {"addRule": ["banner"], "modelLimit": 1}, {"addRule": ["musician"], "modelLimit": 1}],
+            "models": [
+                {
+                    "name": "Centaur Hybrid",
+                    "movement": 8,
+                    "courage": 5,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 6,
+                    "reflexes": 5,
+                    "weapons": [{"id": "great_weapon", "count": 3}, "spiked_enchanted_shield", {"id": "heavy_hooves_and_teeth", "count": 2}],
+                    "min": 3,
+                    "max": 6,
+                    "rules": [{"id": "wounds", "x": 3}]
+                }
+            ],
+            "keywords": ["Beast", "Cavalry"],
+            "subfactions": ["none", "pestilence", "wrath", "excess", "change"]
+        },
+        "centaur_hybrid_lord": {
+            "name": "Centaur Hybrid Lord",
+            "description": "A powerful experimental warrior, half beast and half dwarf.",
+            "category": "hero",
+            "models": [
+                {
+                    "name": "Centaur Hybrid Lord",
+                    "movement": 8,
+                    "courage": 6,
+                    "shoot": 5,
+                    "fight": 6,
+                    "defense": 7,
+                    "reflexes": 6,
+                    "weapons": [{"id": "great_weapon", "count": 3}, "spiked_tower_shield", {"id": "heavy_hooves_and_teeth", "count": 2}],
+                    "options": [
+                        {"replaceWeapon": [{"id": "great_weapon", "count": 3}, "spiked_tower_shield"], "withWeapon": [{"id": "war_hammer", "count": 3}]},
+                        {"replaceRule": [{"id": "siegebreaker_tactics", "x": 1}], "withRule": [{"id": "siegebreaker_tactics", "x": 2}]}
+                    ],
+                    "min": 1,
+                    "max": 1,
+                    "rules": [{"id": "wounds", "x": 4}, {"id": "leader_x", "x": "Beast"}, {"id": "siegebreaker_tactics", "x": 1}]
+                }
+            ],
+            "keywords": ["Beast", "Cavalry"],
+            "subfactions": ["none", "pestilence", "wrath", "excess", "change"]
+        },
+        "black_souls": {
+            "name": "Black Souls",
+            "description": "Branded with cursed runes and filled with eternal hatred.",
+            "category": "elite",
+            "models": [
+                {
+                    "options": [{"replaceWeapon": ["heavy_handweapon", "spiked_shield"], "withWeapon": [{"id": "great_weapon", "count": 2}], "modelLimit": "all"}],
+                    "name": "Black Soul",
+                    "movement": 5,
+                    "courage": 5,
+                    "shoot": 5,
+                    "fight": 6,
+                    "defense": 6,
+                    "reflexes": 5,
+                    "weapons": ["heavy_handweapon", "spiked_shield"],
+                    "min": 5,
+                    "max": 15,
+                    "rules": [{"id": "wounds", "x": 2}]
+                }
+            ],
+            "subfactions": ["wrath", "excess", "pestilence", "none", "change"],
+            "options": [{"addRule": ["champion"], "modelLimit": 1}, {"addRule": ["banner"], "modelLimit": 1}, {"addRule": ["musician"], "modelLimit": 1}]
+        },
+        "engineers": {
+            "name": "Traitor Engineers",
+            "description": "",
+            "category": "elite",
+            "models": [
+                {
+                    "options": [{"replaceWeapon": ["glaive_carbine"], "withWeapon": ["flamethrower", "burst_rifle"], "modelLimit": "1/5"}],
+                    "name": "Traitor Engineers",
+                    "movement": 5,
+                    "courage": 5,
+                    "shoot": 5,
+                    "fight": 6,
+                    "defense": 6,
+                    "reflexes": 5,
+                    "weapons": ["glaive_carbine"],
+                    "min": 5,
+                    "max": 10,
+                    "rules": [{"id": "repair", "x": 3}]
+                }
+            ],
+            "subfactions": ["wrath", "excess", "pestilence", "none", "change"],
+            "options": [{"addRule": ["champion"], "modelLimit": 1}, {"addRule": ["banner"], "modelLimit": 1}, {"addRule": ["musician"], "modelLimit": 1}]
+        },
+        "cinder_spirits": {
+            "name": "Cinder Spirits",
+            "description": "",
+            "category": "core",
+            "models": [
+                {
+                    "name": "Cinder Spirits",
+                    "movement": 7,
+                    "courage": 5,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 6,
+                    "reflexes": 5,
+                    "weapons": [{"id": "claws", "count": 2}, "flame_breath"],
+                    "min": 5,
+                    "max": 15
+                }
+            ],
+            "subfactions": ["wrath", "excess", "pestilence", "none", "change"],
+            "options": [{"addRule": ["champion"], "modelLimit": 1}, {"addRule": ["banner"], "modelLimit": 1}, {"addRule": ["musician"], "modelLimit": 1}]
+        },
+        "magma_elementals": {
+            "name": "Magma Elementals",
+            "description": "",
+            "category": "rare",
+            "models": [
+                {
+                    "name": "Magma Elementals",
+                    "movement": 7,
+                    "courage": 5,
+                    "shoot": 6,
+                    "fight": 7,
+                    "defense": 7,
+                    "reflexes": 5,
+                    "weapons": [{"id": "flame_breath", "count": 2}, {"id": "heavy_great_weapon", "count": 4}],
+                    "min": 3,
+                    "max": 6,
+                    "rules": [{"id": "wounds", "x": 3}]
+                }
+            ],
+            "subfactions": ["wrath", "excess", "pestilence", "none", "change"],
+            "options": [{"addRule": ["champion"], "modelLimit": 1}]
+        },
+        "obsidian_golem": {
+            "name": "Obsidian Golems",
+            "description": "",
+            "category": "rare",
+            "models": [
+                {
+                    "name": "Obsidian Golem",
+                    "movement": 5,
+                    "courage": 5,
+                    "shoot": 5,
+                    "fight": 7,
+                    "defense": 9,
+                    "reflexes": 5,
+                    "weapons": [{"id": "crushing_fists", "count": 4}],
+                    "min": 3,
+                    "max": 6,
+                    "rules": ["damage_table_monster"]
+                }
+            ],
+            "subfactions": ["wrath", "excess", "pestilence", "none", "change"],
+            "options": [{"addRule": ["champion"], "modelLimit": 1}]
         }
-      ],
-      "keywords" : [
-        "Soul-bound",
-        "Infantry"
-      ],
-      "options" : [
-        {
-          "replaceWeapon" : [
-            "demon_hand",
-            "shield"
-          ],
-          "withWeapon" : [
-            [
-              {
-                "id" : "demon_blade",
-                "count" : 2
-              }
+    },
+    "weapons": {
+        "blazing_staff": {"name": "Blazing Staff", "attacks": 1, "ap": 5, "short": "Melee", "rules": [{"id": "reach", "x": 1}, "lethal"]},
+        "glaive_carbine": {
+            "name": "Glaive-Carbine",
+            "profiles": [
+                {"name": "Carbine", "ap": 2, "attacks": 1, "short": 9, "medium": 18, "rules": ["lethal"]},
+                {"name": "Glaive", "ap": 1, "attacks": 1, "short": "Melee", "rules": [{"id": "reach", "x": 1}, "lethal"]}
             ]
-          ],
-          "modelLimit" : "2/5"
+        },
+        "claws": {"name": "Blazing Claws", "attacks": 1, "ap": 3, "short": "Melee"}
+    },
+    "rules": {
+        "repair": {
+            "name": "Repair",
+            "inputs": ["x"],
+            "description": "At any point during this unit's activation, if within 3\" of a Vehicle or Warmachine, roll one die. On an X or less the vehicle or warmachine may remove one critical damage.",
+            "points": ["rule.x", {"multiply": 2}]
+        },
+        "repair_toolkit": {
+            "name": "Repair Toolkit",
+            "description": "This model and its unit may spend one action to repair one vehicle or warmachine within 3\" that has suffered critical damage.",
+            "points": 5
+        },
+        "siegebreaker_tactics": {
+            "name": "Siegebreaker Tactics",
+            "inputs": ["x"],
+            "description": "When this unit is activated, choose up to X friendly _Beast_ units within 6\". This model and those units may re-roll failed Strength tests of 9+ until the end of the round.",
+            "points": ["rule.x", {"multiply": 10}]
+        },
+        "demon_tactics": {
+            "name": "Demonic Tactics",
+            "inputs": ["x"],
+            "description": "When this unit is activated, choose up to X friendly _Infantry_ units within 6\". This model and those units add +3“ next time they move or charge.",
+            "points": ["rule.x", {"multiply": 10}]
+        },
+        "iron_tactics": {
+            "name": "Iron Tactics",
+            "inputs": ["x"],
+            "description": "When this unit is activated, choose up to X friendly _Infantry_ units within 6\". This model and those units may re-roll failed Accuracy tests of 9+ until the end of the round.",
+            "points": ["rule.x", {"multiply": 10}]
+        }
+    },
+    "powers": {
+        "fireball": {"name": "Fireball", "description": "Target enemy unit within 12\" takes 3 hits with AP(3).", "charge": 6},
+        "pain": {"name": "Pain", "description": "Target enemy model within 12\" takes 1 automatic hit with AP(3).", "charge": 6, "subfactions": ["blood", "bone", "dread", "none"]},
+        "slow": {"name": "Slow", "description": "Target enemy unit within 12\" gets -2\" of Movement until the end of the round.", "charge": 7}
+    },
+    "strategies": [
+        {
+            "name": "Blazing Runes",
+            "phase": "activation",
+            "description": "Use before an Infantry unit fights. Hit rolls of 1 or 2 gain +1 AP.",
+            "flavor": "Traitor Dwarves wield enchanted weapons, covered in unholy runes and burning with dark magic.",
+            "cost": 1,
+            "subfactions": ["wrath", "excess", "pestilence", "none", "change"]
         },
         {
-          "addRule" : [
-            "banner"
-          ],
-          "modelLimit" : 1
+            "subfactions": ["none", "wrath", "excess", "pestilence", "change"],
+            "name": "Unnatural Strength",
+            "phase": "activation",
+            "description": "Use when a friendly unit destroys an enemy unit. That unit gains +1 Strength until the end of the battle. A unit may only be affected by this strategy once.",
+            "flavor": "Traitor Dwarves consume the souls of foes they’ve slain to gain ever greater strength.",
+            "cost": 2
         },
         {
-          "addRule" : [
-            "musician"
-          ],
-          "modelLimit" : 1
+            "phase": "activation",
+            "name": "Daemonforged Bullets",
+            "flavor": "Possessed bullets, forged in Hellfire and inscribed with cursed runes, are highly unstable but very effective.",
+            "description": "Use before an Infantry unit shoots. Add +6\" to the short and long range bands of all weapons.",
+            "cost": 1,
+            "subfactions": ["wrath", "excess", "pestilence", "none", "change"]
         }
-      ],
-      "subfactions" : [
-        "none",
-        "trickery_focus",
-        "speed_focus",
-        "primal_focus",
-        "armor_focus"
-      ],
-      "subfactions_0" : [
-        "blackpowder",
-        "wrath",
-        "excess",
-        "forge",
-        "none"
-      ]
-    }
-  },
-  "weapons" : {
-    "shield" : {
-      "name" : "Shield",
-      "attacks" : 0,
-      "short" : "Melee",
-      "rules" : [
-        {
-          "id" : "shield"
-        }
-      ]
-    },
-    "buckler" : {
-      "name" : "Buckler",
-      "attacks" : 0,
-      "short" : "Melee",
-      "rules" : [
-        {
-          "id" : "buckler"
-        }
-      ]
-    },
-    "blazing_staff" : {
-      "name" : "Blazing Staff",
-      "attacks" : 1,
-      "ap" : 5,
-      "short" : "Melee",
-      "rules" : [
-        {
-          "id" : "reach",
-          "x" : 1
-        },
-        "rending"
-      ]
-    },
-    "fire_amulet" : {
-      "name" : "Scorching Amulet",
-      "attacks" : 1,
-      "ap" : 3,
-      "short" : 6,
-      "rules" : [
-        {
-          "id" : "blast",
-          "x" : 2
-        }
-      ]
-    },
-    "demon_hammer" : {
-      "name" : "Daemonforged Warhammer",
-      "ap" : 5,
-      "attacks" : 1,
-      "short" : "Melee"
-    },
-    "demon_handgun" : {
-      "name" : "Daemonforged Handgun",
-      "ap" : 3,
-      "attacks" : 1,
-      "short" : 6,
-      "medium" : 12,
-      "rules" : [
-        "pistol",
-        "rending"
-      ]
-    },
-    "demon_blade" : {
-      "name" : "Daemonforged Blades",
-      "ap" : 3,
-      "attacks" : 1,
-      "short" : "Melee"
-    },
-    "demon_rifle" : {
-      "name" : "Daemonforged Rifle",
-      "ap" : 3,
-      "attacks" : 1,
-      "short" : 9,
-      "medium" : 18,
-      "rules" : [
-        "rending"
-      ]
-    },
-    "demon_halberd" : {
-      "name" : "Daemonforged Halberd",
-      "ap" : 4,
-      "attacks" : 1,
-      "short" : "Melee",
-      "rules" : [
-        {
-          "id" : "reach",
-          "x" : 2
-        }
-      ]
-    },
-    "demon_dagger" : {
-      "name" : "Daemonforged Dagger",
-      "ap" : 1,
-      "attacks" : 1,
-      "short" : "Melee"
-    },
-    "flamethrower" : {
-      "name" : "Flamethrower",
-      "profiles" : [
-        {
-          "name" : "Stream",
-          "short" : 6,
-          "medium" : 12,
-          "ap" : 5,
-          "attacks" : 2,
-          "rules" : [
-            "flame"
-          ]
-        },
-        {
-          "name" : "Spray",
-          "short" : 6,
-          "medium" : 12,
-          "ap" : 1,
-          "attacks" : 5,
-          "rules" : [
-            "flame"
-          ]
-        }
-      ]
-    },
-    "demon_hand" : {
-      "name" : "Daemonforged Handweapon",
-      "ap" : 2,
-      "attacks" : 1,
-      "short" : "Melee"
-    }
-  },
-  "rules" : {
-    "repair" : {
-      "name" : "Repair",
-      "inputs" : [
-        "x"
-      ],
-      "description" : "At any point during this unit's activation, if within 3\" of a Vehicle or Warmachine, roll one die. On an X or less the vehicle may remove one critical damage.",
-      "points" : [
-        "rule.x",
-        {
-          "multiply" : 2
-        }
-      ]
-    },
-    "repair_toolkit" : {
-      "name" : "Repair Toolkit",
-      "description" : "This model and its unit may spend one action to repair one vehicle or warmachine within 3\" that has suffered critical damage.",
-      "points" : 5
-    },
-    "rune" : {
-      "name" : "Blazing Rune",
-      "description" : "Once per round, a friendly _Infantry_ unit within 6\" gains +3“ the next time it makes a Move or Charge action.",
-      "points" : 5
-    },
-    "soul_gem" : {
-      "name" : "Soul Gem",
-      "description" : "When this unit is activated, friendly _Soul-bound_ units 6\" may choose to activate for free if they have not activated yet and perform the same actions as this unit. Friendly _Soul-bound_ units within 6\" may use this unit's Courage value when taking Courage tests. This unit may not be targeted by enemy attacks while it is within 3\" of another friendly _Soul-bound_ unit unless that unit is also a Leader and attacking in Melee.",
-      "points" : 10
-    }
-  },
-  "powers" : {
-    "fireball" : {
-      "name" : "Fireball",
-      "description" : "Target enemy unit within 12\" takes 6 hits with AP 1. This power may be cast unlimited times.",
-      "flavor" : "Conjuring a fireball comes natural to wizards, especially those that sow discord.",
-      "charge" : 6
-    }
-  },
-  "strategies" : [
-    {
-      "name" : "Stubborn",
-      "phase" : "activation",
-      "description" : "Use before activating a unit. That unit may immediately remove up to 2 Shock.",
-      "flavor" : "Standing steadfast like their mountain halls.",
-      "cost" : 1,
-      "subfactions" : [
-        "none",
-        "melee_focus",
-        "magic_focus",
-        "black_focus",
-        "scout_focus"
-      ]
-    },
-    {
-      "subfactions" : [
-        "none",
-        "change_traitors"
-      ],
-      "name" : "Blazing Runes",
-      "phase" : "activation",
-      "description" : "Use before an Infantry unit fights. Hit rolls of 1 or 2 gain +1 AP.",
-      "flavor" : "Chaos Warriors wield enchanted weapons, covered in unholy runes and burning with dark magic.",
-      "cost" : 1
-    }
-  ],
-  "relics" : [],
-  "hidden_units" : [
-    {
-      "name" : "Forgefire Golem",
-      "description" : "",
-      "min" : 1,
-      "max" : 3,
-      "category" : "test",
-      "models" : [
-        {
-          "name" : "Forgefire Golem",
-          "movement" : 4,
-          "fight" : 6,
-          "shoot" : 5,
-          "defense" : 10,
-          "courage" : 6,
-          "reflexes" : 4,
-          "weapons" : [
-            {
-              "id" : "runic_fist",
-              "count" : 2
-            },
-            {
-              "id" : "cannon"
-            }
-          ],
-          "rules" : [
-            "damage_table_warmachine"
-          ],
-          "min" : 1,
-          "max" : 1
-        }
-      ],
-      "keywords" : [
-        "Warmachine",
-        "Infantry"
-      ],
-      "options" : [
-        {
-          "replaceWeapon" : [
-            {
-              "id" : "runic_fist",
-              "count" : 2
-            }
-          ],
-          "withWeapon" : [
-            {
-              "id" : "runic_great",
-              "count" : 3
-            }
-          ]
-        }
-      ],
-      "subfactions" : [
-        "none",
-        "melee_focus",
-        "magic_focus",
-        "black_focus",
-        "scout_focus"
-      ]
-    },
-    {
-      "name" : "Runecarved Elemental",
-      "description" : "",
-      "min" : 1,
-      "max" : 3,
-      "category" : "test",
-      "models" : [
-        {
-          "name" : "Runecarved Elemental",
-          "movement" : 4,
-          "fight" : 7,
-          "shoot" : 4,
-          "defense" : 12,
-          "courage" : 6,
-          "reflexes" : 4,
-          "weapons" : [
-            {
-              "id" : "runic_fist",
-              "count" : 2
-            },
-            {
-              "id" : "runic_fist",
-              "count" : 2
-            },
-            "throw_rock"
-          ],
-          "rules" : [
-            "damage_table_monster",
-            "strider"
-          ],
-          "options" : [
-            {
-              "replaceWeapon" : [
-                {
-                  "id" : "runic_fist",
-                  "count" : 2
-                }
-              ],
-              "withWeapon" : [
-                {
-                  "id" : "runic_great",
-                  "count" : 3
-                }
-              ],
-              "modelLimit" : 2
-            }
-          ],
-          "min" : 1,
-          "max" : 1
-        }
-      ],
-      "keywords" : [
-        "Monster",
-        "Infantry"
-      ],
-      "subfactions" : [
-        "none",
-        "melee_focus",
-        "magic_focus",
-        "black_focus",
-        "scout_focus"
-      ]
-    },
-    {
-      "name" : "Cannon",
-      "description" : "",
-      "min" : 1,
-      "max" : 3,
-      "category" : "test",
-      "models" : [
-        {
-          "name" : "Cannon",
-          "movement" : 5,
-          "shoot" : 5,
-          "defense" : 8,
-          "rules" : [
-            {
-              "id" : "team",
-              "x" : 3
-            },
-            "damage_table_warmachine"
-          ],
-          "weapons" : [
-            "cannon"
-          ],
-          "min" : 1,
-          "max" : 1,
-          "reflexes" : 0,
-          "fight" : 0,
-          "courage" : 0
-        },
-        {
-          "name" : "Dwarven Crew",
-          "movement" : 5,
-          "courage" : 5,
-          "shoot" : 5,
-          "fight" : 5,
-          "defense" : 6,
-          "reflexes" : 5,
-          "weapons" : [
-            "dwarf_dagger"
-          ],
-          "min" : 3,
-          "max" : 3,
-          "rules" : []
-        }
-      ],
-      "keywords" : [
-        "Warmachine",
-        "Artillery"
-      ]
-    },
-    {
-      "name" : "Apprentice",
-      "description" : "",
-      "category" : "hero",
-      "models" : [
-        {
-          "name" : "Acolyte",
-          "movement" : 5,
-          "courage" : 6,
-          "shoot" : 4,
-          "fight" : 5,
-          "defense" : 6,
-          "reflexes" : 6,
-          "rules" : [
-            {
-              "id" : "wounds",
-              "x" : 2
-            },
-            "support",
-            {
-              "id" : "magic",
-              "x" : 1
-            }
-          ],
-          "weapons" : [
-            "blazing_staff",
-            "fire_amulet"
-          ],
-          "min" : 1,
-          "max" : 1
-        }
-      ],
-      "keywords" : [
-        "Hero",
-        "Wizard",
-        "Infantry"
-      ]
-    },
-    {
-      "name" : "Pyre Lord",
-      "description" : "",
-      "category" : "hero",
-      "models" : [
-        {
-          "name" : "Pyre Lord",
-          "movement" : 5,
-          "courage" : 6,
-          "shoot" : 5,
-          "fight" : 5,
-          "defense" : 7,
-          "reflexes" : 6,
-          "rules" : [
-            {
-              "id" : "wounds",
-              "x" : 3
-            },
-            "soul_gem"
-          ],
-          "weapons" : [
-            "demon_rifle",
-            {
-              "id" : "demon_blade",
-              "count" : 4
-            }
-          ],
-          "min" : 1,
-          "max" : 1,
-          "options" : [
-            {
-              "replaceWeapon" : [
-                "demon_rifle"
-              ],
-              "withWeapon" : [
-                "flamethrower"
-              ]
-            }
-          ]
-        }
-      ],
-      "keywords" : [
-        "Hero",
-        "Infantry"
-      ]
-    }
-  ]
+    ],
+    "relics": []
 }
