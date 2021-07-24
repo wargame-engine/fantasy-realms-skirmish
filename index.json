@@ -330,7 +330,21 @@
             "rule": "legend_courage",
             "description": "Upgrade one Leader model with Inspired.",
             "flavor": "This model inspires the best in those who serve them.",
-            "points": 10
+            "points": 5
+        },
+        "expert_fighter": {
+            "name": "Expert Fighter",
+            "rule": "legend_expert_fighter",
+            "description": "Upgrade one Leader model with Expert Fighter.",
+            "flavor": "This model has fought in many close quarters fights and survived.",
+            "points": 5
+        },
+        "quick_reflexes": {
+            "name": "Quick Reflexes",
+            "rule": "legend_quick_reflexes",
+            "description": "Upgrade one Leader model with Quick Reflexes.",
+            "flavor": "This model has expert awareness and can react quickly.",
+            "points": 5
         }
     },
     "powers": {
@@ -591,14 +605,17 @@
         "relic_shield": {"name": "Relic Shield", "attacks": 0, "short": "Melee", "rules": ["relic_shield"]}
     },
     "rules": {
+        "legend_strategist": {"name": "Brilliant Strategist", "description": "While this model is on the table you gain 1 additional Strategy Point per round.", "points": 20},
+        "legend_wounds": {"name": "Resilient", "description": "This model gains Wounds(+1).", "points": 10},
+        "legend_courage": {"name": "Inspired", "description": "This model gains +1 Courage.", "points": 10},
+        "legend_quick_reflexes": {"name": "Quick Reflexes", "description": "This model gains +1 Initiative.", "points": 10},
+        "legend_expert_fighter": {"name": "Expert Fighter", "description": "This model may make one additional attack with any Melee weapon.", "points": 10},
         "light_armor": {"name": "Light Armor", "description": "This model has +1 Save.", "points": 2},
         "heavy_armor": {"name": "Heavy Armor", "description": "This model has +2 Save.", "points": 4},
         "shield": {"name": "Shield", "description": "This model has +1 Save.", "points": 2},
         "buckler": {"name": "Buckler", "description": "This model has +1 Save against melee attacks.", "points": 1},
         "icon": {"name": "Icon", "description": "Friendly units of X types within 6\" may re-roll a single failed Courage test when removing Shock.", "points": 10, "inputs": ["x"]},
         "ethereal": {"name": "Ethereal", "description": "This model may ignore other models and any terrain when moving.", "points": 2},
-        "legend_wounds": {"name": "Resilient", "description": "This model gains Wounds(+1).", "points": 10},
-        "legend_courage": {"name": "Inspired", "description": "This model gains +1 Courage.", "points": 10},
         "leeching": {"name": "Leeching", "description": "Roll a D10 each time this weapon deals damage to a _Leader_ unit. On a 1 or 2 this model regains one Wound.", "points": 1},
         "mount_horse": {"name": "Warhorse", "description": "This model has +2\" Movement.", "points": 2},
         "net": {
