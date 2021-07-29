@@ -238,14 +238,14 @@
     },
     "strategies": [
         {
-            "name": "Fearless",
+            "name": "Ethereal",
             "phase": "activation",
-            "description": "Use before activating a unit. That unit may immediately remove up to 2 Shock.",
-            "flavor": "These horrors know no fear, only death.",
-            "cost": 1
+            "description": "Use when an _Infantry_ unit is hit by an attack. That unit gains +1 Save until end of turn.",
+            "flavor": "These horrors can be difficult to dispatch given their ghostly form.",
+            "cost": 2
         },
         {
-            "name": "Ghostly Form",
+            "name": "Ghostwalk",
             "phase": "activation",
             "description": "Use when an _Infantry_ unit makes a Move action. It may ignore any models and terrain for that move.",
             "flavor": "These horrors are can phase through almost any object with ease.",
