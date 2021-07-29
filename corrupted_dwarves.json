@@ -1,15 +1,15 @@
 {
-    "name": "Traitor Dwarves",
-    "id": "traitor_dwarves",
+    "name": "Corrupted Dwarves",
+    "id": "corrupted_dwarves",
     "author": "Xekon#8266",
     "units": {
-        "traitor_runesmith": {
-            "name": "Traitor Runesmith",
+        "corrupted_runesmith": {
+            "name": "Corrupted Runesmith",
             "description": "",
             "category": "hero",
             "models": [
                 {
-                    "name": "Traitor Runesmith",
+                    "name": "Corrupted Runesmith",
                     "movement": 5,
                     "courage": 6,
                     "shoot": 5,
@@ -80,7 +80,7 @@
         },
         "soul_bound_orcs": {
             "name": "Soul-bound Orcs",
-            "description": "Bound by an ancient contract, these orcs have aligned themselves with the Traitor Dwarves.",
+            "description": "Bound by an ancient contract, these orcs have aligned themselves with the Corrupted Dwarves.",
             "category": "core",
             "models": [
                 {
@@ -174,13 +174,13 @@
             "options": [{"addRule": ["champion"], "modelLimit": 1}, {"addRule": ["banner"], "modelLimit": 1}, {"addRule": ["musician"], "modelLimit": 1}]
         },
         "engineers": {
-            "name": "Traitor Engineers",
+            "name": "Corrupted Engineers",
             "description": "",
             "category": "elite",
             "models": [
                 {
                     "options": [{"replaceWeapon": ["glaive_carbine"], "withWeapon": ["flamethrower", "burst_rifle"], "modelLimit": "1/5"}],
-                    "name": "Traitor Engineers",
+                    "name": "Corrupted Engineers",
                     "movement": 5,
                     "courage": 5,
                     "shoot": 5,
@@ -314,7 +314,7 @@
             "name": "Blazing Runes",
             "phase": "activation",
             "description": "Use before an Infantry unit fights. Hit rolls of 1 or 2 gain +1 AP.",
-            "flavor": "Traitor Dwarves wield enchanted weapons, covered in unholy runes and burning with dark magic.",
+            "flavor": "Corrupted Dwarves wield enchanted weapons, covered in unholy runes and burning with dark magic.",
             "cost": 1,
             "subfactions": ["wrath", "excess", "pestilence", "none", "change"]
         },
@@ -323,7 +323,7 @@
             "name": "Unnatural Strength",
             "phase": "activation",
             "description": "Use when a friendly unit destroys an enemy unit. That unit gains +1 Strength until the end of the battle. A unit may only be affected by this strategy once.",
-            "flavor": "Traitor Dwarves consume the souls of foes they’ve slain to gain ever greater strength.",
+            "flavor": "Corrupted Dwarves consume the souls of foes they’ve slain to gain ever greater strength.",
             "cost": 2
         },
         {
