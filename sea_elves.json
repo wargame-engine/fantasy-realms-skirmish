@@ -113,6 +113,19 @@
                 }
             ]
         },
+        "thrall_leader": {
+            "name": "Depthbound Thrall Leader",
+            "description": "Enslaved by ritualistic magic, these thralls march ever forward.",
+            "category": "hero",
+            "rules": ["leader"],
+            "models": [{"name": "Depthbound Thrall", "movement": 7, "courage": 5, "shoot": 5, "fight": 6, "defense": 5, "reflexes": 5, "weapons": ["great_weapon"], "min": 1, "max": 1}],
+            "options": [
+                {"replaceWeapon": ["great_weapon"], "withWeapon": [["short_bow", {"id": "light_handweapon", "count": 2}], {"id": "heavy_javelin", "count": 2}], "modelLimit": "all"},
+                {"addRule": ["champion"], "modelLimit": 1},
+                {"addRule": ["banner"], "modelLimit": 1},
+                {"addRule": ["musician"], "modelLimit": 1}
+            ]
+        },
         "thralls": {
             "name": "Depthbound Thrall",
             "description": "Enslaved by ritualistic magic, these thralls march ever forward.",
@@ -120,6 +133,34 @@
             "models": [{"name": "Depthbound Thrall", "movement": 7, "courage": 5, "shoot": 5, "fight": 6, "defense": 5, "reflexes": 5, "weapons": ["great_weapon"], "min": 1, "max": 1}],
             "options": [
                 {"replaceWeapon": ["great_weapon"], "withWeapon": [["short_bow", {"id": "light_handweapon", "count": 2}], {"id": "heavy_javelin", "count": 2}], "modelLimit": "all"},
+                {"addRule": ["champion"], "modelLimit": 1},
+                {"addRule": ["banner"], "modelLimit": 1},
+                {"addRule": ["musician"], "modelLimit": 1}
+            ]
+        },
+        "guard_leader": {
+            "name": "Guardian Leader on Bloodreef Eel",
+            "description": "Enslaved by ancient spell and clad in cursed armor.",
+            "category": "hero",
+            "rules": ["leader"],
+            "models": [
+                {
+                    "name": "Guardian Leader on Bloodreef Eel",
+                    "movement": 8,
+                    "courage": 5,
+                    "shoot": 5,
+                    "fight": 6,
+                    "defense": 7,
+                    "reflexes": 5,
+                    "weapons": [{"id": "bite", "count": 2}, {"id": "heavy_spear", "count": 2}],
+                    "rules": ["hover"],
+                    "min": 1,
+                    "max": 1
+                }
+            ],
+            "keywords": ["Cavalry"],
+            "options": [
+                {"replaceWeapon": [{"id": "heavy_spear", "count": 2}], "withWeapon": [{"id": "heavy_handweapon", "count": 3}], "modelLimit": "all"},
                 {"addRule": ["champion"], "modelLimit": 1},
                 {"addRule": ["banner"], "modelLimit": 1},
                 {"addRule": ["musician"], "modelLimit": 1}

@@ -155,6 +155,29 @@
             ],
             "subfactions": ["none"]
         },
+        "dwarf_grunt_leader": {
+            "name": "Dwarven Grunt Leader",
+            "description": "A squad of dwarven soldiers.",
+            "category": "hero",
+            "rules": ["leader"],
+            "models": [
+                {
+                    "options": [{"replaceWeapon": ["handweapon", "shield"], "withWeapon": ["great_weapon", ["crossbow", "light_handweapon"]]}],
+                    "name": "Grunt Leader",
+                    "movement": 5,
+                    "courage": 5,
+                    "shoot": 5,
+                    "fight": 6,
+                    "defense": 6,
+                    "reflexes": 5,
+                    "weapons": ["handweapon", "shield"],
+                    "min": 1,
+                    "max": 1
+                }
+            ],
+            "subfactions": ["none"],
+            "options": [{"addRule": ["champion"], "modelLimit": 1}, {"addRule": ["banner"], "modelLimit": 1}, {"addRule": ["musician"], "modelLimit": 1}]
+        },
         "dwarf_grunts": {
             "name": "Dwarven Grunt",
             "description": "A squad of dwarven soldiers.",
@@ -176,6 +199,30 @@
             ],
             "subfactions": ["none"],
             "options": [{"addRule": ["champion"], "modelLimit": 1}, {"addRule": ["banner"], "modelLimit": 1}, {"addRule": ["musician"], "modelLimit": 1}]
+        },
+        "dwarf_veteran_leader": {
+            "name": "Dwarven Veteran Leader",
+            "description": "A squad of dwarven veterans.",
+            "category": "hero",
+            "rules": ["leader"],
+            "models": [
+                {
+                    "name": "Veteran Leader",
+                    "movement": 5,
+                    "courage": 5,
+                    "shoot": 5,
+                    "fight": 6,
+                    "defense": 6,
+                    "reflexes": 5,
+                    "weapons": [{"id": "great_weapon", "count": 2}],
+                    "min": 1,
+                    "max": 1,
+                    "rules": ["fearless"],
+                    "options": [{"replaceWeapon": [{"id": "great_weapon", "count": 2}], "withWeapon": [{"id": "long_spear", "count": 2}]}, {"addRule": ["shield"], "modelLimit": "all"}]
+                }
+            ],
+            "options": [{"addRule": ["champion"], "modelLimit": 1}, {"addRule": ["banner"], "modelLimit": 1}, {"addRule": ["musician"], "modelLimit": 1}],
+            "subfactions": ["none"]
         },
         "dwarf_veterans": {
             "name": "Dwarven Veteran",
@@ -200,6 +247,29 @@
             "options": [{"addRule": ["champion"], "modelLimit": 1}, {"addRule": ["banner"], "modelLimit": 1}, {"addRule": ["musician"], "modelLimit": 1}],
             "subfactions": ["none"]
         },
+        "dwarf_ranger_leader": {
+            "name": "Dwarven Ranger Leader",
+            "description": "A squad of dwarven scouts.",
+            "category": "hero",
+            "models": [
+                {
+                    "options": [{"addWeapon": "shield", "modelLimit": "all"}, {"replaceRule": ["scout"], "withRule": ["ambush"], "modelLimit": "all"}],
+                    "name": "Ranger Leader",
+                    "movement": 5,
+                    "courage": 6,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 5,
+                    "reflexes": 6,
+                    "weapons": ["heavy_crossbow", {"id": "throwing_axe", "count": 2}],
+                    "min": 1,
+                    "max": 1
+                }
+            ],
+            "subfactions": ["none"],
+            "rules": ["scout", "leader"],
+            "options": [{"addRule": ["champion"], "modelLimit": 1}, {"addRule": ["banner"], "modelLimit": 1}, {"addRule": ["musician"], "modelLimit": 1}]
+        },
         "dwarf_rangers": {
             "name": "Dwarven Ranger",
             "description": "A squad of dwarven scouts.",
@@ -221,6 +291,32 @@
             ],
             "subfactions": ["none"],
             "rules": ["scout"],
+            "options": [{"addRule": ["champion"], "modelLimit": 1}, {"addRule": ["banner"], "modelLimit": 1}, {"addRule": ["musician"], "modelLimit": 1}]
+        },
+        "dwarf_gunner_leader": {
+            "name": "Dwarven Gunner Leader",
+            "description": "A squad of veteran heavy riflemen.",
+            "category": "hero",
+            "rules": ["leader"],
+            "models": [
+                {
+                    "name": "Gunner Leader",
+                    "movement": 5,
+                    "courage": 5,
+                    "shoot": 6,
+                    "fight": 5,
+                    "defense": 6,
+                    "reflexes": 5,
+                    "weapons": ["handgun", "light_handweapon"],
+                    "options": [
+                        {"replaceWeapon": ["handgun"], "withWeapon": ["flamethrower_rifle"]},
+                        {"replaceWeapon": ["handgun"], "withWeapon": [["pistol", "frag_grenade"], {"id": "pistol", "count": 2}, "harpoon_rifle"], "modelLimit": "1/10"}
+                    ],
+                    "max": 1,
+                    "min": 1
+                }
+            ],
+            "subfactions": ["none"],
             "options": [{"addRule": ["champion"], "modelLimit": 1}, {"addRule": ["banner"], "modelLimit": 1}, {"addRule": ["musician"], "modelLimit": 1}]
         },
         "dwarf_gunners": {
@@ -248,6 +344,29 @@
             "subfactions": ["none"],
             "options": [{"addRule": ["champion"], "modelLimit": 1}, {"addRule": ["banner"], "modelLimit": 1}, {"addRule": ["musician"], "modelLimit": 1}]
         },
+        "dwarf_berserker_leader": {
+            "name": "Dwarven Berserker Leader",
+            "description": "A squad of dwarven warriors that rush into the fray.",
+            "category": "hero",
+            "models": [
+                {
+                    "name": "Berserker Leader",
+                    "movement": 5,
+                    "courage": 5,
+                    "shoot": 5,
+                    "fight": 6,
+                    "defense": 6,
+                    "reflexes": 5,
+                    "weapons": [{"id": "handweapon", "count": 3}],
+                    "min": 1,
+                    "max": 1,
+                    "options": [{"replaceWeapon": [{"id": "handweapon", "count": 3}], "withWeapon": [{"id": "great_weapon", "count": 2}]}]
+                }
+            ],
+            "rules": ["fanatical", "furious", "leader"],
+            "subfactions": ["none"],
+            "options": [{"addRule": ["champion"], "modelLimit": 1}, {"addRule": ["banner"], "modelLimit": 1}, {"addRule": ["musician"], "modelLimit": 1}]
+        },
         "dwarf_berserker": {
             "name": "Dwarven Berserker",
             "description": "A squad of dwarven warriors that rush into the fray.",
@@ -270,6 +389,33 @@
             "rules": ["fanatical", "furious"],
             "subfactions": ["none"],
             "options": [{"addRule": ["champion"], "modelLimit": 1}, {"addRule": ["banner"], "modelLimit": 1}, {"addRule": ["musician"], "modelLimit": 1}]
+        },
+        "dwarf_miner_leader": {
+            "name": "Dwarven Miner Leader",
+            "description": "A squad of dwarven miners, digging tunnels beneath the battlefield.",
+            "category": "elite",
+            "models": [
+                {
+                    "name": "Miner Leader",
+                    "movement": 5,
+                    "courage": 5,
+                    "shoot": 5,
+                    "fight": 6,
+                    "defense": 5,
+                    "reflexes": 5,
+                    "weapons": ["great_weapon", "frag_grenade"],
+                    "options": [
+                        {"replaceWeapon": ["great_weapon"], "withWeapon": ["mining_drill", "harpoon_rifle"], "modelLimit": "1/10"},
+                        {"addRule": ["champion"], "modelLimit": 1},
+                        {"addRule": ["banner"], "modelLimit": 1},
+                        {"addRule": ["musician"], "modelLimit": 1}
+                    ],
+                    "min": 1,
+                    "max": 1
+                }
+            ],
+            "rules": [{"id": "ambush"}, "leader"],
+            "subfactions": ["none"]
         },
         "dwarf_miners": {
             "name": "Dwarven Miner",
@@ -299,12 +445,36 @@
             "subfactions": ["none"]
         },
         "berserker_roughriders": {
-            "name": "Dwarven Berserkers on War-Beast",
+            "name": "Dwarven Berserker on War-Beast",
             "description": "A squad of dwarven berserkers riding atop ferocious beasts into battle.",
             "category": "elite",
             "models": [
                 {
-                    "name": "Dwarven Berserker on War-Beasts",
+                    "name": "Dwarven Berserker on War-Beast",
+                    "movement": 8,
+                    "courage": 5,
+                    "shoot": 5,
+                    "fight": 6,
+                    "defense": 6,
+                    "reflexes": 5,
+                    "weapons": [{"id": "heavy_hooves_and_teeth", "count": 2}, {"id": "handweapon", "count": 3}],
+                    "min": 1,
+                    "max": 1,
+                    "rules": [{"id": "impact", "x": 1}, "fanatical", "furious"]
+                }
+            ],
+            "subfactions": ["none"],
+            "options": [{"addRule": ["champion"], "modelLimit": 1}, {"addRule": ["banner"], "modelLimit": 1}, {"addRule": ["musician"], "modelLimit": 1}],
+            "keywords": ["Cavalry"]
+        },
+        "berserker_roughrider_leader": {
+            "name": "Dwarven Berserker Leader on War-Beast",
+            "description": "A squad of dwarven berserkers riding atop ferocious beasts into battle.",
+            "category": "hero",
+            "rules": ["leader"],
+            "models": [
+                {
+                    "name": "Dwarven Berserker Leader on War-Beast",
                     "movement": 8,
                     "courage": 5,
                     "shoot": 5,
@@ -371,8 +541,33 @@
             "subfactions": ["none"],
             "keywords": ["Cavalry"]
         },
+        "veteran_roughrider_leader": {
+            "name": "Dwarven Veteran Leader on War-Beast",
+            "description": "A squad of dwarven veterans riding atop ferocious beasts into battle.",
+            "category": "hero",
+            "rules": ["leader"],
+            "models": [
+                {
+                    "name": "Dwarven Veteran Leader on War-Beasts",
+                    "movement": 8,
+                    "courage": 5,
+                    "shoot": 5,
+                    "fight": 6,
+                    "defense": 6,
+                    "reflexes": 5,
+                    "weapons": [{"id": "heavy_hooves_and_teeth", "count": 2}, {"id": "great_weapon", "count": 2}],
+                    "min": 1,
+                    "max": 1,
+                    "rules": [{"id": "impact", "x": 1}, "fearless"],
+                    "options": [{"replaceWeapon": [{"id": "great_weapon", "count": 2}], "withWeapon": [{"id": "lance", "count": 2}]}, {"addRule": ["shield"], "modelLimit": "all"}]
+                }
+            ],
+            "subfactions": ["none"],
+            "options": [{"addRule": ["champion"], "modelLimit": 1}, {"addRule": ["banner"], "modelLimit": 1}, {"addRule": ["musician"], "modelLimit": 1}],
+            "keywords": ["Cavalry"]
+        },
         "veteran_roughriders": {
-            "name": "Dwarven Veterans on War-Beast",
+            "name": "Dwarven Veteran on War-Beast",
             "description": "A squad of dwarven veterans riding atop ferocious beasts into battle.",
             "category": "elite",
             "models": [
