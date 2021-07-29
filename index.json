@@ -22,9 +22,16 @@
             "color": "#A55D35",
             "alliance": "order",
             "description": "A stout race of miners, engineers and warriors."
-        }
-    },
-    "unfinished_factions": {
+        },
+        "sea_elves": {
+            "version": "1.0",
+            "name": "Sea Elves",
+            "id": "sea_elves",
+            "url": "sea_elves.json",
+            "color": "#03414e",
+            "alliance": "order",
+            "description": "Raising from the depths of the ocean, transmuted by their ancient magic."
+        },
         "eternal_protectors": {
             "version": "1.0",
             "name": "Eternal Protectors",
@@ -34,7 +41,10 @@
             "secondary_color": "#0d407f",
             "alliance": "order",
             "description": "The Eternal Protectors are sworn to protect those who cannot protect themselves and to ward off evil. They wear tough armor and wield mighty weapons to strike down those are unjust."
-        },
+        }
+    },
+    "unfinished_factions": {
+
         "ogre_mercenaries": {
             "version": "1.0",
             "name": "Ogre Mercenaries",
@@ -150,15 +160,6 @@
                     "description": "Empowered by their animalistic gods, the strongest warriors charge into battle with fearsome beasts at their side."
                 }
             }
-        },
-        "sea_elves": {
-            "version": "1.0",
-            "name": "Sea Elves",
-            "id": "sea_elves",
-            "url": "sea_elves.json",
-            "color": "#03414e",
-            "alliance": "order",
-            "description": "Raising from the depths of the ocean, transmuted by their ancient magic."
         },
         "beastmen_horde": {
             "version": "1.0",
