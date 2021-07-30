@@ -608,7 +608,16 @@
         "volley_gun": {"rules": ["rapid_fire"], "short": 12, "medium": 24, "attacks": 3, "ap": 2, "name": "Volley Gun"},
         "drill_cannon": {"name": "Drill Cannon", "ap": 7, "attacks": 1, "short": 18, "medium": 36, "rules": ["lethal"]},
         "flamethrower_pistol": {"name": "Flamethrower Pistol", "ap": 1, "attacks": 3, "short": 6, "rules": ["pistol", "flame"]},
-        "heavy_great_weapon": {"name": "Heavy Great Weapon", "attacks": 1, "short": "Melee", "ap": 4}
+        "heavy_great_weapon": {"name": "Heavy Great Weapon", "attacks": 1, "short": "Melee", "ap": 4},
+        "rending_handweapon": {"name": "Rending Handweapon", "attacks": 1, "ap": 1, "short": "Melee", "rules": ["rending"]},
+        "rending_heavy_polearm": {"name": "Rending Heavy Polearm", "attacks": 1, "ap": 3, "short": "Melee", "rules": ["rending", {"id": "reach", "x": 1}]},
+        "lethal_handweapon": {"name": "Lethal Handweapon", "attacks": 1, "ap": 1, "short": "Melee", "rules": ["lethal"]},
+        "lethal_great_weapon": {"name": "Lethal Great Weapon", "attacks": 1, "ap": 3, "short": "Melee", "rules": ["lethal"]},
+        "heavy_lethal_handweapon": {"name": "Lethal Heavy Handweapon", "attacks": 1, "ap": 2, "short": "Melee", "rules": ["lethal"]},
+        "heavy_lethal_great_weapon": {"name": "Lethal Heavy Great Weapon", "attacks": 1, "ap": 4, "short": "Melee", "rules": ["lethal"]},
+        "lethal_polearm": {"name": "Lethal Polearm", "attacks": 1, "ap": 2, "short": "Melee", "rules": [{"id": "reach", "x": 1}, "lethal"]},
+        "heavy_lethal_polearm": {"name": "Lethal Heavy Polearm", "attacks": 1, "ap": 3, "short": "Melee", "rules": [{"id": "reach", "x": 1}, "lethal"]},
+        "lethal_short_bow": {"name": "Lethal Shortbow", "attacks": 1, "ap": 1, "short": 9, "medium": 18, "rules": ["lethal"]}
     },
     "rules": {
         "legend_strategist": {"name": "Brilliant Strategist", "description": "While this model is on the table you gain 1 additional Strategy Point per round.", "points": 20},
