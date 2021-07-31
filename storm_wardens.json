@@ -1,6 +1,6 @@
 {
-    "name": "Eternal Protectors",
-    "id": "eternal_protectors",
+    "name": "Storm Wardens",
+    "id": "storm_wardens",
     "author": "guitarninja#5707",
     "color": "#D4AF37",
     "units": {
@@ -770,7 +770,7 @@
         {
             "name": "Stormshroud Armor",
             "phase": "activation",
-            "flavor": "The Eternal Protectors wear enchanted armor, absorbing the force of enemy attacks, rendering them harmless",
+            "flavor": "The Storm Wardens wear enchanted armor, absorbing the force of enemy attacks, rendering them harmless",
             "description": "Use this strategy when one of your units is targeted by an attack. Roll a die for each hit, on a 3 or less that hit is prevented.",
             "cost": 2
         },
@@ -778,13 +778,13 @@
             "name": "Stormstrike Portals",
             "phase": "pre_game",
             "description": "Up to half of any force's units, one point for each may be placed in Ambush before the game begins. Any round after the first, when this unit is activated while in reserves, you may choose a point on the battlefield 12\" away from any enemy units and take an Initiative check. If passed, place the unit at that location on the location. If failed, use D10 scattering to determine the landing location of the unit relative to the chosen point.",
-            "flavor": "Raining down from the sky like thunderstrikes, the Eternal Protectors use magical portals to strike from behind enemy lines.",
+            "flavor": "Raining down from the sky like thunderstrikes, the Storm Wardens use magical portals to strike from behind enemy lines.",
             "cost": "1/per"
         },
         {
             "name": "Counter Attack",
             "phase": "activation",
-            "flavor": "Any foe foolish enough to strike a Eternal Protector will feel the wrath of a thousand storms.",
+            "flavor": "Any foe foolish enough to strike a Storm Warden will feel the wrath of a thousand storms.",
             "description": "Use when a unit is targeted by a Fight action. If that unit has not yet activated, it may perform a Defensive Stance reaction without testing Initiative.",
             "cost": 1
         }

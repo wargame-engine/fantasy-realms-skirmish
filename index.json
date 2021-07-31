@@ -32,15 +32,15 @@
             "alliance": "order",
             "description": "Raising from the depths of the ocean, transmuted by their ancient magic."
         },
-        "eternal_protectors": {
+        "storm_wardens": {
             "version": "1.0",
-            "name": "Eternal Protectors",
-            "id": "eternal_protectors",
-            "url": "eternal_protectors.json",
+            "name": "Storm Wardens",
+            "id": "storm_wardens",
+            "url": "storm_wardens.json",
             "color": "#D4AF37",
             "secondary_color": "#0d407f",
             "alliance": "order",
-            "description": "The Eternal Protectors are sworn to protect those who cannot protect themselves and to ward off evil. They wear tough armor and wield mighty weapons to strike down those are unjust."
+            "description": "The Storm Wardens are sworn to protect those who cannot protect themselves and to ward off evil. They wear tough armor and wield mighty weapons to strike down those are unjust."
         },
         "corrupted_legions": {
             "version": "1.0",
