@@ -14,6 +14,38 @@
             "alliance": "death",
             "description": "The Haunting Ghosts are a collection of undead spirits which haunt their hallowed grave sites. The Ghostly Undead use fear and ethereal movement to wash over their foes and scare them into defeat."
         },
+        "orcs_and_goblins": {
+            "version": "1.0",
+            "name": "Orcs and Goblins",
+            "id": "orcs_and_goblins",
+            "url": "orcs_and_goblins.json",
+            "color": "#50974A",
+            "alliance": "destruction",
+            "description": "A savage race made up of various warring tribes.",
+            "subfactions": {
+                "armor": {
+                    "name": "Armor",
+                    "id": "armor",
+                    "color": "#90305d",
+                    "description": "The great goblin forges are blazing anew, supplying their orcish masters with mastercrafted equipment as crude as they may seem."
+                },
+                "speed": {"name": "Speed", "id": "speed", "color": "#547588", "description": "This force focuses on using chariots, boars and anything that goes fast."},
+                "trickery": {
+                    "name": "Trickery",
+                    "id": "trickery",
+                    "color": "#547588",
+                    "description": "Striking in moonlight, these masters of deception, as far as orcs are concerned, use outflanking and ambush maneuvers to gain the upper hand."
+                },
+                "primal": {
+                    "name": "Primal",
+                    "id": "primal",
+                    "color": "#547588",
+                    "description": "Empowered by their animalistic gods, the strongest warriors charge into battle with fearsome beasts at their side."
+                }
+            }
+        }
+    },
+    "unfinished_factions": {
         "mountain_dwarves": {
             "version": "1.0",
             "name": "Mountain Dwarves",
@@ -81,9 +113,7 @@
                     "restricted": true
                 }
             }
-        }
-    },
-    "unfinished_factions": {
+        },
         "ogre_mercenaries": {
             "version": "1.0",
             "name": "Ogre Mercenaries",
@@ -129,36 +159,6 @@
             "color": "#607d8b",
             "alliance": "order",
             "description": "Masters of the Arcane, this ancient island nation is shrouded in mystery."
-        },
-        "orcs_and_goblins": {
-            "version": "1.0",
-            "name": "Orcs and Goblins",
-            "id": "orcs_and_goblins",
-            "url": "orcs_and_goblins.json",
-            "color": "#50974A",
-            "alliance": "destruction",
-            "description": "A savage race made up of various warring tribes.",
-            "subfactions": {
-                "armor": {
-                    "name": "Armor",
-                    "id": "armor",
-                    "color": "#90305d",
-                    "description": "The great goblin forges are blazing anew, supplying their orcish masters with mastercrafted equipment as crude as they may seem."
-                },
-                "speed": {"name": "Speed", "id": "speed", "color": "#547588", "description": "This force focuses on using chariots, boars and anything that goes fast."},
-                "trickery": {
-                    "name": "Trickery",
-                    "id": "trickery",
-                    "color": "#547588",
-                    "description": "Striking in moonlight, these masters of deception, as far as orcs are concerned, use outflanking and ambush maneuvers to gain the upper hand."
-                },
-                "primal": {
-                    "name": "Primal",
-                    "id": "primal",
-                    "color": "#547588",
-                    "description": "Empowered by their animalistic gods, the strongest warriors charge into battle with fearsome beasts at their side."
-                }
-            }
         },
         "beastmen_horde": {
             "version": "1.0",
