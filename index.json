@@ -43,6 +43,15 @@
                     "description": "Empowered by their animalistic gods, the strongest warriors charge into battle with fearsome beasts at their side."
                 }
             }
+        },
+        "high_elves": {
+            "version": "1.0",
+            "name": "High Elves",
+            "id": "high_elves",
+            "url": "high_elves.json",
+            "color": "#607d8b",
+            "alliance": "order",
+            "description": "Masters of the Arcane, this ancient island nation is shrouded in mystery. High Elves combine excellent mobility and good long-range attacks as well as possessing enough elite units to deal with most foes."
         }
     },
     "unfinished_factions": {
@@ -150,15 +159,6 @@
                     "description": "Using illusions, necromancy and their own kin against their foes, these Vampire Lords are masters of attritional warfare."
                 }
             }
-        },
-        "high_elves": {
-            "version": "1.0",
-            "name": "High Elves",
-            "id": "high_elves",
-            "url": "high_elves.json",
-            "color": "#607d8b",
-            "alliance": "order",
-            "description": "Masters of the Arcane, this ancient island nation is shrouded in mystery."
         },
         "beastmen_horde": {
             "version": "1.0",
