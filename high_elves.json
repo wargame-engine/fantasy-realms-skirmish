@@ -234,7 +234,7 @@
             "description": "Fast cavalry, patroling the outskirts of the great elvish nations.",
             "options": [{"addRule": ["champion"]}],
             "category": "hero",
-            "rules": ["leader"],
+            "rules": [{"id": "leader_x", "x": "Cavalry"}],
             "models": [
                 {
                     "name": "Vanguard Leader",
@@ -281,7 +281,7 @@
             "name": "Elven Knight Leader",
             "description": "Mounted soldiers of the elves, overrunning their foes.",
             "category": "hero",
-            "rules": ["leader"],
+            "rules": [{"id": "leader_x", "x": "Cavalry"}],
             "models": [
                 {
                     "name": "Knight",
@@ -457,7 +457,7 @@
                     "max": 1
                 }
             ],
-            "rules": ["runes", "fearless", "shield", "leader"],
+            "rules": ["runes", "fearless", "shield", {"id": "leader_x", "x": "Cavalry"}],
             "keywords": ["Cavalry"],
             "subfactions": ["none"],
             "options": [{"addRule": ["champion"]}]
@@ -584,7 +584,7 @@
         {
             "name": "Moonfire Arrows",
             "phase": "activation",
-            "description": "Use before an _Infantry_ unit shoots with Longbows. Succesful hits have +1 AP.",
+            "description": "Use when an _Infantry_ unit shoots. Hits rolls of 1 or 2 gain +1 AP.",
             "flavor": "Weaved out of the light of the stars and enchanted by ancient secrets, these arrows are a potent weapon to slay even the greatest beasts.",
             "cost": 1
         }
