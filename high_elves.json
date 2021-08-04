@@ -375,7 +375,7 @@
             "name": "Shadowblade Ranger Leader",
             "description": "These ancient high elves clad themselves in shadows to avenge their kin.",
             "min": 1,
-            "max": 3,
+            "max": 1,
             "category": "hero",
             "models": [{"name": "Ranger Leader", "movement": 7, "courage": 5, "shoot": 6, "fight": 6, "defense": 5, "reflexes": 6, "weapons": ["long_bow", "handweapon"], "min": 1, "max": 1}],
             "rules": ["stealth", "ambush", "leader"],
@@ -430,8 +430,8 @@
                     "defense": 6,
                     "reflexes": 6,
                     "weapons": [{"id": "heavy_polearm", "count": 2}],
-                    "min": 5,
-                    "max": 10,
+                    "min": 1,
+                    "max": 1,
                     "options": [{"replaceWeapon": [{"id": "heavy_polearm", "count": 2}], "withWeapon": [[{"id": "great_weapon", "count": 2}, "shield"]]}]
                 }
             ],
