@@ -217,14 +217,14 @@
             "name": "Ghost Tactics",
             "inputs": ["x"],
             "description": "When this unit is activated, choose up to X friendly _Infantry_ units within 6\". Those units may re-roll failed Strength tests of 9+ until the end of the round.",
-            "points": ["rule.x", {"multiply": 10}]
+            "points": ["rule.x", {"multiply": 5}]
         },
         "ghost_lord": {
             "name": "Ghost Lord",
             "description": "Once per round, when a friendly _Infantry_ or _Cavalry_ unit within 6\" declares a Fight action, hit rolls of 1 or 2 cause 2 hits instead of 1.",
-            "points": 10
+            "points": 5
         },
-        "soul_lantern": {"name": "Soul Lantern", "description": "Once per round, a friendly _Infantry_ unit within 6\" gains +1 AP on all Melee weapons.", "points": 10}
+        "soul_lantern": {"name": "Soul Lantern", "description": "Once per round, a friendly _Infantry_ unit within 6\" gains +1 AP on all Melee weapons.", "points": 5}
     },
     "powers": {
         "raise_dead": {
