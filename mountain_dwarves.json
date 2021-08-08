@@ -176,7 +176,7 @@
                 }
             ],
             "subfactions": ["none"],
-            "options": [{"addRule": ["champion"], "modelLimit": 1}, {"addRule": ["banner"], "modelLimit": 1}, {"addRule": ["musician"], "modelLimit": 1}]
+            "options": [{"addRule": ["champion"]}, {"addRule": ["banner", "musician"], "limit": 1}]
         },
         "dwarf_grunts": {
             "name": "Dwarven Grunt",
@@ -198,7 +198,7 @@
                 }
             ],
             "subfactions": ["none"],
-            "options": [{"addRule": ["champion"], "modelLimit": 1}, {"addRule": ["banner"], "modelLimit": 1}, {"addRule": ["musician"], "modelLimit": 1}]
+            "options": [{"addRule": ["champion"]}, {"addRule": ["banner", "musician"], "limit": 1}]
         },
         "dwarf_veteran_leader": {
             "name": "Dwarven Veteran Leader",
@@ -221,7 +221,7 @@
                     "options": [{"replaceWeapon": [{"id": "great_weapon", "count": 2}], "withWeapon": [{"id": "long_spear", "count": 2}]}, {"addRule": ["shield"], "modelLimit": "all"}]
                 }
             ],
-            "options": [{"addRule": ["champion"], "modelLimit": 1}, {"addRule": ["banner"], "modelLimit": 1}, {"addRule": ["musician"], "modelLimit": 1}],
+            "options": [{"addRule": ["champion"]}, {"addRule": ["banner", "musician"], "limit": 1}],
             "subfactions": ["none"]
         },
         "dwarf_veterans": {
@@ -244,7 +244,7 @@
                     "options": [{"replaceWeapon": [{"id": "great_weapon", "count": 2}], "withWeapon": [{"id": "long_spear", "count": 2}]}, {"addRule": ["shield"], "modelLimit": "all"}]
                 }
             ],
-            "options": [{"addRule": ["champion"], "modelLimit": 1}, {"addRule": ["banner"], "modelLimit": 1}, {"addRule": ["musician"], "modelLimit": 1}],
+            "options": [{"addRule": ["champion"]}, {"addRule": ["banner", "musician"], "limit": 1}],
             "subfactions": ["none"]
         },
         "dwarf_ranger_leader": {
@@ -268,7 +268,7 @@
             ],
             "subfactions": ["none"],
             "rules": ["scout", "leader"],
-            "options": [{"addRule": ["champion"], "modelLimit": 1}, {"addRule": ["banner"], "modelLimit": 1}, {"addRule": ["musician"], "modelLimit": 1}]
+            "options": [{"addRule": ["champion"]}, {"addRule": ["banner", "musician"], "limit": 1}]
         },
         "dwarf_rangers": {
             "name": "Dwarven Ranger",
@@ -291,7 +291,7 @@
             ],
             "subfactions": ["none"],
             "rules": ["scout"],
-            "options": [{"addRule": ["champion"], "modelLimit": 1}, {"addRule": ["banner"], "modelLimit": 1}, {"addRule": ["musician"], "modelLimit": 1}]
+            "options": [{"addRule": ["champion"]}, {"addRule": ["banner", "musician"], "limit": 1}]
         },
         "dwarf_gunner_leader": {
             "name": "Dwarven Gunner Leader",
@@ -317,7 +317,7 @@
                 }
             ],
             "subfactions": ["none"],
-            "options": [{"addRule": ["champion"], "modelLimit": 1}, {"addRule": ["banner"], "modelLimit": 1}, {"addRule": ["musician"], "modelLimit": 1}]
+            "options": [{"addRule": ["champion"]}, {"addRule": ["banner", "musician"], "limit": 1}]
         },
         "dwarf_gunners": {
             "name": "Dwarven Gunner",
@@ -342,7 +342,7 @@
                 }
             ],
             "subfactions": ["none"],
-            "options": [{"addRule": ["champion"], "modelLimit": 1}, {"addRule": ["banner"], "modelLimit": 1}, {"addRule": ["musician"], "modelLimit": 1}]
+            "options": [{"addRule": ["champion"]}, {"addRule": ["banner", "musician"], "limit": 1}]
         },
         "dwarf_berserker_leader": {
             "name": "Dwarven Berserker Leader",
@@ -365,7 +365,7 @@
             ],
             "rules": ["fanatical", "furious", "leader"],
             "subfactions": ["none"],
-            "options": [{"addRule": ["champion"], "modelLimit": 1}, {"addRule": ["banner"], "modelLimit": 1}, {"addRule": ["musician"], "modelLimit": 1}]
+            "options": [{"addRule": ["champion"]}, {"addRule": ["banner", "musician"], "limit": 1}]
         },
         "dwarf_berserker": {
             "name": "Dwarven Berserker",
@@ -388,7 +388,7 @@
             ],
             "rules": ["fanatical", "furious"],
             "subfactions": ["none"],
-            "options": [{"addRule": ["champion"], "modelLimit": 1}, {"addRule": ["banner"], "modelLimit": 1}, {"addRule": ["musician"], "modelLimit": 1}]
+            "options": [{"addRule": ["champion"]}, {"addRule": ["banner", "musician"], "limit": 1}]
         },
         "dwarf_miner_leader": {
             "name": "Dwarven Miner Leader",
@@ -464,7 +464,7 @@
                 }
             ],
             "subfactions": ["none"],
-            "options": [{"addRule": ["champion"], "modelLimit": 1}, {"addRule": ["banner"], "modelLimit": 1}, {"addRule": ["musician"], "modelLimit": 1}],
+            "options": [{"addRule": ["champion"]}, {"addRule": ["banner", "musician"], "limit": 1}],
             "keywords": ["Cavalry"]
         },
         "berserker_roughrider_leader": {
@@ -488,7 +488,7 @@
                 }
             ],
             "subfactions": ["none"],
-            "options": [{"addRule": ["champion"], "modelLimit": 1}, {"addRule": ["banner"], "modelLimit": 1}, {"addRule": ["musician"], "modelLimit": 1}],
+            "options": [{"addRule": ["champion"]}, {"addRule": ["banner", "musician"], "limit": 1}],
             "keywords": ["Cavalry"]
         },
         "berserker_champion_roughrider": {
@@ -563,7 +563,7 @@
                 }
             ],
             "subfactions": ["none"],
-            "options": [{"addRule": ["champion"], "modelLimit": 1}, {"addRule": ["banner"], "modelLimit": 1}, {"addRule": ["musician"], "modelLimit": 1}],
+            "options": [{"addRule": ["champion"]}, {"addRule": ["banner", "musician"], "limit": 1}],
             "keywords": ["Cavalry"]
         },
         "veteran_roughriders": {
@@ -587,7 +587,7 @@
                 }
             ],
             "subfactions": ["none"],
-            "options": [{"addRule": ["champion"], "modelLimit": 1}, {"addRule": ["banner"], "modelLimit": 1}, {"addRule": ["musician"], "modelLimit": 1}],
+            "options": [{"addRule": ["champion"]}, {"addRule": ["banner", "musician"], "limit": 1}],
             "keywords": ["Cavalry"]
         },
         "light_gyrocopter": {

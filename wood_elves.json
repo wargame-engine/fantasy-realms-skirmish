@@ -157,7 +157,7 @@
                     "weapons": ["light_handweapon", "longbow"]
                 }
             ],
-            "options": [{"addRule": ["champion"], "modelLimit": 1}, {"addRule": ["banner"], "modelLimit": 1}, {"addRule": ["musician"], "modelLimit": 1}],
+            "options": [{"addRule": ["champion"]}, {"addRule": ["banner", "musician"], "limit": 1}],
             "subfactions": ["none", "watchers", "life", "spite"]
         },
         "elf_guardians": {
@@ -180,7 +180,7 @@
                     "options": [{"replaceWeapon": ["shield", "spear"], "withWeapon": [{"id": "great_weapon", "count": 2}]}]
                 }
             ],
-            "options": [{"addRule": ["champion"], "modelLimit": 1}, {"addRule": ["banner"], "modelLimit": 1}, {"addRule": ["musician"], "modelLimit": 1}],
+            "options": [{"addRule": ["champion"]}, {"addRule": ["banner", "musician"], "limit": 1}],
             "subfactions": ["none", "watchers", "life", "spite"]
         },
         "dryads": {
@@ -202,7 +202,7 @@
                     "rules": ["agile", "furious"]
                 }
             ],
-            "options": [{"addRule": ["champion"], "modelLimit": 1}, {"addRule": ["banner"], "modelLimit": 1}, {"addRule": ["musician"], "modelLimit": 1}],
+            "options": [{"addRule": ["champion"]}, {"addRule": ["banner", "musician"], "limit": 1}],
             "keywords": ["Infantry", "Undead"],
             "subfactions": ["none", "life", "spite", "sorrow"]
         },
@@ -225,7 +225,7 @@
                     "rules": ["agile"]
                 }
             ],
-            "options": [{"addRule": ["champion"], "modelLimit": 1}, {"addRule": ["banner"], "modelLimit": 1}, {"addRule": ["musician"], "modelLimit": 1}],
+            "options": [{"addRule": ["champion"]}, {"addRule": ["banner", "musician"], "limit": 1}],
             "keywords": ["Cavalry"],
             "subfactions": ["none", "watchers", "life", "spite"]
         },
@@ -248,7 +248,7 @@
                     "rules": ["agile", "fear"]
                 }
             ],
-            "options": [{"addRule": ["champion"], "modelLimit": 1}, {"addRule": ["banner"], "modelLimit": 1}, {"addRule": ["musician"], "modelLimit": 1}],
+            "options": [{"addRule": ["champion"]}, {"addRule": ["banner", "musician"], "limit": 1}],
             "keywords": ["Infantry", "Undead"],
             "subfactions": ["none", "life", "spite", "sorrow"]
         },
@@ -272,7 +272,7 @@
                     "options": [{"replaceWeapon": [{"id": "great_weapon", "count": 2}], "withWeapon": [{"id": "heavy_polearm", "count": 2}]}]
                 }
             ],
-            "options": [{"addRule": ["champion"], "modelLimit": 1}, {"addRule": ["banner"], "modelLimit": 1}, {"addRule": ["musician"], "modelLimit": 1}],
+            "options": [{"addRule": ["champion"]}, {"addRule": ["banner", "musician"], "limit": 1}],
             "keywords": ["Infantry", "Undead"],
             "subfactions": ["none", "life", "spite", "sorrow"]
         },
@@ -298,7 +298,7 @@
                     ]
                 }
             ],
-            "options": [{"addRule": ["champion"], "modelLimit": 1}, {"addRule": ["banner"], "modelLimit": 1}, {"addRule": ["musician"], "modelLimit": 1}],
+            "options": [{"addRule": ["champion"]}, {"addRule": ["banner", "musician"], "limit": 1}],
             "subfactions": ["none", "life", "spite", "sorrow"]
         },
         "wild_riders": {
@@ -320,7 +320,7 @@
                     "rules": ["agile", "shield"]
                 }
             ],
-            "options": [{"addRule": ["champion"], "modelLimit": 1}, {"addRule": ["banner"], "modelLimit": 1}, {"addRule": ["musician"], "modelLimit": 1}],
+            "options": [{"addRule": ["champion"]}, {"addRule": ["banner", "musician"], "limit": 1}],
             "keywords": ["Cavalry"],
             "subfactions": ["none", "watchers", "life", "spite"]
         },

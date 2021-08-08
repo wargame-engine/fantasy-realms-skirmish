@@ -131,7 +131,7 @@
                     ]
                 }
             ],
-            "options": [{"addRule": ["champion"], "modelLimit": 1}, {"addRule": ["banner"], "modelLimit": 1}, {"addRule": ["musician"], "modelLimit": 1}]
+            "options": [{"addRule": ["champion"]}, {"addRule": ["banner", "musician"], "limit": 1}]
         },
         "riflemen": {
             "name": "Dwarven Riflemen",
@@ -152,7 +152,7 @@
                     "options": [{"replaceWeapon": [{"id": "handgun", "count": 2}], "withWeapon": ["steam_cannon", {"id": "shotgun", "count": 3}, "burst_rifle"], "modelLimit": "2/5"}]
                 }
             ],
-            "options": [{"addRule": [["champion", "clockwork_companion"]], "modelLimit": 1}, {"addRule": ["banner"], "modelLimit": 1}, {"addRule": ["musician"], "modelLimit": 1}]
+            "options": [{"addRule": [["champion", "clockwork_companion"]], "modelLimit": 1}, {"addRule": ["banner", "musician"], "limit": 1}]
         },
         "wardens": {
             "name": "Skybound Wardens",
@@ -180,7 +180,7 @@
                     ]
                 }
             ],
-            "options": [{"addRule": ["champion"], "modelLimit": 1}, {"addRule": ["banner"], "modelLimit": 1}, {"addRule": ["musician"], "modelLimit": 1}],
+            "options": [{"addRule": ["champion"]}, {"addRule": ["banner", "musician"], "limit": 1}],
             "rules": ["fly"]
         },
         "engineers": {
@@ -205,7 +205,7 @@
                     ]
                 }
             ],
-            "options": [{"addRule": ["champion"], "modelLimit": 1}, {"addRule": ["banner"], "modelLimit": 1}, {"addRule": ["musician"], "modelLimit": 1}],
+            "options": [{"addRule": ["champion"]}, {"addRule": ["banner", "musician"], "limit": 1}],
             "rules": ["fly", {"id": "repair", "x": 3}]
         },
         "escort_airship": {

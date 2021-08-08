@@ -30,7 +30,7 @@
             "name": "Great-Ogre Fangriders",
             "description": "The weakest of the Great-Ogres, they're nevertheless terrifying in a fight.",
             "category": "core",
-            "options": [{"addRule": ["banner"], "modelLimit": 1}, {"addRule": ["musician"], "modelLimit": 1}],
+            "options": [{"addRule": ["banner", "musician"], "limit": 1}],
             "rules": [{"id": "wounds", "x": 3}, {"id": "impact", "x": 2}],
             "keywords": ["Cavalry"],
             "models": [

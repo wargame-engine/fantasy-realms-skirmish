@@ -50,7 +50,7 @@
                 }
             ],
             "subfactions": ["wrath", "excess", "pestilence", "none", "change"],
-            "options": [{"addRule": ["champion"], "modelLimit": 1}, {"addRule": ["banner"], "modelLimit": 1}, {"addRule": ["musician"], "modelLimit": 1}]
+            "options": [{"addRule": ["champion"]}, {"addRule": ["banner", "musician"], "limit": 1}]
         },
         "iron_lord": {
             "name": "Iron Lord",
@@ -99,13 +99,13 @@
             ],
             "keywords": ["Soul-bound", "Infantry"],
             "subfactions": ["wrath", "excess", "pestilence", "none", "change"],
-            "options": [{"addRule": ["champion"], "modelLimit": 1}, {"addRule": ["banner"], "modelLimit": 1}, {"addRule": ["musician"], "modelLimit": 1}]
+            "options": [{"addRule": ["champion"]}, {"addRule": ["banner", "musician"], "limit": 1}]
         },
         "centaur_hybrids": {
             "name": "Centaur Hybrids",
             "description": "Experimental warriors, half beast and half dwarf.",
             "category": "elite",
-            "options": [{"addRule": ["champion"], "modelLimit": 1}, {"addRule": ["banner"], "modelLimit": 1}, {"addRule": ["musician"], "modelLimit": 1}],
+            "options": [{"addRule": ["champion"]}, {"addRule": ["banner", "musician"], "limit": 1}],
             "models": [
                 {
                     "name": "Centaur Hybrid",
@@ -171,7 +171,7 @@
                 }
             ],
             "subfactions": ["wrath", "excess", "pestilence", "none", "change"],
-            "options": [{"addRule": ["champion"], "modelLimit": 1}, {"addRule": ["banner"], "modelLimit": 1}, {"addRule": ["musician"], "modelLimit": 1}]
+            "options": [{"addRule": ["champion"]}, {"addRule": ["banner", "musician"], "limit": 1}]
         },
         "engineers": {
             "name": "Corrupted Engineers",
@@ -194,7 +194,7 @@
                 }
             ],
             "subfactions": ["wrath", "excess", "pestilence", "none", "change"],
-            "options": [{"addRule": ["champion"], "modelLimit": 1}, {"addRule": ["banner"], "modelLimit": 1}, {"addRule": ["musician"], "modelLimit": 1}]
+            "options": [{"addRule": ["champion"]}, {"addRule": ["banner", "musician"], "limit": 1}]
         },
         "cinder_spirits": {
             "name": "Cinder Spirits",
@@ -215,7 +215,7 @@
                 }
             ],
             "subfactions": ["wrath", "excess", "pestilence", "none", "change"],
-            "options": [{"addRule": ["champion"], "modelLimit": 1}, {"addRule": ["banner"], "modelLimit": 1}, {"addRule": ["musician"], "modelLimit": 1}]
+            "options": [{"addRule": ["champion"]}, {"addRule": ["banner", "musician"], "limit": 1}]
         },
         "magma_elementals": {
             "name": "Magma Elementals",
@@ -237,7 +237,7 @@
                 }
             ],
             "subfactions": ["wrath", "excess", "pestilence", "none", "change"],
-            "options": [{"addRule": ["champion"], "modelLimit": 1}]
+            "options": [{"addRule": ["champion"]}]
         },
         "obsidian_golem": {
             "name": "Obsidian Golems",
@@ -259,7 +259,7 @@
                 }
             ],
             "subfactions": ["wrath", "excess", "pestilence", "none", "change"],
-            "options": [{"addRule": ["champion"], "modelLimit": 1}]
+            "options": [{"addRule": ["champion"]}]
         }
     },
     "weapons": {

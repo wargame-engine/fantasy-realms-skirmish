@@ -29,7 +29,7 @@
             "category": "core",
             "models": [
                 {
-                    "options": [{"addRule": ["champion"], "modelLimit": 1}, {"addRule": ["musician"], "modelLimit": 1}],
+                    "options": [{"addRule": ["champion"]}, {"addRule": ["musician"], "modelLimit": 1}],
                     "name": "Skeleton Warrior",
                     "movement": 4,
                     "courage": 8,
@@ -49,7 +49,7 @@
             "category": "core",
             "models": [
                 {
-                    "options": [{"addRule": ["champion"], "modelLimit": 1}, {"addRule": ["musician"], "modelLimit": 1}],
+                    "options": [{"addRule": ["champion"]}, {"addRule": ["musician"], "modelLimit": 1}],
                     "name": "Dead Rider",
                     "movement": 13,
                     "courage": 8,

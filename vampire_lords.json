@@ -221,7 +221,7 @@
                 {"name": "Zombie", "movement": 5, "courage": 5, "shoot": 4, "fight": 5, "defense": 4, "reflexes": 4, "weapons": ["unarmed"], "rules": ["raise_dead", "fear"], "min": 10, "max": 30}
             ],
             "keywords": ["Undead", "Infantry"],
-            "options": [{"addRule": ["champion"], "modelLimit": 1}, {"addRule": ["banner"], "modelLimit": 1}, {"addRule": ["musician"], "modelLimit": 1}],
+            "options": [{"addRule": ["champion"]}, {"addRule": ["banner", "musician"], "limit": 1}],
             "subfactions": ["blood", "bone", "dread", "none"]
         },
         "skeletons": {
@@ -245,7 +245,7 @@
             ],
             "keywords": ["Undead", "Infantry"],
             "subfactions": ["blood", "bone", "dread", "none"],
-            "options": [{"addRule": ["champion"], "modelLimit": 1}, {"addRule": ["banner"], "modelLimit": 1}, {"addRule": ["musician"], "modelLimit": 1}]
+            "options": [{"addRule": ["champion"]}, {"addRule": ["banner", "musician"], "limit": 1}]
         },
         "ghouls": {
             "name": "Ghouls",
@@ -253,7 +253,7 @@
             "category": "core",
             "models": [{"name": "Ghoul", "movement": 6, "courage": 5, "shoot": 4, "fight": 5, "defense": 4, "reflexes": 4, "weapons": [{"id": "claws", "count": 2}], "min": 10, "max": 30}],
             "rules": ["fear"],
-            "options": [{"addRule": ["champion"], "modelLimit": 1}],
+            "options": [{"addRule": ["champion"]}],
             "keywords": ["Undead", "Infantry"],
             "subfactions": ["none"]
         },
@@ -277,7 +277,7 @@
                 }
             ],
             "keywords": ["Undead", "Beast", "Infantry"],
-            "options": [{"addRule": ["champion"], "modelLimit": 1}],
+            "options": [{"addRule": ["champion"]}],
             "subfactions": ["blood", "bone", "dread", "none"]
         },
         "bat_swarms": {
@@ -322,7 +322,7 @@
                 }
             ],
             "keywords": ["Undead", "Monster"],
-            "options": [{"addRule": ["champion"], "modelLimit": 1}],
+            "options": [{"addRule": ["champion"]}],
             "subfactions": ["none"]
         },
         "crypt_watch": {
@@ -346,7 +346,7 @@
             ],
             "keywords": ["Undead", "Infantry"],
             "subfactions": ["blood", "bone", "dread", "none"],
-            "options": [{"addRule": ["champion"], "modelLimit": 1}, {"addRule": ["banner"], "modelLimit": 1}, {"addRule": ["musician"], "modelLimit": 1}]
+            "options": [{"addRule": ["champion"]}, {"addRule": ["banner", "musician"], "limit": 1}]
         },
         "skeletal_knights": {
             "name": "Skeletal Knights",
@@ -367,7 +367,7 @@
                 }
             ],
             "keywords": ["Undead", "Cavalry"],
-            "options": [{"addRule": ["champion"], "modelLimit": 1}, {"addRule": ["banner"], "modelLimit": 1}, {"addRule": ["musician"], "modelLimit": 1}],
+            "options": [{"addRule": ["champion"]}, {"addRule": ["banner", "musician"], "limit": 1}],
             "rules": ["fear"],
             "subfactions": ["none"]
         },
@@ -414,7 +414,7 @@
             ],
             "keywords": ["Undead", "Cavalry"],
             "rules": [{"id": "wounds", "x": 2}, "vampiric_siphon"],
-            "options": [{"addRule": ["champion"], "modelLimit": 1}, {"addRule": ["banner"], "modelLimit": 1}, {"addRule": ["musician"], "modelLimit": 1}],
+            "options": [{"addRule": ["champion"]}, {"addRule": ["banner", "musician"], "limit": 1}],
             "subfactions": ["none"]
         }
     },

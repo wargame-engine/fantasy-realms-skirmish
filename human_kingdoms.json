@@ -261,7 +261,7 @@
                 }
             ],
             "subfactions": ["none"],
-            "options": [{"addRule": ["champion"], "modelLimit": 1}, {"addRule": ["banner"], "modelLimit": 1}, {"addRule": ["musician"], "modelLimit": 1}]
+            "options": [{"addRule": ["champion"]}, {"addRule": ["banner", "musician"], "limit": 1}]
         },
         "men_at_arms": {
             "name": "Men-at-arms",
@@ -285,7 +285,7 @@
                 }
             ],
             "subfactions": ["none"],
-            "options": [{"addRule": ["champion"], "modelLimit": 1}, {"addRule": ["banner"], "modelLimit": 1}, {"addRule": ["musician"], "modelLimit": 1}]
+            "options": [{"addRule": ["champion"]}, {"addRule": ["banner", "musician"], "limit": 1}]
         },
         "bowmen": {
             "name": "Bowmen",
@@ -307,7 +307,7 @@
                 }
             ],
             "subfactions": ["none"],
-            "options": [{"addRule": ["champion"], "modelLimit": 1}, {"addRule": ["banner"], "modelLimit": 1}, {"addRule": ["musician"], "modelLimit": 1}]
+            "options": [{"addRule": ["champion"]}, {"addRule": ["banner", "musician"], "limit": 1}]
         },
         "handgunners": {
             "name": "Handgunners",
@@ -329,7 +329,7 @@
                 }
             ],
             "subfactions": ["none"],
-            "options": [{"addRule": ["champion"], "modelLimit": 1}, {"addRule": ["banner"], "modelLimit": 1}, {"addRule": ["musician"], "modelLimit": 1}]
+            "options": [{"addRule": ["champion"]}, {"addRule": ["banner", "musician"], "limit": 1}]
         },
         "pistoliers": {
             "name": "Mounted Pistoliers",
@@ -355,7 +355,7 @@
             ],
             "keywords": ["Cavalry"],
             "subfactions": ["none"],
-            "options": [{"addRule": ["champion"], "modelLimit": 1}, {"addRule": ["musician"], "modelLimit": 1}]
+            "options": [{"addRule": ["champion"]}, {"addRule": ["musician"], "modelLimit": 1}]
         },
         "honor_guard": {
             "name": "Honor Guard",
@@ -377,7 +377,7 @@
                 }
             ],
             "subfactions": ["none"],
-            "options": [{"addRule": ["champion"], "modelLimit": 1}, {"addRule": ["banner"], "modelLimit": 1}, {"addRule": ["musician"], "modelLimit": 1}]
+            "options": [{"addRule": ["champion"]}, {"addRule": ["banner", "musician"], "limit": 1}]
         },
         "hunters": {
             "name": "Hunters",
@@ -400,7 +400,7 @@
             ],
             "rules": ["evasive", "scout"],
             "subfactions": ["none"],
-            "options": [{"addRule": ["champion"], "modelLimit": 1}, {"addRule": ["banner"], "modelLimit": 1}, {"addRule": ["musician"], "modelLimit": 1}]
+            "options": [{"addRule": ["champion"]}, {"addRule": ["banner", "musician"], "limit": 1}]
         },
         "realm_knights": {
             "name": "Realm Knights",
@@ -424,7 +424,7 @@
             ],
             "keywords": ["Cavalry"],
             "subfactions": ["none"],
-            "options": [{"addRule": ["champion"], "modelLimit": 1}, {"addRule": ["banner"], "modelLimit": 1}, {"addRule": ["musician"], "modelLimit": 1}]
+            "options": [{"addRule": ["champion"]}, {"addRule": ["banner", "musician"], "limit": 1}]
         },
         "realm_knights_horse": {
             "name": "Realm Knights on Warhorses",
@@ -448,7 +448,7 @@
             ],
             "keywords": ["Cavalry"],
             "subfactions": ["none"],
-            "options": [{"addRule": ["champion"], "modelLimit": 1}, {"addRule": ["banner"], "modelLimit": 1}, {"addRule": ["musician"], "modelLimit": 1}]
+            "options": [{"addRule": ["champion"]}, {"addRule": ["banner", "musician"], "limit": 1}]
         },
         "realm_knights_gryphon": {
             "name": "Realm Knights on Gryphons",
@@ -472,7 +472,7 @@
             ],
             "keywords": ["Beast", "Cavalry"],
             "subfactions": ["none"],
-            "options": [{"addRule": ["champion"], "modelLimit": 1}, {"addRule": ["banner"], "modelLimit": 1}, {"addRule": ["musician"], "modelLimit": 1}]
+            "options": [{"addRule": ["champion"]}, {"addRule": ["banner", "musician"], "limit": 1}]
         },
         "realm_knights_pegasus": {
             "name": "Realm Knights on Pegasi",
@@ -496,7 +496,7 @@
             ],
             "keywords": ["Cavalry"],
             "subfactions": ["none"],
-            "options": [{"addRule": ["champion"], "modelLimit": 1}, {"addRule": ["banner"], "modelLimit": 1}, {"addRule": ["musician"], "modelLimit": 1}]
+            "options": [{"addRule": ["champion"]}, {"addRule": ["banner", "musician"], "limit": 1}]
         },
         "bowmen_horse": {
             "name": "Mounted Bowmen",
@@ -518,7 +518,7 @@
                 }
             ],
             "subfactions": ["none"],
-            "options": [{"addRule": ["champion"], "modelLimit": 1}, {"addRule": ["banner"], "modelLimit": 1}, {"addRule": ["musician"], "modelLimit": 1}]
+            "options": [{"addRule": ["champion"]}, {"addRule": ["banner", "musician"], "limit": 1}]
         },
         "cannon": {
             "name": "Cannon",
@@ -680,7 +680,7 @@
             ],
             "keywords": ["Cavalry"],
             "subfactions": ["none"],
-            "options": [{"addRule": ["champion"], "modelLimit": 1}, {"addRule": ["banner"], "modelLimit": 1}, {"addRule": ["musician"], "modelLimit": 1}]
+            "options": [{"addRule": ["champion"]}, {"addRule": ["banner", "musician"], "limit": 1}]
         },
         "paladin_pegasus": {
             "name": "Paladin on Pegasi",
@@ -704,7 +704,7 @@
             ],
             "keywords": ["Cavalry"],
             "subfactions": ["none"],
-            "options": [{"addRule": ["champion"], "modelLimit": 1}, {"addRule": ["banner"], "modelLimit": 1}, {"addRule": ["musician"], "modelLimit": 1}]
+            "options": [{"addRule": ["champion"]}, {"addRule": ["banner", "musician"], "limit": 1}]
         },
         "general_pegasus": {
             "name": "General on Pegasus",

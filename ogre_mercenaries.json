@@ -149,7 +149,7 @@
             "description": "With the strength of an ogre, your definition of 'sidearm' quickly changes.",
             "category": "core",
             "rules": [{"id": "wounds", "x": 2}],
-            "options": [{"addRule": ["banner"], "modelLimit": 1}, {"addRule": ["musician"], "modelLimit": 1}],
+            "options": [{"addRule": ["banner", "musician"], "limit": 1}],
             "models": [
                 {
                     "name": "Ogre Artillerist Sergeant",
@@ -214,7 +214,7 @@
             "description": "Outriders for mercenary companies - when ogres can find beasts strong enough to carry them!",
             "category": "elite",
             "rules": [{"id": "wounds", "x": 3}, {"id": "impact", "x": 2}],
-            "options": [{"addRule": ["banner"], "modelLimit": 1}, {"addRule": ["musician"], "modelLimit": 1}],
+            "options": [{"addRule": ["banner", "musician"], "limit": 1}],
             "models": [
                 {
                     "name": "Cavalry Sergeant",

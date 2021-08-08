@@ -160,7 +160,7 @@
             "category": "core",
             "models": [
                 {
-                    "options": [{"addRule": ["champion"], "modelLimit": 1}, {"addRule": ["banner"], "modelLimit": 1}, {"addRule": ["musician"], "modelLimit": 1}],
+                    "options": [{"addRule": ["champion"]}, {"addRule": ["banner", "musician"], "limit": 1}],
                     "name": "Satyr Despoiler",
                     "movement": 7,
                     "courage": 4,
@@ -219,7 +219,7 @@
             "category": "elite",
             "models": [
                 {
-                    "options": [{"addRule": ["champion"], "modelLimit": 1}, {"addRule": ["banner"], "modelLimit": 1}, {"addRule": ["musician"], "modelLimit": 1}],
+                    "options": [{"addRule": ["champion"]}, {"addRule": ["banner", "musician"], "limit": 1}],
                     "name": "Centaur",
                     "movement": 8,
                     "courage": 4,
