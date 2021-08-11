@@ -207,11 +207,6 @@
     },
     "rules": {
         "discipline": {"name": "Discipline", "description": "This unit and all friendly units within 6\" ignore Shock when making any Overwatch or Defensive Stance reaction rolls.", "points": 15},
-        "net": {
-            "name": "Net",
-            "description": "Units engaged in Melee with a model that has this weapon suffer -1 to Initiative tests when escaping combat for each weapon with this rule.",
-            "points": 1
-        },
         "barbed_net": {"name": "Barbed Net", "description": "Units hit by this weapon half their movement until the end of the turn.", "points": 3},
         "raid_tactics": {
             "name": "Raider Tactics",
