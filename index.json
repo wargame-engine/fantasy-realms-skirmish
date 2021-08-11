@@ -49,7 +49,7 @@
             "name": "High Elves",
             "id": "high_elves",
             "url": "high_elves.json",
-            "color": "#607d8b",
+            "color": "#0d407f",
             "alliance": "order",
             "description": "The High Elves are dedicated to holding and defending the lands they already have, and will destroy any force that dares to threaten their holdings."
         }
