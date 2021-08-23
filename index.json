@@ -52,6 +52,15 @@
             "color": "#0d407f",
             "alliance": "order",
             "description": "The High Elves are dedicated to holding and defending the lands they already have, and will destroy any force that dares to threaten their holdings."
+        },
+        "mountain_dwarves": {
+            "version": "1.0",
+            "name": "Mountain Dwarves",
+            "id": "mountain_dwarves",
+            "url": "mountain_dwarves.json",
+            "color": "#A55D35",
+            "alliance": "order",
+            "description": "The Mountain Dwarves were forced back to deep holes and warrens, but have regathered their forces.  They seek to conquer lands that were once theirs, in the belief that other races on them are merely squatters."
         }
     },
     "unfinished_factions": {
@@ -150,15 +159,6 @@
             "color": "#03414e",
             "alliance": "order",
             "description": "Transmuted by ancient magic to be mightier than any other elf, the Sea Elves require incredible alchemical concoctions to survive.  They hire themselves out to other races to afford their survival, and live under the sea to avoid mortal conflict."
-        },
-        "mountain_dwarves": {
-            "version": "1.0",
-            "name": "Mountain Dwarves",
-            "id": "mountain_dwarves",
-            "url": "mountain_dwarves.json",
-            "color": "#A55D35",
-            "alliance": "order",
-            "description": "The Mountain Dwarves were forced back to deep holes and warrens, but have regathered their forces.  They seek to conquer lands that were once theirs, in the belief that other races on them are merely squatters."
         },
         "beastmen_horde": {
             "version": "1.0",
@@ -590,7 +590,7 @@
         "hand_cannon": {"name": "Hand Cannon", "ap": 7, "attacks": 1, "short": 6, "medium": 12},
         "chainsaw": {"name": "Chainsaw", "attacks": 1, "short": "Melee", "ap": 7},
         "rock_throw": {"name": "Rock Throw", "attacks": 1, "ap": 6, "rules": [{"id": "blast", "x": 2}, "scatter"], "short": 9, "medium": 18},
-        "flame_breath": {"name": "Flaming Breath", "short": 6, "medium": 12, "ap": 3, "attacks": 1, "rules": ["flame", "lethal"]},
+        "dragon_breath": {"name": "Dragon Breath", "short": 6, "medium": 12, "ap": 3, "attacks": 1, "rules": ["flame", "lethal"]},
         "ballista": {"name": "Ballista", "profiles": [{"name": "Focus", "ap": 6, "attacks": 1, "medium": 36, "short": 18}, {"name": "Volley", "ap": 2, "attacks": 6, "medium": 36, "short": 18}]},
         "heavy_volley_gun": {"rules": ["rapid_fire"], "short": 15, "medium": 30, "attacks": 6, "ap": 3, "name": "Heavy Volley Gun"},
         "rocket_battery": {"rules": ["scatter", {"id": "blast", "x": 3}, "indirect"], "short": 18, "medium": 36, "attacks": 3, "ap": 5, "name": "Rocket Battery"},
