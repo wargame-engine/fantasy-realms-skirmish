@@ -12,95 +12,35 @@
             "url": "haunting_ghosts.json",
             "color": "#4C838A",
             "alliance": "death",
-            "description": "Places of necromantic power can often spontaneously bring the dead back to life, and without a leader they have only one drive:  Spread that necromantic power, through the death of those nearby!"
+            "description": "The Haunting Ghosts are a collection of undead spirits which haunt their hallowed grave sites. The Ghostly Undead use fear and ethereal movement to wash over their foes and scare them into defeat."
         },
-        "orcs_and_goblins": {
+        "mountain_dwarves": {
             "version": "1.0",
-            "name": "Orcs and Goblins",
-            "id": "orcs_and_goblins",
-            "url": "orcs_and_goblins.json",
-            "color": "#50974A",
-            "alliance": "destruction",
-            "description": "Creatures from faraway lands, the Orcs and Goblins are usually content to feud among themselves - but when they turn their attention elsewhere, they prove themselves a truly powerful foe.",
-            "subfactions": {
-                "armor": {
-                    "name": "Armor",
-                    "id": "armor",
-                    "color": "#90305d",
-                    "description": "The great goblin forges are blazing anew, supplying their orcish masters with mastercrafted equipment as crude as they may seem."
-                },
-                "speed": {"name": "Speed", "id": "speed", "color": "#547588", "description": "This force focuses on using chariots, boars and anything that goes fast."},
-                "trickery": {
-                    "name": "Trickery",
-                    "id": "trickery",
-                    "color": "#547588",
-                    "description": "Striking in moonlight, these masters of deception, as far as orcs are concerned, use outflanking and ambush maneuvers to gain the upper hand."
-                },
-                "primal": {
-                    "name": "Primal",
-                    "id": "primal",
-                    "color": "#547588",
-                    "description": "Empowered by their animalistic gods, the strongest warriors charge into battle with fearsome beasts at their side."
-                }
-            }
-        },
-        "high_elves": {
-            "version": "1.0",
-            "name": "High Elves",
-            "id": "high_elves",
-            "url": "high_elves.json",
-            "color": "#0d407f",
+            "name": "Mountain Dwarves",
+            "id": "mountain_dwarves",
+            "url": "mountain_dwarves.json",
+            "color": "#A55D35",
             "alliance": "order",
-            "description": "The High Elves are dedicated to holding and defending the lands they already have, and will destroy any force that dares to threaten their holdings."
-        }
-    },
-    "unfinished_factions": {
-        "storm_wardens": {
+            "description": "A stout race of miners, engineers and warriors."
+        },
+        "sea_elves": {
             "version": "1.0",
-            "name": "Storm Wardens",
-            "id": "storm_wardens",
-            "url": "storm_wardens.json",
+            "name": "Sea Elves",
+            "id": "sea_elves",
+            "url": "sea_elves.json",
+            "color": "#03414e",
+            "alliance": "order",
+            "description": "Raising from the depths of the ocean, transmuted by their ancient magic."
+        },
+        "eternal_protectors": {
+            "version": "1.0",
+            "name": "Eternal Protectors",
+            "id": "eternal_protectors",
+            "url": "eternal_protectors.json",
             "color": "#D4AF37",
             "secondary_color": "#0d407f",
             "alliance": "order",
-            "description": "Creations of an arch-wizard, the Storm Wardens exist to enforce peace around the realms - no matter who it may favour.  Their incredible weapons and armour are unmatched by other races."
-        },
-        "ogre_mercenaries": {
-            "version": "1.0",
-            "name": "Ogre Mercenaries",
-            "id": "ogre_mercenaries",
-            "url": "ogre_mercenaries.json",
-            "color": "#954535",
-            "alliance": "destruction",
-            "description": "Once the scourge of the lands, the ogres have learned that they keep their bellies fuller by hiring themselves out as mercenaries than by killing people who can cook for them."
-        },
-        "greatogre_raiders": {
-            "version": "1.0",
-            "name": "Greatogre Raiders",
-            "id": "greatogre_raiders",
-            "url": "greatogre_raiders.json",
-            "color": "#4f9ae0",
-            "description": "The greatest of ogre tribes, who only interact with their lessers when they need something - food, coin, or just a challenge!",
-            "alliance": "destruction"
-        },
-        "vampire_lords": {
-            "version": "1.0",
-            "name": "Vampire Lords",
-            "id": "vampire_lords",
-            "url": "vampire_lords.json",
-            "color": "#801111",
-            "alliance": "death",
-            "description": "Vampire Lords are necromancers who have learned to imbue themselves with necrotic power.  They wield their undead hordes like a weapon, to cut away those who would stand in their way.",
-            "subfactions": {
-                "bone": {"name": "Bone", "id": "bone", "color": "#90305d", "description": "Raising endless armies of skeletal soldiers to do their bidding."},
-                "blood": {"name": "Blood", "id": "blood", "color": "#547588", "description": "Fledgling vampires are eager to drink and don't have the patience for just biting their enemies."},
-                "dread": {
-                    "name": "Dread",
-                    "id": "dread",
-                    "color": "#547588",
-                    "description": "Using illusions, necromancy and their own kin against their foes, these Vampire Lords are masters of attritional warfare."
-                }
-            }
+            "description": "The Eternal Protectors are sworn to protect those who cannot protect themselves and to ward off evil. They wear tough armor and wield mighty weapons to strike down those are unjust."
         },
         "corrupted_legions": {
             "version": "1.0",
@@ -109,7 +49,7 @@
             "url": "corrupted_legions.json",
             "color": "#231f20",
             "alliance": "chaos",
-            "description": "The Corrupted Legions prove that even dead gods can be mightier than mortals.  Wearing powerful cursed armour and wielding weapons with ancient enchantments, they seek the ressurection of their dark masters.",
+            "description": "The Corrupted Legions are those who chose to fight for evil instead of order and made a pact with the dark gods. The Corrupted Legions use deadly corrupted warriors and other barbarians to swiftly crush their foes.",
             "subfactions": {
                 "change": {
                     "name": "Magic",
@@ -141,24 +81,84 @@
                     "restricted": true
                 }
             }
-        },
-        "sea_elves": {
+        }
+    },
+    "unfinished_factions": {
+        "ogre_mercenaries": {
             "version": "1.0",
-            "name": "Sea Elves",
-            "id": "sea_elves",
-            "url": "sea_elves.json",
-            "color": "#03414e",
-            "alliance": "order",
-            "description": "Transmuted by ancient magic to be mightier than any other elf, the Sea Elves require incredible alchemical concoctions to survive.  They hire themselves out to other races to afford their survival, and live under the sea to avoid mortal conflict."
+            "name": "Ogre Mercenaries",
+            "id": "ogre_mercenaries",
+            "url": "ogre_mercenaries.json",
+            "color": "#954535",
+            "alliance": "destruction",
+            "description": "Large-bodied mercenaries with huge appetites for gold and destruction"
         },
-        "mountain_dwarves": {
+        "greatogre_raiders": {
             "version": "1.0",
-            "name": "Mountain Dwarves",
-            "id": "mountain_dwarves",
-            "url": "mountain_dwarves.json",
-            "color": "#A55D35",
+            "name": "Greatogre Raiders",
+            "id": "greatogre_raiders",
+            "url": "greatogre_raiders.json",
+            "color": "#4f9ae0",
+            "description": "The greatest of ogre tribes, who only interact with their lessers when they need something - food, coin, or just a challenge!",
+            "alliance": "destruction"
+        },
+        "vampire_lords": {
+            "version": "1.0",
+            "name": "Vampire Lords",
+            "id": "vampire_lords",
+            "url": "vampire_lords.json",
+            "color": "#801111",
+            "alliance": "death",
+            "description": "The Vampire Lords are powerful vampires who command legions of undead to do their bidding. They defeat their foes with powerful death magic and hordes of undead.",
+            "subfactions": {
+                "bone": {"name": "Bone", "id": "bone", "color": "#90305d", "description": "Raising endless armies of skeletal soldiers to do their bidding."},
+                "blood": {"name": "Blood", "id": "blood", "color": "#547588", "description": "Fledgling vampires are eager to drink and don't have the patience for just biting their enemies."},
+                "dread": {
+                    "name": "Dread",
+                    "id": "dread",
+                    "color": "#547588",
+                    "description": "Using illusions, necromancy and their own kin against their foes, these Vampire Lords are masters of attritional warfare."
+                }
+            }
+        },
+        "high_elves": {
+            "version": "1.0",
+            "name": "High Elves",
+            "id": "high_elves",
+            "url": "high_elves.json",
+            "color": "#607d8b",
             "alliance": "order",
-            "description": "The Mountain Dwarves were forced back to deep holes and warrens, but have regathered their forces.  They seek to conquer lands that were once theirs, in the belief that other races on them are merely squatters."
+            "description": "Masters of the Arcane, this ancient island nation is shrouded in mystery."
+        },
+        "orcs_and_goblins": {
+            "version": "1.0",
+            "name": "Orcs and Goblins",
+            "id": "orcs_and_goblins",
+            "url": "orcs_and_goblins.json",
+            "color": "#50974A",
+            "alliance": "destruction",
+            "description": "A savage race made up of various warring tribes.",
+            "subfactions": {
+                "armor": {
+                    "name": "Armor",
+                    "id": "armor",
+                    "color": "#90305d",
+                    "description": "The great goblin forges are blazing anew, supplying their orcish masters with mastercrafted equipment as crude as they may seem."
+                },
+                "speed": {"name": "Speed", "id": "speed", "color": "#547588", "description": "This force focuses on using chariots, boars and anything that goes fast."},
+                "trickery": {
+                    "name": "Trickery",
+                    "id": "trickery",
+                    "color": "#547588",
+                    "description": "Striking in moonlight, these masters of deception, as far as orcs are concerned, use outflanking and ambush maneuvers to gain the upper hand."
+                },
+                "primal": {
+                    "name": "Primal",
+                    "id": "primal",
+                    "color": "#547588",
+                    "description": "Empowered by their animalistic gods, the strongest warriors charge into battle with fearsome beasts at their side."
+                }
+            }
         },
         "beastmen_horde": {
             "version": "1.0",
@@ -167,7 +167,7 @@
             "url": "beastmen_horde.json",
             "color": "#954535",
             "alliance": "chaos",
-            "description": "The Beastmen seek nothing less than the destruction of civilization and the pointless rules it brings.  They enlist great war-beasts and horrible creatures to their aid.",
+            "description": "The Beastmen are a race of human-like beasts found in forests. Their main goal is to disrupt and destroy the races of mankind through savage all-out raids.",
             "subfactions": {
                 "change": {
                     "name": "Magic",
@@ -197,7 +197,7 @@
             "url": "human_kingdoms.json",
             "color": "#990c0c",
             "alliance": "order",
-            "description": "The myriad of Human Kingdoms are mercurial and quick-blooded, wanting only peace one generation while seeking to conquer the world the next - and well-equipped for either."
+            "description": "A collection of various kingdoms, infighting for political presence but uniting under one banner to defend their home."
         },
         "lizardmen": {
             "version": "0.1",
@@ -215,7 +215,7 @@
             "url": "corrupted_dwarves.json",
             "color": "#360c30",
             "alliance": "chaos",
-            "description": "Twisted by the whispers of dead gods, the Corrupted Dwarves have learned to put chaotic magic into their machines.  They fight as much at the whims of their dark masters as their own choice.",
+            "description": "Corrupted by the dark gods, these dwarves imbue twisted warmachines with demonic magic.",
             "subfactions": {
                 "change": {
                     "name": "Magic",
@@ -244,7 +244,7 @@
             "id": "merchant_dwarves",
             "url": "merchant_dwarves.json",
             "alliance": "order",
-            "description": "Famous for their gold-lust, the Merchant Dwarves hire themselves out to any force that can afford them.  Their powerful technology and airships make them a dangerous foe.",
+            "description": "A race of travelling merchants and glory-seekers with advanced weaponry.",
             "color": "#000000",
             "secondary_color": "#360c30"
         },
@@ -255,7 +255,7 @@
             "url": "dark_elves.json",
             "color": "#30106B",
             "alliance": "order",
-            "description": "The Dark Elves are dedicated to conquering and taking whatever land they can, and aren't afraid to bring the full might of elven wisdom and power to bear to do it."
+            "description": "Cursed by their dark gods, these Elves raid the coasts and rivers of the mainlands from their ship-fortresses."
         },
         "wood_elves": {
             "version": "1.0",
@@ -264,7 +264,7 @@
             "url": "wood_elves.json",
             "color": "#38733a",
             "alliance": "order",
-            "description": "Hidden away in their forests, the Wood Elves seek only peace, and the spreading of nature's gifts.  They go to war only to fight those who would despoil their forests or stop their spread.",
+            "description": "Hidden away within their dense forests, striking back against those that dare to anger the spirits of the forest.",
             "subfactions": {
                 "spite": {
                     "name": "Spite-Grove",
@@ -511,7 +511,7 @@
         "heavy_spear": {"name": "Heavy Spear", "attacks": 1, "ap": 2, "short": "Melee", "rules": [{"id": "reach", "x": 1}]},
         "long_spear": {"name": "Long Spear", "attacks": 1, "ap": 1, "short": "Melee", "rules": [{"id": "reach", "x": 1}, "phalanx"]},
         "pike": {"name": "Pike", "attacks": 1, "ap": 1, "short": "Melee", "rules": [{"id": "reach", "x": 2}, "phalanx"]},
-        "net_and_spear": {"name": "Spear and Net", "attacks": 1, "ap": 1, "short": "Melee", "rules": ["ensnare", {"id": "reach", "x": 1}]},
+        "net_and_spear": {"name": "Spear and Net", "attacks": 1, "ap": 1, "short": "Melee", "rules": ["net", {"id": "reach", "x": 1}]},
         "polearm": {"name": "Polearm", "attacks": 1, "ap": 2, "short": "Melee", "rules": [{"id": "reach", "x": 1}]},
         "heavy_polearm": {"name": "Heavy Polearm", "attacks": 1, "ap": 3, "short": "Melee", "rules": [{"id": "reach", "x": 1}]},
         "great_polearm": {"name": "Great Polearm", "attacks": 1, "ap": 4, "short": "Melee", "rules": [{"id": "reach", "x": 1}]},
@@ -590,7 +590,7 @@
         "hand_cannon": {"name": "Hand Cannon", "ap": 7, "attacks": 1, "short": 6, "medium": 12},
         "chainsaw": {"name": "Chainsaw", "attacks": 1, "short": "Melee", "ap": 7},
         "rock_throw": {"name": "Rock Throw", "attacks": 1, "ap": 6, "rules": [{"id": "blast", "x": 2}, "scatter"], "short": 9, "medium": 18},
-        "flame_breath": {"name": "Flaming Breath", "short": 6, "medium": 12, "ap": 3, "attacks": 1, "rules": ["flame", "lethal"]},
+        "dragon_breath": {"name": "Dragon Breath", "short": 6, "medium": 12, "ap": 3, "attacks": 1, "rules": ["flame", "lethal"]},
         "ballista": {"name": "Ballista", "profiles": [{"name": "Focus", "ap": 6, "attacks": 1, "medium": 36, "short": 18}, {"name": "Volley", "ap": 2, "attacks": 6, "medium": 36, "short": 18}]},
         "heavy_volley_gun": {"rules": ["rapid_fire"], "short": 15, "medium": 30, "attacks": 6, "ap": 3, "name": "Heavy Volley Gun"},
         "rocket_battery": {"rules": ["scatter", {"id": "blast", "x": 3}, "indirect"], "short": 18, "medium": 36, "attacks": 3, "ap": 5, "name": "Rocket Battery"},
@@ -633,6 +633,11 @@
         "ethereal": {"name": "Ethereal", "description": "This model may ignore other models and any terrain when moving.", "points": 2},
         "leeching": {"name": "Leeching", "description": "Roll a D10 each time this weapon deals damage to a _Leader_ unit. On a 1 or 2 this model regains one Wound.", "points": 1},
         "mount_horse": {"name": "Warhorse", "description": "This model has +2\" Movement.", "points": 2},
+        "net": {
+            "name": "Net",
+            "description": "Units engaged in Melee with a model that has this weapon suffer -1 to Initiative tests when escaping combat for each weapon with this rule.",
+            "points": 1
+        },
         "barbed_net": {"name": "Barbed Net", "description": "Units hit by this weapon half their movement until the end of the turn.", "points": 3},
         "poisoned_blades": {"name": "Poisoned Blades", "description": "This model's melee weapons have +1 AP against enemies without _Damage Table(X)_.", "points": 5},
         "regeneration": {"name": "Regeneration", "description": "At the end of it's activation you can heal 1 wound that has been allocated to this model.", "points": 5},

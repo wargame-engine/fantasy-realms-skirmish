@@ -40,7 +40,7 @@
                     "defense": 7,
                     "reflexes": 6,
                     "rules": [{"id": "wounds", "x": 3}, "repair_toolkit", "leader", {"id": "engineer_tactics", "x": 1}],
-                    "weapons": [{"id": "war_hammer", "count": 3}, {"id": "heavy_pistol", "count": 2}],
+                    "weapons": [{"id": "grand_weapon", "count": 3}, {"id": "heavy_pistol", "count": 2}],
                     "min": 1,
                     "max": 1,
                     "options": [{"replaceRule": [{"id": "engineer_tactics", "x": 1}], "withRule": [{"id": "engineer_tactics", "x": 2}]}]
@@ -82,7 +82,7 @@
                     "defense": 8,
                     "reflexes": 6,
                     "rules": [{"id": "wounds", "x": 3}, "leader", {"id": "merchant_tactics", "x": 1}],
-                    "weapons": [{"id": "war_hammer", "count": 3}, {"id": "pistol", "count": 3}],
+                    "weapons": [{"id": "grand_weapon", "count": 3}, {"id": "pistol", "count": 3}],
                     "options": [{"addRule": ["suit"]}, {"replaceRule": [{"id": "merchant_tactics", "x": 1}], "withRule": [{"id": "merchant_tactics", "x": 2}]}],
                     "min": 1,
                     "max": 1
@@ -131,7 +131,7 @@
                     ]
                 }
             ],
-            "options": [{"addRule": ["champion"]}, {"addRule": ["banner", "musician"], "limit": 1}]
+            "options": [{"addRule": ["champion"], "modelLimit": 1}, {"addRule": ["banner"], "modelLimit": 1}, {"addRule": ["musician"], "modelLimit": 1}]
         },
         "riflemen": {
             "name": "Dwarven Riflemen",
@@ -152,7 +152,7 @@
                     "options": [{"replaceWeapon": [{"id": "handgun", "count": 2}], "withWeapon": ["steam_cannon", {"id": "shotgun", "count": 3}, "burst_rifle"], "modelLimit": "2/5"}]
                 }
             ],
-            "options": [{"addRule": [["champion", "clockwork_companion"]], "modelLimit": 1}, {"addRule": ["banner", "musician"], "limit": 1}]
+            "options": [{"addRule": [["champion", "clockwork_companion"]], "modelLimit": 1}, {"addRule": ["banner"], "modelLimit": 1}, {"addRule": ["musician"], "modelLimit": 1}]
         },
         "wardens": {
             "name": "Skybound Wardens",
@@ -180,7 +180,7 @@
                     ]
                 }
             ],
-            "options": [{"addRule": ["champion"]}, {"addRule": ["banner", "musician"], "limit": 1}],
+            "options": [{"addRule": ["champion"], "modelLimit": 1}, {"addRule": ["banner"], "modelLimit": 1}, {"addRule": ["musician"], "modelLimit": 1}],
             "rules": ["fly"]
         },
         "engineers": {
@@ -205,7 +205,7 @@
                     ]
                 }
             ],
-            "options": [{"addRule": ["champion"]}, {"addRule": ["banner", "musician"], "limit": 1}],
+            "options": [{"addRule": ["champion"], "modelLimit": 1}, {"addRule": ["banner"], "modelLimit": 1}, {"addRule": ["musician"], "modelLimit": 1}],
             "rules": ["fly", {"id": "repair", "x": 3}]
         },
         "escort_airship": {
