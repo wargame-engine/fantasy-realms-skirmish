@@ -1,7 +1,7 @@
 {
     "reportUrl": "https://github.com/wargame-engine/fantasy-realms-skirmish/issues",
-    "name": "Fantasy Realms Skirmish",
-    "id": "fantasy_realms_skirmish",
+    "name": "Mystic Realms Skirmish",
+    "id": "mystic_realms_skirmish",
     "version": "1.0",
     "alliances": {"death": {"name": "Bringers of Death"}, "destruction": {"name": "Forces of Destruction"}, "order": {"name": "Keepers of Order"}, "chaos": {"name": "Instruments of Chaos"}},
     "factions": {
