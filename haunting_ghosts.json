@@ -203,6 +203,49 @@
             "category": "elite",
             "models": [{"name": "Revenant", "movement": 6, "courage": 6, "shoot": 6, "fight": 6, "defense": 7, "reflexes": 5, "weapons": [{"id": "great_weapon", "count": 2}], "min": 1, "max": 1}],
             "keywords": ["Undead", "Infantry"]
+        },
+        "banshee_leader": {
+            "name": "Banshee Leader",
+            "description": "A ghostly spirit filled with revenge.",
+            "category": "elite",
+            "rules": ["leader"],
+            "models": [
+                {
+                    "name": "Banshee Leader",
+                    "movement": 6,
+                    "courage": 6,
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 7,
+                    "reflexes": 5,
+                    "weapons": [{"id": "frost_dagger", "count": 3}, "scream"],
+                    "rules": [{"id": "wounds", "x": 2}],
+                    "min": 1,
+                    "max": 1
+                }
+            ],
+            "keywords": ["Undead", "Infantry"]
+        },
+        "banshee": {
+            "name": "Banshee",
+            "description": "A ghostly spirit filled with revenge.",
+            "category": "elite",
+            "models": [
+                {
+                    "name": "Banshee",
+                    "movement": 6,
+                    "courage": 6,
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 7,
+                    "reflexes": 5,
+                    "weapons": [{"id": "frost_dagger", "count": 3}, "scream"],
+                    "rules": [{"id": "wounds", "x": 2}],
+                    "min": 1,
+                    "max": 1
+                }
+            ],
+            "keywords": ["Undead", "Infantry"]
         }
     },
     "weapons": {
