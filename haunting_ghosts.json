@@ -253,7 +253,9 @@
         "ghostly_shackles": {"name": "Ghostly Shackles", "attacks": 1, "ap": 4, "short": "Melee"},
         "death_bell": {"name": "Death Bell", "attacks": 1, "ap": 4, "short": "Melee"},
         "curse_blade": {"name": "Curse-bound Blade", "attacks": 1, "ap": 2, "short": "Melee", "rules": ["lance"]},
-        "executioner_great_axe": {"name": "Great Axe", "attacks": 1, "ap": 5, "short": "Melee", "rules": ["rending"]}
+        "executioner_great_axe": {"name": "Great Axe", "attacks": 1, "ap": 5, "short": "Melee", "rules": ["rending"]},
+        "frost_dagger": {"name": "Frost Dagger", "attacks": 1, "ap": 3, "short": "Melee", "rules": ["lethal"]},
+        "scream": {"name": "Banshee Scream", "attacks": 1, "ap": 2, "short": 9, "rules": ["indirect"]}
     },
     "rules": {
         "ghost_tactics": {
