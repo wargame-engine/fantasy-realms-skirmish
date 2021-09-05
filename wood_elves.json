@@ -2,7 +2,6 @@
     "name": "Wood Elves",
     "id": "wood_elves",
     "author": "Xekon#8266",
-    "description": "",
     "alliance": "order",
     "units": {
         "elf_prince": {
