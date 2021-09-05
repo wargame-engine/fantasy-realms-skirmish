@@ -116,7 +116,7 @@
             "name": "Corrupted Legions",
             "id": "corrupted_legions",
             "url": "corrupted_legions.json",
-            "color": "#231f20",
+            "color": "#343a40",
             "alliance": "chaos",
             "description": "The Corrupted Legions prove that even dead gods can be mightier than mortals.  Wearing powerful cursed armour and wielding weapons with ancient enchantments, they seek the ressurection of their dark masters.",
             "subfactions": {
@@ -245,15 +245,15 @@
             "url": "merchant_dwarves.json",
             "alliance": "order",
             "description": "Famous for their gold-lust, the Merchant Dwarves hire themselves out to any force that can afford them.  Their powerful technology and airships make them a dangerous foe.",
-            "color": "#000000",
-            "secondary_color": "#360c30"
+            "color": "#343a40",
+            "secondary_color": "#3d3354"
         },
         "dark_elves": {
             "version": "1.0",
             "name": "Dark Elves",
             "id": "dark_elves",
             "url": "dark_elves.json",
-            "color": "#30106B",
+            "color": "#4e2894",
             "alliance": "order",
             "description": "The Dark Elves are dedicated to conquering and taking whatever land they can, and aren't afraid to bring the full might of elven wisdom and power to bear to do it."
         },
