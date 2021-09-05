@@ -267,7 +267,7 @@
             "subfactions": ["none"]
         },
         "dwarf_veteran": {
-            "name": "Dwarven Veterans",
+            "name": "Dwarven Veteran",
             "description": "A dwarven veteran.",
             "category": "core",
             "models": [
@@ -740,7 +740,7 @@
             "subfactions": ["none"]
         },
         "berserker_roughrider_leader": {
-            "name": "Dwarven Berserker Leader on War-Beasts",
+            "name": "Dwarven Berserker Leader on War-Beast",
             "description": "A dwarven berserker leader riding atop a ferocious beast into battle.",
             "category": "hero",
             "models": [
