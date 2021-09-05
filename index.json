@@ -381,7 +381,12 @@
         "haste": {"name": "Haste", "description": "Target friendly unit within 12\" may immediately make a free move action.", "charge": 6, "category": "air"},
         "crystal_volley": {"name": "Crystal Volley", "description": "Target enemy unit within 12\" takes 5 hits each with AP(1).", "charge": 7, "category": "earth"},
         "earthen_armor": {"name": "Earthen Armor", "description": "Target friendly unit within 12\" gains +1 Save until the end of the turn.", "charge": 6, "category": "earth"},
-        "earthquake": {"name": "Earthquake", "description": "Target enemy unit within 12\" takes 3 hits with AP(1). Roll a d10 for all units within 3\" of it. On a 5 or less that unit is hit as well", "charge": 5, "category": "earth"},
+        "earthquake": {
+            "name": "Earthquake",
+            "description": "Target enemy unit within 12\" takes 3 hits with AP(1). Roll a d10 for all units within 3\" of it. On a 5 or less that unit is hit as well",
+            "charge": 5,
+            "category": "earth"
+        },
         "wild_frenzy": {"name": "Wild Frenzy", "description": "Target friendly unit within 12\" may immediately make a free charge action.", "charge": 5, "category": "nature"},
         "entangling_roots": {
             "name": "Entangling Roots",
@@ -574,7 +579,7 @@
         "hand_cannon": {"name": "Hand Cannon", "ap": 7, "attacks": 1, "short": 6, "medium": 12},
         "chainsaw": {"name": "Chainsaw", "attacks": 1, "short": "Melee", "ap": 7},
         "rock_throw": {"name": "Rock Throw", "attacks": 1, "ap": 6, "rules": [{"id": "blast", "x": 2}, "scatter"], "short": 9, "medium": 18},
-        "dragon_breath": {"name": "Dragon Breath", "short": 6, "medium": 12, "ap": 3, "attacks": 1, "rules": ["flame", "lethal"]},
+        "flame_breath": {"name": "Flaming Breath", "short": 6, "medium": 12, "ap": 1, "attacks": 1, "rules": ["flame"]},
         "ballista": {"name": "Ballista", "profiles": [{"name": "Focus", "ap": 6, "attacks": 1, "medium": 36, "short": 18}, {"name": "Volley", "ap": 2, "attacks": 6, "medium": 36, "short": 18}]},
         "heavy_volley_gun": {"rules": ["rapid_fire"], "short": 15, "medium": 30, "attacks": 6, "ap": 3, "name": "Heavy Volley Gun"},
         "rocket_battery": {"rules": ["scatter", {"id": "blast", "x": 3}, "indirect"], "short": 18, "medium": 36, "attacks": 3, "ap": 5, "name": "Rocket Battery"},
