@@ -52,7 +52,9 @@
             "color": "#0d407f",
             "alliance": "order",
             "description": "The High Elves are dedicated to holding and defending the lands they already have, and will destroy any force that dares to threaten their holdings."
-        },
+        }
+    },
+    "unfinished_factions": {
         "mountain_dwarves": {
             "version": "1.0",
             "name": "Mountain Dwarves",
@@ -61,9 +63,7 @@
             "color": "#A55D35",
             "alliance": "order",
             "description": "The Mountain Dwarves were forced back to deep holes and warrens, but have regathered their forces.  They seek to conquer lands that were once theirs, in the belief that other races on them are merely squatters."
-        }
-    },
-    "unfinished_factions": {
+        },
         "storm_wardens": {
             "version": "1.0",
             "name": "Storm Wardens",
