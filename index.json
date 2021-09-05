@@ -538,7 +538,7 @@
             "profiles": [{"name": "Melee", "attacks": 1, "short": "Melee"}, {"name": "Thrown", "attacks": 1, "short": 9, "rules": ["assault"]}],
             "rules": ["poison"]
         },
-        "throwing_axe": {"name": "Handaxe", "profiles": [{"name": "Melee", "attacks": 1, "ap": 1, "short": "Melee"}, {"name": "Thrown", "attacks": 1, "ap": 1, "short": 9, "rules": ["assault"]}]},
+        "throwing_axe": {"name": "Throwing Axes", "attacks": 1, "ap": 1, "short": 9, "rules": ["assault", "rending"]},
         "blowpipe": {"name": "Blowpipe", "attacks": 1, "short": 9, "rules": ["poison", "assault"]},
         "short_bow": {"name": "Shortbow", "attacks": 1, "ap": 1, "short": 9, "medium": 18},
         "poison_short_bow": {"name": "Poisoned Shortbow", "attacks": 1, "ap": 1, "short": 9, "medium": 18, "rules": ["poison"]},
