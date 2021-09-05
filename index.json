@@ -529,7 +529,7 @@
         "heavy_pistol": {"name": "Heavy Pistol", "ap": 3, "attacks": 1, "short": 9, "rules": ["pistol"]},
         "carbine": {"name": "Carbine", "ap": 3, "attacks": 1, "short": 9, "medium": 18, "rules": ["assault"]},
         "light_repeater_handgun": {"name": "Light Repeater Handgun", "ap": 1, "attacks": 1, "short": 12, "medium": 24, "rules": ["rapid_fire"]},
-        "handgun": {"name": "Handgun", "ap": 3, "attacks": 1, "short": 12, "medium": 24, "rules": ["rapid_fire"]},
+        "handgun": {"name": "Handgun", "ap": 3, "attacks": 1, "short": 12, "medium": 24},
         "repeater_handgun": {"name": "Repeater Handgun", "ap": 3, "attacks": 1, "short": 12, "medium": 24, "rules": ["rapid_fire"]},
         "long_rifle": {"name": "Long Rifle", "ap": 4, "attacks": 1, "short": 18, "medium": 36, "rules": ["sniper"]},
         "shotgun": {"name": "Shotgun", "attacks": 1, "ap": 3, "short": 6, "medium": 12, "rules": ["assault", "brutal"]},
