@@ -492,6 +492,7 @@
         "banshee_wail": {"name": "Banshee Wail", "ap": 3, "attacks": 1, "short": 9, "medium": 18, "rules": [{"id": "shocking", "x": 2}]},
         "necrotic_breath": {"name": "Necrotic Breath", "ap":23, "attacks": 1, "short": 6, "medium": 12, "rules": ["flame"]},
         "flame_breath": {"name": "Flame Breath", "short": 6, "medium": 12, "ap": 1, "attacks": 1, "rules": ["flame"]},
+        "lightning_breath": {"name": "Lightning Breath", "short": 6, "medium": 12, "ap": 1, "attacks": 1, "rules": ["lethal"]},
         "rock_throw": {"name": "Rock Throw", "attacks": 1, "ap": 6, "rules": [{"id": "blast", "x": 2}, "scatter"], "short": 9, "medium": 18},
         "buckler": {"name": "Buckler", "attacks": 0, "short": "Melee", "rules": ["buckler"]},
         "heavy_buckler": {"name": "Heavy Buckler", "attacks": 0, "short": "Melee", "rules": ["heavy_buckler"]},

@@ -222,7 +222,7 @@
                     "defense": 7,
                     "reflexes": 6,
                     "rules": ["lightning_field", {"id": "wounds", "x": 3}],
-                    "weapons": [{"id": "heavy_handweapon", "count": 2}, {"id": "staff", "count": 2}, {"id": "flame_breath", "count": 2}, {"id": "beak_and_claws", "count": 2}],
+                    "weapons": [{"id": "heavy_handweapon", "count": 2}, {"id": "staff", "count": 2}, {"id": "lightning_breath", "count": 2}, {"id": "beak_and_claws", "count": 2}],
                     "options": [
                         {"replaceWeapon": [{"id": "heavy_handweapon", "count": 2}, {"id": "staff", "count": 2}], "withWeapon": [{"id": "great_staff", "count": 3}]},
                         {"addWeapon": ["spirit_flask"], "modelLimit": 3}
@@ -415,7 +415,7 @@
                         {"addWeapon": ["spirit_flask"], "limit": 3},
                         {"replaceRule": [{"id": "warrior_tactics", "x": 1}], "withRule": [{"id": "warrior_tactics", "x": 2}]}
                     ],
-                    "weapons": [{"id": "great_hammer", "count": 2}, "tower_shield", {"id": "flame_breath", "count": 3}, {"id": "beak_and_claws", "count": 3}]
+                    "weapons": [{"id": "great_hammer", "count": 2}, "tower_shield", {"id": "lightning_breath", "count": 3}, {"id": "beak_and_claws", "count": 3}]
                 }
             ],
             "keywords": ["Monster", "Cavalry"]
@@ -447,7 +447,7 @@
                         {"id": "repeater_crossbow", "count": 2},
                         {"id": "grand_weapon", "count": 3},
                         {"id": "fangs_and_claws", "count": 2},
-                        {"id": "flame_breath", "count": 2},
+                        {"id": "lightning_breath", "count": 2},
                         "enchanted_shield"
                     ]
                 }
@@ -475,7 +475,7 @@
                         {"addWeapon": ["spirit_flask"], "limit": 3},
                         {"replaceRule": [{"id": "warrior_tactics", "x": 1}], "withRule": [{"id": "warrior_tactics", "x": 2}]}
                     ],
-                    "weapons": [{"id": "great_polearm", "count": 3}, "relic_shield", {"id": "flame_breath", "count": 4}, {"id": "fangs_and_claws", "count": 3}, "bashing_tail"]
+                    "weapons": [{"id": "great_polearm", "count": 3}, "relic_shield", {"id": "lightning_breath", "count": 4}, {"id": "fangs_and_claws", "count": 3}, "bashing_tail"]
                 }
             ],
             "keywords": ["Monster", "Cavalry"]
