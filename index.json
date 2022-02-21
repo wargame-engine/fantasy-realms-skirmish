@@ -5,6 +5,15 @@
     "version": "1.0",
     "alliances": {"death": {"name": "Bringers of Death"}, "destruction": {"name": "Forces of Destruction"}, "order": {"name": "Keepers of Order"}, "chaos": {"name": "Instruments of Chaos"}},
     "factions": {
+        "vampire_lords": {
+            "version": "1.0",
+            "name": "Vampire Lords",
+            "id": "vampire_lords",
+            "url": "vampire_lords.json",
+            "color": "#801111",
+            "alliance": "death",
+            "description": "Vampire Lords are necromancers who have learned to imbue themselves with necrotic power. They wield their undead hordes like a weapon, to cut away those who would stand in their way."
+        },
         "haunting_ghosts": {
             "version": "1.0",
             "name": "Haunting Ghosts",
@@ -91,25 +100,6 @@
             "color": "#4f9ae0",
             "description": "The greatest of ogre tribes, who only interact with their lessers when they need something - food, coin, or just a challenge!",
             "alliance": "destruction"
-        },
-        "vampire_lords": {
-            "version": "1.0",
-            "name": "Vampire Lords",
-            "id": "vampire_lords",
-            "url": "vampire_lords.json",
-            "color": "#801111",
-            "alliance": "death",
-            "description": "Vampire Lords are necromancers who have learned to imbue themselves with necrotic power.  They wield their undead hordes like a weapon, to cut away those who would stand in their way.",
-            "subfactions": {
-                "bone": {"name": "Bone", "id": "bone", "color": "#90305d", "description": "Raising endless armies of skeletal soldiers to do their bidding."},
-                "blood": {"name": "Blood", "id": "blood", "color": "#547588", "description": "Fledgling vampires are eager to drink and don't have the patience for just biting their enemies."},
-                "dread": {
-                    "name": "Dread",
-                    "id": "dread",
-                    "color": "#547588",
-                    "description": "Using illusions, necromancy and their own kin against their foes, these Vampire Lords are masters of attritional warfare."
-                }
-            }
         },
         "corrupted_legions": {
             "version": "1.0",
@@ -490,7 +480,7 @@
         "rending_claws": {"name": "Rending Claws", "attacks": 1, "ap": 1, "short": "Melee", "rules": ["rending"]},
         "claws": {"name": "Claws", "attacks": 1, "ap": 1, "short": "Melee"},
         "banshee_wail": {"name": "Banshee Wail", "ap": 3, "attacks": 1, "short": 9, "medium": 18, "rules": [{"id": "shocking", "x": 2}]},
-        "necrotic_breath": {"name": "Necrotic Breath", "ap":23, "attacks": 1, "short": 6, "medium": 12, "rules": ["flame"]},
+        "necrotic_breath": {"name": "Necrotic Breath", "ap": 23, "attacks": 1, "short": 6, "medium": 12, "rules": ["flame"]},
         "flame_breath": {"name": "Flame Breath", "short": 6, "medium": 12, "ap": 1, "attacks": 1, "rules": ["flame"]},
         "lightning_breath": {"name": "Lightning Breath", "short": 6, "medium": 12, "ap": 1, "attacks": 1, "rules": ["lethal"]},
         "rock_throw": {"name": "Rock Throw", "attacks": 1, "ap": 6, "rules": [{"id": "blast", "x": 2}, "scatter"], "short": 9, "medium": 18},
