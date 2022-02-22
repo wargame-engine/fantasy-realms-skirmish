@@ -25,34 +25,6 @@
             ],
             "subfactions": ["none"]
         },
-        "vampire_lord_dragon": {
-            "name": "Vampire Lord on Undead Dragon",
-            "description": "",
-            "category": "hero",
-            "models": [
-                {
-                    "name": "Vampire Lord on Undead Dragon",
-                    "movement": 10,
-                    "courage": 8,
-                    "shoot": 5,
-                    "fight": 6,
-                    "defense": 12,
-                    "reflexes": 6,
-                    "weapons": [{"id": "heavy_great_weapon", "count": 4}, {"id": "feral_claws", "count": 4}, {"id": "necrotic_breath", "count": 2}],
-                    "options": [
-                        {"replaceWeapon": [{"id": "heavy_great_weapon", "count": 4}], "withWeapon": [{"id": "heavy_lance", "count": 4}]},
-                        {"addRule": ["relic_shield"]},
-                        {"addRule": [{"id": "power", "x": 1}, {"id": "power", "x": 2}]},
-                        {"replaceRule": [{"id": "knight_tactics", "x": 1}], "withRule": [{"id": "knight_tactics", "x": 2}]}
-                    ],
-                    "rules": ["fear", {"id": "leader", "x": "Infantry, Cavalry"}, "damage_chart", "fly", {"id": "knight_tactics", "x": 1}],
-                    "min": 1,
-                    "max": 1
-                }
-            ],
-            "keywords": ["Undead", "Cavalry", "Monster"],
-            "subfactions": ["none"]
-        },
         "vampire_lord_horse": {
             "name": "Vampire Lord on Undead Horse",
             "description": "",
@@ -76,7 +48,7 @@
                         {"addRule": [{"id": "power", "x": 1}, {"id": "power", "x": 2}]},
                         {"replaceRule": [{"id": "knight_tactics", "x": 1}], "withRule": [{"id": "knight_tactics", "x": 2}]}
                     ],
-                    "rules": ["fear", {"id": "leader", "x": "Infantry, Cavalry"}, {"id": "wounds", "x": 3}, {"id": "knight_tactics", "x": 1}],
+                    "rules": [{"id": "leader", "x": "Infantry, Cavalry"}, {"id": "wounds", "x": 3}, {"id": "knight_tactics", "x": 1}],
                     "min": 1,
                     "max": 1
                 }
@@ -131,7 +103,7 @@
                     "reflexes": 6,
                     "weapons": [{"id": "feral_claws", "count": 4}, "vampire_bite"],
                     "options": [{"addRule": [{"id": "fly", "name": "Wings"}]}, {"replaceRule": [{"id": "feral_tactics", "x": 1}], "withRule": [{"id": "feral_tactics", "x": 2}]}],
-                    "rules": [{"id": "wounds", "x": 3}, "fear", "leader", {"id": "feral_tactics", "x": 1}],
+                    "rules": [{"id": "wounds", "x": 3}, "leader", {"id": "feral_tactics", "x": 1}],
                     "min": 1,
                     "max": 1
                 }
@@ -139,8 +111,8 @@
             "keywords": ["Undead", "Infantry"],
             "subfactions": ["none"]
         },
-        "revenant_king_mount": {
-            "name": "Revenant King on Undead Horse",
+        "barrow_king_mount": {
+            "name": "Barrow King on Undead Horse",
             "description": "",
             "category": "hero",
             "models": [
@@ -167,15 +139,15 @@
             ],
             "keywords": ["Undead", "Cavalry"],
             "subfactions": ["none"],
-            "rules": ["fear", {"id": "wounds", "x": 3}, {"id": "leader_x", "x": "Infantry, Cavalry"}]
+            "rules": [{"id": "wounds", "x": 3}, {"id": "leader_x", "x": "Infantry, Cavalry"}]
         },
-        "revenant_king": {
-            "name": "Revenant King",
+        "barrow_king": {
+            "name": "Barrow King",
             "description": "Once a proud king, reduced to nothing but an echo of his former glory, hungering for the warmth of living.",
             "category": "hero",
             "models": [
                 {
-                    "name": "Revenant King",
+                    "name": "Barrow King",
                     "movement": 5,
                     "courage": 8,
                     "shoot": 5,
@@ -194,11 +166,11 @@
             ],
             "keywords": ["Undead", "Infantry"],
             "subfactions": ["none"],
-            "rules": ["fear", {"id": "wounds", "x": 3}, "leader"]
+            "rules": [{"id": "wounds", "x": 3}, "leader"]
         },
         "zombie": {
             "name": "Zombie",
-            "description": "A freshly risen undead.",
+            "description": "The risen undead. Be careful or you might end up part of them.",
             "category": "core",
             "models": [
                 {
@@ -219,29 +191,6 @@
             "keywords": ["Undead", "Infantry"],
             "subfactions": ["none"]
         },
-        "zombie_leader": {
-            "name": "Zombie Leader",
-            "description": "A freshly risen leader.",
-            "category": "hero",
-            "models": [
-                {
-                    "name": "Zombie Leader",
-                    "movement": 5,
-                    "courage": 5,
-                    "shoot": 4,
-                    "fight": 5,
-                    "defense": 4,
-                    "reflexes": 4,
-                    "options": [{"addRule": ["champion"]}],
-                    "weapons": ["unarmed"],
-                    "rules": ["raise_dead", "fear", "leader"],
-                    "min": 1,
-                    "max": 1
-                }
-            ],
-            "keywords": ["Undead", "Infantry"],
-            "subfactions": ["none"]
-        },
         "skeleton": {
             "name": "Skeleton",
             "description": "A construct of bones, held together by dark magic.",
@@ -251,13 +200,13 @@
                     "name": "Skeleton",
                     "movement": 5,
                     "courage": 5,
-                    "shoot": 4,
+                    "shoot": 5,
                     "fight": 5,
                     "defense": 5,
                     "reflexes": 5,
                     "weapons": ["handweapon", "shield"],
                     "options": [
-                        {"replaceWeapon": ["handweapon", "shield"], "withWeapon": ["great_weapon", ["bow", {"id": "light_handweapon", "count": 2}], ["spear", "shield"]]},
+                        {"replaceWeapon": ["handweapon", "shield"], "withWeapon": ["great_weapon", ["bow", {"id": "light_handweapon"}], ["spear", "shield"]]},
                         {"addRule": ["banner", "musician"], "limit": 1}
                     ],
                     "min": 1,
@@ -276,13 +225,13 @@
                     "name": "Skeleton Leader",
                     "movement": 5,
                     "courage": 5,
-                    "shoot": 4,
+                    "shoot": 5,
                     "fight": 5,
                     "defense": 5,
                     "reflexes": 5,
                     "weapons": ["handweapon", "shield"],
                     "options": [
-                        {"replaceWeapon": ["handweapon", "shield"], "withWeapon": ["great_weapon", ["bow", {"id": "light_handweapon", "count": 2}], ["spear", "shield"]]},
+                        {"replaceWeapon": ["handweapon", "shield"], "withWeapon": ["great_weapon", ["bow", {"id": "light_handweapon"}], ["spear", "shield"]]},
                         {"addRule": ["champion"]}
                     ],
                     "min": 1,
@@ -295,16 +244,15 @@
         },
         "ghoul": {
             "name": "Ghoul",
-            "description": "A terrifying creature of the night.",
+            "description": "Humanoid looking beasts which feed on the flesh of mortals. They tend to carry poisonous weapons made out of bone or other scavenged parts.",
             "category": "core",
-            "models": [{"name": "Ghoul", "movement": 6, "courage": 5, "shoot": 4, "fight": 5, "defense": 4, "reflexes": 4, "weapons": [{"id": "rending_claws", "count": 2}], "min": 1, "max": 1}],
-            "rules": ["fear"],
+            "models": [{"name": "Ghoul", "movement": 6, "courage": 5, "shoot": 4, "fight": 5, "defense": 5, "reflexes": 5, "weapons": [{"id": "poison_claws", "count": 2}], "min": 1, "max": 1}],
             "keywords": ["Undead", "Infantry"],
             "subfactions": ["none"]
         },
         "ghoul_leader": {
-            "name": "Ghouls",
-            "description": "A leader of terrifying creatures of the night.",
+            "name": "Ghoul Leader",
+            "description": "Humanoid looking beasts which feed on the flesh of mortals. They tend to carry poisonous weapons made out of bone or other scavenged parts.",
             "category": "hero",
             "models": [
                 {
@@ -313,33 +261,33 @@
                     "courage": 5,
                     "shoot": 4,
                     "fight": 5,
-                    "defense": 4,
-                    "reflexes": 4,
+                    "defense": 5,
+                    "reflexes": 5,
                     "options": [{"addRule": ["champion"]}],
-                    "weapons": [{"id": "rending_claws", "count": 2}],
+                    "weapons": [{"id": "poison_claws", "count": 2}],
                     "min": 1,
                     "max": 1
                 }
             ],
-            "rules": ["fear", "leader"],
+            "rules": ["leader"],
             "keywords": ["Undead", "Infantry"],
             "subfactions": ["none"]
         },
-        "barghest": {
-            "name": "Barghest",
-            "description": "A reanimated hound, who won't stop hunting until their prey is dead.",
+        "dire_wolf": {
+            "name": "Dire Wolf",
+            "description": "Undead wolves with a ferocious apetite for mortal flesh. It is best to not get in between them and their prey.",
             "category": "core",
             "models": [
                 {
-                    "name": "Barghest",
+                    "name": "Dire Wolf",
                     "movement": 8,
-                    "courage": 6,
+                    "courage": 5,
                     "shoot": 5,
                     "fight": 5,
                     "defense": 6,
                     "reflexes": 5,
                     "rules": ["scout"],
-                    "weapons": [{"id": "fangs_and_teeth", "count": 2}],
+                    "weapons": [{"id": "rending_claws", "count": 2}],
                     "min": 1,
                     "max": 1
                 }
@@ -347,22 +295,22 @@
             "keywords": ["Undead", "Beast", "Infantry"],
             "subfactions": ["none"]
         },
-        "barghest_leader": {
-            "name": "Barghest Leader",
-            "description": "A reanimated pack leader, who won't stop hunting until their prey is dead.",
+        "dire_wolf_leader": {
+            "name": "Dire Wolf Leader",
+            "description": "Undead wolves with a ferocious apetite for mortal flesh. It is best to not get in between them and their prey.",
             "category": "hero",
             "models": [
                 {
-                    "name": "Barghest Leader",
+                    "name": "Dire Wolf Leader",
                     "movement": 8,
-                    "courage": 6,
+                    "courage": 5,
                     "shoot": 5,
                     "fight": 5,
                     "defense": 6,
                     "reflexes": 5,
                     "options": [{"addRule": ["champion"]}],
                     "rules": ["scout", "leader"],
-                    "weapons": [{"id": "fangs_and_teeth", "count": 2}],
+                    "weapons": [{"id": "rending_claws", "count": 2}],
                     "min": 1,
                     "max": 1
                 }
@@ -371,7 +319,7 @@
             "subfactions": ["none"]
         },
         "bat_swarm": {
-            "name": "Bat Swarms",
+            "name": "Bat Swarm",
             "description": "A swarm of giant bats, swooping down on unsuspecting victims.",
             "category": "elite",
             "models": [
@@ -383,7 +331,7 @@
                     "fight": 5,
                     "defense": 4,
                     "reflexes": 5,
-                    "rules": [{"id": "swarm", "x": 3}, "distracting", "fly", "vampiric_siphon"],
+                    "rules": [{"id": "swarm", "x": 3}, "distracting", "fly", "life_drain"],
                     "weapons": [{"id": "bite", "count": 3}],
                     "min": 1,
                     "max": 1
@@ -405,7 +353,7 @@
                     "fight": 5,
                     "defense": 4,
                     "reflexes": 5,
-                    "rules": [{"id": "swarm", "x": 3}, "distracting", "fly", "vampiric_siphon", "leader"],
+                    "rules": [{"id": "swarm", "x": 3}, "distracting", "fly", "life_drain", "leader"],
                     "weapons": [{"id": "bite", "count": 3}],
                     "min": 1,
                     "max": 1
@@ -427,7 +375,7 @@
                     "fight": 5,
                     "defense": 6,
                     "reflexes": 5,
-                    "rules": ["fear", {"id": "wounds", "x": 2}],
+                    "rules": [{"id": "wounds", "x": 2}],
                     "weapons": [{"id": "feral_claws", "count": 3}],
                     "min": 1,
                     "max": 1
@@ -450,7 +398,7 @@
                     "defense": 6,
                     "reflexes": 5,
                     "options": [{"addRule": ["champion"]}],
-                    "rules": ["fear", {"id": "wounds", "x": 2}, "leader"],
+                    "rules": [{"id": "wounds", "x": 2}, "leader"],
                     "weapons": [{"id": "feral_claws", "count": 3}],
                     "min": 1,
                     "max": 1
@@ -527,7 +475,6 @@
                 }
             ],
             "keywords": ["Undead", "Cavalry"],
-            "rules": ["fear"],
             "subfactions": ["none"]
         },
         "skeletal_knight_leader": {
@@ -550,7 +497,7 @@
                 }
             ],
             "keywords": ["Undead", "Cavalry"],
-            "rules": ["fear", "leader"],
+            "rules": ["leader"],
             "subfactions": ["none"]
         },
         "vampire_knight": {
@@ -633,7 +580,7 @@
         "staff_of_dominion": {"name": "Staff of Dominion", "description": "This model subtracts 1 from Power rolls.", "points": 15}
     },
     "powers": {
-        "raise_dead": {"name": "Raise Dead", "description": "Target friendly _Undead_ _Infantry_ unit within 12\" restores 1D3 models. This power may only be cast once per turn.", "charge": 5},
+        "raise_dead": {"name": "Raise Dead", "description": "Target friendly _Undead_ _Infantry_ unit within 12\" rolls 1D10 for each missing model in the unit. On a 3 or less that model is restored. This power may only be cast once per turn.", "charge": 5},
         "death_hex": {"name": "Death Hex", "description": "Target enemy unit within 12\" must re-roll one succesful die on its next Save test. This power may be cast unlimited times.", "charge": 6},
         "unholy_shroud": {"name": "Unholy Shroud", "description": "Target friendly unit within 12\". That unit has +1 Initiative until the of the turn.", "charge": 7}
     },
@@ -655,7 +602,7 @@
             "subfactions": ["blood", "bone", "dread", "none"]
         },
         "living_dead": {
-            "name": "Living Dead",
+            "name": "Dead Hunger",
             "phase": "activation",
             "description": "Use when a unit declares a Charge action. That unit gets +3\" of Movement for that action.",
             "flavor": "Corpses raised from their grave, preying on their once beloved with uncanny ferocity.",

@@ -478,6 +478,7 @@
         "fangs_and_teeth": {"name": "Fangs and Teeth", "ap": 2, "attacks": 1, "short": "Melee"},
         "spider_bite": {"name": "Spider Bite", "attacks": 1, "short": "Melee", "rules": [{"id": "poison", "x": 2}], "ap": 1},
         "rending_claws": {"name": "Rending Claws", "attacks": 1, "ap": 1, "short": "Melee", "rules": ["rending"]},
+        "poison_claws": {"name": "Poison Claws", "attacks": 1, "short": "Melee", "rules": ["poison"]},
         "claws": {"name": "Claws", "attacks": 1, "ap": 1, "short": "Melee"},
         "banshee_wail": {"name": "Banshee Wail", "ap": 3, "attacks": 1, "short": 9, "medium": 18, "rules": [{"id": "shocking", "x": 2}]},
         "necrotic_breath": {"name": "Necrotic Breath", "ap": 23, "attacks": 1, "short": 6, "medium": 12, "rules": ["flame"]},
@@ -660,8 +661,8 @@
             "description": "Roll a die each time this model kills an enemy model. On a roll of 1 or 2, place a Zombie model that has died this game within base contact of this model.",
             "points": 2
         },
-        "vampiric_siphon": {
-            "name": "Vampiric Siphon",
+        "life_drain": {
+            "name": "Life Drain",
             "description": "At the end of any activation in which this unit slew any enemy models, you can heal 1 wound that has been allocated to a model in this unit.",
             "points": 2
         },
