@@ -76,7 +76,7 @@
                         {"addRule": [{"id": "power", "x": 1}, {"id": "power", "x": 2}]},
                         {"replaceRule": [{"id": "knight_tactics", "x": 1}], "withRule": [{"id": "knight_tactics", "x": 2}]}
                     ],
-                    "rules": ["fear", {"id": "leader", "x": "Infantry, Cavalry"}, {"id": "wounds", "x": 3}, {"id": "knight_tactics", "x": 1}, "vampiric_siphon"],
+                    "rules": ["fear", {"id": "leader", "x": "Infantry, Cavalry"}, {"id": "wounds", "x": 3}, {"id": "knight_tactics", "x": 1}],
                     "min": 1,
                     "max": 1
                 }
@@ -108,7 +108,7 @@
                         {"addRule": [{"id": "power", "x": 1}, {"id": "power", "x": 2}], "limit": 1},
                         {"replaceRule": [{"id": "vampire_tactics", "x": 1}], "withRule": [{"id": "vampire_tactics", "x": 2}]}
                     ],
-                    "rules": [{"id": "wounds", "x": 3}, "leader", {"id": "vampire_tactics", "x": 1}, "vampiric_siphon"],
+                    "rules": [{"id": "wounds", "x": 3}, "leader", {"id": "vampire_tactics", "x": 1}],
                     "min": 1,
                     "max": 1
                 }
@@ -116,13 +116,13 @@
             "keywords": ["Undead", "Infantry"],
             "subfactions": ["none"]
         },
-        "strigoi_lord": {
-            "name": "Strigoi Lord",
+        "feral_vampire_lord": {
+            "name": "Feral Vampire Lord",
             "description": "",
             "category": "hero",
             "models": [
                 {
-                    "name": "Strigoi Lord",
+                    "name": "Feral Vampire Lord",
                     "movement": 7,
                     "courage": 8,
                     "shoot": 5,
@@ -131,7 +131,7 @@
                     "reflexes": 6,
                     "weapons": [{"id": "feral_claws", "count": 4}, "vampire_bite"],
                     "options": [{"addRule": [{"id": "fly", "name": "Wings"}]}, {"replaceRule": [{"id": "feral_tactics", "x": 1}], "withRule": [{"id": "feral_tactics", "x": 2}]}],
-                    "rules": [{"id": "wounds", "x": 3}, "fear", "leader", {"id": "feral_tactics", "x": 1}, "vampiric_siphon"],
+                    "rules": [{"id": "wounds", "x": 3}, "fear", "leader", {"id": "feral_tactics", "x": 1}],
                     "min": 1,
                     "max": 1
                 }
@@ -573,7 +573,7 @@
                 }
             ],
             "keywords": ["Undead", "Cavalry"],
-            "rules": [{"id": "wounds", "x": 2}, "vampiric_siphon"],
+            "rules": [{"id": "wounds", "x": 2}],
             "subfactions": ["none"]
         },
         "vampire_knight_leader": {
@@ -596,7 +596,7 @@
                 }
             ],
             "keywords": ["Undead", "Cavalry"],
-            "rules": [{"id": "wounds", "x": 2}, "vampiric_siphon", "leader"],
+            "rules": [{"id": "wounds", "x": 2}, "leader"],
             "subfactions": ["none"]
         }
     },
@@ -627,7 +627,7 @@
         },
         "sanguine_chalice": {
             "name": "Sanguine Chalice",
-            "description": "Once per game roll a die each time a friendly unit within 3\" kills an enemy model. On a roll of 1 or 2, return a model to that unit. This may not bring the unit over its starting size.",
+            "description": "Once per game at the start this unit's activation, it may choose to regain Wounds(x) equal to half its total Wounds(x) value rounded up. This may not bring the unit above its maximum Wounds(x) value.",
             "points": 10
         },
         "staff_of_dominion": {"name": "Staff of Dominion", "description": "This model subtracts 1 from Power rolls.", "points": 15}
@@ -676,14 +676,14 @@
             "rule": "sanguine_chalice",
             "description": "Upgrade one Leader model with Sanguine Chalice.",
             "flavor": "This chalice overflows with fresh blood, inciting fallen soldiers to return from beyond.",
-            "points": 10
+            "points": 5
         },
         "staff_of_dominion": {
             "name": "Staff of Dominion",
             "rule": "staff_of_dominion",
             "description": "Upgrade one Power model with Staff of Dominion.",
             "flavor": "This ivory staff channels unholy energies to allow for easier spellcasting.",
-            "points": 15
+            "points": 10
         }
     }
 }

@@ -657,12 +657,12 @@
         },
         "raise_dead": {
             "name": "Raise Dead",
-            "description": "Roll a die each time this model kills an enemy model. On a roll of 1 or 2, return a model to this unit. This may not bring the unit over its starting size.",
+            "description": "Roll a die each time this model kills an enemy model. On a roll of 1 or 2, place a Zombie model that has died this game within base contact of this model.",
             "points": 2
         },
         "vampiric_siphon": {
             "name": "Vampiric Siphon",
-            "description": "At the end of any activation in which this unit slew any enemy models, you can heal 1 wound that has been allocated to a mode in this unit.",
+            "description": "At the end of any activation in which this unit slew any enemy models, you can heal 1 wound that has been allocated to a model in this unit.",
             "points": 2
         },
         "warrior_tactics": {
