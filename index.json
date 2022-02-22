@@ -3,7 +3,13 @@
     "name": "Mystic Realms Skirmishes",
     "id": "mystic_realms_skirmish",
     "version": "1.0",
-    "alliances": {"death": {"name": "Bringers of Death"}, "destruction": {"name": "Forces of Destruction"}, "order": {"name": "Keepers of Order"}, "chaos": {"name": "Instruments of Chaos"}},
+    "alliances": {
+        "death": {"name": "Bringers of Death"},
+        "destruction": {"name": "Forces of Destruction"},
+        "order": {"name": "Keepers of Order"},
+        "doom": {"name": "Instruments of Doom"},
+        "mercenaries": {"name": "Mercenaries"}
+    },
     "factions": {
         "vampire_lords": {
             "version": "1.0",
@@ -107,7 +113,7 @@
             "id": "corrupted_legions",
             "url": "corrupted_legions.json",
             "color": "#343a40",
-            "alliance": "chaos",
+            "alliance": "doom",
             "description": "The Corrupted Legions prove that even dead gods can be mightier than mortals.  Wearing powerful cursed armour and wielding weapons with ancient enchantments, they seek the ressurection of their dark masters.",
             "subfactions": {
                 "change": {
@@ -156,7 +162,7 @@
             "id": "beastmen_horde",
             "url": "beastmen_horde.json",
             "color": "#954535",
-            "alliance": "chaos",
+            "alliance": "doom",
             "description": "The Beastmen seek nothing less than the destruction of civilization and the pointless rules it brings.  They enlist great war-beasts and horrible creatures to their aid.",
             "subfactions": {
                 "change": {
@@ -204,7 +210,7 @@
             "id": "corrupted_dwarves",
             "url": "corrupted_dwarves.json",
             "color": "#360c30",
-            "alliance": "chaos",
+            "alliance": "doom",
             "description": "Twisted by the whispers of dead gods, the Corrupted Dwarves have learned to put chaotic magic into their machines.  They fight as much at the whims of their dark masters as their own choice.",
             "subfactions": {
                 "change": {
