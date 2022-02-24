@@ -7,10 +7,20 @@
         "death": {"name": "Bringers of Death"},
         "destruction": {"name": "Forces of Destruction"},
         "order": {"name": "Keepers of Order"},
-        "doom": {"name": "Instruments of Doom"},
+        "chaos": {"name": "Instruments of Doom"},
         "mercenaries": {"name": "Mercenaries"}
     },
     "factions": {
+        "storm_wardens": {
+            "version": "1.0",
+            "name": "Storm Wardens",
+            "id": "storm_wardens",
+            "url": "storm_wardens.json",
+            "color": "#D4AF37",
+            "secondary_color": "#0d407f",
+            "alliance": "order",
+            "description": "Creations of an arch-wizard, the Storm Wardens exist to enforce peace around the realms - no matter who it may favour. Their incredible weapons and armour are unmatched by other races."
+        },
         "vampire_lords": {
             "version": "1.0",
             "name": "Vampire Lords",
@@ -79,16 +89,6 @@
             "alliance": "order",
             "description": "The Mountain Dwarves were forced back to deep holes and warrens, but have regathered their forces.  They seek to conquer lands that were once theirs, in the belief that other races on them are merely squatters."
         },
-        "storm_wardens": {
-            "version": "1.0",
-            "name": "Storm Wardens",
-            "id": "storm_wardens",
-            "url": "storm_wardens.json",
-            "color": "#D4AF37",
-            "secondary_color": "#0d407f",
-            "alliance": "order",
-            "description": "Creations of an arch-wizard, the Storm Wardens exist to enforce peace around the realms - no matter who it may favour.  Their incredible weapons and armour are unmatched by other races."
-        },
         "ogre_mercenaries": {
             "version": "1.0",
             "name": "Ogre Mercenaries",
@@ -113,7 +113,7 @@
             "id": "corrupted_legions",
             "url": "corrupted_legions.json",
             "color": "#343a40",
-            "alliance": "doom",
+            "alliance": "chaos",
             "description": "The Corrupted Legions prove that even dead gods can be mightier than mortals.  Wearing powerful cursed armour and wielding weapons with ancient enchantments, they seek the ressurection of their dark masters.",
             "subfactions": {
                 "change": {
@@ -162,7 +162,7 @@
             "id": "beastmen_horde",
             "url": "beastmen_horde.json",
             "color": "#954535",
-            "alliance": "doom",
+            "alliance": "chaos",
             "description": "The Beastmen seek nothing less than the destruction of civilization and the pointless rules it brings.  They enlist great war-beasts and horrible creatures to their aid.",
             "subfactions": {
                 "change": {
@@ -210,7 +210,7 @@
             "id": "corrupted_dwarves",
             "url": "corrupted_dwarves.json",
             "color": "#360c30",
-            "alliance": "doom",
+            "alliance": "chaos",
             "description": "Twisted by the whispers of dead gods, the Corrupted Dwarves have learned to put chaotic magic into their machines.  They fight as much at the whims of their dark masters as their own choice.",
             "subfactions": {
                 "change": {
@@ -484,7 +484,6 @@
         "fangs_and_teeth": {"name": "Fangs and Teeth", "ap": 2, "attacks": 1, "short": "Melee"},
         "spider_bite": {"name": "Spider Bite", "attacks": 1, "short": "Melee", "rules": [{"id": "poison", "x": 2}], "ap": 1},
         "rending_claws": {"name": "Rending Claws", "attacks": 1, "ap": 1, "short": "Melee", "rules": ["rending"]},
-        "poison_claws": {"name": "Poison Claws", "attacks": 1, "short": "Melee", "rules": ["poison"]},
         "claws": {"name": "Claws", "attacks": 1, "ap": 1, "short": "Melee"},
         "banshee_wail": {"name": "Banshee Wail", "ap": 3, "attacks": 1, "short": 9, "medium": 18, "rules": [{"id": "shocking", "x": 2}]},
         "necrotic_breath": {"name": "Necrotic Breath", "ap": 23, "attacks": 1, "short": 6, "medium": 12, "rules": ["flame"]},
@@ -667,8 +666,8 @@
             "description": "Roll a die each time this model kills an enemy model. On a roll of 1 or 2, place a Zombie model that has died this game within base contact of this model.",
             "points": 2
         },
-        "life_drain": {
-            "name": "Life Drain",
+        "vampiric_siphon": {
+            "name": "Vampiric Siphon",
             "description": "At the end of any activation in which this unit slew any enemy models, you can heal 1 wound that has been allocated to a model in this unit.",
             "points": 2
         },
