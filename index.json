@@ -16,7 +16,7 @@
             "name": "Merchant Dwarves",
             "id": "merchant_dwarves",
             "url": "merchant_dwarves.json",
-            "alliance": "order",
+            "alliance": "mercenaries",
             "description": "Famous for their gold-lust, the Merchant Dwarves hire themselves out to any force that can afford them.  Their powerful technology and airships make them a dangerous foe.",
             "color": "#343a40",
             "secondary_color": "#3d3354"
