@@ -11,6 +11,16 @@
         "mercenaries": {"name": "Mercenaries"}
     },
     "factions": {
+        "merchant_dwarves": {
+            "version": "1.0",
+            "name": "Merchant Dwarves",
+            "id": "merchant_dwarves",
+            "url": "merchant_dwarves.json",
+            "alliance": "order",
+            "description": "Famous for their gold-lust, the Merchant Dwarves hire themselves out to any force that can afford them.  Their powerful technology and airships make them a dangerous foe.",
+            "color": "#343a40",
+            "secondary_color": "#3d3354"
+        },
         "storm_wardens": {
             "version": "1.0",
             "name": "Storm Wardens",
@@ -234,16 +244,6 @@
                 "excess": {"name": "Excess", "id": "excess", "color": "#547588", "description": "Sadistic and twisted Warriors, always seeking for new ways of ecstasy."}
             }
         },
-        "merchant_dwarves": {
-            "version": "1.0",
-            "name": "Merchant Dwarves",
-            "id": "merchant_dwarves",
-            "url": "merchant_dwarves.json",
-            "alliance": "order",
-            "description": "Famous for their gold-lust, the Merchant Dwarves hire themselves out to any force that can afford them.  Their powerful technology and airships make them a dangerous foe.",
-            "color": "#343a40",
-            "secondary_color": "#3d3354"
-        },
         "dark_elves": {
             "version": "1.0",
             "name": "Dark Elves",
@@ -367,7 +367,7 @@
         "crushing_waves": {"name": "Crushing Waves", "description": "Target enemy unit within 12\" takes 4 hits with AP(4).", "charge": 5, "category": "water"},
         "aqueous_form": {
             "name": "Aqueous Form",
-            "description": "Target friendly unit within 12\" gets +2\" Movement and may trat Difficult Ground as normal terrain until the end of the turn.",
+            "description": "Target friendly unit within 12\" gets +2\" Movement and may treat Difficult Ground as normal terrain until the end of the turn.",
             "charge": 6,
             "category": "water"
         },
@@ -383,7 +383,12 @@
             "charge": 5,
             "category": "earth"
         },
-        "wild_frenzy": {"name": "Wild Frenzy", "description": "Target friendly unit within 12\" may immediately make a free charge action.", "charge": 5, "category": "nature"},
+        "wild_frenzy": {
+            "name": "Wild Frenzy",
+            "description": "Target friendly unit within 12\" may make one additional attack with any Melee weapon until the end of the turn.",
+            "charge": 5,
+            "category": "nature"
+        },
         "entangling_roots": {
             "name": "Entangling Roots",
             "description": "Target enemy unit within 12\" takes 3 hit with AP(0) and has -2\" Movement until the end of the turn.",
@@ -614,7 +619,6 @@
         "buckler": {"name": "Buckler", "description": "This model has +1 Save against melee attacks.", "points": 1},
         "icon": {"name": "Icon", "description": "Friendly units of X types within 6\" may re-roll a single failed Courage test when removing Shock.", "points": 10, "inputs": ["x"]},
         "ethereal": {"name": "Ethereal", "description": "This model may ignore other models and any terrain when moving.", "points": 2},
-        "leeching": {"name": "Leeching", "description": "Roll a D10 each time this weapon deals damage to a _Leader_ unit. On a 1 or 2 this model regains one Wound.", "points": 1},
         "mount_horse": {"name": "Warhorse", "description": "This model has +2\" Movement.", "points": 2},
         "barbed_net": {"name": "Barbed Net", "description": "Units hit by this weapon half their movement until the end of the turn.", "points": 3},
         "poisoned_blades": {"name": "Poisoned Blades", "description": "This model's melee weapons have +1 AP against enemies without _Damage Table(X)_.", "points": 5},
@@ -700,6 +704,10 @@
             "inputs": ["x"],
             "description": "When this unit is activated, choose up to X friendly _Cavalry_ units within 6\". This unit and those units may re-roll failed Accuracy tests of 9+ until the end of the round.",
             "points": ["rule.x", {"multiply": 10}]
+        },
+        "hover_mode": {
+            "name": "Hover Mode",
+            "description": "When this Aircraft is activated, it may choose to fly in Hover mode. If it does, units do not suffer -1 Accuracy when targeting this unit, but it is not required to make a move action when activated."
         }
     }
 }

@@ -2,12 +2,12 @@
     "name": "Merchant Dwarves",
     "id": "merchant_dwarves",
     "author": "Xekon#8266",
-    "description": "A race of travelling merchants and glory-seekers with advanced weaponry.",
-    "alliance": "order",
+    "description": "Famous for their gold-lust, the Merchant Dwarves hire themselves out to any force that can afford them. Their powerful technology and airships make them a dangerous foe.",
+    "alliance": "mercenaries",
     "units": {
         "lord_navigator": {
             "name": "Lord-Navigator",
-            "description": "",
+            "description": "Able to navigate their fleet trough the space between realms, these spellcasters are a valuable asset on the battlefield.",
             "category": "hero",
             "models": [
                 {
@@ -19,7 +19,7 @@
                     "defense": 7,
                     "reflexes": 6,
                     "rules": [{"id": "wounds", "x": 3}, {"id": "power", "x": 1}, "leader"],
-                    "weapons": [{"id": "handweapon", "count": 2}, {"id": "repeater_handgun", "count": 2}],
+                    "weapons": ["great_staff", {"id": "repeater_pistol", "count": 2}],
                     "options": [{"replaceRule": [{"id": "power", "x": 1}], "withRule": [{"id": "power", "x": 2}]}],
                     "min": 1,
                     "max": 1
@@ -28,7 +28,7 @@
         },
         "lord_engineer": {
             "name": "Lord-Engineer",
-            "description": "",
+            "description": "Master of the machines, this tinkerer is the heart of any operation, keeping the fleet up and running.",
             "category": "hero",
             "models": [
                 {
@@ -39,17 +39,20 @@
                     "fight": 6,
                     "defense": 7,
                     "reflexes": 6,
-                    "rules": [{"id": "wounds", "x": 3}, "repair_toolkit", "leader", {"id": "engineer_tactics", "x": 1}],
-                    "weapons": [{"id": "war_hammer", "count": 3}, {"id": "heavy_pistol", "count": 2}],
+                    "rules": [{"id": "wounds", "x": 3}, "engineer", "leader", {"id": "blackpowder_tactics", "x": 1}],
+                    "weapons": [{"id": "grand_hammer", "count": 3}, "welding_beam"],
+                    "options": [
+                        {"addWeapon": ["repeater_pistol", "mortar_rifle", "long_rifle", "shotgun"]},
+                        {"replaceRule": [{"id": "blackpowder_tactics", "x": 1}], "withRule": [{"id": "blackpowder_tactics", "x": 2}]}
+                    ],
                     "min": 1,
-                    "max": 1,
-                    "options": [{"replaceRule": [{"id": "engineer_tactics", "x": 1}], "withRule": [{"id": "engineer_tactics", "x": 2}]}]
+                    "max": 1
                 }
             ]
         },
         "lord_engineer_suit": {
             "name": "Lord-Engineer with Skybound Suit",
-            "description": "",
+            "description": "Master of the machines, this tinker has built himself a suit capable of flight, allowing for repairs whilst high up in the skies.",
             "category": "hero",
             "models": [
                 {
@@ -60,17 +63,17 @@
                     "fight": 6,
                     "defense": 8,
                     "reflexes": 6,
-                    "rules": [{"id": "wounds", "x": 4}, "repair_toolkit", "leader", {"id": "engineer_tactics", "x": 1}],
-                    "weapons": [{"id": "chainsaw", "count": 3}, "steam_cannon", {"id": "volley_gun", "count": 2}, {"id": "heavy_pistol", "count": 2}],
+                    "rules": [{"id": "wounds", "x": 4}, "engineer", "leader", {"id": "blackpowder_tactics", "x": 1}, "fly"],
+                    "weapons": [{"id": "chainsaw", "count": 3}, {"id": "carbine", "count": 3}, "handcannon", "welding_beam"],
                     "min": 1,
                     "max": 1,
-                    "options": [{"replaceRule": [{"id": "engineer_tactics", "x": 1}], "withRule": [{"id": "engineer_tactics", "x": 2}]}]
+                    "options": [{"replaceRule": [{"id": "blackpowder_tactics", "x": 1}], "withRule": [{"id": "blackpowder_tactics", "x": 2}]}]
                 }
             ]
         },
         "lord_admiral": {
             "name": "Lord-Admiral",
-            "description": "",
+            "description": "The leader of a merchant dwarf fleet has fought and traded for centuries, acquiring wisdom, wealth and a trusty crew.",
             "category": "hero",
             "models": [
                 {
@@ -81,9 +84,13 @@
                     "fight": 6,
                     "defense": 8,
                     "reflexes": 6,
-                    "rules": [{"id": "wounds", "x": 3}, "leader", {"id": "merchant_tactics", "x": 1}],
-                    "weapons": [{"id": "war_hammer", "count": 3}, {"id": "pistol", "count": 3}],
-                    "options": [{"addRule": ["suit"]}, {"replaceRule": [{"id": "merchant_tactics", "x": 1}], "withRule": [{"id": "merchant_tactics", "x": 2}]}],
+                    "rules": [{"id": "wounds", "x": 3}, "leader", {"id": "ranger_tactics", "x": 1}],
+                    "weapons": [{"id": "grand_hammer", "count": 3}, {"id": "repeater_pistol", "count": 2}],
+                    "options": [
+                        {"replaceWeapon": [{"id": "repeater_pistol", "count": 2}], "withWeapon": [{"id": "shotgun", "count": 2}, "mortar_rifle"]},
+                        {"addRule": ["suit"]},
+                        {"replaceRule": [{"id": "ranger_tactics", "x": 1}], "withRule": [{"id": "ranger_tactics", "x": 2}]}
+                    ],
                     "min": 1,
                     "max": 1
                 }
@@ -91,31 +98,51 @@
         },
         "lord_alchemist": {
             "name": "Lord-Alchemist",
-            "description": "",
+            "description": "Constantly brewing new potions, draughts and explosive potions, these masters of chemistry are capable of providing helpful suppresion.",
             "category": "hero",
             "models": [
                 {
                     "name": "Lord-Alchemist",
                     "movement": 5,
                     "courage": 7,
-                    "shoot": 5,
+                    "shoot": 6,
                     "fight": 6,
                     "defense": 7,
                     "reflexes": 6,
-                    "rules": [{"id": "wounds", "x": 3}, "leader", "alchemy"],
-                    "weapons": [{"id": "steam_cannon", "count": 2}, {"id": "handweapon", "count": 2}],
+                    "rules": [{"id": "wounds", "x": 3}, "leader", "evasive"],
+                    "weapons": [{"id": "handweapon", "count": 2}, "chemthrower", "alchemical_grenade"],
                     "min": 1,
                     "max": 1
                 }
             ]
         },
-        "pioneers": {
-            "name": "Dwarven Pioneers",
-            "description": "A band of armored glory-seekers.",
+        "lord_brewmaster": {
+            "name": "Lord-Brewmaster",
+            "description": "Brewmasters carry large kegs of freshly brewed beer, which they'll share with the rest of the crew.",
+            "category": "hero",
+            "models": [
+                {
+                    "name": "Lord-Brewmaster",
+                    "movement": 5,
+                    "courage": 7,
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 7,
+                    "reflexes": 6,
+                    "rules": [{"id": "wounds", "x": 3}, "leader", "brew"],
+                    "weapons": [{"id": "great_axe", "count": 4}],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "pioneer": {
+            "name": "Dwarven Pioneer",
+            "description": "A crewmate of a merchant fleet, a capable fighter and prospector, seeking out riches on the ground.",
             "category": "core",
             "models": [
                 {
-                    "name": "Privateer",
+                    "name": "Pioneer",
                     "movement": 5,
                     "courage": 5,
                     "shoot": 5,
@@ -123,19 +150,43 @@
                     "defense": 6,
                     "reflexes": 5,
                     "weapons": ["light_pistol", "handweapon"],
-                    "min": 10,
-                    "max": 30,
+                    "min": 1,
+                    "max": 1,
                     "options": [
-                        {"replaceWeapon": ["light_pistol", "handweapon"], "withWeapon": [{"id": "heavy_polearm", "count": 2}, "harpoon_rifle", "volley_gun"], "modelLimit": "3/10"},
-                        {"replaceWeapon": ["light_pistol"], "withWeapon": [{"id": "light_pistol", "count": 3}], "modelLimit": 1}
+                        {"replaceWeapon": ["light_pistol", "handweapon"], "withWeapon": [{"id": "pike", "count": 2}, "harpoon_rifle", "volley_gun"]},
+                        {"addRule": ["banner", "musician"], "limit": 1}
                     ]
                 }
-            ],
-            "options": [{"addRule": ["champion"]}, {"addRule": ["banner", "musician"], "limit": 1}]
+            ]
         },
-        "riflemen": {
-            "name": "Dwarven Riflemen",
-            "description": "A squad of heavy-armored gunners.",
+        "pioneer_leader": {
+            "name": "Dwarven Pioneer Leader",
+            "description": "A crewmate leader of a merchant fleet, a capable fighter and prospector, seeking out riches on the ground.",
+            "category": "hero",
+            "models": [
+                {
+                    "name": "Pioneer Leader",
+                    "movement": 5,
+                    "courage": 5,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 6,
+                    "reflexes": 5,
+                    "weapons": ["light_pistol", "handweapon"],
+                    "min": 1,
+                    "max": 1,
+                    "options": [
+                        {"replaceWeapon": ["light_pistol", "handweapon"], "withWeapon": [{"id": "pike", "count": 2}, "harpoon_rifle", "volley_gun"]},
+                        {"replaceWeapon": ["light_pistol"], "withWeapon": [{"id": "repeater_pistol", "count": 2}, "flamethrower_pistol"]},
+                        {"addRule": ["champion"]}
+                    ],
+                    "rules": ["leader"]
+                }
+            ]
+        },
+        "rifleman": {
+            "name": "Dwarven Rifleman",
+            "description": "A heavy-armored gunner, able to blast enemies with a hailstorm of bullets and explosives.",
             "category": "elite",
             "models": [
                 {
@@ -147,16 +198,42 @@
                     "defense": 6,
                     "reflexes": 5,
                     "weapons": ["light_handweapon", {"id": "handgun", "count": 2}],
-                    "min": 5,
-                    "max": 10,
-                    "options": [{"replaceWeapon": [{"id": "handgun", "count": 2}], "withWeapon": ["steam_cannon", {"id": "shotgun", "count": 3}, "burst_rifle"], "modelLimit": "2/5"}]
+                    "min": 1,
+                    "max": 1,
+                    "options": [
+                        {"replaceWeapon": [{"id": "handgun", "count": 2}], "withWeapon": [{"id": "shotgun", "count": 2}, "chemthrower", "handcannon", "mortar_rifle", "volley_gun"]},
+                        {"addRule": ["banner", "musician"], "limit": 1}
+                    ]
                 }
-            ],
-            "options": [{"addRule": [["champion", "clockwork_companion"]], "modelLimit": 1}, {"addRule": ["banner", "musician"], "limit": 1}]
+            ]
         },
-        "wardens": {
-            "name": "Skybound Wardens",
-            "description": "A squad of flying defenders.",
+        "rifleman_leader": {
+            "name": "Dwarven Rifleman Leader",
+            "description": "A heavy-armored gunner leader, able to blast enemies with a hailstorm of bullets and explosives.",
+            "category": "hero",
+            "models": [
+                {
+                    "name": "Rifleman Leader",
+                    "movement": 5,
+                    "courage": 5,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 6,
+                    "reflexes": 5,
+                    "weapons": ["light_handweapon", {"id": "handgun", "count": 2}],
+                    "min": 1,
+                    "max": 1,
+                    "options": [
+                        {"replaceWeapon": [{"id": "handgun", "count": 2}], "withWeapon": [{"id": "shotgun", "count": 2}, "chemthrower", "handcannon", "mortar_rifle", "volley_gun"]},
+                        {"addRule": [["champion", "clockwork_companion"]]}
+                    ],
+                    "rules": ["leader"]
+                }
+            ]
+        },
+        "warden": {
+            "name": "Skybound Warden",
+            "description": "A flying protector.",
             "category": "elite",
             "models": [
                 {
@@ -167,25 +244,51 @@
                     "fight": 6,
                     "defense": 7,
                     "reflexes": 5,
-                    "weapons": [{"id": "heavy_pistol", "count": 2}, "heavy_polearm", "frag_grenade"],
-                    "min": 3,
-                    "max": 6,
+                    "weapons": ["frag_grenade", "flamethrower_pistol", {"id": "pike", "count": 2}],
+                    "min": 1,
+                    "max": 1,
                     "options": [
                         {
-                            "replaceWeapon": [{"id": "heavy_pistol", "count": 2}, "heavy_polearm"],
-                            "withWeapon": [{"id": "harpoon_rifle", "count": 2}, "net_launcher", "drill_cannon"],
-                            "modelLimit": "1/3"
+                            "replaceWeapon": ["flamethrower_pistol", {"id": "pike", "count": 2}],
+                            "withWeapon": [{"id": "volley_gun", "count": 2}, {"id": "harpoon_rifle", "count": 2}, "net_launcher", {"id": "drill_cannon", "count": 2}]
                         },
-                        {"replaceWeapon": [{"id": "heavy_pistol", "count": 2}, "heavy_polearm"], "withWeapon": ["volley_gun"], "modelLimit": "1/3"}
+                        {"addRule": ["banner", "musician"], "limit": 1}
                     ]
                 }
             ],
-            "options": [{"addRule": ["champion"]}, {"addRule": ["banner", "musician"], "limit": 1}],
             "rules": ["fly"]
         },
-        "engineers": {
-            "name": "Skybound Engineers",
-            "description": "A squad of flying engineers.",
+        "warden_leader": {
+            "name": "Skybound Warden Leader",
+            "description": "A flying protector leader.",
+            "category": "hero",
+            "models": [
+                {
+                    "name": "Warden Leader",
+                    "movement": 8,
+                    "courage": 6,
+                    "shoot": 5,
+                    "fight": 6,
+                    "defense": 7,
+                    "reflexes": 5,
+                    "weapons": ["frag_grenade", "flamethrower_pistol", {"id": "pike", "count": 2}],
+                    "min": 1,
+                    "max": 1,
+                    "options": [
+                        {
+                            "replaceWeapon": ["flamethrower_pistol", {"id": "pike", "count": 2}],
+                            "withWeapon": [{"id": "volley_gun", "count": 2}, {"id": "harpoon_rifle", "count": 2}, "net_launcher", {"id": "drill_cannon", "count": 2}],
+                            "modelLimit": "1/3"
+                        },
+                        {"addRule": ["champion"]}
+                    ]
+                }
+            ],
+            "rules": ["fly", "leader"]
+        },
+        "engineer": {
+            "name": "Skybound Engineer",
+            "description": "A flying engineer.",
             "category": "elite",
             "models": [
                 {
@@ -196,21 +299,50 @@
                     "fight": 6,
                     "defense": 7,
                     "reflexes": 5,
-                    "weapons": ["chainsaw", {"id": "light_pistol", "count": 3}],
-                    "min": 3,
-                    "max": 6,
+                    "weapons": [{"id": "chainsaw", "count": 2}, "repeater_pistol"],
+                    "min": 1,
+                    "max": 1,
                     "options": [
-                        {"replaceWeapon": ["chainsaw", {"id": "light_pistol", "count": 3}], "withWeapon": [{"id": "harpoon_rifle", "count": 2}, "net_launcher"], "modelLimit": "1/3"},
-                        {"replaceWeapon": ["chainsaw", {"id": "light_pistol", "count": 3}], "withWeapon": ["volley_gun"], "modelLimit": "1/3"}
+                        {
+                            "replaceWeapon": [{"id": "chainsaw", "count": 2}, "repeater_pistol"],
+                            "withWeapon": ["volley_gun", {"id": "harpoon_rifle", "count": 2}, "net_launcher", {"id": "drill_cannon", "count": 2}]
+                        },
+                        {"addRule": ["banner", "musician"], "limit": 1}
                     ]
                 }
             ],
-            "options": [{"addRule": ["champion"]}, {"addRule": ["banner", "musician"], "limit": 1}],
-            "rules": ["fly", {"id": "repair", "x": 3}]
+            "rules": ["fly", "engineer"]
+        },
+        "engineer_leader": {
+            "name": "Skybound Engineer Leader",
+            "description": "A flying engineer leader.",
+            "category": "hero",
+            "models": [
+                {
+                    "name": "Engineer Leader",
+                    "movement": 8,
+                    "courage": 6,
+                    "shoot": 5,
+                    "fight": 6,
+                    "defense": 7,
+                    "reflexes": 5,
+                    "weapons": [{"id": "chainsaw", "count": 2}, "repeater_pistol"],
+                    "min": 1,
+                    "max": 1,
+                    "options": [
+                        {
+                            "replaceWeapon": [{"id": "chainsaw", "count": 2}, "repeater_pistol"],
+                            "withWeapon": ["volley_gun", {"id": "harpoon_rifle", "count": 2}, "net_launcher", {"id": "drill_cannon", "count": 2}]
+                        },
+                        {"addRule": ["champion"]}
+                    ]
+                }
+            ],
+            "rules": ["fly", "engineer", "leader"]
         },
         "escort_airship": {
             "name": "Escort-Class Airship",
-            "description": "",
+            "description": "A light-class vessel, used to secure the flanks of the merchant fleet.",
             "category": "rare",
             "models": [
                 {
@@ -221,9 +353,9 @@
                     "fight": 5,
                     "defense": 9,
                     "reflexes": 6,
-                    "rules": ["fly", "damage_table_warmachine"],
-                    "weapons": ["mortar", "light_bomb", "volley_gun", "crushing_hull", "torpedoes"],
-                    "options": [{"replaceWeapon": ["mortar"], "withWeapon": ["drill_cannon", "burst_cannon"]}],
+                    "rules": ["damage_chart", "hover_mode", "aircraft"],
+                    "weapons": ["mortar", "light_bomb", "torpedoes", {"id": "carbine", "count": 2}],
+                    "options": [{"replaceWeapon": ["mortar"], "withWeapon": ["drill_cannon"]}],
                     "min": 1,
                     "max": 1
                 }
@@ -232,7 +364,7 @@
         },
         "frigate_airship": {
             "name": "Frigate-Class Airship",
-            "description": "",
+            "description": "A medium-class vessel, holding precious cargo and weapons.",
             "category": "rare",
             "models": [
                 {
@@ -243,9 +375,9 @@
                     "fight": 5,
                     "defense": 10,
                     "reflexes": 6,
-                    "rules": ["fly", "damage_table_warmachine", {"id": "transport", "x": 5}, {"id": "open_topped", "x": 5}],
-                    "weapons": ["mortar", "medium_bomb", "volley_gun", "crushing_hull", {"id": "torpedoes", "count": 2}],
-                    "options": [{"replaceWeapon": ["mortar"], "withWeapon": ["harpoon_rifle_warmachine", "burst_cannon"]}],
+                    "rules": ["damage_chart", {"id": "transport", "x": 5}, {"id": "open_topped", "x": 5}, "hover_mode", "aircraft"],
+                    "weapons": ["mortar", "medium_bomb", {"id": "torpedoes", "count": 2}, {"id": "carbine", "count": 4}],
+                    "options": [{"replaceWeapon": ["mortar"], "withWeapon": ["harpoon_rifle_warmachine"]}],
                     "min": 1,
                     "max": 1
                 }
@@ -254,7 +386,7 @@
         },
         "destroyer_airship": {
             "name": "Destroyer-Class Airship",
-            "description": "",
+            "description": "A heavy-class vessel, able to obliterate anyone who threatens to steal the amassed riches inside.",
             "category": "rare",
             "models": [
                 {
@@ -265,9 +397,9 @@
                     "fight": 5,
                     "defense": 12,
                     "reflexes": 6,
-                    "rules": ["fly", "damage_table_warmachine", {"id": "transport", "x": 10}, {"id": "open_topped", "x": 10}],
-                    "weapons": [{"id": "crushing_hull", "count": 2}, "heavy_bomb", {"id": "torpedoes", "count": 4}, "heavy_volley_gun"],
-                    "options": [{"replaceWeapon": ["heavy_volley_gun"], "withWeapon": ["rocket_battery", "heavy_mortar"]}],
+                    "rules": ["damage_chart", {"id": "transport", "x": 10}, {"id": "open_topped", "x": 10}, "hover_mode", "aircraft"],
+                    "weapons": ["heavy_bomb", {"id": "torpedoes", "count": 4}, {"id": "carbine", "count": 8}, {"id": "volley_gun", "count": 2}],
+                    "options": [{"replaceWeapon": [{"id": "volley_gun", "count": 2}], "withWeapon": [{"id": "mortar", "count": 2}, {"id": "harpoon_rifle_warmachine", "count": 2}]}],
                     "min": 1,
                     "max": 1
                 }
@@ -275,51 +407,31 @@
             "keywords": ["Vehicle", "Warmachine"]
         }
     },
-    "weapons": {},
-    "rules": {
-        "brew": {"name": "Dwarven Brew", "description": "Once per game when you activate this unit, you may heal D3 wounds that have been allocated to this unit."},
-        "suit": {"name": "Skybound Suit", "description": "This model gains +3\" Movement, Wounds(+1) and may ignore terrain and other models without the Fly special rule when moving.", "points": 15},
-        "clockwork_companion": {"name": "Clockwork Companion", "description": "This model and its unit re-rolls failed hit rolls of 9+ when shooting.", "points": 5},
-        "boarding_tactics": {
-            "name": "Boarding Tactics",
-            "inputs": ["x"],
-            "description": "When this unit is activated, choose up to X friendly _Infantry_ units within 6\". This unit and those units may re-roll failed Strength tests of 9+ until the end of the round.",
-            "points": ["rule.x", {"multiply": 10}]
+    "weapons": {
+        "alchemical_grenade": {
+            "name": "Chemical Bomb",
+            "profiles": [
+                {"name": "Unstable", "attacks": "1", "ap": 5, "short": 6, "rules": ["grenade", "overcharge"]},
+                {"name": "Flash", "attacks": "1", "short": 6, "rules": ["grenade", "stun", {"id": "blast", "x": 3}]},
+                {"name": "Siphon", "attacks": "1", "short": 6, "rules": ["grenade", "leeching", {"id": "blast", "x": 3}]}
+            ]
         },
-        "merchant_tactics": {
-            "name": "Merchant Tactics",
-            "inputs": ["x"],
-            "description": "When this unit is activated, choose up to X friendly _Infantry_ units within 6\". This unit and those units may re-roll failed Accuracy tests of 9+ until the end of the round.",
-            "points": ["rule.x", {"multiply": 10}]
-        },
-        "engineer_tactics": {
-            "name": "Engineer Tactics",
-            "inputs": ["x"],
-            "description": "When this unit is activated, choose up to X friendly _Warmachine_ units within 6\". This unit and those units may re-roll failed Accuracy tests of 9+ until the end of the round.",
-            "points": ["rule.x", {"multiply": 10}]
-        },
-        "alchemy": {
-            "name": "Aetherdust Alchemy",
-            "description": "When this unit is activated, choose a Aetherdust for this unit or another _Infantry_ unit within 6\" to be in effect until the end of the turn:\n* Mithril: Roll a die when a model in this unit loses a wound. On a value of 1 or 2 that wound is not lost.\n* Gold: When this unit shoots, re-roll failed Accuracy tests of 9+.\n* Copper: When this unit fights, it gains +1 AP on all Melee weapons.",
-            "points": [15]
-        },
-        "mastercrafted_armor": {
-            "name": "Mastercrafted Armor",
-            "description": "This model gains +1 to their Save and causes 3 Melee hits with AP(1) when it successfully charges an enemy unit.",
-            "points": 15
-        }
+        "welding_beam": {"name": "Welding Beam", "attacks": 1, "ap": 5, "short": 6},
+        "rivet_pistol": {"name": "Rivet Pistol", "attacks": 3, "short": 6, "ap": 2, "rules": ["lethal", "pistol"]}
     },
-    "powers": {
-        "aetherwinds": {"name": "Aetherwinds", "description": "Target friendly unit within 12\" may immediately make a free move action. This power may only be cast once per turn.", "charge": 7},
-        "aethershock": {"name": "Aethershock", "description": "Target enemy unit within 12\" takes 3 hits with AP(3). This power may only be cast once per turn.", "charge": 6},
-        "mist": {"name": "Concealing Mist", "description": "Target friendly unit within 12\" gets -1 to be hit the next time it is attacked. This power may be cast unlimited times.", "charge": 6},
-        "cloudburst": {"name": "Cloudburst", "description": "Target enemy unit within 12\" gets -1 Accuracy until the end of the round. This power may be cast unlimited times.", "charge": 6},
-        "gilded_burden": {
-            "name": "Gilded Burden",
-            "description": "Target enemy unit within 12\" can only make one movement action next time it is activated. This power may only be cast once per turn.",
-            "charge": 7
+    "rules": {
+        "suit": {"name": "Skybound Suit", "description": "This model gains +3\" Movement, Wounds(+1) and may ignore terrain and other models without the Fly special rule when moving.", "points": 15},
+        "clockwork_companion": {"name": "Clockwork Companion", "description": "This model and all friendly models within 3\" re-roll failed hit rolls of 9+ when shooting.", "points": 5},
+        "opportunist": {
+            "name": "Opportunist",
+            "description": "When an enemy model takes any unsaved hits by this models melee attacks, you can push that model 1“ directly away from this model.",
+            "points": 5
         },
-        "lead": {"name": "Steel to Lead", "description": "Target enemy unit within 12\" gets -1 Strength until the end of the round. This power may be cast unlimited times.", "charge": 7}
+        "brew": {
+            "name": "Dwarven Brew",
+            "description": "When this unit is activated, choose a Beer for this unit or a friendly _Infantry_ unit within 6\" to drink:\n* Clockwork Malt: Roll a die when a model in this unit loses a wound. On a value of 1 or 2 that wound is not lost.\n* Berserker Brew: When this unit fights, hit rolls of 1 or 2 generate an additional attack.\n* Ol’ Classic: One model in the unit immediately heals D3 wounds.",
+            "points": [15]
+        }
     },
     "strategies": [
         {
@@ -333,31 +445,57 @@
             "name": "Stubborn",
             "phase": "activation",
             "description": "Use before activating a unit. That unit may immediately remove up to 2 Shock.",
-            "flavor": "Not letting such nuisance as sure defeat break them has made them withstand so many onslaughts.",
+            "flavor": "Not letting such nuisance as overwhelming odds defeat them has made the Merchant Dwarfs withstand many onslaughts.",
             "cost": 1
         },
         {
-            "name": "Spider Mines",
+            "name": "Clockwork Quickloader",
             "phase": "activation",
-            "description": "Use when a _Dwarf Infantry_ unit is charged. The charging unit takes 4 automatic hits with AP0.",
-            "flavor": "Novice Engineers build these to learn the intricate mechanism of greater warmachines.",
+            "description": "Use when a _Dwarf Infantry_ unit makes a ranged attack. Hit rolls of 1 and 2 generate an additional hit. Additional hits must be assigned to the same model.",
+            "flavor": "A masterpiece among dwarven inventions, this device allows for increased fire rate without reducing accuracy.",
             "cost": 1
         }
     ],
-    "relics": [
-        {
-            "name": "Hidden Stash",
-            "description": "Upgrade one _Leader_ model with Dwarven Brew.",
-            "flavor": "Dwarves are known for their love of alcohol, which they even carry into battle.",
-            "points": 10,
-            "rule": "brew"
+    "powers": {
+        "trailblaze": {
+            "name": "Trailblaze",
+            "charge": 7,
+            "description": "Target friendly unit within 12\" may move up to 12\" ignoring all models and terrain. This must end outside of 12\" of any enemy units."
         },
-        {
-            "name": "Mastercrafted Armor",
-            "description": "Upgrade one _Leader_ model with Mastercrafted Armor.",
-            "flavor": "Made from the strongest metals and inscribed with runes of power, its a sign of wealth.",
-            "points": 15,
-            "rule": "mastercrafted_armor"
+        "fissure": {"name": "Fissure", "charge": 6, "description": "Target enemy unit within 18\" takes 3 automatic hits with AP(3)."},
+        "command": {"name": "Command", "charge": 5, "description": "Target friendly unit within 12\" may make a free shoot action after it moves until the end of the activation phase."},
+        "empowering_vapour": {
+            "name": "Empowering Vapour",
+            "charge": 5,
+            "description": "Target friendly unit within 12“ gains +1 Strength and +1 Accuracy until the end of the activation phase. ",
+            "category": "steam"
+        },
+        "billow": {"name": "Billow", "charge": 6, "description": "Place up to two 3\" diameter smoke markers in base contact within 18\".", "category": "steam"},
+        "suffocating_fumes": {"name": "Suffocating Fumes", "charge": 7, "description": "Target enemy model within 18\" take 2 hits with AP(5).", "category": "steam"}
+    },
+    "relics": {
+        "opportunist": {
+            "name": "Opportunist",
+            "rule": "opportunist",
+            "description": "Upgrade one Leader model with Opportunist.",
+            "flavor": "A tactician will use any opening in their enemies defenses to gain the upper hand.",
+            "points": 5
+        },
+        "storm_in_a_bottle": {
+            "name": "Storm in a Bottle",
+            "rule": {"id": "power", "x": 1},
+            "description": "Upgrade one Leader model with Power(1).",
+            "flavor": "Cracking this glass bottle open unleashes a surge of primal magic.",
+            "points": 10
+        },
+        "rivet_pistol": {
+            "name": "Rivet Pistol",
+            "weapon": "rivet_pistol",
+            "description": "Replace one model's Repeater Pistol with Rivet Pistol.",
+            "flavor": "This prized heirloom spits out lethal rivets at high speed.",
+            "points": 5
         }
-    ]
+    },
+    "powerCategories": {"steam": {"name": "Steam"}},
+    "subfactions": {}
 }
