@@ -313,7 +313,7 @@
         {
             "name": "Blazing Runes",
             "phase": "activation",
-            "description": "Use before an Infantry unit fights. Hit rolls of 1 or 2 gain +1 AP.",
+            "description": "Use before an Infantry unit fights. Successful hits gain +1 AP.",
             "flavor": "Corrupted Dwarves wield enchanted weapons, covered in unholy runes and burning with dark magic.",
             "cost": 1,
             "subfactions": ["wrath", "excess", "pestilence", "none", "change"]

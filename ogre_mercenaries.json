@@ -362,7 +362,7 @@
         "brutality": {
             "phase": "activation",
             "name": "Brutality",
-            "description": "Use before fighting with a _Infantry_ unit. Hit rolls of 1 or 2 gain +1 AP.",
+            "description": "Use before fighting with a _Infantry_ unit. Successful hits gain +1 AP.",
             "flavor": "With their superior strength and savagery these ogres can easily crush any opposition.",
             "cost": 1
         },

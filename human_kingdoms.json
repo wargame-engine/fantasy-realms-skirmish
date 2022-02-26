@@ -783,7 +783,7 @@
             "phase": "activation",
             "name": "Blessed Armory",
             "flavor": "Inscribed with countless prayers and blessed by angels and the church, these weapons can even strike down demons.",
-            "description": "Use before an Infantry unit fights. Hit rolls of 1 or 2 gain +1 AP.",
+            "description": "Use before an Infantry unit fights. Successful hits gain +1 AP.",
             "cost": 1
         },
         {
