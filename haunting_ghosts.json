@@ -255,7 +255,7 @@
         "curse_blade": {"name": "Curse-bound Blade", "attacks": 1, "ap": 2, "short": "Melee", "rules": ["lance"]},
         "executioner_great_axe": {"name": "Great Axe", "attacks": 1, "ap": 5, "short": "Melee", "rules": ["rending"]},
         "frost_dagger": {"name": "Frost Dagger", "attacks": 1, "ap": 3, "short": "Melee", "rules": ["lethal"]},
-        "scream": {"name": "Banshee Scream", "attacks": 1, "ap": 2, "short": 9, "rules": ["indirect"]}
+        "scream": {"name": "Banshee Scream", "attacks": 1, "ap": 2, "short": 9, "rules": ["pistol"]}
     },
     "rules": {
         "ghost_tactics": {
